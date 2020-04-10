@@ -15,14 +15,16 @@ public class IndicatorBar : MonoBehaviour {
 
 	public string indicatorName = "DefaultName";
 	public int fillingLevel = 75;
+	public Color color = Color.red;
 	
 	private RectTransform borderRect;
 	private const int MIN_VALUE = 0;
 	private const int MAX_VALUE = 100;
-
+	
 	void Start () {
 		borderRect = border.GetComponent<RectTransform> ();
 		text.GetComponent<Text>().text = indicatorName;
+		filling.GetComponent<Image>().color = color;
 	}
 
 
