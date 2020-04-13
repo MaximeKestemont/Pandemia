@@ -1,12 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class ResourceManager : MonoBehaviour {
 
     // UI objects
     public GameObject menuPanel;
 
-    // Player objects
+    // Prefab
+    public GameObject eventPrefab;
+
+    // GameObjects
+    public List<GameObject> eventsList;
 }
