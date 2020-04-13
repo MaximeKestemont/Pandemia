@@ -16,7 +16,9 @@ public class GameController : MonoBehaviour
         // Init events
         resourceManager.eventsList = gameDataGenerator.events;;
         
-
+        // Activate first event
+        GameObject firstEvent = resourceManager.eventsList[0];
+        firstEvent.SetActive(true);
 
     }
 
