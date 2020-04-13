@@ -6,6 +6,8 @@ public class Event : MonoBehaviour
 {
 
     public List<Choice> choices {get;set;}
+    public string title;
+    public string description;
 
     // Start is called before the first frame update
     void Start()

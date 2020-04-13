@@ -18,6 +18,7 @@ public class GameDataGenerator: MonoBehaviour
         List<Choice> choiceList1 = new List<Choice>(choices1);
         GameObject event1 = Instantiate(resourceManager.eventPrefab);
         event1.GetComponentInChildren<Event>().choices = choiceList1;
+        event1.GetComponentInChildren<Event>().title = "My first event";
 
         // Event2
         Choice choice3 = new Choice("Choice2.1");
@@ -26,6 +27,7 @@ public class GameDataGenerator: MonoBehaviour
         List<Choice> choiceList2 = new List<Choice>(choices2);
         GameObject event2 = Instantiate(resourceManager.eventPrefab);
         event2.GetComponentInChildren<Event>().choices = choiceList2;
+        event2.GetComponentInChildren<Event>().title = "Alex est un noob";
 
         // EventList
         GameObject[] events = {event1, event2};
