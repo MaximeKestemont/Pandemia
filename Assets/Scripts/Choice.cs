@@ -1,18 +1,28 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class Choice
+public class Choice: MonoBehaviour
 {
-    public string title {get;}
+    public string title {get;set;}
     public List<ChoiceConsequence> choiceConsequences;
 
-    public Choice(
-        string title,
-        List<ChoiceConsequence> choiceConsequences
-    ) {
-        this.title = title;
-        this.choiceConsequences = choiceConsequences;
+    public Text choiceTitle;
+    public Image choiceImage;
+
+    public Button choiceButton;
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        choiceTitle.GetComponent<Text>().text = title;
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
     }
     
     /*
