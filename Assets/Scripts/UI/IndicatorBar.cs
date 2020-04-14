@@ -16,6 +16,8 @@ public class IndicatorBar : MonoBehaviour {
 	public string indicatorName = "DefaultName";
 	public int fillingLevel = 75;
 	public Color color = Color.red;
+
+	public List<ValueOverTime> bonusAndMalus;
 	
 	private RectTransform borderRect;
 	private const int MIN_VALUE = 0;
@@ -39,12 +41,12 @@ public class IndicatorBar : MonoBehaviour {
 
 	/*
 	=====================
-	UpdateIndicator
+	AddValue
 	=====================
 	Update the indicator by a value (can be negative).
 	If it goes below or above the range, TODO something happens
 	*/
-	public void UpdateIndicator(int value) {
+	public void AddValue(int value) {
 		fillingLevel = fillingLevel + value;
 
 		if (fillingLevel < MIN_VALUE) {
@@ -54,6 +56,24 @@ public class IndicatorBar : MonoBehaviour {
 		if (fillingLevel < MAX_VALUE) {
 			Debug.Log ($"Indicator {indicatorName} is too high !");
 		}
-
 	}
+
+	public void UpdateIndicator() {
+		// Need this filtered list as we may remove some bonus/malus
+		List<ValueOverTime> updatedBonusMalus = new List<ValueOverTime>();
+
+		foreach (var valueOverTime in bonusAndMalus) {
+			valueOverTime.timeLeft = valueOverTime.timeLeft - 1;
+			this.fillingLevel = valueOverTime.ApplyValue(this.fillingLevel);
+
+			if (valueOverTime.timeLeft > 0) {
+				updatedBonusMalus.Add(valueOverTime);
+			}
+		}
+
+		// Update the bonusMalus list with the filtered one
+		this.bonusAndMalus = updatedBonusMalus;
+	}
+
+	
 }
