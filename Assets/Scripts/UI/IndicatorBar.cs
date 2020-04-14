@@ -41,21 +41,13 @@ public class IndicatorBar : MonoBehaviour {
 
 	/*
 	=====================
-	AddValue
+	AddValueOverTime
 	=====================
-	Update the indicator by a value (can be negative).
-	If it goes below or above the range, TODO something happens
+	Add a value to the list of bonus and malus. If the timeLeft <= 0, it means this is a value that will be
+	applied only once. If > 0, it will last at least during one event.
 	*/
-	public void AddValue(int value) {
-		fillingLevel = fillingLevel + value;
-
-		if (fillingLevel < MIN_VALUE) {
-			Debug.Log ($"Indicator {indicatorName} is too low !");
-		}
-
-		if (fillingLevel < MAX_VALUE) {
-			Debug.Log ($"Indicator {indicatorName} is too high !");
-		}
+	public void AddValueOverTime(ValueOverTime valueOverTime) {
+		bonusAndMalus.Add(valueOverTime);
 	}
 
 	public void UpdateIndicator() {
@@ -66,13 +58,22 @@ public class IndicatorBar : MonoBehaviour {
 			valueOverTime.timeLeft = valueOverTime.timeLeft - 1;
 			this.fillingLevel = valueOverTime.ApplyValue(this.fillingLevel);
 
-			if (valueOverTime.timeLeft > 0) {
+			if (valueOverTime.timeLeft >= 0) {
 				updatedBonusMalus.Add(valueOverTime);
 			}
 		}
 
 		// Update the bonusMalus list with the filtered one
 		this.bonusAndMalus = updatedBonusMalus;
+
+		// Check if the value went outside its range
+		if (fillingLevel < MIN_VALUE) {
+			Debug.Log ($"Indicator {indicatorName} is too low !");
+		}
+
+		if (fillingLevel < MAX_VALUE) {
+			Debug.Log ($"Indicator {indicatorName} is too high !");
+		}
 	}
 
 	
