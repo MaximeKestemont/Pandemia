@@ -48,10 +48,11 @@ public class GameDataGenerator: MonoBehaviour
     ) {
         GameObject newEvent = Instantiate(resourceManager.eventPrefab, GameObject.Find("Events").transform);
         newEvent.GetComponentInChildren<Event>().title = title;
+        var choiceParent = newEvent.GetComponentInChildren<Event>().choices;
 
         foreach(var choice in choices)
         {
-            choice.transform.SetParent(newEvent.transform, false);
+            choice.transform.SetParent(choiceParent.transform, false);
         }
 
         newEvent.SetActive(false);

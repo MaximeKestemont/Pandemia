@@ -10,6 +10,8 @@ public class Event : MonoBehaviour
     public Text textTitle;
     public Image eventImage;
 
+    public GameObject choices;
+
     // Start is called before the first frame update
     void Start()
     {
