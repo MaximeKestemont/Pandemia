@@ -38,6 +38,7 @@ public class GameController : MonoBehaviour
         }
 
         Debug.Log("Moving to next event...");
+        currentEvent.GetComponent<Event>().status = Event.Status.PASSED;
         currentEvent.SetActive(false);
         currentEventIndex++;
 

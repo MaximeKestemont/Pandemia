@@ -52,6 +52,8 @@ public class GameDataGenerator: MonoBehaviour
 
         List<GameObject> choiceList1 = new List<GameObject>{choice1, choice2};
         GameObject event1 = CreateEvent(
+            1,
+            Event.Status.UNLOCKED,
             "My first event",
             choiceList1
         );
@@ -67,6 +69,8 @@ public class GameDataGenerator: MonoBehaviour
         );
         List<GameObject> choiceList2 = new List<GameObject>{choice3, choice4};
         GameObject event2 = CreateEvent(
+            2,
+            Event.Status.UNLOCKED,
             "Alex est un noob",
             choiceList2
         );
@@ -77,13 +81,18 @@ public class GameDataGenerator: MonoBehaviour
     }
 
     private GameObject CreateEvent(
+        int uid,
+        Event.Status status,
         string title,
         List<GameObject> choices
     ) {
         GameObject newEvent = Instantiate(resourceManager.eventPrefab, GameObject.Find("Events").transform);
-        newEvent.GetComponentInChildren<Event>().title = title;
-        var choiceParent = newEvent.GetComponentInChildren<Event>().choices;
+        Event e = newEvent.GetComponent<Event>();
+        e.title = title;
+        e.uid = uid;
+        e.status = status;
 
+        var choiceParent = e.choices;
         foreach(var choice in choices)
         {
             choice.transform.SetParent(choiceParent.transform, false);
@@ -98,8 +107,8 @@ public class GameDataGenerator: MonoBehaviour
         List<ChoiceConsequence> choiceConsequences
     ) {
         GameObject newChoice = Instantiate(resourceManager.choicePrefab);
-        newChoice.GetComponentInChildren<Choice>().title = title;
-        newChoice.GetComponentInChildren<Choice>().choiceConsequences = choiceConsequences;
+        newChoice.GetComponent<Choice>().title = title;
+        newChoice.GetComponent<Choice>().choiceConsequences = choiceConsequences;
         return newChoice; 
     }
 }
