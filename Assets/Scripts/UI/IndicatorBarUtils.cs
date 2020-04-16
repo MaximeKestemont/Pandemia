@@ -1,13 +1,15 @@
+using UnityEngine;
+
 public abstract class ValueOverTime {
-	public int value;
-	public int timeLeft;
+	public abstract int value {get; set;}
+	public abstract int timeLeft {get; set;}
 
     public abstract int ApplyValue(int indicatorValue);
 }
 
 public class AbsoluteValueOverTime: ValueOverTime {
-	public new int value;
-	public new int timeLeft;
+	public override int value {get; set;}
+	public override int timeLeft {get; set;}
 		
 	public AbsoluteValueOverTime(
 		int value,
@@ -18,13 +20,13 @@ public class AbsoluteValueOverTime: ValueOverTime {
 	}
 
     public override int ApplyValue(int indicatorValue) {
-        return (indicatorValue - this.value);
+        return (indicatorValue + this.value);
     }
 }
 
 public class PercentageValueOverTime: ValueOverTime {
-	public new int value;
-	public new int timeLeft;
+    public override int value {get; set;}
+	public override int timeLeft {get; set;}
 		
 	public PercentageValueOverTime(
 		int value,
@@ -36,7 +38,7 @@ public class PercentageValueOverTime: ValueOverTime {
 
     // +5% -> 105% of indicatorValue
     // -5% -> 95% of indicatorValue
-    public override int ApplyValue(int indicatorValue) {
-        return (100 + this.value) / 100 * indicatorValue;
+    public override int ApplyValue(int indicatorValue) {    
+        return (int)((100f + this.value) / 100 * indicatorValue);
     }
 }

@@ -17,7 +17,7 @@ public class IndicatorBar : MonoBehaviour {
 	public int fillingLevel = 75;
 	public Color color = Color.red;
 
-	public List<ValueOverTime> bonusAndMalus;
+	public List<ValueOverTime> bonusAndMalus = new List<ValueOverTime>();
 	
 	private RectTransform borderRect;
 	private const int MIN_VALUE = 0;
@@ -71,7 +71,7 @@ public class IndicatorBar : MonoBehaviour {
 			Debug.Log ($"Indicator {indicatorName} is too low !");
 		}
 
-		if (fillingLevel < MAX_VALUE) {
+		if (fillingLevel > MAX_VALUE) {
 			Debug.Log ($"Indicator {indicatorName} is too high !");
 		}
 	}

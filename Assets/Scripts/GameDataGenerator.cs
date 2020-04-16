@@ -11,13 +11,45 @@ public class GameDataGenerator: MonoBehaviour
 
     public void Start()
     {
-        // Event1
+        // --- Event1 ---
+        // Choice 1
+        ChoiceConsequence consequence11 = new ChoiceConsequence(
+            resourceManager.economy,
+            ChoiceConsequence.ValueTypeEnum.ABSOLUTE,
+            10,
+            0
+        );
+        ChoiceConsequence consequence12 = new ChoiceConsequence(
+            resourceManager.propagationSpeed,
+            ChoiceConsequence.ValueTypeEnum.ABSOLUTE,
+            -5,
+            3
+        );
+
         GameObject choice1 = CreateChoice(
-            "Alex > Max"
+            "Alex > Max",
+            new List<ChoiceConsequence>{consequence11, consequence12}
         );
+
+        // Choice 2
+        ChoiceConsequence consequence21 = new ChoiceConsequence(
+            resourceManager.economy,
+            ChoiceConsequence.ValueTypeEnum.PERCENTAGE,
+            10,
+            0
+        );
+        ChoiceConsequence consequence22 = new ChoiceConsequence(
+            resourceManager.propagationSpeed,
+            ChoiceConsequence.ValueTypeEnum.PERCENTAGE,
+            -5,
+            1
+        );
+
         GameObject choice2 = CreateChoice(
-            "Briquet > Max"
+            "Briquet > Max",
+            new List<ChoiceConsequence>{consequence21, consequence22}
         );
+
         List<GameObject> choiceList1 = new List<GameObject>{choice1, choice2};
         GameObject event1 = CreateEvent(
             "My first event",
@@ -26,10 +58,12 @@ public class GameDataGenerator: MonoBehaviour
 
         // Event2
         GameObject choice3 = CreateChoice(
-            "Alex >>> Max"
+            "Alex >>> Max",
+            new List<ChoiceConsequence>()
         );
         GameObject choice4 = CreateChoice(
-            "Briquet >>>> Max"
+            "Briquet >>>> Max",
+            new List<ChoiceConsequence>()
         );
         List<GameObject> choiceList2 = new List<GameObject>{choice3, choice4};
         GameObject event2 = CreateEvent(
@@ -60,10 +94,12 @@ public class GameDataGenerator: MonoBehaviour
     }
 
     private GameObject CreateChoice(
-        string title
+        string title,
+        List<ChoiceConsequence> choiceConsequences
     ) {
         GameObject newChoice = Instantiate(resourceManager.choicePrefab);
         newChoice.GetComponentInChildren<Choice>().title = title;
+        newChoice.GetComponentInChildren<Choice>().choiceConsequences = choiceConsequences;
         return newChoice; 
     }
 }
