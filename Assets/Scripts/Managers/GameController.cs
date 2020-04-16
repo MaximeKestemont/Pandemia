@@ -6,6 +6,8 @@ public class GameController : MonoBehaviour
 {
     public ResourceManager resourceManager;
     public GameDataGenerator gameDataGenerator;
+    public int currentEventIndex;
+    private GameObject currentEvent;
 
     public void StartGame()
     {
@@ -17,8 +19,9 @@ public class GameController : MonoBehaviour
         resourceManager.eventsList = gameDataGenerator.events;;
         
         // Activate first event
-        GameObject firstEvent = resourceManager.eventsList[0];
-        firstEvent.SetActive(true);
+        currentEventIndex = 0;
+        currentEvent = resourceManager.eventsList[currentEventIndex];
+        currentEvent.SetActive(true);
 
     }
 
@@ -35,6 +38,20 @@ public class GameController : MonoBehaviour
         }
 
         Debug.Log("Moving to next event...");
+        currentEvent.SetActive(false);
+        currentEventIndex++;
+
+        if (currentEventIndex < resourceManager.eventsList.Count) {
+            currentEvent = resourceManager.eventsList[currentEventIndex];
+            currentEvent.SetActive(true);
+        } else {
+            FinishGame();
+        }
+        
+    }
+
+    public void FinishGame() {
+        Debug.Log("No more event. Game finished.");
     }
     
 }
