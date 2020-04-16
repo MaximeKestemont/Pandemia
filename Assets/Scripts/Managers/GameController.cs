@@ -27,4 +27,14 @@ public class GameController : MonoBehaviour
     {
         
     }
+
+    public void NextEvent() {
+        Debug.Log("Resolving the event...");
+        foreach (var IndicatorBar in resourceManager.indicators) {
+            IndicatorBar.UpdateIndicator();
+        }
+
+        Debug.Log("Moving to next event...");
+    }
+    
 }

@@ -1257,6 +1257,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ee6d152eb1664b019bd68557ee3d46e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameController: {fileID: 1049867533}
   menuPanel: {fileID: 1887515217}
   eventPrefab: {fileID: 633061166656149566, guid: 525153e9a4af84ccb9ff89584a2eef5e,
     type: 3}

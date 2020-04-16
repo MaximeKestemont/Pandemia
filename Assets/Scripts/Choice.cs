@@ -52,7 +52,7 @@ public class Choice: MonoBehaviour
             if (valueOverTime != null )consequence.indicatorBar.AddValueOverTime(valueOverTime);
         }
 
-        ResourceManager.resourceManager.NextEvent();
+        ResourceManager.resourceManager.gameController.NextEvent();
     }
 
 

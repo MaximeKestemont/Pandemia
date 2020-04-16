@@ -6,6 +6,9 @@ using UnityEngine;
 public class ResourceManager : MonoBehaviour {
     public static ResourceManager resourceManager;
 
+    //--- Managers ---
+    public GameController gameController;
+
     // --- UI objects ---
     public GameObject menuPanel;
 
@@ -32,13 +35,4 @@ public class ResourceManager : MonoBehaviour {
         this.indicators = new List<IndicatorBar>{health, economy, propagationSpeed, populationSatisfaction, infectedNumber};
     }
 
-    public void NextEvent() {
-        Debug.Log("Resolving the event...");
-        foreach (var IndicatorBar in indicators) {
-            IndicatorBar.UpdateIndicator();
-        }
-
-        Debug.Log("Moving to next event...");
-    }
-    
 }
