@@ -825,7 +825,15 @@ MonoBehaviour:
   menuPanel: {fileID: 1887515217}
   eventPrefab: {fileID: 633061166656149566, guid: 525153e9a4af84ccb9ff89584a2eef5e,
     type: 3}
+  choicePrefab: {fileID: 1506054925664981898, guid: 9c683a5a703144088bb2b7a6231e3e96,
+    type: 3}
   eventsList: []
+  health: {fileID: 0}
+  economy: {fileID: 0}
+  propagationSpeed: {fileID: 0}
+  populationSatisfaction: {fileID: 0}
+  infectedNumber: {fileID: 0}
+  indicators: []
 --- !u!1 &1904234968
 GameObject:
   m_ObjectHideFlags: 0

@@ -127,6 +127,7 @@ MonoBehaviour:
   choiceTitle: {fileID: 5096160235226824802}
   choiceImage: {fileID: 6939444151949212188}
   choiceButton: {fileID: 1664993035228112294}
+  gameController: {fileID: 0}
 --- !u!1 &2727135133696314331
 GameObject:
   m_ObjectHideFlags: 0

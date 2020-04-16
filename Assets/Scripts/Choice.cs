@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class Choice: MonoBehaviour
 {
     public string title {get;set;}
-    public List<ChoiceConsequence> choiceConsequences;
+    public List<ChoiceConsequence> choiceConsequences = new List<ChoiceConsequence>();
 
     public Text choiceTitle;
     public Image choiceImage;
