@@ -133,6 +133,21 @@ PrefabInstance:
       propertyPath: indicatorName
       value: Pop.Satisfaction
       objectReference: {fileID: 0}
+    - target: {fileID: 1840937659899806920, guid: fa7d02b799c0f4802925bf43b7713f09,
+        type: 3}
+      propertyPath: color.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1840937659899806920, guid: fa7d02b799c0f4802925bf43b7713f09,
+        type: 3}
+      propertyPath: color.g
+      value: 0.39215687
+      objectReference: {fileID: 0}
+    - target: {fileID: 1840937659899806920, guid: fa7d02b799c0f4802925bf43b7713f09,
+        type: 3}
+      propertyPath: color.b
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1840937659899806921, guid: fa7d02b799c0f4802925bf43b7713f09,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -877,6 +892,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   resourceManager: {fileID: 1895411078}
   gameDataGenerator: {fileID: 2076418270}
+  currentEventIndex: 0
 --- !u!224 &1161579318 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1840937659899806921, guid: fa7d02b799c0f4802925bf43b7713f09,
@@ -1358,6 +1374,16 @@ PrefabInstance:
         type: 3}
       propertyPath: fillingLevel
       value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 1840937659899806920, guid: fa7d02b799c0f4802925bf43b7713f09,
+        type: 3}
+      propertyPath: color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1840937659899806920, guid: fa7d02b799c0f4802925bf43b7713f09,
+        type: 3}
+      propertyPath: color.g
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1840937659899806921, guid: fa7d02b799c0f4802925bf43b7713f09,
         type: 3}

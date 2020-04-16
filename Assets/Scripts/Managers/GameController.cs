@@ -41,6 +41,7 @@ public class GameController : MonoBehaviour
         currentEvent.SetActive(false);
         currentEventIndex++;
 
+        // TODO need to be improved at some point to randomly chose in a specific set of event the next event
         if (currentEventIndex < resourceManager.eventsList.Count) {
             currentEvent = resourceManager.eventsList[currentEventIndex];
             currentEvent.SetActive(true);
