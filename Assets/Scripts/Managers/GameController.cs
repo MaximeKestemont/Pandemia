@@ -6,7 +6,7 @@ public class GameController : MonoBehaviour
 {
     public ResourceManager resourceManager;
     public GameDataGenerator gameDataGenerator;
-    public int currentEventIndex;
+    public int currentEventId;
     private GameObject currentEvent;
 
     public void StartGame()
@@ -16,11 +16,11 @@ public class GameController : MonoBehaviour
 
         Debug.Log ("Initializing game data and storing them in resource manager...");
         // Init events
-        resourceManager.eventsList = gameDataGenerator.events;;
+        resourceManager.eventsMap = gameDataGenerator.events;;
         
         // Activate first event
-        currentEventIndex = 0;
-        currentEvent = resourceManager.eventsList[currentEventIndex];
+        currentEventId = 1;
+        currentEvent = resourceManager.eventsMap[currentEventId];
         currentEvent.SetActive(true);
 
     }
@@ -40,11 +40,11 @@ public class GameController : MonoBehaviour
         Debug.Log("Moving to next event...");
         currentEvent.GetComponent<Event>().status = Event.Status.PASSED;
         currentEvent.SetActive(false);
-        currentEventIndex++;
+        currentEventId++;
 
         // TODO need to be improved at some point to randomly chose in a specific set of event the next event
-        if (currentEventIndex < resourceManager.eventsList.Count) {
-            currentEvent = resourceManager.eventsList[currentEventIndex];
+        if (currentEventId < resourceManager.eventsMap.Count + 1) { // TODO refactor, need to be below max id
+            currentEvent = resourceManager.eventsMap[currentEventId];
             currentEvent.SetActive(true);
         } else {
             FinishGame();

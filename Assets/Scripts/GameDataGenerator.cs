@@ -6,7 +6,7 @@ using UnityEngine;
 public class GameDataGenerator: MonoBehaviour
 {
 
-    public List<GameObject> events {get;set;}
+    public Dictionary<int, GameObject> events {get;set;}
     public ResourceManager resourceManager;
 
     public void Start()
@@ -17,13 +17,19 @@ public class GameDataGenerator: MonoBehaviour
             resourceManager.economy,
             ChoiceConsequence.ValueTypeEnum.ABSOLUTE,
             10,
-            0
+            0,
+            new List<int>(),
+            new List<int>(),
+            new List<int>()
         );
         ChoiceConsequence consequence12 = new ChoiceConsequence(
             resourceManager.propagationSpeed,
             ChoiceConsequence.ValueTypeEnum.ABSOLUTE,
             -5,
-            3
+            3,
+            new List<int>(),
+            new List<int>(),
+            new List<int>()
         );
 
         GameObject choice1 = CreateChoice(
@@ -36,13 +42,19 @@ public class GameDataGenerator: MonoBehaviour
             resourceManager.economy,
             ChoiceConsequence.ValueTypeEnum.PERCENTAGE,
             10,
-            0
+            0,
+            new List<int>(),
+            new List<int>(),
+            new List<int>()
         );
         ChoiceConsequence consequence22 = new ChoiceConsequence(
             resourceManager.propagationSpeed,
             ChoiceConsequence.ValueTypeEnum.PERCENTAGE,
             -5,
-            1
+            1,
+            new List<int>(),
+            new List<int>(),
+            new List<int>()
         );
 
         GameObject choice2 = CreateChoice(
@@ -77,7 +89,10 @@ public class GameDataGenerator: MonoBehaviour
 
         // EventList
         Debug.Log(event1.transform.position);
-        this.events = new List<GameObject>{event1, event2};
+        this.events = new Dictionary<int, GameObject>{
+            {event1.GetComponent<Event>().uid, event1}, 
+            {event2.GetComponent<Event>().uid, event2}
+        };
     }
 
     private GameObject CreateEvent(

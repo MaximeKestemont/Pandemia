@@ -18,7 +18,7 @@ public class ResourceManager : MonoBehaviour {
 
     // --- GameObjects ---
     // Events
-    public List<GameObject> eventsList;
+    public Dictionary<int, GameObject> eventsMap;
     
     // Indicators
     public IndicatorBar health;
