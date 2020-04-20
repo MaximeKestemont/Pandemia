@@ -12,6 +12,11 @@ public class Choice: MonoBehaviour
     public Image choiceImage;
 
     public Button choiceButton;
+    
+    // List of event ids that will be unlocked/locked/passed (= permanently locked) once the choice is executed
+    public List<int> unlockedEvents = new List<int>();
+    public List<int> lockedEvents = new List<int>();
+    public List<int> passedEvents = new List<int>();
 
     // Start is called before the first frame update
     void Start()
@@ -34,7 +39,8 @@ public class Choice: MonoBehaviour
     public void Execute() {
         Debug.Log($"Execute choice {this.title}");
 
-        foreach(var consequence in choiceConsequences) {
+        // Update indicators values
+        foreach(var consequence in choiceConsequences) {    
             ValueOverTime valueOverTime = null;
             switch (consequence.valueType) 
             {
@@ -49,8 +55,20 @@ public class Choice: MonoBehaviour
                     break;
 
             }
-            if (valueOverTime != null )consequence.indicatorBar.AddValueOverTime(valueOverTime);
+            if (valueOverTime != null ) consequence.indicatorBar.AddValueOverTime(valueOverTime);
         }
+
+        // Lock/unlock other events
+        foreach(var eventId in lockedEvents) {
+            ResourceManager.resourceManager.eventsMap[eventId].GetComponent<Event>().status = Event.Status.LOCKED;
+        }
+        foreach(var eventId in unlockedEvents) {
+            ResourceManager.resourceManager.eventsMap[eventId].GetComponent<Event>().status = Event.Status.UNLOCKED;
+        }
+        foreach(var eventId in passedEvents) {
+            ResourceManager.resourceManager.eventsMap[eventId].GetComponent<Event>().status = Event.Status.PASSED;
+        }
+
 
         ResourceManager.resourceManager.gameController.NextEvent();
     }

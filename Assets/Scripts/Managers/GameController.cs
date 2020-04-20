@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
 
 public class GameController : MonoBehaviour
 {
@@ -40,10 +41,19 @@ public class GameController : MonoBehaviour
         Debug.Log("Moving to next event...");
         currentEvent.GetComponent<Event>().status = Event.Status.PASSED;
         currentEvent.SetActive(false);
-        currentEventId++;
 
-        // TODO need to be improved at some point to randomly chose in a specific set of event the next event
-        if (currentEventId < resourceManager.eventsMap.Count + 1) { // TODO refactor, need to be below max id
+
+        // Candidate ids for next event = all "UNLOCKED" events
+        List<int> filteredIds = resourceManager.eventsMap
+            .Where(x => x.Value.GetComponent<Event>().status == Event.Status.UNLOCKED)
+            .Select(x => x.Key)
+            .ToList();
+
+        // Select the next event id and the correspond event, or finish the game
+        if (filteredIds.Count > 0) {
+            var randomIndex = Random.Range(0, filteredIds.Count); 
+            currentEventId = filteredIds[randomIndex];
+            Debug.Log($"New event: {currentEventId}");
             currentEvent = resourceManager.eventsMap[currentEventId];
             currentEvent.SetActive(true);
         } else {
