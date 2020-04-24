@@ -1,5 +1,78 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8921675130762359173
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78d86ceab28114ca481a4504b2f3e3a3, type: 3}
+  m_Name: Choice
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -392, y: -328}
+  ports:
+    keys:
+    - correspondingEvent
+    - unlockingEvents
+    - lockingEvents
+    - passingEvents
+    values:
+    - _fieldName: correspondingEvent
+      _node: {fileID: -8921675130762359173}
+      _typeQualifiedName: EventNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: eventChoices
+        node: {fileID: 9089561121803420581}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: unlockingEvents
+      _node: {fileID: -8921675130762359173}
+      _typeQualifiedName: EventNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: unlockingChoices
+        node: {fileID: -3042879296080936519}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: lockingEvents
+      _node: {fileID: -8921675130762359173}
+      _typeQualifiedName: EventNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: passingEvents
+      _node: {fileID: -8921675130762359173}
+      _typeQualifiedName: EventNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  correspondingEvent: {fileID: 0}
+  unlockingEvents: {fileID: 0}
+  lockingEvents: {fileID: 0}
+  passingEvents: {fileID: 0}
+  description: send spies to retrieve informations anyway
+  choiceNodeConsequences:
+  - indicatorType: 1
+    valueType: 0
+    value: -1
+    duration: 0
 --- !u!114 &-8259522358120340577
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13,7 +86,7 @@ MonoBehaviour:
   m_Name: Event
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -1176, y: 120}
+  position: {x: -1224, y: 104}
   ports:
     keys:
     - unlockingChoices
@@ -67,10 +140,300 @@ MonoBehaviour:
   lockingChoices: {fileID: 0}
   passingChoices: {fileID: 0}
   eventChoices: {fileID: 0}
-  title: Event1
-  description: Alex est un noob ?
+  title: Virus Discovery
+  description: Health authorities in country X, reported a cluster of viral pneumonia
+    cases of unknown cause
   uid: 1
   status: 0
+--- !u!114 &-7873629218891756846
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78d86ceab28114ca481a4504b2f3e3a3, type: 3}
+  m_Name: Choice
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 360, y: 184}
+  ports:
+    keys:
+    - correspondingEvent
+    - unlockingEvents
+    - lockingEvents
+    - passingEvents
+    values:
+    - _fieldName: correspondingEvent
+      _node: {fileID: -7873629218891756846}
+      _typeQualifiedName: EventNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: eventChoices
+        node: {fileID: -4989236890089119801}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: unlockingEvents
+      _node: {fileID: -7873629218891756846}
+      _typeQualifiedName: EventNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: lockingEvents
+      _node: {fileID: -7873629218891756846}
+      _typeQualifiedName: EventNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: passingEvents
+      _node: {fileID: -7873629218891756846}
+      _typeQualifiedName: EventNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  correspondingEvent: {fileID: 0}
+  unlockingEvents: {fileID: 0}
+  lockingEvents: {fileID: 0}
+  passingEvents: {fileID: 0}
+  description: 'create a virus task force '
+  choiceNodeConsequences:
+  - indicatorType: 1
+    valueType: 0
+    value: -2
+    duration: 0
+--- !u!114 &-4989236890089119801
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e77689f02e2134294bbdf1163ebfa777, type: 3}
+  m_Name: Event
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -8, y: 280}
+  ports:
+    keys:
+    - unlockingChoices
+    - eventChoices
+    - lockingChoices
+    - passingChoices
+    values:
+    - _fieldName: unlockingChoices
+      _node: {fileID: -4989236890089119801}
+      _typeQualifiedName: ChoiceNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: unlockingEvents
+        node: {fileID: -2606820613033744273}
+        reroutePoints: []
+      - fieldName: unlockingEvents
+        node: {fileID: -159379426874192965}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: eventChoices
+      _node: {fileID: -4989236890089119801}
+      _typeQualifiedName: ChoiceNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: correspondingEvent
+        node: {fileID: -7873629218891756846}
+        reroutePoints: []
+      - fieldName: correspondingEvent
+        node: {fileID: -2799038945508752388}
+        reroutePoints: []
+      - fieldName: correspondingEvent
+        node: {fileID: 6353620514710455766}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: lockingChoices
+      _node: {fileID: -4989236890089119801}
+      _typeQualifiedName: ChoiceNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: passingChoices
+      _node: {fileID: -4989236890089119801}
+      _typeQualifiedName: ChoiceNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  unlockingChoices: {fileID: 0}
+  lockingChoices: {fileID: 0}
+  passingChoices: {fileID: 0}
+  eventChoices: {fileID: 0}
+  title: Virus spreading
+  description: Country X has been warning doctors from spreading information about
+    the virus, this is discouraging our specialists to dig for informations
+  uid: 3
+  status: 0
+--- !u!114 &-3042879296080936519
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e77689f02e2134294bbdf1163ebfa777, type: 3}
+  m_Name: Event
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -8, y: -520}
+  ports:
+    keys:
+    - unlockingChoices
+    - lockingChoices
+    - passingChoices
+    - eventChoices
+    values:
+    - _fieldName: unlockingChoices
+      _node: {fileID: -3042879296080936519}
+      _typeQualifiedName: ChoiceNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: unlockingEvents
+        node: {fileID: -8921675130762359173}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: lockingChoices
+      _node: {fileID: -3042879296080936519}
+      _typeQualifiedName: ChoiceNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: passingChoices
+      _node: {fileID: -3042879296080936519}
+      _typeQualifiedName: ChoiceNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: eventChoices
+      _node: {fileID: -3042879296080936519}
+      _typeQualifiedName: ChoiceNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  unlockingChoices: {fileID: 0}
+  lockingChoices: {fileID: 0}
+  passingChoices: {fileID: 0}
+  eventChoices: {fileID: 0}
+  title: Event3
+  description: 
+  uid: 5
+  status: 1
+--- !u!114 &-2799038945508752388
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78d86ceab28114ca481a4504b2f3e3a3, type: 3}
+  m_Name: Choice
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 360, y: 440}
+  ports:
+    keys:
+    - correspondingEvent
+    - unlockingEvents
+    - lockingEvents
+    - passingEvents
+    values:
+    - _fieldName: correspondingEvent
+      _node: {fileID: -2799038945508752388}
+      _typeQualifiedName: EventNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: eventChoices
+        node: {fileID: -4989236890089119801}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: unlockingEvents
+      _node: {fileID: -2799038945508752388}
+      _typeQualifiedName: EventNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: lockingEvents
+      _node: {fileID: -2799038945508752388}
+      _typeQualifiedName: EventNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: passingEvents
+      _node: {fileID: -2799038945508752388}
+      _typeQualifiedName: EventNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  correspondingEvent: {fileID: 0}
+  unlockingEvents: {fileID: 0}
+  lockingEvents: {fileID: 0}
+  passingEvents: {fileID: 0}
+  description: Propose to send a team of scientist to assist country X
+  choiceNodeConsequences:
+  - indicatorType: 1
+    valueType: 0
+    value: -1
+    duration: 0
 --- !u!114 &-2606820613033744273
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -84,7 +447,7 @@ MonoBehaviour:
   m_Name: Choice
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -776, y: 280}
+  position: {x: -968, y: 216}
   ports:
     keys:
     - correspondingEvent
@@ -117,10 +480,7 @@ MonoBehaviour:
       _node: {fileID: -2606820613033744273}
       _typeQualifiedName: EventNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
-      connections:
-      - fieldName: lockingChoices
-        node: {fileID: 9089561121803420581}
-        reroutePoints: []
+      connections: []
       _direction: 1
       _connectionType: 0
       _typeConstraint: 0
@@ -129,7 +489,10 @@ MonoBehaviour:
       _node: {fileID: -2606820613033744273}
       _typeQualifiedName: EventNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
-      connections: []
+      connections:
+      - fieldName: unlockingChoices
+        node: {fileID: -4989236890089119801}
+        reroutePoints: []
       _direction: 1
       _connectionType: 0
       _typeConstraint: 0
@@ -138,7 +501,7 @@ MonoBehaviour:
   unlockingEvents: {fileID: 0}
   lockingEvents: {fileID: 0}
   passingEvents: {fileID: 0}
-  description: Choice2
+  description: Let's wait and see how the situation evolves
   choiceNodeConsequences: []
 --- !u!114 &-418196963981226469
 MonoBehaviour:
@@ -153,7 +516,7 @@ MonoBehaviour:
   m_Name: Choice
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -72, y: -40}
+  position: {x: -392, y: -152}
   ports:
     keys:
     - correspondingEvent
@@ -207,7 +570,7 @@ MonoBehaviour:
   unlockingEvents: {fileID: 0}
   lockingEvents: {fileID: 0}
   passingEvents: {fileID: 0}
-  description: Choice 1
+  description: Call out on their actions internationaly
   choiceNodeConsequences: []
 --- !u!114 &-159379426874192965
 MonoBehaviour:
@@ -222,7 +585,7 @@ MonoBehaviour:
   m_Name: Choice
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -88, y: 280}
+  position: {x: -392, y: 40}
   ports:
     keys:
     - correspondingEvent
@@ -246,7 +609,10 @@ MonoBehaviour:
       _node: {fileID: -159379426874192965}
       _typeQualifiedName: EventNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
-      connections: []
+      connections:
+      - fieldName: unlockingChoices
+        node: {fileID: -4989236890089119801}
+        reroutePoints: []
       _direction: 1
       _connectionType: 0
       _typeConstraint: 0
@@ -264,10 +630,7 @@ MonoBehaviour:
       _node: {fileID: -159379426874192965}
       _typeQualifiedName: EventNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
-      connections:
-      - fieldName: passingChoices
-        node: {fileID: 2974876036813072751}
-        reroutePoints: []
+      connections: []
       _direction: 1
       _connectionType: 0
       _typeConstraint: 0
@@ -276,7 +639,7 @@ MonoBehaviour:
   unlockingEvents: {fileID: 0}
   lockingEvents: {fileID: 0}
   passingEvents: {fileID: 0}
-  description: Choice 2
+  description: Very well, we can't do anything about it
   choiceNodeConsequences: []
 --- !u!114 &11400000
 MonoBehaviour:
@@ -298,6 +661,12 @@ MonoBehaviour:
   - {fileID: -418196963981226469}
   - {fileID: -159379426874192965}
   - {fileID: 2974876036813072751}
+  - {fileID: -4989236890089119801}
+  - {fileID: -2799038945508752388}
+  - {fileID: -7873629218891756846}
+  - {fileID: -8921675130762359173}
+  - {fileID: 6353620514710455766}
+  - {fileID: -3042879296080936519}
 --- !u!114 &1835623876069977045
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -311,7 +680,7 @@ MonoBehaviour:
   m_Name: Choice
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -776, y: -56}
+  position: {x: -968, y: 40}
   ports:
     keys:
     - correspondingEvent
@@ -365,12 +734,8 @@ MonoBehaviour:
   unlockingEvents: {fileID: 0}
   lockingEvents: {fileID: 0}
   passingEvents: {fileID: 0}
-  description: Choice1
-  choiceNodeConsequences:
-  - indicatorType: 0
-    valueType: 0
-    value: 50
-    duration: 2
+  description: Ask specialists to cover the case
+  choiceNodeConsequences: []
 --- !u!114 &2974876036813072751
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -384,7 +749,7 @@ MonoBehaviour:
   m_Name: Event
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 280, y: 120}
+  position: {x: -8, y: -136}
   ports:
     keys:
     - unlockingChoices
@@ -417,10 +782,7 @@ MonoBehaviour:
       _node: {fileID: 2974876036813072751}
       _typeQualifiedName: ChoiceNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
-      connections:
-      - fieldName: passingEvents
-        node: {fileID: -159379426874192965}
-        reroutePoints: []
+      connections: []
       _direction: 0
       _connectionType: 0
       _typeConstraint: 0
@@ -440,8 +802,75 @@ MonoBehaviour:
   eventChoices: {fileID: 0}
   title: Event3
   description: 
-  uid: 3
+  uid: 4
   status: 1
+--- !u!114 &6353620514710455766
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78d86ceab28114ca481a4504b2f3e3a3, type: 3}
+  m_Name: Choice
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 360, y: 648}
+  ports:
+    keys:
+    - correspondingEvent
+    - unlockingEvents
+    - lockingEvents
+    - passingEvents
+    values:
+    - _fieldName: correspondingEvent
+      _node: {fileID: 6353620514710455766}
+      _typeQualifiedName: EventNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: eventChoices
+        node: {fileID: -4989236890089119801}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: unlockingEvents
+      _node: {fileID: 6353620514710455766}
+      _typeQualifiedName: EventNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: lockingEvents
+      _node: {fileID: 6353620514710455766}
+      _typeQualifiedName: EventNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: passingEvents
+      _node: {fileID: 6353620514710455766}
+      _typeQualifiedName: EventNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  correspondingEvent: {fileID: 0}
+  unlockingEvents: {fileID: 0}
+  lockingEvents: {fileID: 0}
+  passingEvents: {fileID: 0}
+  description: It's fine, the virus won't be able to reach our country, we're just
+    too far away
+  choiceNodeConsequences: []
 --- !u!114 &9089561121803420581
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -455,7 +884,7 @@ MonoBehaviour:
   m_Name: Event
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -440, y: 136}
+  position: {x: -712, y: -72}
   ports:
     keys:
     - unlockingChoices
@@ -486,6 +915,9 @@ MonoBehaviour:
       - fieldName: correspondingEvent
         node: {fileID: -159379426874192965}
         reroutePoints: []
+      - fieldName: correspondingEvent
+        node: {fileID: -8921675130762359173}
+        reroutePoints: []
       _direction: 1
       _connectionType: 0
       _typeConstraint: 0
@@ -494,10 +926,7 @@ MonoBehaviour:
       _node: {fileID: 9089561121803420581}
       _typeQualifiedName: ChoiceNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
-      connections:
-      - fieldName: lockingEvents
-        node: {fileID: -2606820613033744273}
-        reroutePoints: []
+      connections: []
       _direction: 0
       _connectionType: 0
       _typeConstraint: 0
@@ -515,7 +944,8 @@ MonoBehaviour:
   lockingChoices: {fileID: 0}
   passingChoices: {fileID: 0}
   eventChoices: {fileID: 0}
-  title: Event2
-  description: Breaker est un noob ?
+  title: Rumor-mongering
+  description: Country X has been severely warning doctors from spreading information
+    about the virus, this is discouraging our specialists to dig for informations
   uid: 2
   status: 0
