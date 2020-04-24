@@ -60,10 +60,14 @@ public class Choice: MonoBehaviour
 
         // Lock/unlock other events
         foreach(var eventId in lockedEvents) {
-            ResourceManager.resourceManager.eventsMap[eventId].GetComponent<Event>().status = Event.Status.LOCKED;
+            if(ResourceManager.resourceManager.eventsMap[eventId].GetComponent<Event>().status != Event.Status.PASSED){
+                ResourceManager.resourceManager.eventsMap[eventId].GetComponent<Event>().status = Event.Status.LOCKED;
+            }
         }
         foreach(var eventId in unlockedEvents) {
-            ResourceManager.resourceManager.eventsMap[eventId].GetComponent<Event>().status = Event.Status.UNLOCKED;
+            if(ResourceManager.resourceManager.eventsMap[eventId].GetComponent<Event>().status != Event.Status.PASSED){
+                ResourceManager.resourceManager.eventsMap[eventId].GetComponent<Event>().status = Event.Status.UNLOCKED;
+            }
         }
         foreach(var eventId in passedEvents) {
             ResourceManager.resourceManager.eventsMap[eventId].GetComponent<Event>().status = Event.Status.PASSED;
