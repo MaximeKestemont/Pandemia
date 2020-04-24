@@ -111,7 +111,7 @@ public class GameDataGenerator: MonoBehaviour
         );
 
         // EventList
-        Debug.Log(event1.transform.position);
+        
         this.events = new Dictionary<int, GameObject>{
             {event1.GetComponent<Event>().uid, event1}, 
             {event2.GetComponent<Event>().uid, event2},

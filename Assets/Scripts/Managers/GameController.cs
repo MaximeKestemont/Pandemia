@@ -7,6 +7,7 @@ public class GameController : MonoBehaviour
 {
     public ResourceManager resourceManager;
     public GameDataGenerator gameDataGenerator;
+    public GraphLoader graphLoader;
     public int currentEventId;
     private GameObject currentEvent;
 
@@ -17,12 +18,13 @@ public class GameController : MonoBehaviour
 
         Debug.Log ("Initializing game data and storing them in resource manager...");
         // Init events
-        resourceManager.eventsMap = gameDataGenerator.events;;
+        resourceManager.eventsMap = graphLoader.gameEvents;//gameDataGenerator.events;;
         
         // Activate first event
         currentEventId = 1;
         currentEvent = resourceManager.eventsMap[currentEventId];
         currentEvent.SetActive(true);
+        Debug.Log($"Current event: {currentEventId}");
 
     }
 
@@ -42,7 +44,6 @@ public class GameController : MonoBehaviour
         currentEvent.GetComponent<Event>().status = Event.Status.PASSED;
         currentEvent.SetActive(false);
 
-
         // Candidate ids for next event = all "UNLOCKED" events
         List<int> filteredIds = resourceManager.eventsMap
             .Where(x => x.Value.GetComponent<Event>().status == Event.Status.UNLOCKED)
@@ -53,7 +54,7 @@ public class GameController : MonoBehaviour
         if (filteredIds.Count > 0) {
             var randomIndex = Random.Range(0, filteredIds.Count); 
             currentEventId = filteredIds[randomIndex];
-            Debug.Log($"New event: {currentEventId}");
+            Debug.Log($"Current event: {currentEventId}");
             currentEvent = resourceManager.eventsMap[currentEventId];
             currentEvent.SetActive(true);
         } else {

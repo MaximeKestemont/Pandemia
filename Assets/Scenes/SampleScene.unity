@@ -897,7 +897,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   resourceManager: {fileID: 1895411078}
   gameDataGenerator: {fileID: 2076418270}
-  currentEventIndex: 0
+  graphLoader: {fileID: 2076418272}
+  currentEventId: 0
 --- !u!224 &1161579318 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1840937659899806921, guid: fa7d02b799c0f4802925bf43b7713f09,
@@ -1284,7 +1285,6 @@ MonoBehaviour:
     type: 3}
   choicePrefab: {fileID: 1506054925664981898, guid: 9c683a5a703144088bb2b7a6231e3e96,
     type: 3}
-  eventsList: []
   health: {fileID: 1255262514}
   economy: {fileID: 871589307}
   propagationSpeed: {fileID: 513533188}
@@ -1512,6 +1512,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2076418271}
   - component: {fileID: 2076418270}
+  - component: {fileID: 2076418272}
   m_Layer: 0
   m_Name: GameDataGenerator
   m_TagString: Untagged
@@ -1546,6 +1547,20 @@ Transform:
   m_Father: {fileID: 1711023281}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2076418272
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2076418269}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e6995af790b64baba454c050ffd7acd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  resourceManager: {fileID: 1895411078}
+  eventObjects: []
 --- !u!114 &2077709658 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1840937659899806920, guid: fa7d02b799c0f4802925bf43b7713f09,
