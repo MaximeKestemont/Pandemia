@@ -67,7 +67,7 @@ MonoBehaviour:
   unlockingEvents: {fileID: 0}
   lockingEvents: {fileID: 0}
   passingEvents: {fileID: 0}
-  description: send spies to retrieve informations anyway
+  description: send spies to retrieve informations near the infection's epicenter.
   choiceNodeConsequences:
   - indicatorType: 1
     valueType: 0
@@ -182,7 +182,10 @@ MonoBehaviour:
       _node: {fileID: -7873629218891756846}
       _typeQualifiedName: EventNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
-      connections: []
+      connections:
+      - fieldName: unlockingChoices
+        node: {fileID: -7694240807611325573}
+        reroutePoints: []
       _direction: 1
       _connectionType: 0
       _typeConstraint: 0
@@ -215,6 +218,78 @@ MonoBehaviour:
     valueType: 0
     value: -2
     duration: 0
+--- !u!114 &-7694240807611325573
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e77689f02e2134294bbdf1163ebfa777, type: 3}
+  m_Name: Event
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 760, y: 184}
+  ports:
+    keys:
+    - unlockingChoices
+    - lockingChoices
+    - passingChoices
+    - eventChoices
+    values:
+    - _fieldName: unlockingChoices
+      _node: {fileID: -7694240807611325573}
+      _typeQualifiedName: ChoiceNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: unlockingEvents
+        node: {fileID: 6353620514710455766}
+        reroutePoints: []
+      - fieldName: unlockingEvents
+        node: {fileID: -7873629218891756846}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: lockingChoices
+      _node: {fileID: -7694240807611325573}
+      _typeQualifiedName: ChoiceNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: passingChoices
+      _node: {fileID: -7694240807611325573}
+      _typeQualifiedName: ChoiceNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: eventChoices
+      _node: {fileID: -7694240807611325573}
+      _typeQualifiedName: ChoiceNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  unlockingChoices: {fileID: 0}
+  lockingChoices: {fileID: 0}
+  passingChoices: {fileID: 0}
+  eventChoices: {fileID: 0}
+  title: Neighbors contamination
+  description: Country Y which has a border with us declared that the virus has contaminated
+    some of his civilians
+  uid: 6
+  status: 1
 --- !u!114 &-4989236890089119801
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -296,6 +371,76 @@ MonoBehaviour:
     the virus, this is discouraging our specialists to dig for informations
   uid: 3
   status: 0
+--- !u!114 &-3232855861693150234
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78d86ceab28114ca481a4504b2f3e3a3, type: 3}
+  m_Name: Choice
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 312, y: -648}
+  ports:
+    keys:
+    - correspondingEvent
+    - unlockingEvents
+    - lockingEvents
+    - passingEvents
+    values:
+    - _fieldName: correspondingEvent
+      _node: {fileID: -3232855861693150234}
+      _typeQualifiedName: EventNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: eventChoices
+        node: {fileID: -3042879296080936519}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: unlockingEvents
+      _node: {fileID: -3232855861693150234}
+      _typeQualifiedName: EventNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: lockingEvents
+      _node: {fileID: -3232855861693150234}
+      _typeQualifiedName: EventNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: passingEvents
+      _node: {fileID: -3232855861693150234}
+      _typeQualifiedName: EventNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  correspondingEvent: {fileID: 0}
+  unlockingEvents: {fileID: 0}
+  lockingEvents: {fileID: 0}
+  passingEvents: {fileID: 0}
+  description: The city markets
+  choiceNodeConsequences:
+  - indicatorType: 1
+    valueType: 0
+    value: -1
+    duration: 0
 --- !u!114 &-3042879296080936519
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -351,7 +496,16 @@ MonoBehaviour:
       _node: {fileID: -3042879296080936519}
       _typeQualifiedName: ChoiceNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
-      connections: []
+      connections:
+      - fieldName: correspondingEvent
+        node: {fileID: -3232855861693150234}
+        reroutePoints: []
+      - fieldName: correspondingEvent
+        node: {fileID: 2262510063017414057}
+        reroutePoints: []
+      - fieldName: correspondingEvent
+        node: {fileID: 3040428922536879968}
+        reroutePoints: []
       _direction: 1
       _connectionType: 0
       _typeConstraint: 0
@@ -360,8 +514,9 @@ MonoBehaviour:
   lockingChoices: {fileID: 0}
   passingChoices: {fileID: 0}
   eventChoices: {fileID: 0}
-  title: Event3
-  description: 
+  title: Spies ready
+  description: your spies arrived and are ready to start their mission, where should
+    they start?Propose to send a team of scientist to assist country X
   uid: 5
   status: 1
 --- !u!114 &-2799038945508752388
@@ -377,7 +532,7 @@ MonoBehaviour:
   m_Name: Choice
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 360, y: 440}
+  position: {x: 360, y: 648}
   ports:
     keys:
     - correspondingEvent
@@ -667,6 +822,79 @@ MonoBehaviour:
   - {fileID: -8921675130762359173}
   - {fileID: 6353620514710455766}
   - {fileID: -3042879296080936519}
+  - {fileID: -3232855861693150234}
+  - {fileID: 3040428922536879968}
+  - {fileID: 2262510063017414057}
+  - {fileID: 971881845485741094}
+  - {fileID: -7694240807611325573}
+--- !u!114 &971881845485741094
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e77689f02e2134294bbdf1163ebfa777, type: 3}
+  m_Name: Event
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 696, y: -888}
+  ports:
+    keys:
+    - unlockingChoices
+    - lockingChoices
+    - passingChoices
+    - eventChoices
+    values:
+    - _fieldName: unlockingChoices
+      _node: {fileID: 971881845485741094}
+      _typeQualifiedName: ChoiceNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: unlockingEvents
+        node: {fileID: 2262510063017414057}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: lockingChoices
+      _node: {fileID: 971881845485741094}
+      _typeQualifiedName: ChoiceNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: passingChoices
+      _node: {fileID: 971881845485741094}
+      _typeQualifiedName: ChoiceNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: eventChoices
+      _node: {fileID: 971881845485741094}
+      _typeQualifiedName: ChoiceNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  unlockingChoices: {fileID: 0}
+  lockingChoices: {fileID: 0}
+  passingChoices: {fileID: 0}
+  eventChoices: {fileID: 0}
+  title: Diplomatic incident
+  description: The building is under very high surveillance and your spies got caught
+  uid: 7
+  status: 1
 --- !u!114 &1835623876069977045
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -736,6 +964,79 @@ MonoBehaviour:
   passingEvents: {fileID: 0}
   description: Ask specialists to cover the case
   choiceNodeConsequences: []
+--- !u!114 &2262510063017414057
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78d86ceab28114ca481a4504b2f3e3a3, type: 3}
+  m_Name: Choice
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 312, y: -824}
+  ports:
+    keys:
+    - correspondingEvent
+    - unlockingEvents
+    - lockingEvents
+    - passingEvents
+    values:
+    - _fieldName: correspondingEvent
+      _node: {fileID: 2262510063017414057}
+      _typeQualifiedName: EventNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: eventChoices
+        node: {fileID: -3042879296080936519}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: unlockingEvents
+      _node: {fileID: 2262510063017414057}
+      _typeQualifiedName: EventNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: unlockingChoices
+        node: {fileID: 971881845485741094}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: lockingEvents
+      _node: {fileID: 2262510063017414057}
+      _typeQualifiedName: EventNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: passingEvents
+      _node: {fileID: 2262510063017414057}
+      _typeQualifiedName: EventNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  correspondingEvent: {fileID: 0}
+  unlockingEvents: {fileID: 0}
+  lockingEvents: {fileID: 0}
+  passingEvents: {fileID: 0}
+  description: The biological secret laboratory close to  the  city
+  choiceNodeConsequences:
+  - indicatorType: 1
+    valueType: 0
+    value: -1
+    duration: 0
 --- !u!114 &2974876036813072751
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -804,6 +1105,76 @@ MonoBehaviour:
   description: 
   uid: 4
   status: 1
+--- !u!114 &3040428922536879968
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78d86ceab28114ca481a4504b2f3e3a3, type: 3}
+  m_Name: Choice
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 312, y: -456}
+  ports:
+    keys:
+    - correspondingEvent
+    - unlockingEvents
+    - lockingEvents
+    - passingEvents
+    values:
+    - _fieldName: correspondingEvent
+      _node: {fileID: 3040428922536879968}
+      _typeQualifiedName: EventNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: eventChoices
+        node: {fileID: -3042879296080936519}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: unlockingEvents
+      _node: {fileID: 3040428922536879968}
+      _typeQualifiedName: EventNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: lockingEvents
+      _node: {fileID: 3040428922536879968}
+      _typeQualifiedName: EventNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: passingEvents
+      _node: {fileID: 3040428922536879968}
+      _typeQualifiedName: EventNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  correspondingEvent: {fileID: 0}
+  unlockingEvents: {fileID: 0}
+  lockingEvents: {fileID: 0}
+  passingEvents: {fileID: 0}
+  description: The city hospital
+  choiceNodeConsequences:
+  - indicatorType: 1
+    valueType: 0
+    value: -1
+    duration: 0
 --- !u!114 &6353620514710455766
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -817,7 +1188,7 @@ MonoBehaviour:
   m_Name: Choice
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 360, y: 648}
+  position: {x: 360, y: 440}
   ports:
     keys:
     - correspondingEvent
@@ -841,7 +1212,10 @@ MonoBehaviour:
       _node: {fileID: 6353620514710455766}
       _typeQualifiedName: EventNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
-      connections: []
+      connections:
+      - fieldName: unlockingChoices
+        node: {fileID: -7694240807611325573}
+        reroutePoints: []
       _direction: 1
       _connectionType: 0
       _typeConstraint: 0
