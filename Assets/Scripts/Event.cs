@@ -11,6 +11,7 @@ public class Event : MonoBehaviour
     public string title;
     public string description;
     public Text textTitle;
+    public Text textDescription;
     public Image eventImage;
 
     public GameObject choices;
@@ -18,7 +19,8 @@ public class Event : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        textTitle.GetComponent<Text>().text = title;
+        textTitle.GetComponent<Text>().text = this.title;
+        textDescription.GetComponent<Text>().text = this.description;
     }
 
     // Update is called once per frame
