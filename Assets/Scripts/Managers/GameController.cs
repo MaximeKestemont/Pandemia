@@ -1,6 +1,7 @@
-﻿using System.Collections;
+﻿using UnityEngine;
+using UnityEngine.SceneManagement;
+using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
 using System.Linq;
 
 public class GameController : MonoBehaviour
@@ -14,6 +15,7 @@ public class GameController : MonoBehaviour
     public void StartGame()
     {
         Debug.Log ("Starting the game...");
+        resourceManager.gameOverPanel.SetActive(false);
         resourceManager.menuPanel.SetActive(false);
 
         Debug.Log ("Initializing game data and storing them in resource manager...");
@@ -39,7 +41,7 @@ public class GameController : MonoBehaviour
         foreach (var IndicatorBar in resourceManager.indicators) {
             IndicatorBar.UpdateIndicator();
         }
-
+        
         Debug.Log("Moving to next event...");
         currentEvent.GetComponent<Event>().status = Event.Status.PASSED;
         currentEvent.SetActive(false);
@@ -65,6 +67,12 @@ public class GameController : MonoBehaviour
 
     public void FinishGame() {
         Debug.Log("No more event. Game finished.");
+        resourceManager.gameOverPanel.SetActive(true);
+        Debug.Log("Game Over panel activated.");
+    }
+
+    public void Restart() {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
     
 }

@@ -11,6 +11,7 @@ public class ResourceManager : MonoBehaviour {
 
     // --- UI objects ---
     public GameObject menuPanel;
+    public GameObject gameOverPanel;
 
     // --- Prefab ---
     public GameObject eventPrefab;
