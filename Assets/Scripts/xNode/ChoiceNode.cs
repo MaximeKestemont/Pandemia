@@ -29,7 +29,10 @@ public class ChoiceNode : Node {
         ECONOMY,
         POP_SATISFACTION,
         INFECTED_NUMBER,
-        PROPAGATION_SPEED
+        PROPAGATION_SPEED,
+        POPULATION,
+        DEATH,
+        IMMUNED
     }
 
     [Serializable]

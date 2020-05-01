@@ -27,13 +27,25 @@ public class ResourceManager : MonoBehaviour {
     public IndicatorBar propagationSpeed;
     public IndicatorBar populationSatisfaction;
     public IndicatorBar infectedNumber;
+    public IndicatorBar population;
+    public IndicatorBar death;
+    public IndicatorBar immuned;
 
     public List<IndicatorBar> indicators;
 
     void Start() {
         resourceManager = this;
 
-        this.indicators = new List<IndicatorBar>{health, economy, propagationSpeed, populationSatisfaction, infectedNumber};
+        this.indicators = new List<IndicatorBar>{
+            health, 
+            economy, 
+            propagationSpeed, 
+            populationSatisfaction, 
+            infectedNumber,
+            population,
+            death,
+            immuned
+        };
     }
 
     /*
@@ -55,6 +67,12 @@ public class ResourceManager : MonoBehaviour {
                 return populationSatisfaction;
             case ChoiceNode.IndicatorType.PROPAGATION_SPEED:
                 return propagationSpeed;
+            case ChoiceNode.IndicatorType.POPULATION:
+                return population;
+            case ChoiceNode.IndicatorType.DEATH:
+                return death;
+            case ChoiceNode.IndicatorType.IMMUNED:
+                return immuned;
             default:
                 Debug.LogError("IndicatorType in xNode editor not supported yet!");
                 return null;

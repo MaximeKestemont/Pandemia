@@ -50,7 +50,7 @@ public class IndicatorBar : MonoBehaviour {
 		bonusAndMalus.Add(valueOverTime);
 	}
 
-	public void UpdateIndicator() {
+	protected void ApplyBonusMalus() {
 		// Need this filtered list as we may remove some bonus/malus
 		List<ValueOverTime> updatedBonusMalus = new List<ValueOverTime>();
 
@@ -65,15 +65,29 @@ public class IndicatorBar : MonoBehaviour {
 
 		// Update the bonusMalus list with the filtered one
 		this.bonusAndMalus = updatedBonusMalus;
+	}
 
-		// Check if the value went outside its range
-		if (fillingLevel < MIN_VALUE) {
-			Debug.Log ($"Indicator {indicatorName} is too low !");
-		}
+	/*
+	=====================
+	UpdateIndicator
+	=====================
+	Update all indicator bars:
+	1. Apply bonus/malus for each indicator bar
+	2. Update each indicator bar based on its own formula
+	*/
+	public static void UpdateIndicator(ResourceManager resourceManager) {
+        foreach (var IndicatorBar in resourceManager.indicators) {
+			IndicatorBar.ApplyBonusMalus();
+        }
 
-		if (fillingLevel > MAX_VALUE) {
-			Debug.Log ($"Indicator {indicatorName} is too high !");
-		}
+		
+		
+		
+
+
+
+		//     For the second part, the formula is the following one: 
+    	//INFECTED_NUMBER(t + 1) = INFECTED_NUMBER(t) + (TOTAL_POP - IMMUNE_POP) * PROP_SPEED * CONTAGION - NEW_IMMUNE
 	}
 
 	
