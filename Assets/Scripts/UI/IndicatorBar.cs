@@ -20,8 +20,8 @@ public class IndicatorBar : MonoBehaviour {
 	public List<ValueOverTime> bonusAndMalus = new List<ValueOverTime>();
 	
 	private RectTransform borderRect;
-	private const int MIN_VALUE = 0;
-	private const int MAX_VALUE = 100;
+	public int MIN_VALUE = 0;
+	public int MAX_VALUE = 100;
 	
 	void Start () {
 		borderRect = border.GetComponent<RectTransform> ();
@@ -75,20 +75,52 @@ public class IndicatorBar : MonoBehaviour {
 	1. Apply bonus/malus for each indicator bar
 	2. Update each indicator bar based on its own formula
 	*/
-	public static void UpdateIndicator(ResourceManager resourceManager) {
-        foreach (var IndicatorBar in resourceManager.indicators) {
+	public static void UpdateIndicator(ResourceManager resourceManager, Virus virus) {
+        
+		// --- Apply bonus malus for each indicators ---
+		foreach (var IndicatorBar in resourceManager.indicators) {
 			IndicatorBar.ApplyBonusMalus();
         }
 
-		
-		
-		
+		// Values needed to compute the future values of indicators
+		int currentInfected = resourceManager.infectedNumber.fillingLevel;
+		int currentHealth = resourceManager.health.fillingLevel;
+		int currentEco = resourceManager.economy.fillingLevel;
+		int propagation_speed = resourceManager.propagationSpeed.fillingLevel;
+		int population = resourceManager.population.fillingLevel;
+		int cured = resourceManager.cured.fillingLevel;
 
+		int maxHealth = resourceManager.health.MAX_VALUE;
 
+		// New death = nb_infected * ( (100 - health) / 100 ) * ( 1 / healingTime)
+		// Second term represents the healing (mis)ability, last term the average healing/death time
+		int newDeath = (int)(currentInfected * (maxHealth - currentHealth) / 100f / virus.healingTime);
+		Debug.Log(currentInfected);
+		Debug.Log((maxHealth - currentHealth) / 100f / virus.healingTime);
+		Debug.Log($"{newDeath} people died this turn !");
 
-		//     For the second part, the formula is the following one: 
-    	//INFECTED_NUMBER(t + 1) = INFECTED_NUMBER(t) + (TOTAL_POP - IMMUNE_POP) * PROP_SPEED * CONTAGION - NEW_IMMUNE
+		int newCured = (int)(currentInfected * (currentHealth) / 100f / virus.healingTime);
+		Debug.Log($"{newCured} people were healed this turn !");
+		
+		// New infected = old_infected + old_infected * propagation_speed * (pop - cured) * (contagion_prob / 100)
+		// Second term represents the fact that infected people are contaminating new people, and that once cured,
+		// you cannot be infected again
+		int newInfected = (int)(currentInfected + currentInfected * propagation_speed / 100 * (population - cured) * virus.contagionProb / 100f);
+		Debug.Log($"{newInfected} people were infected this turn !");
+
+		// New eco = old_eco * (pop - death - new_infected) / pop
+		// Should reflect that part of the population is dead/sick and thus cannot contribute to the economy
+		int newEco = (int)(currentEco * (population - newDeath) / population);
+		Debug.Log($"New economy is {newEco}, it was {currentEco} before.");
+
+		// Update indicators
+		resourceManager.death.fillingLevel += newDeath;
+		resourceManager.population.fillingLevel -= newDeath;
+		resourceManager.cured.fillingLevel += newCured;
+		resourceManager.infectedNumber.fillingLevel = currentInfected + newInfected - newCured - newDeath;
+		resourceManager.economy.fillingLevel = newEco; // overwriten on purpose
+
+		Debug.Log($"{resourceManager.infectedNumber.fillingLevel} infected people, from {currentInfected}");
 	}
 
-	
 }

@@ -32,7 +32,7 @@ public class ChoiceNode : Node {
         PROPAGATION_SPEED,
         POPULATION,
         DEATH,
-        IMMUNED
+        CURED
     }
 
     [Serializable]

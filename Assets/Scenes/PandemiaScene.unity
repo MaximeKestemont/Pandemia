@@ -742,6 +742,7 @@ RectTransform:
   - {fileID: 621006815}
   - {fileID: 1302193030}
   - {fileID: 1887515218}
+  - {fileID: 1205871682}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1068,6 +1069,16 @@ PrefabInstance:
       propertyPath: color.b
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1840937659899806920, guid: fa7d02b799c0f4802925bf43b7713f09,
+        type: 3}
+      propertyPath: MAX_VALUE
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 1840937659899806920, guid: fa7d02b799c0f4802925bf43b7713f09,
+        type: 3}
+      propertyPath: fillingLevel
+      value: 750
+      objectReference: {fileID: 0}
     - target: {fileID: 1840937659899806921, guid: fa7d02b799c0f4802925bf43b7713f09,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1369,6 +1380,43 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 1840937658739314687}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1205871681
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1205871682}
+  m_Layer: 5
+  m_Name: Viruses
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1205871682
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1205871681}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1355499746}
+  - {fileID: 1480073311}
+  m_Father: {fileID: 303925214}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &1231896482 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1840937659899806921, guid: fa7d02b799c0f4802925bf43b7713f09,
@@ -1481,6 +1529,56 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1302193029}
   m_CullTransparentMesh: 0
+--- !u!1 &1355499745
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1355499746}
+  - component: {fileID: 1355499747}
+  m_Layer: 5
+  m_Name: VonCreed666
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1355499746
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1355499745}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1205871682}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1355499747
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1355499745}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b05583f8636124d47a5fdc29efcc12cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  contagionProb: 3
+  healingTime: 10
 --- !u!1 &1432216137
 GameObject:
   m_ObjectHideFlags: 0
@@ -1576,6 +1674,56 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7f95267deac945a3b3bc5a4248b22ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1480073310
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1480073311}
+  - component: {fileID: 1480073312}
+  m_Layer: 5
+  m_Name: Covid19
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1480073311
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1480073310}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1205871682}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1480073312
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1480073310}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b05583f8636124d47a5fdc29efcc12cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  contagionProb: 3
+  healingTime: 5
 --- !u!1 &1531697986
 GameObject:
   m_ObjectHideFlags: 0
@@ -1780,6 +1928,11 @@ PrefabInstance:
       propertyPath: fillingLevel
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1840937659899806920, guid: fa7d02b799c0f4802925bf43b7713f09,
+        type: 3}
+      propertyPath: indicatorName
+      value: Cured
+      objectReference: {fileID: 0}
     - target: {fileID: 1840937659899806921, guid: fa7d02b799c0f4802925bf43b7713f09,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1888,7 +2041,7 @@ PrefabInstance:
     - target: {fileID: 1840937659899806922, guid: fa7d02b799c0f4802925bf43b7713f09,
         type: 3}
       propertyPath: m_Name
-      value: Immuned
+      value: Cured
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fa7d02b799c0f4802925bf43b7713f09, type: 3}
@@ -2153,8 +2306,10 @@ MonoBehaviour:
   infectedNumber: {fileID: 2077709658}
   population: {fileID: 1231896483}
   death: {fileID: 1464938755}
-  immuned: {fileID: 264804474}
+  cured: {fileID: 264804474}
   indicators: []
+  vonCreed666: {fileID: 1355499747}
+  covid19: {fileID: 1480073312}
 --- !u!1 &1904234968
 GameObject:
   m_ObjectHideFlags: 0
@@ -2581,6 +2736,11 @@ PrefabInstance:
     - target: {fileID: 1840937659899806920, guid: fa7d02b799c0f4802925bf43b7713f09,
         type: 3}
       propertyPath: fillingLevel
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 1840937659899806920, guid: fa7d02b799c0f4802925bf43b7713f09,
+        type: 3}
+      propertyPath: MAX_VALUE
       value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 1840937659899806921, guid: fa7d02b799c0f4802925bf43b7713f09,

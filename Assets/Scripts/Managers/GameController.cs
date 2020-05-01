@@ -12,6 +12,8 @@ public class GameController : MonoBehaviour
     public int currentEventId;
     private GameObject currentEvent;
 
+    private Virus virus; // virus selected for the game
+
     public void StartGame()
     {
         Debug.Log ("Starting the game...");
@@ -20,7 +22,11 @@ public class GameController : MonoBehaviour
 
         Debug.Log ("Initializing game data and storing them in resource manager...");
         // Init events
-        resourceManager.eventsMap = graphLoader.gameEvents;//gameDataGenerator.events;;
+        resourceManager.eventsMap = graphLoader.gameEvents;
+        
+        // Chose a virus
+        this.virus = resourceManager.vonCreed666; // TODO should be randomized/selected by the player
+        Debug.Log ($"Virus {this.virus.name} has been selected for this game");
         
         // Activate first event
         currentEventId = 1;
@@ -38,9 +44,8 @@ public class GameController : MonoBehaviour
 
     public void NextEvent() {
         Debug.Log("Resolving the event...");
-        IndicatorBar.UpdateIndicator(resourceManager);
-
-        
+        IndicatorBar.UpdateIndicator(resourceManager, virus);
+    
         Debug.Log("Moving to next event...");
         currentEvent.GetComponent<Event>().status = Event.Status.PASSED;
         currentEvent.SetActive(false);
