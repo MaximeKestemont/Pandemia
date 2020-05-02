@@ -4,7 +4,7 @@ public abstract class ValueOverTime {
 	public abstract int value {get; set;}
 	public abstract int timeLeft {get; set;}
 
-    public abstract int ApplyValue(int indicatorValue);
+	public abstract int ApplyValue(int indicatorValue);
 }
 
 public class AbsoluteValueOverTime: ValueOverTime {
@@ -25,7 +25,7 @@ public class AbsoluteValueOverTime: ValueOverTime {
 }
 
 public class PercentageValueOverTime: ValueOverTime {
-    public override int value {get; set;}
+	public override int value {get; set;}
 	public override int timeLeft {get; set;}
 		
 	public PercentageValueOverTime(

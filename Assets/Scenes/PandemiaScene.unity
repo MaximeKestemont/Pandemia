@@ -1373,6 +1373,7 @@ MonoBehaviour:
   resourceManager: {fileID: 1895411078}
   gameDataGenerator: {fileID: 2076418270}
   graphLoader: {fileID: 2076418272}
+  gameOverPanel: {fileID: 1302193033}
   currentEventId: 0
 --- !u!224 &1161579318 stripped
 RectTransform:
@@ -1464,6 +1465,7 @@ GameObject:
   - component: {fileID: 1302193030}
   - component: {fileID: 1302193032}
   - component: {fileID: 1302193031}
+  - component: {fileID: 1302193033}
   m_Layer: 5
   m_Name: GameOver Panel
   m_TagString: Untagged
@@ -1529,6 +1531,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1302193029}
   m_CullTransparentMesh: 0
+--- !u!114 &1302193033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1302193029}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bdff02981a53b40c7a92ea73c20dcfd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  endingTitle: {fileID: 1760004868}
+  retryButton: {fileID: 430314578}
+  QuitButton: {fileID: 1918844020}
 --- !u!1 &1355499745
 GameObject:
   m_ObjectHideFlags: 0
@@ -2303,7 +2320,7 @@ MonoBehaviour:
   economy: {fileID: 871589307}
   propagationSpeed: {fileID: 513533188}
   populationSatisfaction: {fileID: 1034461213}
-  infectedNumber: {fileID: 2077709658}
+  infectedNumber: {fileID: 513533188}
   population: {fileID: 1231896483}
   death: {fileID: 1464938755}
   cured: {fileID: 264804474}
@@ -2698,18 +2715,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   resourceManager: {fileID: 1895411078}
   eventObjects: []
---- !u!114 &2077709658 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1840937659899806920, guid: fa7d02b799c0f4802925bf43b7713f09,
-    type: 3}
-  m_PrefabInstance: {fileID: 527798350}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f7f95267deac945a3b3bc5a4248b22ce, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!224 &2077709659 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1840937659899806921, guid: fa7d02b799c0f4802925bf43b7713f09,

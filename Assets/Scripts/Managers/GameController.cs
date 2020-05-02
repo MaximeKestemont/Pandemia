@@ -9,10 +9,16 @@ public class GameController : MonoBehaviour
     public ResourceManager resourceManager;
     public GameDataGenerator gameDataGenerator;
     public GraphLoader graphLoader;
+    
+    public GameOverPanel gameOverPanel;
+
     public int currentEventId;
     private GameObject currentEvent;
 
     private Virus virus; // virus selected for the game
+    private IndicatorBar indicatorBar;
+
+    private int eventCount = 0;
 
     public void StartGame()
     {
@@ -46,6 +52,12 @@ public class GameController : MonoBehaviour
         Debug.Log("Resolving the event...");
         IndicatorBar.UpdateIndicator(resourceManager, virus);
     
+        eventCount++;
+        if (resourceManager.infectedNumber.fillingLevel == resourceManager.infectedNumber.MAX_VALUE) {
+            FinishGame(false);
+        } else if ((resourceManager.infectedNumber.fillingLevel == resourceManager.infectedNumber.MIN_VALUE) && (eventCount != 0)) {
+            FinishGame(true);
+        }
         Debug.Log("Moving to next event...");
         currentEvent.GetComponent<Event>().status = Event.Status.PASSED;
         currentEvent.SetActive(false);
@@ -64,15 +76,19 @@ public class GameController : MonoBehaviour
             currentEvent = resourceManager.eventsMap[currentEventId];
             currentEvent.SetActive(true);
         } else {
-            FinishGame();
+            FinishGame(true);
         }
-        
     }
 
-    public void FinishGame() {
-        Debug.Log("No more event. Game finished.");
+    public void FinishGame(bool isWinner) {
+        if(isWinner) {
+            Debug.Log("No more event. Game finished.");
+            gameOverPanel.SetEndingScreen(true);
+        } else {
+            Debug.Log("Game Over panel activated.");
+            gameOverPanel.SetEndingScreen(true);
+        }
         resourceManager.gameOverPanel.SetActive(true);
-        Debug.Log("Game Over panel activated.");
     }
 
     public void Restart() {
