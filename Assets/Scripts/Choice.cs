@@ -73,8 +73,7 @@ public class Choice: MonoBehaviour
             ResourceManager.resourceManager.eventsMap[eventId].GetComponent<Event>().status = Event.Status.PASSED;
         }
 
-
-        ResourceManager.resourceManager.gameController.NextEvent();
+        ResourceManager.resourceManager.recapPanel.SetActive(true);
     }
 
 

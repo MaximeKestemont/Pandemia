@@ -25,6 +25,7 @@ public class GameController : MonoBehaviour
         Debug.Log ("Starting the game...");
         resourceManager.gameOverPanel.SetActive(false);
         resourceManager.menuPanel.SetActive(false);
+        resourceManager.recapPanel.SetActive(false);
 
         Debug.Log ("Initializing game data and storing them in resource manager...");
         // Init events
@@ -78,6 +79,11 @@ public class GameController : MonoBehaviour
         } else {
             FinishGame(true);
         }
+    }
+
+    public void CloseRecapPanel() {
+        resourceManager.recapPanel.SetActive(false);
+        NextEvent();
     }
 
     public void FinishGame(bool isWinner) {
