@@ -9,6 +9,7 @@ public class GameController : MonoBehaviour
     public ResourceManager resourceManager;
     public GameDataGenerator gameDataGenerator;
     public GraphLoader graphLoader;
+    public RecapPanel recapPanel;
     
     public GameOverPanel gameOverPanel;
 
@@ -52,6 +53,7 @@ public class GameController : MonoBehaviour
     public void NextEvent() {
         Debug.Log("Resolving the event...");
         IndicatorBar.UpdateIndicator(resourceManager, virus);
+        recapPanel.UpdateRecap();
     
         eventCount++;
         if (resourceManager.infectedNumber.fillingLevel == resourceManager.infectedNumber.MAX_VALUE) {

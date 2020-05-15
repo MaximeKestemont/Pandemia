@@ -20,11 +20,10 @@ public class RecapPanel : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        UpdateRecap();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void UpdateRecap()
     {
         deathText.GetComponent<Text>().text =  $"{resourceManager.newDeath} people died this turn!";
         curedText.GetComponent<Text>().text =  $"{resourceManager.newCured} people were healed this turn!";
@@ -34,5 +33,6 @@ public class RecapPanel : MonoBehaviour
         populationText.GetComponent<Text>().text =  $"Population is now: {resourceManager.population.fillingLevel}";
         healthText.GetComponent<Text>().text =  $"{resourceManager.infectedNumber.fillingLevel} infected people";
         propagationSpeedText.GetComponent<Text>().text =  $"The virus is spreading at a speed of {resourceManager.propagationSpeed.fillingLevel}";
+        populationSatisfactionText.GetComponent<Text>().text =  $"The population satisfaction is {resourceManager.populationSatisfaction.fillingLevel}";
     }
 }
