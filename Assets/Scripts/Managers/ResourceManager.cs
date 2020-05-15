@@ -37,6 +37,13 @@ public class ResourceManager : MonoBehaviour {
     // Viruses
     public Virus vonCreed666;
     public Virus covid19;
+
+    // NewStats
+    public int newDeath;
+    public int newCured;
+    public int newInfected;
+    public int newEco;
+    
     
 
     void Start() {

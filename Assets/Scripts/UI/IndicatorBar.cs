@@ -119,6 +119,10 @@ public class IndicatorBar : MonoBehaviour {
 		resourceManager.cured.fillingLevel += newCured;
 		resourceManager.infectedNumber.fillingLevel = currentInfected + newInfected - newCured - newDeath;
 		resourceManager.economy.fillingLevel = newEco; // overwriten on purpose
+		resourceManager.newDeath = newDeath;
+		resourceManager.newCured =newCured;
+		resourceManager.newEco = newEco;
+		resourceManager.newInfected = newInfected;
 
 		Debug.Log($"{resourceManager.infectedNumber.fillingLevel} infected people, from {currentInfected}");
 	}
