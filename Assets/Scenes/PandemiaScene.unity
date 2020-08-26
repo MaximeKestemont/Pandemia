@@ -1406,7 +1406,7 @@ PrefabInstance:
     - target: {fileID: 1840937659899806920, guid: fa7d02b799c0f4802925bf43b7713f09,
         type: 3}
       propertyPath: fillingLevel
-      value: 750
+      value: 75
       objectReference: {fileID: 0}
     - target: {fileID: 1840937659899806921, guid: fa7d02b799c0f4802925bf43b7713f09,
         type: 3}
@@ -1626,6 +1626,18 @@ MonoBehaviour:
   m_Spacing: {x: 1250, y: 75}
   m_Constraint: 2
   m_ConstraintCount: 2
+--- !u!114 &681380884 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1840937659899806920, guid: fa7d02b799c0f4802925bf43b7713f09,
+    type: 3}
+  m_PrefabInstance: {fileID: 527798350}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7f95267deac945a3b3bc5a4248b22ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &717031708
 GameObject:
   m_ObjectHideFlags: 0
@@ -3233,7 +3245,7 @@ MonoBehaviour:
   economy: {fileID: 871589307}
   propagationSpeed: {fileID: 513533188}
   populationSatisfaction: {fileID: 1034461213}
-  infectedNumber: {fileID: 513533188}
+  infectedNumber: {fileID: 681380884}
   population: {fileID: 1231896483}
   death: {fileID: 1464938755}
   cured: {fileID: 264804474}

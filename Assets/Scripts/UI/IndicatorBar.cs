@@ -33,7 +33,7 @@ public class IndicatorBar : MonoBehaviour {
 	void Update () {
 		// Update the bar rendering
 		filling.transform.localScale = new Vector3 (
-			fillingLevel / 100f * borderRect.localScale.x, 
+			(float) fillingLevel / (float) MAX_VALUE * borderRect.localScale.x, 
 			filling.transform.localScale.y, 
 			filling.transform.localScale.z
 		);
@@ -119,6 +119,7 @@ public class IndicatorBar : MonoBehaviour {
 		resourceManager.cured.fillingLevel += newCured;
 		resourceManager.infectedNumber.fillingLevel = currentInfected + newInfected - newCured - newDeath;
 		resourceManager.economy.fillingLevel = newEco; // overwriten on purpose
+
 		resourceManager.newDeath = newDeath;
 		resourceManager.newCured =newCured;
 		resourceManager.newEco = newEco;
