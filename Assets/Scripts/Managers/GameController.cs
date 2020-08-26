@@ -85,6 +85,7 @@ public class GameController : MonoBehaviour
 
     public void CloseRecapPanel() {
         resourceManager.recapPanel.SetActive(false);
+        Debug.Log("Close panel");
         NextEvent();
     }
 

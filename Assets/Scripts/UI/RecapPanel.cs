@@ -31,7 +31,6 @@ public class RecapPanel : MonoBehaviour
         economyText.GetComponent<Text>().text =  $"The economy is now: {resourceManager.newEco}";
         healthText.GetComponent<Text>().text =  $"{resourceManager.infectedNumber.fillingLevel} infected people";
         populationText.GetComponent<Text>().text =  $"Population is now: {resourceManager.population.fillingLevel}";
-        healthText.GetComponent<Text>().text =  $"{resourceManager.infectedNumber.fillingLevel} infected people";
         propagationSpeedText.GetComponent<Text>().text =  $"The virus is spreading at a speed of {resourceManager.propagationSpeed.fillingLevel}";
         populationSatisfactionText.GetComponent<Text>().text =  $"The population satisfaction is {resourceManager.populationSatisfaction.fillingLevel}";
     }
