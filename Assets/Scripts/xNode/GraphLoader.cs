@@ -81,6 +81,9 @@ public class GraphLoader: MonoBehaviour
         }
 
         gameEvents = eventObjects.ToDictionary(x => x.GetComponent<Event>().uid);
+
+        // Render the menu panel active so that the game can be started
+        resourceManager.menuPanel.SetActive(true);
     }
 
     // Update is called once per frame
