@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI; 
+using System;
 
 /*
 Indicator bar, handling the UI update.
@@ -102,10 +103,13 @@ public class IndicatorBar : MonoBehaviour {
 		int newCured = (int)(currentInfected * (currentHealth) / 100f / virus.healingTime);
 		Debug.Log($"{newCured} people were healed this turn !");
 		
-		// New infected = old_infected + old_infected * propagation_speed * (pop - cured) * (contagion_prob / 100)
+		// New infected = old_infected + old_infected * propagation_speed * (pop - cured) * (contagion_prob / 100) - newCured
 		// Second term represents the fact that infected people are contaminating new people, and that once cured,
 		// you cannot be infected again
-		int newInfected = (int)(currentInfected + currentInfected * propagation_speed / 100 * (population - cured) * virus.contagionProb / 100f);
+		int newInfected = (int)(currentInfected + currentInfected * propagation_speed / 100 * (population - cured) * virus.contagionProb / 100f - newCured);
+		
+		// ugly upper bound so that it does not grow too fast
+		newInfected = Math.Min(20, newInfected);
 		Debug.Log($"{newInfected} people were infected this turn !");
 
 		// New eco = old_eco * (pop - death - new_infected) / pop
@@ -121,7 +125,7 @@ public class IndicatorBar : MonoBehaviour {
 		resourceManager.economy.fillingLevel = newEco; // overwriten on purpose
 
 		resourceManager.newDeath = newDeath;
-		resourceManager.newCured =newCured;
+		resourceManager.newCured = newCured;
 		resourceManager.newEco = newEco;
 		resourceManager.newInfected = newInfected;
 
