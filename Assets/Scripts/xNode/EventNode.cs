@@ -10,6 +10,7 @@ public class EventNode : Node {
 	[Input] public ChoiceNode passingChoices;
 	[Output] public ChoiceNode eventChoices;
 
+	public string character;
 	public string title;
 	public string description;
 	public int uid;

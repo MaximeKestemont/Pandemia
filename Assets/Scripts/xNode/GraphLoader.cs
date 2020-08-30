@@ -27,6 +27,7 @@ public class GraphLoader: MonoBehaviour
             GameObject newEventObject = Instantiate(resourceManager.eventPrefab, GameObject.Find("Events").transform);
 
             Event newEvent = newEventObject.GetComponent<Event>();
+            newEvent.character = eventNode.character;
             newEvent.title = eventNode.title;
             newEvent.description = eventNode.description;
             newEvent.uid = eventNode.uid;

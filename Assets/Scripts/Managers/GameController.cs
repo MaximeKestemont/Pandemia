@@ -7,7 +7,6 @@ using System.Linq;
 public class GameController : MonoBehaviour
 {
     public ResourceManager resourceManager;
-    public GameDataGenerator gameDataGenerator;
     public GraphLoader graphLoader;
     public RecapPanel recapPanel;
     

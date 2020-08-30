@@ -140,6 +140,7 @@ MonoBehaviour:
   lockingChoices: {fileID: 0}
   passingChoices: {fileID: 0}
   eventChoices: {fileID: 0}
+  character: Researcher
   title: Virus Discovery
   description: Health authorities in country X, reported a cluster of viral pneumonia
     cases of unknown cause
@@ -285,6 +286,7 @@ MonoBehaviour:
   lockingChoices: {fileID: 0}
   passingChoices: {fileID: 0}
   eventChoices: {fileID: 0}
+  character: 
   title: Neighbors contamination
   description: Country Y which has a border with us declared that the virus has contaminated
     some of his civilians
@@ -436,6 +438,7 @@ MonoBehaviour:
   lockingChoices: {fileID: 0}
   passingChoices: {fileID: 0}
   eventChoices: {fileID: 0}
+  character: 
   title: Virus spreading
   description: Country X has been warning doctors from spreading information about
     the virus, this is discouraging our specialists to dig for informations
@@ -584,6 +587,7 @@ MonoBehaviour:
   lockingChoices: {fileID: 0}
   passingChoices: {fileID: 0}
   eventChoices: {fileID: 0}
+  character: 
   title: Spies ready
   description: your spies arrived and are ready to start their mission, where should
     they start?Propose to send a team of scientist to assist country X
@@ -967,6 +971,7 @@ MonoBehaviour:
   lockingChoices: {fileID: 0}
   passingChoices: {fileID: 0}
   eventChoices: {fileID: 0}
+  character: 
   title: Diplomatic incident
   description: The building is under very high surveillance and your spies got caught
   uid: 7
@@ -1180,6 +1185,7 @@ MonoBehaviour:
   lockingChoices: {fileID: 0}
   passingChoices: {fileID: 0}
   eventChoices: {fileID: 0}
+  character: 
   title: Event3
   description: 
   uid: 4
@@ -1464,6 +1470,7 @@ MonoBehaviour:
   lockingChoices: {fileID: 0}
   passingChoices: {fileID: 0}
   eventChoices: {fileID: 0}
+  character: 
   title: Rumor-mongering
   description: Country X has been severely warning doctors from spreading information
     about the virus, this is discouraging our specialists to dig for informations
