@@ -6,7 +6,9 @@ using System;
 
 [NodeTint("#34eb3d")]
 public class ChoiceNode : Node { 
-	[Input] public EventNode correspondingEvent;
+	[Input] public NPCDialogueNode correspondingDialogue;
+    [Output] public NPCDialogueNode followingDialogue;
+
     [Output] public EventNode unlockingEvents;
     [Output] public EventNode lockingEvents;
     [Output] public EventNode passingEvents;

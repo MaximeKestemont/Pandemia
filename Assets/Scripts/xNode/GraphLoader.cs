@@ -19,31 +19,87 @@ public class GraphLoader: MonoBehaviour
         // TODO change the string resource name here to load another event graph
         EventChoiceGraph graph = Resources.Load("TestGraph") as EventChoiceGraph;
 
+        var eventsParent = GameObject.Find("Events").transform;
+
         Debug.Log($"Nodes count: {graph.CountNodes()}");
 
         // Loop over events and create corresponding game objects
         List<EventNode> events = graph.GetEventNodes();
         foreach (var eventNode in events) {
-            GameObject newEventObject = Instantiate(resourceManager.eventPrefab, GameObject.Find("Events").transform);
+            GameObject newEventObject = Instantiate(resourceManager.eventPrefab, eventsParent);
 
             Event newEvent = newEventObject.GetComponent<Event>();
-            newEvent.character = eventNode.character;
             newEvent.title = eventNode.title;
             newEvent.description = eventNode.description;
             newEvent.uid = eventNode.uid;
             newEvent.status = eventNode.status;
+                        
+            newEventObject.SetActive(false);
+            eventObjects.Add(newEventObject);
+            Debug.Log($"Event {newEvent.uid} has been properly created");
+        }
 
-            // Create the choices as well
-            var connections = eventNode.GetOutputPort("eventChoices").GetConnections();
-            foreach (var connection in connections) {
-                ChoiceNode choiceNode = connection.node as ChoiceNode;
+        gameEvents = eventObjects.ToDictionary(x => x.GetComponent<Event>().uid);
+
+        // Loop over dialogues, create corresponding games objects, their choices objects and link dialogue to event
+        // We loop 2 times, as we first need to instantiate all dialogues before being able to link the choices to it,
+        // as a choice could be connected to a not yet identified dialogue
+        // Note: could be refactored with a recursive method + a stack of not yet accessed dialogue
+        Dictionary<int, GameObject> dialoguesDict = new Dictionary<int, GameObject>(); // needed to retrieve it later and link it to choices
+        List<NPCDialogueNode> dialogues = graph.GetDialogueNodes();
+        foreach(var dialogueNode in dialogues) {
+            GameObject newDialogueObject = Instantiate(resourceManager.dialoguePrefab);
+            newDialogueObject.SetActive(false);
+
+            // Fill the object variable
+            NPCDialogue newDialogue = newDialogueObject.GetComponent<NPCDialogue>();
+            newDialogue.character = dialogueNode.character;
+            newDialogue.dialogue = dialogueNode.dialogue;
+
+            // Link it to initial event (and activate only the first dialogue)
+            var eventConnections = dialogueNode.GetInputPort("initialEvent").GetConnections();
+            NPCDialogueNode previousDialogueNode = dialogueNode; 
+            bool isFirstDialogue = true;
+
+            while (eventConnections.Count() == 0) {
+                ChoiceNode previousChoice = previousDialogueNode.GetInputPort("incomingChoice").GetConnections()[0].node as ChoiceNode;
+                previousDialogueNode = previousChoice.GetInputPort("correspondingDialogue").GetConnections()[0].node as NPCDialogueNode;
+                eventConnections = previousDialogueNode.GetInputPort("initialEvent").GetConnections();
+                isFirstDialogue = false;
+            }
+
+            int initialEventId = (eventConnections[0].node as EventNode).uid;
+            Event initialEvent = gameEvents[initialEventId].GetComponent<Event>();
+            newDialogueObject.transform.SetParent(initialEvent.dialogueContainer.transform, false);
+            if (isFirstDialogue) newDialogueObject.SetActive(true);
+            
+            dialoguesDict.Add(dialogueNode.uid, newDialogueObject);
+        }
+
+        
+        foreach(var dialogueNode in dialogues) {
+            // Retrieve the already created dialogue from its uid
+            
+            NPCDialogue dialogueInstance = dialoguesDict[dialogueNode.uid].GetComponent<NPCDialogue>();
+
+            // Create choices associated to this dialogue
+            var choiceConnections = dialogueNode.GetOutputPort("outcomingChoices").GetConnections();
+            foreach (var choiceConnection in choiceConnections) {
+                ChoiceNode choiceNode = choiceConnection.node as ChoiceNode;
                 
                 GameObject newChoiceObject = Instantiate(resourceManager.choicePrefab);
-                newChoiceObject.transform.SetParent(newEvent.choices.transform, false);
+                newChoiceObject.transform.SetParent(dialogueInstance.choices.transform, false);
 
                 Choice newChoice = newChoiceObject.GetComponent<Choice>();
                 newChoice.title = choiceNode.description;
-                
+
+                // Add the following dialogue to the attribute of the newChoice instance
+                var followingDialogueConnections = choiceNode.GetOutputPort("followingDialogue").GetConnections();
+                foreach (var followingDialogueConnection in followingDialogueConnections) {
+                    NPCDialogueNode followingDialogueNode = followingDialogueConnection.node as NPCDialogueNode;
+                    newChoice.followingDialogue = dialoguesDict[followingDialogueNode.uid];
+                }
+
                 // Fill the unlock/lock event lists based on the Node output connections
                 var unlockingEventConnections = choiceNode.GetOutputPort("unlockingEvents").GetConnections();
                 foreach (var unlockingEventConnection in unlockingEventConnections) {
@@ -74,14 +130,8 @@ public class GraphLoader: MonoBehaviour
                     newChoice.choiceConsequences.Add(choiceConsequence);
                 }
                 
-            }
-
-            newEventObject.SetActive(false);
-            eventObjects.Add(newEventObject);
-            Debug.Log($"Event {newEvent.uid} has been properly created");
+            }      
         }
-
-        gameEvents = eventObjects.ToDictionary(x => x.GetComponent<Event>().uid);
 
         // Render the menu panel active so that the game can be started
         resourceManager.menuPanel.SetActive(true);

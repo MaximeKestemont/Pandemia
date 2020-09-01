@@ -8,7 +8,8 @@ public class EventNode : Node {
 	[Input] public ChoiceNode unlockingChoices;
 	[Input] public ChoiceNode lockingChoices;
 	[Input] public ChoiceNode passingChoices;
-	[Output] public ChoiceNode eventChoices;
+	
+	[Output] public NPCDialogueNode dialogue;
 
 	public string character;
 	public string title;

@@ -6,6 +6,7 @@ using XNode;
 [CreateAssetMenu]
 public class EventChoiceGraph : NodeGraph {
     public static int nextEventUid = 1;
+    public static int nextDialogueUid = 1;
 
     public int CountNodes() {
         return nodes.Count;
@@ -29,5 +30,15 @@ public class EventChoiceGraph : NodeGraph {
         }
       }
       return result;
+    }
+
+    public List<NPCDialogueNode> GetDialogueNodes() {
+      List<NPCDialogueNode> result = new List<NPCDialogueNode>();
+      foreach (var node in nodes) {
+        if (node is NPCDialogueNode) {
+          result.Add(node as NPCDialogueNode);
+        }
+      }
+      return result;      
     }
 }

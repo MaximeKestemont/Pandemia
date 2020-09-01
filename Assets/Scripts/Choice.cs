@@ -18,6 +18,8 @@ public class Choice: MonoBehaviour
     public List<int> lockedEvents = new List<int>();
     public List<int> passedEvents = new List<int>();
 
+    public GameObject followingDialogue = null; // next dialogue if this choice is chosen
+
     // Start is called before the first frame update
     void Start()
     {
@@ -73,7 +75,13 @@ public class Choice: MonoBehaviour
             ResourceManager.resourceManager.eventsMap[eventId].GetComponent<Event>().status = Event.Status.PASSED;
         }
 
-        ResourceManager.resourceManager.recapPanel.SetActive(true);
+        if (followingDialogue) {
+            this.GetComponentInParent<NPCDialogue>().gameObject.SetActive(false);
+            followingDialogue.SetActive(true);
+        } else {
+            // End of event --> go to recap panel
+            ResourceManager.resourceManager.recapPanel.SetActive(true);
+        }
     }
 
 

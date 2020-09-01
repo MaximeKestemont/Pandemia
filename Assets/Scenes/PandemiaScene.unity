@@ -1928,7 +1928,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   resourceManager: {fileID: 1895411078}
-  gameDataGenerator: {fileID: 2076418270}
   graphLoader: {fileID: 2076418272}
   recapPanel: {fileID: 391624195}
   gameOverPanel: {fileID: 1302193033}
@@ -3266,6 +3265,8 @@ MonoBehaviour:
     type: 3}
   choicePrefab: {fileID: 1506054925664981898, guid: 9c683a5a703144088bb2b7a6231e3e96,
     type: 3}
+  dialoguePrefab: {fileID: 1587925661265913251, guid: 78b05826061484d6e8a5b3fe2227dc7e,
+    type: 3}
   health: {fileID: 1255262514}
   economy: {fileID: 871589307}
   propagationSpeed: {fileID: 513533188}
@@ -3717,7 +3718,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0c19bc25df284ea8b20e79e19dd3bc1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  resourceManager: {fileID: 1895411078}
 --- !u!4 &2076418271
 Transform:
   m_ObjectHideFlags: 0

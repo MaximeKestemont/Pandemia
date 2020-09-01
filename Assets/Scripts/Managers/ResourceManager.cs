@@ -17,6 +17,7 @@ public class ResourceManager : MonoBehaviour {
     // --- Prefab ---
     public GameObject eventPrefab;
     public GameObject choicePrefab;
+    public GameObject dialoguePrefab;
 
     // --- GameObjects ---
     // Events
