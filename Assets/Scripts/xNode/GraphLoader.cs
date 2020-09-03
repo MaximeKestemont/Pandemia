@@ -30,7 +30,6 @@ public class GraphLoader: MonoBehaviour
 
             Event newEvent = newEventObject.GetComponent<Event>();
             newEvent.title = eventNode.title;
-            newEvent.description = eventNode.description;
             newEvent.uid = eventNode.uid;
             newEvent.status = eventNode.status;
                         
@@ -53,7 +52,7 @@ public class GraphLoader: MonoBehaviour
 
             // Fill the object variable
             NPCDialogue newDialogue = newDialogueObject.GetComponent<NPCDialogue>();
-            newDialogue.character = dialogueNode.character;
+            newDialogue.character = resourceManager.charactersMap[dialogueNode.character];
             newDialogue.dialogue = dialogueNode.dialogue;
 
             // Link it to initial event (and activate only the first dialogue)

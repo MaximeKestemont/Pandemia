@@ -22,6 +22,10 @@ public class ResourceManager : MonoBehaviour {
     // --- GameObjects ---
     // Events
     public Dictionary<int, GameObject> eventsMap;
+
+    // Characters (name -> object)
+    public GameObject characters;
+    public Dictionary<Character.CharacterName, Character> charactersMap = new Dictionary<Character.CharacterName, Character>();
     
     // Indicators
     public IndicatorBar health;
@@ -49,6 +53,11 @@ public class ResourceManager : MonoBehaviour {
 
     void Start() {
         resourceManager = this;
+
+        // Fill characters dict
+        foreach(Character character in this.characters.GetComponentsInChildren<Character>()) {
+            charactersMap.Add(character.name, character);
+        }
 
         this.indicators = new List<IndicatorBar>{
             health, 

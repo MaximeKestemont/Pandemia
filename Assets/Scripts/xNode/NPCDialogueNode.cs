@@ -9,7 +9,7 @@ public class NPCDialogueNode : Node {
 	[Input] public ChoiceNode incomingChoice;
 	[Output] public ChoiceNode outcomingChoices;
 
-	public string character;
+	public Character.CharacterName character;
 	public string dialogue;
 	public int uid;
 
