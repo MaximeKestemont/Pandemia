@@ -1,4 +1,4 @@
-using System.Collections.Generic;   
+using System.Collections.Generic;
 /*
 * Define for a given indicator the bonus/malus to apply to it and its type (percentage, absolute value, etc.)
 * If the duration is 0, it will be a one shot bonus or malus. Else, it will last X events.

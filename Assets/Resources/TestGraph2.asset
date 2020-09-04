@@ -63,7 +63,7 @@ MonoBehaviour:
   dialogue: "Vous...vous \xEAtes s\xE9rieux, Monsieur le Pr\xE9sident ? N'est-ce
     pas un peu disproportionn\xE9 comme r\xE9action ? L'impact \xE9conomique sera
     terrible !"
-  uid: 6
+  uid: 2
 --- !u!114 &-8913196847682330628
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -298,7 +298,7 @@ MonoBehaviour:
   dialogue: "J'ai un peu \xE9tudi\xE9 la question, et une solution toute simple m'est
     venue \xE0 l'esprit...Pourquoi ne pas construire un mur, un gigantesque mur,
     autour de ce virus ?"
-  uid: 4
+  uid: 13
 --- !u!114 &-7818891064560319830
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -364,7 +364,7 @@ MonoBehaviour:
   character: 0
   dialogue: "Hello my dear !\nJ'ai eu vent d'une inqui\xE9tante histoire...il semblerait
     qu'un virus \xE9trange se r\xE9pand parmi votre peuple ?"
-  uid: 8
+  uid: 6
 --- !u!114 &-7615297506382698577
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -762,7 +762,7 @@ MonoBehaviour:
   dialogue: "Je ne suis pas sur que ce soit une d\xE9cision tr\xE8s sage, Monsieur
     le Pr\xE9sident. Il risque de mal le prendre, et il est connu pour \xEAtre assez
     irritable..."
-  uid: 2
+  uid: 10
 --- !u!114 &-5094203497081966685
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -910,7 +910,7 @@ MonoBehaviour:
   character: 0
   dialogue: "Etes-vous certain ? Ce mur a un impact d\xE9sastreux sur notre \xE9conomie,
     sans parler de votre cote de popularit\xE9..."
-  uid: 13
+  uid: 7
 --- !u!114 &-5064450600914271291
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -978,6 +978,7 @@ MonoBehaviour:
   title: "Un invit\xE9 surprise"
   uid: 2
   status: 0
+  conditions: []
 --- !u!114 &-4905055044204627014
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1129,6 +1130,7 @@ MonoBehaviour:
   title: Des trous dans le mur...
   uid: 4
   status: 1
+  conditions: []
 --- !u!114 &-3722489541259353381
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1142,7 +1144,7 @@ MonoBehaviour:
   m_Name: Event
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 0, y: 0}
+  position: {x: -8, y: -8}
   ports:
     keys:
     - unlockingChoices
@@ -1196,6 +1198,7 @@ MonoBehaviour:
   title: "Une grippe \xE9trange..."
   uid: 1
   status: 0
+  conditions: []
 --- !u!114 &-2008968446456916411
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1259,7 +1262,7 @@ MonoBehaviour:
   dialogue: "Bon...bonjour Monsieur le Pr\xE9sident. En r\xE9alit\xE9, nous ne savons
     pas encore grand chose sur cette grippe, les personnes contamin\xE9es semblent
     avoir des difficult\xE9s \xE0 respirer, mais sans autres cons\xE9quences..."
-  uid: 12
+  uid: 1
 --- !u!114 &-1988788447319851164
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1326,7 +1329,7 @@ MonoBehaviour:
   dialogue: "Monsieur ! \nIl semblerait qu'une grippe \xE9trange soit apparue dans
     un quartier de la capitale. Les sp\xE9cialistes semblent inquiets. \nQue devrions-nous
     faire ?"
-  uid: 5
+  uid: 3
 --- !u!114 &-1790166036415234018
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1390,7 +1393,7 @@ MonoBehaviour:
   dialogue: "Monsieur le Pr\xE9sident, nous entamons la construction du mur autour
     du virus. Ce n'est pas tr\xE8s clair pour nos ing\xE9nieurs, doivent-il pr\xE9voir
     des barbel\xE9s pour retenir le virus ?"
-  uid: 1
+  uid: 5
 --- !u!114 &-1527326300684381723
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2078,6 +2081,7 @@ MonoBehaviour:
   title: Le grand mur
   uid: 3
   status: 1
+  conditions: []
 --- !u!114 &2305580346829359603
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2471,7 +2475,7 @@ MonoBehaviour:
     le Pr\xE9sident. Il semblerait cependant que cela ne fonctionne pas tr\xE8s bien,
     le virus s'\xE9tant d\xE9j\xE0 r\xE9pandu en dehors de la capitale. Que devons-nous
     faire s?"
-  uid: 7
+  uid: 8
 --- !u!114 &5206087724217859860
 MonoBehaviour:
   m_ObjectHideFlags: 0

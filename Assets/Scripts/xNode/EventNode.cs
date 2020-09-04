@@ -15,6 +15,8 @@ public class EventNode : Node {
 	public int uid;
 	public Event.Status status;
 
+	public List<EventCondition> conditions;
+
 	// Use this for initialization
 	protected override void Init() {
 		base.Init();

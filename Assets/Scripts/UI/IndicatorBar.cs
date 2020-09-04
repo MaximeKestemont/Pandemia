@@ -83,6 +83,7 @@ public class IndicatorBar : MonoBehaviour {
 			IndicatorBar.ApplyBonusMalus();
         }
 
+		/* No hidden computation anymore. 
 		// Values needed to compute the future values of indicators
 		int currentInfected = resourceManager.infectedNumber.fillingLevel;
 		int currentHealth = resourceManager.health.fillingLevel;
@@ -130,6 +131,7 @@ public class IndicatorBar : MonoBehaviour {
 		resourceManager.newInfected = newInfected;
 
 		Debug.Log($"{resourceManager.infectedNumber.fillingLevel} infected people, from {currentInfected}");
+		*/
 	}
 
 }

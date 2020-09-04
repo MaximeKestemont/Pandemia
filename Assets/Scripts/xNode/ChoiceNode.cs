@@ -26,26 +26,15 @@ public class ChoiceNode : Node {
 		return null; // Replace this
 	}
 
-    public enum IndicatorType {
-        HEALTH,
-        ECONOMY,
-        POP_SATISFACTION,
-        INFECTED_NUMBER,
-        PROPAGATION_SPEED,
-        POPULATION,
-        DEATH,
-        CURED
-    }
-
     [Serializable]
     public class ChoiceNodeConsequence {
-        public IndicatorType indicatorType;
+        public ResourceManager.IndicatorType indicatorType;
         public ChoiceConsequence.ValueTypeEnum valueType;
         public int value;
         public int duration;
 
         public ChoiceNodeConsequence(
-            IndicatorType indicatorType,
+            ResourceManager.IndicatorType indicatorType,
             ChoiceConsequence.ValueTypeEnum valueType,
             int value,
             int duration

@@ -78,28 +78,39 @@ public class ResourceManager : MonoBehaviour {
 	Mapping between the enum type from ChoideNode (i.e. internalType) and the actual game object.
     This is needed to convert the consequences created in xNode editor to game objects linked to the corresponding indicators.
 	*/
-    public IndicatorBar GetIndicatorBar(ChoiceNode.IndicatorType internalType) {
+    public IndicatorBar GetIndicatorBar(IndicatorType internalType) {
         switch (internalType) {
-            case ChoiceNode.IndicatorType.HEALTH:
+            case IndicatorType.HEALTH:
                 return health;
-            case ChoiceNode.IndicatorType.ECONOMY:
+            case IndicatorType.ECONOMY:
                 return economy;
-            case ChoiceNode.IndicatorType.INFECTED_NUMBER:
+            case IndicatorType.INFECTED_NUMBER:
                 return infectedNumber;
-            case ChoiceNode.IndicatorType.POP_SATISFACTION:
+            case IndicatorType.POP_SATISFACTION:
                 return populationSatisfaction;
-            case ChoiceNode.IndicatorType.PROPAGATION_SPEED:
+            case IndicatorType.PROPAGATION_SPEED:
                 return propagationSpeed;
-            case ChoiceNode.IndicatorType.POPULATION:
+            case IndicatorType.POPULATION:
                 return population;
-            case ChoiceNode.IndicatorType.DEATH:
+            case IndicatorType.DEATH:
                 return death;
-            case ChoiceNode.IndicatorType.CURED:
+            case IndicatorType.CURED:
                 return cured;
             default:
                 Debug.LogError("IndicatorType in xNode editor not supported yet!");
                 return null;
         }
+    }
+
+    public enum IndicatorType {
+        HEALTH,
+        ECONOMY,
+        POP_SATISFACTION,
+        INFECTED_NUMBER,
+        PROPAGATION_SPEED,
+        POPULATION,
+        DEATH,
+        CURED
     }
 
 }

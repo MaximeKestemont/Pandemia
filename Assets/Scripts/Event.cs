@@ -14,6 +14,10 @@ public class Event : MonoBehaviour
 
     public GameObject dialogueContainer;
 
+    // Conditions required to unlocked the event. It only needs to validate one EventCondition, but inside an EventCondition,
+    // all constraints need to be validated
+    public List<EventCondition> eventConditions;
+
     // Start is called before the first frame update
     void Start()
     {

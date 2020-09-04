@@ -60,6 +60,47 @@ public class GameController : MonoBehaviour
         } else if ((resourceManager.infectedNumber.fillingLevel == resourceManager.infectedNumber.MIN_VALUE) && (eventCount != 0)) {
             FinishGame(true);
         }
+
+        // check if events are meeting conditions to be unlocked/locked
+        Debug.Log("Checking if events should be unlocked or locked");
+        foreach(GameObject eventObject in resourceManager.eventsMap.Values) {
+            Event eventInstance = eventObject.GetComponent<Event>();
+
+            if (eventInstance.status != Event.Status.PASSED && eventInstance.eventConditions.Count > 0) {
+                bool unlocked = false;
+                
+                // If one EventCondition is fully met, unlock the event. Else, it should be locked.
+                // unlocked = EventCondition1 OR EventCondition2, but EventCondition1 = Condition1 AND Condition2
+                foreach(EventCondition eventCondition in eventInstance.eventConditions) {
+                    bool allConditionsChecked = true;
+
+                    // Check that all conditions in an EventCondition are met
+                    foreach(EventCondition.Condition condition in eventCondition.conditions) {
+                        bool conditionChecked;
+                        if (condition.conditionType == EventCondition.ConditionType.ABOVE) {
+                            conditionChecked = resourceManager.GetIndicatorBar(condition.indicatorType).fillingLevel >= condition.threshold;
+                        } else {
+                            conditionChecked = resourceManager.GetIndicatorBar(condition.indicatorType).fillingLevel < condition.threshold;
+                        }
+                        if (!conditionChecked) {
+                            allConditionsChecked = false;
+                        } 
+                    }
+                    
+                    // Only setting it to true (optionnally), as we do not want to erase a previous True
+                    if (allConditionsChecked) {
+                        unlocked = true;
+                    }
+                }
+
+                if (unlocked) {
+                    eventInstance.status = Event.Status.UNLOCKED;
+                } else {
+                    eventInstance.status = Event.Status.LOCKED;
+                }
+            }
+        }
+
         Debug.Log("Moving to next event...");
         currentEvent.GetComponent<Event>().status = Event.Status.PASSED;
         currentEvent.SetActive(false);
