@@ -13,7 +13,7 @@ public class ChoiceNode : Node {
     [Output] public EventNode lockingEvents;
     [Output] public EventNode passingEvents;
     
-
+    [TextArea]
     public string description;
     public List<ChoiceNodeConsequence> choiceNodeConsequences;
 

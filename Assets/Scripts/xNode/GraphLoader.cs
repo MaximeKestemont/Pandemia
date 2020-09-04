@@ -17,7 +17,7 @@ public class GraphLoader: MonoBehaviour
     {
         Debug.Log("Start parsing xNode graph...");
         // TODO change the string resource name here to load another event graph
-        EventChoiceGraph graph = Resources.Load("TestGraph") as EventChoiceGraph;
+        EventChoiceGraph graph = Resources.Load("TestGraph2") as EventChoiceGraph;
 
         var eventsParent = GameObject.Find("Events").transform;
 

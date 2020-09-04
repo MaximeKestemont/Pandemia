@@ -12,7 +12,6 @@ public class EventNode : Node {
 	[Output] public NPCDialogueNode dialogue;
 
 	public string title;
-	public string description;
 	public int uid;
 	public Event.Status status;
 

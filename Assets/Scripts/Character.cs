@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class Character : MonoBehaviour
 {
 
-    public CharacterName name;
+    public CharacterName characterName;
     public Image image;
 
     void Start()
@@ -16,6 +16,8 @@ public class Character : MonoBehaviour
     public enum CharacterName {
         GRUMP, // trump
         MINISTER_OF_HEALTH,
+        MINISTER_OF_FOREIGN_AFFAIRS,
+        MINISTER_OF_INTERNAL_AFFAIRS,
         RESEARCHER
     }
 

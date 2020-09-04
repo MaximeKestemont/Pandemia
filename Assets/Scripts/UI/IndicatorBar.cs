@@ -45,7 +45,7 @@ public class IndicatorBar : MonoBehaviour {
 	AddValueOverTime
 	=====================
 	Add a value to the list of bonus and malus. If the timeLeft <= 0, it means this is a value that will be
-	applied only once. If > 0, it will last at least during one event.
+	applied only once. If > 0, it will last at least during one event (so be applied at least 2 times)
 	*/
 	public void AddValueOverTime(ValueOverTime valueOverTime) {
 		bonusAndMalus.Add(valueOverTime);

@@ -125,7 +125,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9450faacd0eac4f32b3c8cbd9dcdda55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  character: 
+  character: {fileID: 0}
   dialogue: 
   textDialogue: {fileID: 3075843030503541786}
   textCharacterName: {fileID: 1945087587779089413}

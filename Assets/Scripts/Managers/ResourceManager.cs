@@ -56,7 +56,7 @@ public class ResourceManager : MonoBehaviour {
 
         // Fill characters dict
         foreach(Character character in this.characters.GetComponentsInChildren<Character>()) {
-            charactersMap.Add(character.name, character);
+            charactersMap.Add(character.characterName, character);
         }
 
         this.indicators = new List<IndicatorBar>{

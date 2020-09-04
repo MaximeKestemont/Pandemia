@@ -10,7 +10,7 @@ public class NPCDialogueNode : Node {
 	[Output] public ChoiceNode outcomingChoices;
 
 	public Character.CharacterName character;
-	public string dialogue;
+	[TextArea] public string dialogue;
 	public int uid;
 
 	// Use this for initialization

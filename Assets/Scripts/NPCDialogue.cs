@@ -8,6 +8,8 @@ public class NPCDialogue : MonoBehaviour
 
     public Character character;
     public string dialogue;
+    
+    
     public Text textDialogue;
     public Text textCharacterName;
 
@@ -17,7 +19,7 @@ public class NPCDialogue : MonoBehaviour
     void Start()
     {
         textDialogue.GetComponent<Text>().text = this.dialogue;
-        textCharacterName.GetComponent<Text>().text = this.character.name.ToString();
+        textCharacterName.GetComponent<Text>().text = this.character.characterName.ToString();
         
     }
 
