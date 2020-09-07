@@ -36,6 +36,7 @@ public class ResourceManager : MonoBehaviour {
     public IndicatorBar population;
     public IndicatorBar death;
     public IndicatorBar cured;
+    public IndicatorBar virusKnowledge;
 
     public List<IndicatorBar> indicators;
 
@@ -67,7 +68,8 @@ public class ResourceManager : MonoBehaviour {
             infectedNumber,
             population,
             death,
-            cured
+            cured,
+            virusKnowledge
         };
     }
 
@@ -96,6 +98,9 @@ public class ResourceManager : MonoBehaviour {
                 return death;
             case IndicatorType.CURED:
                 return cured;
+            case IndicatorType.VIRUS_KNOWLEDGE:
+                return virusKnowledge;
+            
             default:
                 Debug.LogError("IndicatorType in xNode editor not supported yet!");
                 return null;
@@ -110,7 +115,8 @@ public class ResourceManager : MonoBehaviour {
         PROPAGATION_SPEED,
         POPULATION,
         DEATH,
-        CURED
+        CURED,
+        VIRUS_KNOWLEDGE
     }
 
 }

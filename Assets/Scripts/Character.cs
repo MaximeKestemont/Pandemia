@@ -13,12 +13,15 @@ public class Character : MonoBehaviour
     {   
     }
 
+    // !!! Add new character at the END of this enum. Else, it modifies all existing nodes.
     public enum CharacterName {
         GRUMP, // trump
         MINISTER_OF_HEALTH,
         MINISTER_OF_FOREIGN_AFFAIRS,
         MINISTER_OF_INTERNAL_AFFAIRS,
-        RESEARCHER
+        MISTRESS,
+        RESEARCHER,
+        JOURNALIST
     }
 
 }
