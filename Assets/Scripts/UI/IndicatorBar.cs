@@ -70,6 +70,22 @@ public class IndicatorBar : MonoBehaviour {
 
 	/*
 	=====================
+	SetVisible
+	=====================
+	Hide or render the indicator, by updating its children renderers
+	*/
+	public void SetVisible(bool isVisible) {
+		int alpha;
+		if (isVisible) {
+			alpha = 1;
+		} else {
+			alpha = 0;
+		}
+		this.gameObject.GetComponent<CanvasGroup>().alpha = alpha;
+	}
+
+	/*
+	=====================
 	UpdateIndicator
 	=====================
 	Update all indicator bars:

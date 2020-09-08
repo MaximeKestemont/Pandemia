@@ -12,14 +12,16 @@ public class NPCDialogue : MonoBehaviour
     
     public Text textDialogue;
     public Text textCharacterName;
+    public RawImage image;
 
     public GameObject choices;
 
     // Start is called before the first frame update
     void Start()
     {
-        textDialogue.GetComponent<Text>().text = this.dialogue;
-        textCharacterName.GetComponent<Text>().text = this.character.characterName.ToString();
+        textDialogue.text = this.dialogue;
+        textCharacterName.text = this.character.characterName.ToString();
+        image.texture = this.character.image;
         
     }
 

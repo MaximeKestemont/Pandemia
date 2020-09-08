@@ -7,6 +7,9 @@ public class Choice: MonoBehaviour
 {
     public string title {get;set;}
     public List<ChoiceConsequence> choiceConsequences = new List<ChoiceConsequence>();
+    
+    // some choice may render visible indicators
+    public ResourceManager.IndicatorType indicatorToUnlock = ResourceManager.IndicatorType.NONE;
 
     public Text choiceTitle;
     public Image choiceImage;
@@ -73,6 +76,11 @@ public class Choice: MonoBehaviour
         }
         foreach(var eventId in passedEvents) {
             ResourceManager.resourceManager.eventsMap[eventId].GetComponent<Event>().status = Event.Status.PASSED;
+        }
+
+        // Render indicators
+        if (indicatorToUnlock != ResourceManager.IndicatorType.NONE) {
+            ResourceManager.resourceManager.GetIndicatorBar(indicatorToUnlock).SetVisible(true);
         }
 
         if (followingDialogue) {

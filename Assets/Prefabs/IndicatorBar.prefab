@@ -184,7 +184,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 30.06, y: 0}
+  m_AnchoredPosition: {x: 30, y: 0}
   m_SizeDelta: {x: 280, y: 80}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!222 &1840937659142292573
@@ -233,6 +233,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1840937659899806921}
   - component: {fileID: 1840937659899806920}
+  - component: {fileID: 8674389316468550080}
   m_Layer: 5
   m_Name: IndicatorBar
   m_TagString: Untagged
@@ -281,6 +282,20 @@ MonoBehaviour:
   indicatorName: Propagation Speed
   fillingLevel: 75
   color: {r: 1, g: 0, b: 0, a: 1}
+  MIN_VALUE: 0
+  MAX_VALUE: 100
+--- !u!225 &8674389316468550080
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1840937659899806922}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &1840937660697130350
 GameObject:
   m_ObjectHideFlags: 0

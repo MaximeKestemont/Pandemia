@@ -71,6 +71,13 @@ public class ResourceManager : MonoBehaviour {
             cured,
             virusKnowledge
         };
+
+        // Hide some indicators at the start
+        infectedNumber.SetVisible(false);
+        death.SetVisible(false);
+        virusKnowledge.SetVisible(false);
+        propagationSpeed.SetVisible(false);
+        cured.SetVisible(false);
     }
 
     /*
@@ -116,7 +123,8 @@ public class ResourceManager : MonoBehaviour {
         POPULATION,
         DEATH,
         CURED,
-        VIRUS_KNOWLEDGE
+        VIRUS_KNOWLEDGE,
+        NONE // null type
     }
 
 }

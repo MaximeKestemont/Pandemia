@@ -23,7 +23,9 @@ public class GraphLoader: MonoBehaviour
 
         Debug.Log($"Nodes count: {graph.CountNodes()}");
 
-        // Loop over events and create corresponding game objects
+        /* ----------------- EVENTS ---------------
+        * Loop over events and create corresponding game objects
+        */
         List<EventNode> events = graph.GetEventNodes();
         foreach (var eventNode in events) {
             GameObject newEventObject = Instantiate(resourceManager.eventPrefab, eventsParent);
@@ -41,10 +43,12 @@ public class GraphLoader: MonoBehaviour
 
         gameEvents = eventObjects.ToDictionary(x => x.GetComponent<Event>().uid);
 
-        // Loop over dialogues, create corresponding games objects, their choices objects and link dialogue to event
-        // We loop 2 times, as we first need to instantiate all dialogues before being able to link the choices to it,
-        // as a choice could be connected to a not yet identified dialogue
-        // Note: could be refactored with a recursive method + a stack of not yet accessed dialogue
+        /* ----------------- DIALOGUES ---------------
+        * Loop over dialogues, create corresponding games objects, their choices objects and link dialogue to event
+        * We loop 2 times, as we first need to instantiate all dialogues before being able to link the choices to it,
+        * as a choice could be connected to a not yet identified dialogue
+        * Note: could be refactored with a recursive method + a stack of not yet accessed dialogue
+        */
         Dictionary<int, GameObject> dialoguesDict = new Dictionary<int, GameObject>(); // needed to retrieve it later and link it to choices
         List<NPCDialogueNode> dialogues = graph.GetDialogueNodes();
         foreach(var dialogueNode in dialogues) {
@@ -92,6 +96,7 @@ public class GraphLoader: MonoBehaviour
 
                 Choice newChoice = newChoiceObject.GetComponent<Choice>();
                 newChoice.title = choiceNode.description;
+                newChoice.indicatorToUnlock = choiceNode.indicatorToUnlock;
 
                 // Add the following dialogue to the attribute of the newChoice instance
                 var followingDialogueConnections = choiceNode.GetOutputPort("followingDialogue").GetConnections();

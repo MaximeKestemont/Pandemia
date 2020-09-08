@@ -63,7 +63,7 @@ MonoBehaviour:
   dialogue: "Vous...vous \xEAtes s\xE9rieux, Monsieur le Pr\xE9sident ? N'est-ce
     pas un peu disproportionn\xE9 comme r\xE9action ? L'impact \xE9conomique sera
     terrible !"
-  uid: 43
+  uid: 25
 --- !u!114 &-8913196847682330628
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -149,6 +149,7 @@ MonoBehaviour:
     valueType: 0
     value: -60
     duration: 0
+  indicatorToUnlock: 9
 --- !u!114 &-8900051836254191432
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -212,7 +213,7 @@ MonoBehaviour:
   dialogue: "Monsieur le Pr\xE9sident !\nComme vous avez pu le voir dans la presse,
     nous avons eu vent d'une affaire, entre vous et une charmante jeune dame...Pouvez-vous
     nous en dire plus ?"
-  uid: 40
+  uid: 17
 --- !u!114 &-8641935941286930188
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -296,6 +297,7 @@ MonoBehaviour:
     Mettez toute la capitale en isolement
     total, tout de suite !'
   choiceNodeConsequences: []
+  indicatorToUnlock: 9
 --- !u!114 &-8476399991715965209
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -362,7 +364,7 @@ MonoBehaviour:
   dialogue: "J'ai un peu \xE9tudi\xE9 la question, et une solution toute simple m'est
     venue \xE0 l'esprit...Pourquoi ne pas construire un mur, un gigantesque mur,
     autour de ce virus ?"
-  uid: 49
+  uid: 16
 --- !u!114 &-8344875645927665424
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -430,7 +432,7 @@ MonoBehaviour:
     mais c'est encore au sujet de cette grippe. Le nombre de cas semble augmenter
     rapidement, plus que dans le cas d'une grippe standard. Et nos sp\xE9cialistes
     ne savent toujours pas de quoi il s'agit."
-  uid: 34
+  uid: 3
 --- !u!114 &-8230544096393969765
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -517,6 +519,7 @@ MonoBehaviour:
     valueType: 0
     value: 20
     duration: 0
+  indicatorToUnlock: 9
 --- !u!114 &-8223023701455156818
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -598,6 +601,7 @@ MonoBehaviour:
   description: "Non, c'est bien trop risqu\xE9, je ne peux pas me le permettre au
     vu de ma position."
   choiceNodeConsequences: []
+  indicatorToUnlock: 9
 --- !u!114 &-8189615961173914702
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -678,6 +682,7 @@ MonoBehaviour:
   passingEvents: {fileID: 0}
   description: "Pas maintenant, je suis...je suis occup\xE9 !"
   choiceNodeConsequences: []
+  indicatorToUnlock: 9
 --- !u!114 &-7818891064560319830
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -743,7 +748,7 @@ MonoBehaviour:
   character: 0
   dialogue: "Hello my dear !\nJ'ai eu vent d'une inqui\xE9tante histoire...il semblerait
     qu'un virus \xE9trange se r\xE9pand parmi votre peuple ?"
-  uid: 50
+  uid: 12
 --- !u!114 &-7757250838793234255
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -829,6 +834,7 @@ MonoBehaviour:
     valueType: 0
     value: 20
     duration: 0
+  indicatorToUnlock: 9
 --- !u!114 &-7619066564953695623
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -911,6 +917,7 @@ MonoBehaviour:
     valueType: 0
     value: 5
     duration: 0
+  indicatorToUnlock: 9
 --- !u!114 &-7615297506382698577
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -991,6 +998,7 @@ MonoBehaviour:
   passingEvents: {fileID: 0}
   description: Il semblerait, oui...
   choiceNodeConsequences: []
+  indicatorToUnlock: 9
 --- !u!114 &-7524046756960466478
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1055,7 +1063,7 @@ MonoBehaviour:
     de contamination du virus. Nos donn\xE9es ne sont pas tout \xE0 fait fiables,
     mais il semblerait que le virus puisse rester en suspension dans l'air plusieurs
     heures !"
-  uid: 51
+  uid: 14
 --- !u!114 &-7407796427923633968
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1134,6 +1142,7 @@ MonoBehaviour:
   description: "Tr\xE8s bien, je vous remercie. Pas de raison de s'alarmer outre
     mesure. Vous pouvez disposer maintenant, j'ai des sujets \xE0 traiter."
   choiceNodeConsequences: []
+  indicatorToUnlock: 9
 --- !u!114 &-6965955643441440527
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1218,6 +1227,7 @@ MonoBehaviour:
     valueType: 0
     value: 10
     duration: 0
+  indicatorToUnlock: 9
 --- !u!114 &-6933002340184841140
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1310,6 +1320,7 @@ MonoBehaviour:
     valueType: 0
     value: -5
     duration: 0
+  indicatorToUnlock: 9
 --- !u!114 &-6571206116351972908
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1464,6 +1475,7 @@ MonoBehaviour:
   passingEvents: {fileID: 0}
   description: "C'est \xE0 dire ? Parlez, voyons !"
   choiceNodeConsequences: []
+  indicatorToUnlock: 9
 --- !u!114 &-6148687762853371554
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1545,6 +1557,7 @@ MonoBehaviour:
   description: "J'ai un cours de Golf qui commence bient\xF4t. Qu'il rappelle plus
     tard !"
   choiceNodeConsequences: []
+  indicatorToUnlock: 9
 --- !u!114 &-5810375302947757840
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1607,7 +1620,7 @@ MonoBehaviour:
   character: 5
   dialogue: "Monsieur le Pr\xE9sident !\nNous avons investigu\xE9 plus en d\xE9tails
     cette grippe \xE9trange, et nous avons fait cetains progr\xE8s !"
-  uid: 33
+  uid: 20
 --- !u!114 &-5769252873609689896
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1689,6 +1702,7 @@ MonoBehaviour:
   description: Rhabille toi ! Et vous, ce n'est pas ce que vous croyez...Nous discuterons
     de cette grippe une autre fois...
   choiceNodeConsequences: []
+  indicatorToUnlock: 9
 --- !u!114 &-5257053716037480903
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1770,6 +1784,7 @@ MonoBehaviour:
   description: "Continuez \xE0 entretenir le mur, ajoutez-y des gardiens suppl\xE9mentaires
     !"
   choiceNodeConsequences: []
+  indicatorToUnlock: 9
 --- !u!114 &-5231167777361486337
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1833,7 +1848,7 @@ MonoBehaviour:
   dialogue: "Je ne suis pas sur que ce soit une d\xE9cision tr\xE8s sage, Monsieur
     le Pr\xE9sident. Il risque de mal le prendre, et il est connu pour \xEAtre assez
     irritable..."
-  uid: 48
+  uid: 8
 --- !u!114 &-5129744298042399994
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1916,6 +1931,7 @@ MonoBehaviour:
     valueType: 0
     value: 20
     duration: 0
+  indicatorToUnlock: 9
 --- !u!114 &-5099976302529643120
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1999,6 +2015,7 @@ MonoBehaviour:
     valueType: 0
     value: 15
     duration: 0
+  indicatorToUnlock: 9
 --- !u!114 &-5094203497081966685
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2084,6 +2101,7 @@ MonoBehaviour:
     valueType: 0
     value: -20
     duration: 0
+  indicatorToUnlock: 9
 --- !u!114 &-5065756943078923477
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2146,7 +2164,7 @@ MonoBehaviour:
   character: 0
   dialogue: "Etes-vous certain ? Ce mur a un impact d\xE9sastreux sur notre \xE9conomie,
     sans parler de votre cote de popularit\xE9..."
-  uid: 44
+  uid: 6
 --- !u!114 &-5064450600914271291
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2293,6 +2311,7 @@ MonoBehaviour:
   description: "Cette grippe commence \xE0 me gonfler.\nHors de question que j'annule
     mon cours !"
   choiceNodeConsequences: []
+  indicatorToUnlock: 9
 --- !u!114 &-4467104179170580774
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2355,7 +2374,7 @@ MonoBehaviour:
   character: 1
   dialogue: "Tr\xE8s bien, ce sera fait.\nQue devons-nous faire par rapport au manque
     de masques ?"
-  uid: 29
+  uid: 1
 --- !u!114 &-4436405260831344289
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2436,6 +2455,7 @@ MonoBehaviour:
   passingEvents: {fileID: 0}
   description: "Un voyage \xE0 l'\xE9tranger, pourquoi pas...Italie, Espagne ?"
   choiceNodeConsequences: []
+  indicatorToUnlock: 9
 --- !u!114 &-4420976360222954400
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2576,7 +2596,7 @@ MonoBehaviour:
   dialogue: "Nous nous rencontrons toujours \xE0 l'hotel, c'est lassant \xE0 force...Pourquoi
     ne ferions-nous pas quelque chose d'autre, pour changer ? Il nous suffit de rester
     discret, personne ne nous reconnaitra."
-  uid: 39
+  uid: 21
 --- !u!114 &-3722489541259353381
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2854,7 +2874,7 @@ MonoBehaviour:
   dialogue: "Le comment importe peu...Le peuple est assez surpris de voir que vous
     avez du temps \xE0 consacrer \xE0 ce genre de frivolit\xE9s, alors qu'une pand\xE9mie
     s'annonce. Pouvez-vous nous \xE9claircir un peu sur cette histoire ?"
-  uid: 41
+  uid: 13
 --- !u!114 &-2500432219215394467
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2941,6 +2961,7 @@ MonoBehaviour:
     valueType: 0
     value: -10
     duration: 0
+  indicatorToUnlock: 9
 --- !u!114 &-2253588294746429726
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3023,6 +3044,7 @@ MonoBehaviour:
     valueType: 0
     value: -40
     duration: 0
+  indicatorToUnlock: 9
 --- !u!114 &-2017413853270691546
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3103,6 +3125,7 @@ MonoBehaviour:
   passingEvents: {fileID: 0}
   description: Vous ne savez pas ce que vous ratez...
   choiceNodeConsequences: []
+  indicatorToUnlock: 9
 --- !u!114 &-2008968446456916411
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3166,7 +3189,7 @@ MonoBehaviour:
   dialogue: "Bon...bonjour Monsieur le Pr\xE9sident. En r\xE9alit\xE9, nous ne savons
     pas encore grand chose sur cette grippe, les personnes contamin\xE9es semblent
     avoir des difficult\xE9s \xE0 respirer, mais sans autres cons\xE9quences..."
-  uid: 42
+  uid: 4
 --- !u!114 &-1988788447319851164
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3233,7 +3256,7 @@ MonoBehaviour:
   dialogue: "Monsieur ! \nIl semblerait qu'une grippe \xE9trange soit apparue dans
     un quartier de la capitale. Les sp\xE9cialistes semblent inquiets. \nQue devrions-nous
     faire ?"
-  uid: 45
+  uid: 9
 --- !u!114 &-1790166036415234018
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3297,7 +3320,7 @@ MonoBehaviour:
   dialogue: "Monsieur le Pr\xE9sident, nous entamons la construction du mur autour
     du virus. Ce n'est pas tr\xE8s clair pour nos ing\xE9nieurs, doivent-il pr\xE9voir
     des barbel\xE9s pour retenir le virus ?"
-  uid: 46
+  uid: 18
 --- !u!114 &-1698912449060562332
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3383,6 +3406,7 @@ MonoBehaviour:
     valueType: 0
     value: 10
     duration: 0
+  indicatorToUnlock: 9
 --- !u!114 &-1527326300684381723
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3462,6 +3486,7 @@ MonoBehaviour:
     respiratoires ? Je suis le pr\xE9sident, pas le m\xE9decin du coin. Hors de ma
     vue !"
   choiceNodeConsequences: []
+  indicatorToUnlock: 9
 --- !u!114 &-1377400357066802787
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3555,6 +3580,7 @@ MonoBehaviour:
     valueType: 0
     value: -5
     duration: 0
+  indicatorToUnlock: 9
 --- !u!114 &-507541601788557995
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3633,6 +3659,7 @@ MonoBehaviour:
   description: "Cessez de me d\xE9ranger avec de telles futilit\xE9s ! Une grippe,
     ca se soigne ! "
   choiceNodeConsequences: []
+  indicatorToUnlock: 9
 --- !u!114 &-415226015298921600
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3714,6 +3741,7 @@ MonoBehaviour:
     valueType: 0
     value: -20
     duration: 0
+  indicatorToUnlock: 9
 --- !u!114 &-229377627837845917
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3794,6 +3822,7 @@ MonoBehaviour:
   passingEvents: {fileID: 0}
   description: Bien...vous avez sans doute raison. Passez le moi.
   choiceNodeConsequences: []
+  indicatorToUnlock: 9
 --- !u!114 &-106709695032851730
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3875,6 +3904,7 @@ MonoBehaviour:
   description: "Que voulez-vous dire par \xE9trange ? Envoyez moi l'un de ces experts,
     qu'il me fasse un rapport d\xE9taill\xE9 !"
   choiceNodeConsequences: []
+  indicatorToUnlock: 9
 --- !u!114 &-39886907014924423
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3953,6 +3983,7 @@ MonoBehaviour:
   description: Un...un mur ?! Pour retenir le virus ? Je ne suis pas certain que
     cela soit d'une grande aide...
   choiceNodeConsequences: []
+  indicatorToUnlock: 9
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4282,6 +4313,7 @@ MonoBehaviour:
     valueType: 0
     value: -5
     duration: 0
+  indicatorToUnlock: 9
 --- !u!114 &1759967436600919857
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4347,7 +4379,7 @@ MonoBehaviour:
   character: 5
   dialogue: "A premi\xE8re vue, la nature de cette grippe serait virale, et son degr\xE9
     de contagion pr\xE8s de 3 fois sup\xE9rieur \xE0 celui d'une grippe classique."
-  uid: 38
+  uid: 10
 --- !u!114 &2305580346829359603
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4428,6 +4460,7 @@ MonoBehaviour:
   passingEvents: {fileID: 0}
   description: Passez le moi.
   choiceNodeConsequences: []
+  indicatorToUnlock: 9
 --- !u!114 &2596246116372881253
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4509,6 +4542,7 @@ MonoBehaviour:
   description: "Je vois...continuez vos investigations, et tenez moi au courant des
     r\xE9sultants."
   choiceNodeConsequences: []
+  indicatorToUnlock: 9
 --- !u!114 &3265950341284250682
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4587,6 +4621,7 @@ MonoBehaviour:
   description: "Bien sur que non, je ne suis pas s\xE9rieux. Vous n'\xEAtes pas tr\xE8s
     perspicace il semblerait..."
   choiceNodeConsequences: []
+  indicatorToUnlock: 9
 --- !u!114 &3291702852521685842
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4668,6 +4703,7 @@ MonoBehaviour:
   description: "J'arrive !\n...\nOh, vous \xEAtes toujous l\xE0.\n...\nVous voulez
     nous rejoindre ?"
   choiceNodeConsequences: []
+  indicatorToUnlock: 9
 --- !u!114 &3330794033176243479
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4753,6 +4789,7 @@ MonoBehaviour:
     valueType: 0
     value: -5
     duration: 0
+  indicatorToUnlock: 9
 --- !u!114 &3380805119946957146
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4814,7 +4851,7 @@ MonoBehaviour:
   outcomingChoices: {fileID: 0}
   character: 4
   dialogue: Tu as dis quelque chose, mon cher ? Rejoins moi dans le lit au lieu de...
-  uid: 37
+  uid: 23
 --- !u!114 &3435564652014928347
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4896,6 +4933,7 @@ MonoBehaviour:
   description: "Tu as raison, je vais r\xE9server un restaurant pour ce soir. Nous
     irons \xE0 l'op\xE9ra ensuite."
   choiceNodeConsequences: []
+  indicatorToUnlock: 9
 --- !u!114 &3436169663438258891
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4989,6 +5027,7 @@ MonoBehaviour:
     valueType: 0
     value: 5
     duration: 0
+  indicatorToUnlock: 9
 --- !u!114 &3515525755029350254
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5078,6 +5117,7 @@ MonoBehaviour:
     valueType: 0
     value: -20
     duration: 0
+  indicatorToUnlock: 9
 --- !u!114 &3641747310119261892
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5140,7 +5180,7 @@ MonoBehaviour:
   character: 1
   dialogue: "Insuffisante que pour pouvoir en distribuer \xE0 chaque citoyen, j'en
     ai bien peur...Nous ignorons d'ailleurs si cela sera r\xE9ellement utile."
-  uid: 30
+  uid: 24
 --- !u!114 &4100047494000281693
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5204,7 +5244,7 @@ MonoBehaviour:
   dialogue: "Monsieur le Pr\xE9sident ! \nNous avons effectu\xE9 diverses mod\xE9lisations,
     \xE0 partir des informations que nous avions pu r\xE9colter sur le virus et les
     premiers infect\xE9s. La situation est inqui\xE9tante !"
-  uid: 32
+  uid: 11
 --- !u!114 &4720124938883402071
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5264,7 +5304,7 @@ MonoBehaviour:
   character: 5
   dialogue: Je ne suis pas certain de ... je..bonjour Madame...Je pense que je vais
     y aller !
-  uid: 36
+  uid: 19
 --- !u!114 &4920490625740508703
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5329,7 +5369,7 @@ MonoBehaviour:
     le Pr\xE9sident. Il semblerait cependant que cela ne fonctionne pas tr\xE8s bien,
     le virus s'\xE9tant d\xE9j\xE0 r\xE9pandu en dehors de la capitale. Que devons-nous
     faire s?"
-  uid: 47
+  uid: 15
 --- !u!114 &5141091862183648765
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5484,6 +5524,7 @@ MonoBehaviour:
   passingEvents: {fileID: 0}
   description: "\"R\xE9pandre\" est un bien grand mot..."
   choiceNodeConsequences: []
+  indicatorToUnlock: 9
 --- !u!114 &5846356453247499964
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5643,6 +5684,7 @@ MonoBehaviour:
     valueType: 0
     value: -30
     duration: 0
+  indicatorToUnlock: 9
 --- !u!114 &6565207463979878035
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5724,6 +5766,7 @@ MonoBehaviour:
   description: "Ou en sont nos r\xE9serves de masques ? Est-ce que cela permettrait
     de ralentir la propagation ?"
   choiceNodeConsequences: []
+  indicatorToUnlock: 9
 --- !u!114 &7286356970662616604
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5806,6 +5849,7 @@ MonoBehaviour:
     valueType: 0
     value: 20
     duration: 0
+  indicatorToUnlock: 9
 --- !u!114 &7556784360022163871
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5869,7 +5913,7 @@ MonoBehaviour:
   dialogue: "Si l'on en croit nos mod\xE8les, le nombre d'infect\xE9s pourraient
     croitre de mani\xE8re tr\xE8s importante, et nos hopitaux ne seraient plus en
     mesure d'y faire face et de traiter tout le monde."
-  uid: 31
+  uid: 5
 --- !u!114 &7621415491027884080
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5951,6 +5995,7 @@ MonoBehaviour:
     valueType: 0
     value: -30
     duration: 0
+  indicatorToUnlock: 9
 --- !u!114 &7782223547540608360
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6031,6 +6076,7 @@ MonoBehaviour:
   passingEvents: {fileID: 0}
   description: "Comment \xEAtes-vous au courant ?!"
   choiceNodeConsequences: []
+  indicatorToUnlock: 9
 --- !u!114 &7927178763799599695
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6112,6 +6158,7 @@ MonoBehaviour:
   description: "Continuez \xE0 \xE9tudier ce virus. Je veux savoir quel est le vecteur
     exact de contamination."
   choiceNodeConsequences: []
+  indicatorToUnlock: 9
 --- !u!114 &8445391073542873854
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6190,6 +6237,7 @@ MonoBehaviour:
   description: "Nous ne pouvons pas nous le permettre pour l'instant, l'\xE9conomie
     ne tiendrait pas."
   choiceNodeConsequences: []
+  indicatorToUnlock: 9
 --- !u!114 &8713376518831463849
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6252,4 +6300,4 @@ MonoBehaviour:
   character: 2
   dialogue: "Monsieur le Pr\xE9sident !\nLe Pr\xE9sident des Etats-Unis est au bout
     du fil, il souhaite vous parler tout de suite !"
-  uid: 35
+  uid: 22

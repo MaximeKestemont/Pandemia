@@ -16,6 +16,7 @@ public class ChoiceNode : Node {
     [TextArea]
     public string description;
     public List<ChoiceNodeConsequence> choiceNodeConsequences;
+    public ResourceManager.IndicatorType indicatorToUnlock = ResourceManager.IndicatorType.NONE;
 
 	protected override void Init() {
 		base.Init();

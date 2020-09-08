@@ -7,7 +7,7 @@ public class Character : MonoBehaviour
 {
 
     public CharacterName characterName;
-    public Image image;
+    public Texture2D image;
 
     void Start()
     {   
