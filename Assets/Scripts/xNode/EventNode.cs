@@ -5,15 +5,15 @@ using XNode;
 
 [NodeTint("#3459eb")]
 public class EventNode : Node {
+	public string title;
+	public int uid;
+	public Event.Status status;
+
 	[Input] public ChoiceNode unlockingChoices;
 	[Input] public ChoiceNode lockingChoices;
 	[Input] public ChoiceNode passingChoices;
 
 	[Output] public NPCDialogueNode dialogue;
-
-	public string title;
-	public int uid;
-	public Event.Status status;
 
 	public List<EventCondition> conditions;
 

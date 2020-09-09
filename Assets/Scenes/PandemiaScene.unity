@@ -4452,7 +4452,7 @@ PrefabInstance:
     - target: {fileID: 1840937659899806920, guid: fa7d02b799c0f4802925bf43b7713f09,
         type: 3}
       propertyPath: fillingLevel
-      value: 100
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1840937659899806921, guid: fa7d02b799c0f4802925bf43b7713f09,
         type: 3}
