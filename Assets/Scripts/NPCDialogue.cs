@@ -13,6 +13,7 @@ public class NPCDialogue : MonoBehaviour
     public Text textDialogue;
     public Text textCharacterName;
     public RawImage image;
+    public Button button;
 
     public GameObject choices;
 
@@ -22,6 +23,13 @@ public class NPCDialogue : MonoBehaviour
         textDialogue.text = this.dialogue;
         textCharacterName.text = this.character.characterName.ToString();
         image.texture = this.character.image;
+
+        // If no following choice, display the next event button
+        if (!choices.GetComponentInChildren<Choice>()) {
+            button.onClick.AddListener(() => ResourceManager.resourceManager.gameController.NextEvent());
+        } else {
+            button.gameObject.SetActive(false);
+        }
         
     }
 
