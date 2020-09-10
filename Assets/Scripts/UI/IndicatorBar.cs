@@ -11,11 +11,13 @@ Range between 0 and 100.
 public class IndicatorBar : MonoBehaviour {
 
 	public GameObject filling;
+	public GameObject blinkingImage;
 	public GameObject border;
 	public GameObject text;
 
 	public string indicatorName = "DefaultName";
 	public int fillingLevel = 75;
+	private int previousFillingLevel;
 	public Color color = Color.red;
 
 	public List<ValueOverTime> bonusAndMalus = new List<ValueOverTime>();
@@ -23,11 +25,16 @@ public class IndicatorBar : MonoBehaviour {
 	private RectTransform borderRect;
 	public int MIN_VALUE = 0;
 	public int MAX_VALUE = 100;
+	public int blinkingTime = 2;
+
+	private bool isBlinking = false;
 	
 	void Start () {
 		borderRect = border.GetComponent<RectTransform> ();
 		text.GetComponent<Text>().text = indicatorName;
 		filling.GetComponent<Image>().color = color;
+		this.previousFillingLevel = this.fillingLevel;
+		this.blinkingImage.SetActive(false);
 	}
 
 
@@ -38,6 +45,45 @@ public class IndicatorBar : MonoBehaviour {
 			filling.transform.localScale.y, 
 			filling.transform.localScale.z
 		);
+
+		// Check if the bar has been updated, and if yes, trigger blinking
+		if (previousFillingLevel != fillingLevel) {
+			// Resize the width of the blinking image
+			int blinkingImageWidth = Math.Abs(fillingLevel - previousFillingLevel);
+
+			blinkingImage.transform.localScale = new Vector3 (
+				(float) blinkingImageWidth / (float) MAX_VALUE * borderRect.localScale.x, 
+				filling.transform.localScale.y, 
+				filling.transform.localScale.z
+			);
+
+			// Position the blinking image properly
+			if (fillingLevel < previousFillingLevel) {
+				// Starting position of blinkingImage = Ending position of FillingImage
+				blinkingImage.transform.localPosition = new Vector3(
+					filling.transform.localPosition.x + filling.transform.localScale.x * filling.GetComponent<RectTransform>().rect.width,
+					blinkingImage.transform.localPosition.y,
+					blinkingImage.transform.localPosition.z
+				);
+			} else {
+				// Ending position of blinkingImage = Ending position of FillingImage
+				// -> starting position = Ending position - width
+				float endingPosition = filling.transform.localPosition.x + filling.transform.localScale.x * filling.GetComponent<RectTransform>().rect.width;
+				blinkingImage.transform.localPosition = new Vector3(
+					endingPosition - blinkingImageWidth,
+					blinkingImage.transform.localPosition.y,
+					blinkingImage.transform.localPosition.z
+				);				
+			}
+
+			if (!isBlinking) {
+				isBlinking = true;
+				InvokeRepeating ("Blink", 0, 0.2f);
+				StartCoroutine(StopBlinking());
+			}
+			previousFillingLevel = fillingLevel;
+		}
+
 	}
 
 	/*
@@ -83,6 +129,29 @@ public class IndicatorBar : MonoBehaviour {
 		}
 		this.gameObject.GetComponent<CanvasGroup>().alpha = alpha;
 	}
+
+	/*
+	=====================
+	Blink
+	=====================
+	Enable or disable the blinking image
+	*/
+	void Blink() {
+		//blinkingImage.GetComponent<Image>().
+		blinkingImage.SetActive(!blinkingImage.active);
+	}
+
+	/*
+	=====================
+	StopBlinking
+	=====================
+	*/
+	IEnumerator StopBlinking() {
+		yield return new WaitForSeconds(this.blinkingTime);
+		CancelInvoke ();
+		blinkingImage.SetActive(false);
+		this.isBlinking = false;
+	} 
 
 	/*
 	=====================
