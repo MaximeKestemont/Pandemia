@@ -15,7 +15,7 @@ public class RecapPanel : MonoBehaviour
     }
 
     public IEnumerator WaitAndClose() {
-        dayText.text = "Day " + resourceManager.gameController.day;
+        dayText.text = "Day " + resourceManager.gameController.day + "...";
         yield return new WaitForSeconds(3);
         resourceManager.recapPanel.SetActive(false);
     }

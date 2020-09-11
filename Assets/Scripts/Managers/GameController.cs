@@ -65,6 +65,12 @@ public class GameController : MonoBehaviour
             FinishGame(true);
         }
 
+        if (CheckLosingConditions()) {
+            FinishGame(false);
+        } else if (CheckWinningConditions()) {
+            FinishGame(true);
+        } else {
+
         Debug.Log("Updating the day counter and displaying the corresponding panel");
         this.day += 1;
         RecapPanel recapPanel = resourceManager.recapPanel.GetComponent<RecapPanel>();
@@ -131,6 +137,21 @@ public class GameController : MonoBehaviour
         } else {
             FinishGame(true);
         }
+        }
+    }
+
+    public bool CheckLosingConditions() {
+        bool economyCondition = resourceManager.economy.fillingLevel == resourceManager.economy.MIN_VALUE;
+        bool deathCondition = resourceManager.death.fillingLevel == resourceManager.death.MAX_VALUE;
+        bool populationCondition = resourceManager.population.fillingLevel == resourceManager.population.MIN_VALUE;
+        bool satisfactionCondition = resourceManager.populationSatisfaction.fillingLevel == resourceManager.populationSatisfaction.MIN_VALUE;
+        return economyCondition || deathCondition || populationCondition || satisfactionCondition;
+    }
+
+    public bool CheckWinningConditions() {
+        bool virusKnowledgeCondition = resourceManager.virusKnowledge.fillingLevel == resourceManager.virusKnowledge.MAX_VALUE;
+        bool infectedNumberCondition = resourceManager.infectedNumber.fillingLevel == resourceManager.infectedNumber.MIN_VALUE;
+        return virusKnowledgeCondition || infectedNumberCondition;
     }
 
     public void FinishGame(bool isWinner) {

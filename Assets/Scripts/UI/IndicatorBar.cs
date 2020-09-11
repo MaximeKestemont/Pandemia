@@ -103,7 +103,8 @@ public class IndicatorBar : MonoBehaviour {
 
 		foreach (var valueOverTime in bonusAndMalus) {
 			valueOverTime.timeLeft = valueOverTime.timeLeft - 1;
-			this.fillingLevel = valueOverTime.ApplyValue(this.fillingLevel);
+			// Value should stay between MIN and MAX values
+			this.fillingLevel = Math.Max(this.MIN_VALUE, Math.Min(this.MAX_VALUE, valueOverTime.ApplyValue(this.fillingLevel)));
 
 			if (valueOverTime.timeLeft >= 0) {
 				updatedBonusMalus.Add(valueOverTime);

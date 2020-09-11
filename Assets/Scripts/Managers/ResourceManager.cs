@@ -35,7 +35,6 @@ public class ResourceManager : MonoBehaviour {
     public IndicatorBar infectedNumber;
     public IndicatorBar population;
     public IndicatorBar death;
-    public IndicatorBar cured;
     public IndicatorBar virusKnowledge;
 
     public List<IndicatorBar> indicators;
@@ -68,7 +67,6 @@ public class ResourceManager : MonoBehaviour {
             infectedNumber,
             population,
             death,
-            cured,
             virusKnowledge
         };
 
@@ -77,7 +75,6 @@ public class ResourceManager : MonoBehaviour {
         death.SetVisible(false);
         virusKnowledge.SetVisible(false);
         propagationSpeed.SetVisible(false);
-        cured.SetVisible(false);
     }
 
     /*
@@ -103,8 +100,6 @@ public class ResourceManager : MonoBehaviour {
                 return population;
             case IndicatorType.DEATH:
                 return death;
-            case IndicatorType.CURED:
-                return cured;
             case IndicatorType.VIRUS_KNOWLEDGE:
                 return virusKnowledge;
             
@@ -122,7 +117,7 @@ public class ResourceManager : MonoBehaviour {
         PROPAGATION_SPEED,
         POPULATION,
         DEATH,
-        CURED,
+        CURED, // useless but if removed, all nodes created with values bigger in the enums will be modified
         VIRUS_KNOWLEDGE,
         NONE // null type
     }
