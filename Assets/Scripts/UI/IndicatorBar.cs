@@ -138,7 +138,7 @@ public class IndicatorBar : MonoBehaviour {
 	*/
 	void Blink() {
 		//blinkingImage.GetComponent<Image>().
-		blinkingImage.SetActive(!blinkingImage.active);
+		blinkingImage.SetActive(!blinkingImage.activeSelf);
 	}
 
 	/*

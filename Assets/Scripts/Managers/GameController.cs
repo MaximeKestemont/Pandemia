@@ -20,6 +20,9 @@ public class GameController : MonoBehaviour
 
     private int eventCount = 0;
 
+    // Counter to track the player progress
+    public int day = 1;
+
     public void StartGame()
     {
         Debug.Log ("Starting the game...");
@@ -50,16 +53,23 @@ public class GameController : MonoBehaviour
     }
 
     public void NextEvent() {
+
         Debug.Log("Resolving the event...");
         IndicatorBar.UpdateIndicator(resourceManager, virus);
-        recapPanel.UpdateRecap();
     
+        Debug.Log("Checking if game is not over");
         eventCount++;
         if (resourceManager.infectedNumber.fillingLevel == resourceManager.infectedNumber.MAX_VALUE) {
             FinishGame(false);
         } else if ((resourceManager.infectedNumber.fillingLevel == resourceManager.infectedNumber.MIN_VALUE) && (eventCount != 0)) {
             FinishGame(true);
         }
+
+        Debug.Log("Updating the day counter and displaying the corresponding panel");
+        this.day += 1;
+        RecapPanel recapPanel = resourceManager.recapPanel.GetComponent<RecapPanel>();
+        recapPanel.gameObject.SetActive(true);
+        recapPanel.StartCoroutine(recapPanel.WaitAndClose());
 
         // check if events are meeting conditions to be unlocked/locked
         Debug.Log("Checking if events should be unlocked or locked");
@@ -121,12 +131,6 @@ public class GameController : MonoBehaviour
         } else {
             FinishGame(true);
         }
-    }
-
-    public void CloseRecapPanel() {
-        resourceManager.recapPanel.SetActive(false);
-        Debug.Log("Close panel");
-        NextEvent();
     }
 
     public void FinishGame(bool isWinner) {

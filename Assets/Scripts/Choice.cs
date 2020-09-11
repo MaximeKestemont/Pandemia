@@ -22,11 +22,14 @@ public class Choice: MonoBehaviour
     public List<int> passedEvents = new List<int>();
 
     public GameObject followingDialogue = null; // next dialogue if this choice is chosen
+    
+    private ResourceManager resourceManager;
 
     // Start is called before the first frame update
     void Start()
     {
         choiceTitle.GetComponent<Text>().text = title;
+        resourceManager = ResourceManager.resourceManager;
     }
 
     // Update is called once per frame
@@ -65,30 +68,30 @@ public class Choice: MonoBehaviour
 
         // Lock/unlock other events
         foreach(var eventId in lockedEvents) {
-            if(ResourceManager.resourceManager.eventsMap[eventId].GetComponent<Event>().status != Event.Status.PASSED){
-                ResourceManager.resourceManager.eventsMap[eventId].GetComponent<Event>().status = Event.Status.LOCKED;
+            if(resourceManager.eventsMap[eventId].GetComponent<Event>().status != Event.Status.PASSED){
+                resourceManager.eventsMap[eventId].GetComponent<Event>().status = Event.Status.LOCKED;
             }
         }
         foreach(var eventId in unlockedEvents) {
-            if(ResourceManager.resourceManager.eventsMap[eventId].GetComponent<Event>().status != Event.Status.PASSED){
-                ResourceManager.resourceManager.eventsMap[eventId].GetComponent<Event>().status = Event.Status.UNLOCKED;
+            if(resourceManager.eventsMap[eventId].GetComponent<Event>().status != Event.Status.PASSED){
+                resourceManager.eventsMap[eventId].GetComponent<Event>().status = Event.Status.UNLOCKED;
             }
         }
         foreach(var eventId in passedEvents) {
-            ResourceManager.resourceManager.eventsMap[eventId].GetComponent<Event>().status = Event.Status.PASSED;
+            resourceManager.eventsMap[eventId].GetComponent<Event>().status = Event.Status.PASSED;
         }
 
         // Render indicators
         if (indicatorToUnlock != ResourceManager.IndicatorType.NONE) {
-            ResourceManager.resourceManager.GetIndicatorBar(indicatorToUnlock).SetVisible(true);
+            resourceManager.GetIndicatorBar(indicatorToUnlock).SetVisible(true);
         }
 
         if (followingDialogue) {
             this.GetComponentInParent<NPCDialogue>().gameObject.SetActive(false);
             followingDialogue.SetActive(true);
         } else {
-            // End of event --> go to recap panel
-            ResourceManager.resourceManager.recapPanel.SetActive(true);
+            // End of event --> go to next event
+            resourceManager.gameController.NextEvent();
         }
     }
 
