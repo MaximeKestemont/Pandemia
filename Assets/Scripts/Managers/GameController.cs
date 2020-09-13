@@ -39,7 +39,7 @@ public class GameController : MonoBehaviour
         Debug.Log ($"Virus {this.virus.name} has been selected for this game");
         
         // Activate first event
-        currentEventId = 1;
+        currentEventId = 0;
         currentEvent = resourceManager.eventsMap[currentEventId];
         currentEvent.SetActive(true);
         Debug.Log($"Current event: {currentEventId}");
@@ -59,11 +59,6 @@ public class GameController : MonoBehaviour
     
         Debug.Log("Checking if game is not over");
         eventCount++;
-        if (resourceManager.infectedNumber.fillingLevel == resourceManager.infectedNumber.MAX_VALUE) {
-            FinishGame(false);
-        } else if ((resourceManager.infectedNumber.fillingLevel == resourceManager.infectedNumber.MIN_VALUE) && (eventCount != 0)) {
-            FinishGame(true);
-        }
 
         if (CheckLosingConditions()) {
             FinishGame(false);
@@ -149,9 +144,10 @@ public class GameController : MonoBehaviour
     }
 
     public bool CheckWinningConditions() {
+        bool eventsCondition = eventCount > 10;
         bool virusKnowledgeCondition = resourceManager.virusKnowledge.fillingLevel == resourceManager.virusKnowledge.MAX_VALUE;
         bool infectedNumberCondition = resourceManager.infectedNumber.fillingLevel == resourceManager.infectedNumber.MIN_VALUE;
-        return virusKnowledgeCondition || infectedNumberCondition;
+        return (virusKnowledgeCondition || infectedNumberCondition) && eventsCondition;
     }
 
     public void FinishGame(bool isWinner) {

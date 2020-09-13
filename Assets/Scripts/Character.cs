@@ -21,7 +21,8 @@ public class Character : MonoBehaviour
         MINISTER_OF_INTERNAL_AFFAIRS,
         MISTRESS,
         RESEARCHER,
-        JOURNALIST
+        JOURNALIST,
+        PRIME_MINISTER
     }
 
 }
