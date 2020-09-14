@@ -22,7 +22,9 @@ public class Character : MonoBehaviour
         MISTRESS,
         RESEARCHER,
         JOURNALIST,
-        PRIME_MINISTER
+        PRIME_MINISTER,
+        MINISTER_OF_ECONOMY,
+        PHARMA_LOBBYIST
     }
 
 }

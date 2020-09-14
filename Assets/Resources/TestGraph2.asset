@@ -63,7 +63,7 @@ MonoBehaviour:
   dialogue: "Vous...vous \xEAtes s\xE9rieux, Monsieur le Pr\xE9sident ? N'est-ce
     pas un peu disproportionn\xE9 comme r\xE9action ? L'impact \xE9conomique sera
     terrible !"
-  uid: 40
+  uid: 12
 --- !u!114 &-8913196847682330628
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -213,7 +213,7 @@ MonoBehaviour:
   dialogue: "Monsieur le Pr\xE9sident !\nComme vous avez pu le voir dans la presse,
     nous avons eu vent d'une affaire, entre vous et une charmante jeune dame...Pouvez-vous
     nous en dire plus ?"
-  uid: 36
+  uid: 4
 --- !u!114 &-8641935941286930188
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -368,7 +368,82 @@ MonoBehaviour:
   dialogue: "J'ai un peu \xE9tudi\xE9 la question, et une solution toute simple m'est
     venue \xE0 l'esprit...Pourquoi ne pas construire un mur, un gigantesque mur,
     autour de ce virus ?"
-  uid: 28
+  uid: 42
+--- !u!114 &-8413346220491358754
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e77689f02e2134294bbdf1163ebfa777, type: 3}
+  m_Name: Event
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 4264, y: 3416}
+  ports:
+    keys:
+    - unlockingChoices
+    - lockingChoices
+    - passingChoices
+    - dialogue
+    values:
+    - _fieldName: unlockingChoices
+      _node: {fileID: -8413346220491358754}
+      _typeQualifiedName: ChoiceNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: unlockingEvents
+        node: {fileID: 8671454449011215515}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: lockingChoices
+      _node: {fileID: -8413346220491358754}
+      _typeQualifiedName: ChoiceNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: passingChoices
+      _node: {fileID: -8413346220491358754}
+      _typeQualifiedName: ChoiceNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: dialogue
+      _node: {fileID: -8413346220491358754}
+      _typeQualifiedName: NPCDialogueNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: initialEvent
+        node: {fileID: 7634119974094431354}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  title: Le complot "Big Pharma"
+  uid: 21
+  status: 1
+  unlockingChoices: {fileID: 0}
+  lockingChoices: {fileID: 0}
+  passingChoices: {fileID: 0}
+  dialogue: {fileID: 0}
+  conditions:
+  - conditions:
+    - indicatorType: 8
+      threshold: 15
+      conditionType: 0
 --- !u!114 &-8344875645927665424
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -382,7 +457,7 @@ MonoBehaviour:
   m_Name: NPC Dialogue
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 168, y: 1272}
+  position: {x: 216, y: 1304}
   ports:
     keys:
     - initialEvent
@@ -432,11 +507,11 @@ MonoBehaviour:
   incomingChoice: {fileID: 0}
   outcomingChoices: {fileID: 0}
   character: 1
-  dialogue: "Monsieur le Pr\xE9sident...Pardonnez moi de vous d\xE9ranger \xE0 nouveau,
-    mais c'est encore au sujet de cette grippe. Le nombre de cas semble augmenter
-    rapidement, plus que dans le cas d'une grippe standard. Et nos sp\xE9cialistes
-    ne savent toujours pas de quoi il s'agit."
-  uid: 2
+  dialogue: "Pardonnez moi de vous d\xE9ranger \xE0 nouveau, mais c'est encore au
+    sujet de cette grippe. Le nombre de cas semble augmenter rapidement, plus que
+    dans le cas d'une grippe standard. Et nos sp\xE9cialistes ne savent toujours
+    pas de quoi il s'agit."
+  uid: 38
 --- !u!114 &-8318947926553738119
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -602,7 +677,7 @@ MonoBehaviour:
     valueType: 0
     value: -5
     duration: 0
-  - indicatorType: 3
+  - indicatorType: 4
     valueType: 0
     value: 20
     duration: 0
@@ -835,7 +910,7 @@ MonoBehaviour:
   character: 0
   dialogue: "Hello my dear !\nJ'ai eu vent d'une inqui\xE9tante histoire...il semblerait
     qu'un virus \xE9trange se r\xE9pand parmi votre peuple ?"
-  uid: 17
+  uid: 11
 --- !u!114 &-7757250838793234255
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -849,7 +924,7 @@ MonoBehaviour:
   m_Name: Choice
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 4696, y: 312}
+  position: {x: 4936, y: 248}
   ports:
     keys:
     - correspondingDialogue
@@ -874,7 +949,10 @@ MonoBehaviour:
       _node: {fileID: -7757250838793234255}
       _typeQualifiedName: NPCDialogueNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
-      connections: []
+      connections:
+      - fieldName: incomingChoice
+        node: {fileID: -4119325921555146253}
+        reroutePoints: []
       _direction: 1
       _connectionType: 0
       _typeConstraint: 0
@@ -912,15 +990,7 @@ MonoBehaviour:
   lockingEvents: {fileID: 0}
   passingEvents: {fileID: 0}
   description: Augmentez fortement la production.
-  choiceNodeConsequences:
-  - indicatorType: 1
-    valueType: 0
-    value: -20
-    duration: 0
-  - indicatorType: 0
-    valueType: 0
-    value: 20
-    duration: 0
+  choiceNodeConsequences: []
   indicatorToUnlock: 9
 --- !u!114 &-7619066564953695623
 MonoBehaviour:
@@ -1146,11 +1216,10 @@ MonoBehaviour:
   incomingChoice: {fileID: 0}
   outcomingChoices: {fileID: 0}
   character: 5
-  dialogue: "Monsieur !\nJe reviens vers vous avec des informations au sujet du vecteur
-    de contamination du virus. Nos donn\xE9es ne sont pas tout \xE0 fait fiables,
-    mais il semblerait que le virus puisse rester en suspension dans l'air plusieurs
-    heures !"
-  uid: 19
+  dialogue: "Je reviens vers vous avec des informations au sujet du vecteur de contamination
+    du virus. Nos donn\xE9es ne sont pas tout \xE0 fait fiables, mais il semblerait
+    que le virus puisse rester en suspension dans l'air plusieurs heures !"
+  uid: 3
 --- !u!114 &-7407796427923633968
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1358,7 +1427,7 @@ MonoBehaviour:
   character: 1
   dialogue: "Leur situation \xE9tait sous contr\xF4le...et a brusquement empir\xE9,
     en l'espace de quelques heures !"
-  uid: 37
+  uid: 23
 --- !u!114 &-6965955643441440527
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1537,6 +1606,151 @@ MonoBehaviour:
     value: -5
     duration: 0
   indicatorToUnlock: 9
+--- !u!114 &-6744966966447857869
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39784acf12ef448498ee792b1bf41ff0, type: 3}
+  m_Name: NPC Dialogue
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 2776, y: 3368}
+  ports:
+    keys:
+    - initialEvent
+    - incomingChoice
+    - outcomingChoices
+    values:
+    - _fieldName: initialEvent
+      _node: {fileID: -6744966966447857869}
+      _typeQualifiedName: EventNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: dialogue
+        node: {fileID: -4837346469576310711}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: incomingChoice
+      _node: {fileID: -6744966966447857869}
+      _typeQualifiedName: ChoiceNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: outcomingChoices
+      _node: {fileID: -6744966966447857869}
+      _typeQualifiedName: ChoiceNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: correspondingDialogue
+        node: {fileID: -4187843840712376257}
+        reroutePoints: []
+      - fieldName: correspondingDialogue
+        node: {fileID: 7307833212662970042}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  initialEvent: {fileID: 0}
+  incomingChoice: {fileID: 0}
+  outcomingChoices: {fileID: 0}
+  character: 9
+  dialogue: Bonjour !
+  uid: 17
+--- !u!114 &-6667092801569149470
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78d86ceab28114ca481a4504b2f3e3a3, type: 3}
+  m_Name: Choice
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 6152, y: 3480}
+  ports:
+    keys:
+    - correspondingDialogue
+    - followingDialogue
+    - unlockingEvents
+    - lockingEvents
+    - passingEvents
+    values:
+    - _fieldName: correspondingDialogue
+      _node: {fileID: -6667092801569149470}
+      _typeQualifiedName: NPCDialogueNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: outcomingChoices
+        node: {fileID: -4346775651834682891}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: followingDialogue
+      _node: {fileID: -6667092801569149470}
+      _typeQualifiedName: NPCDialogueNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: unlockingEvents
+      _node: {fileID: -6667092801569149470}
+      _typeQualifiedName: EventNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: lockingEvents
+      _node: {fileID: -6667092801569149470}
+      _typeQualifiedName: EventNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: passingEvents
+      _node: {fileID: -6667092801569149470}
+      _typeQualifiedName: EventNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  correspondingDialogue: {fileID: 0}
+  followingDialogue: {fileID: 0}
+  unlockingEvents: {fileID: 0}
+  lockingEvents: {fileID: 0}
+  passingEvents: {fileID: 0}
+  description: "C'est hors de question que je mette en danger la sant\xE9 de mon
+    peuple ! Allez-vous en ! Sans la voiture !"
+  choiceNodeConsequences:
+  - indicatorType: 4
+    valueType: 0
+    value: -10
+    duration: 0
+  indicatorToUnlock: 9
 --- !u!114 &-6571206116351972908
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1687,8 +1901,12 @@ MonoBehaviour:
   lockingEvents: {fileID: 0}
   passingEvents: {fileID: 0}
   description: "C'est \xE0 dire ? Parlez, voyons !"
-  choiceNodeConsequences: []
-  indicatorToUnlock: 9
+  choiceNodeConsequences:
+  - indicatorType: 4
+    valueType: 0
+    value: 15
+    duration: 0
+  indicatorToUnlock: 4
 --- !u!114 &-6148687762853371554
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1771,6 +1989,66 @@ MonoBehaviour:
     tard !"
   choiceNodeConsequences: []
   indicatorToUnlock: 9
+--- !u!114 &-5937623069744095474
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39784acf12ef448498ee792b1bf41ff0, type: 3}
+  m_Name: NPC Dialogue
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 5448, y: 3608}
+  ports:
+    keys:
+    - initialEvent
+    - incomingChoice
+    - outcomingChoices
+    values:
+    - _fieldName: initialEvent
+      _node: {fileID: -5937623069744095474}
+      _typeQualifiedName: EventNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: incomingChoice
+      _node: {fileID: -5937623069744095474}
+      _typeQualifiedName: ChoiceNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: followingDialogue
+        node: {fileID: 2322911130510164977}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: outcomingChoices
+      _node: {fileID: -5937623069744095474}
+      _typeQualifiedName: ChoiceNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: correspondingDialogue
+        node: {fileID: 2539000399609211474}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  initialEvent: {fileID: 0}
+  incomingChoice: {fileID: 0}
+  outcomingChoices: {fileID: 0}
+  character: 9
+  dialogue: "Nous travaillons d'arrache-pieds sur un vaccin, que nous aimerions commercialiser.
+    Mais pour cela, il faut que cette pand\xE9mie reste...et bien, une pand\xE9mie."
+  uid: 28
 --- !u!114 &-5810375302947757840
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1833,7 +2111,89 @@ MonoBehaviour:
   character: 5
   dialogue: "Monsieur le Pr\xE9sident !\nNous avons investigu\xE9 plus en d\xE9tails
     cette grippe \xE9trange, et nous avons fait cetains progr\xE8s !"
-  uid: 24
+  uid: 31
+--- !u!114 &-5773141601634084214
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78d86ceab28114ca481a4504b2f3e3a3, type: 3}
+  m_Name: Choice
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 4776, y: 2936}
+  ports:
+    keys:
+    - correspondingDialogue
+    - followingDialogue
+    - unlockingEvents
+    - lockingEvents
+    - passingEvents
+    values:
+    - _fieldName: correspondingDialogue
+      _node: {fileID: -5773141601634084214}
+      _typeQualifiedName: NPCDialogueNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: outcomingChoices
+        node: {fileID: -2567500366553648640}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: followingDialogue
+      _node: {fileID: -5773141601634084214}
+      _typeQualifiedName: NPCDialogueNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: unlockingEvents
+      _node: {fileID: -5773141601634084214}
+      _typeQualifiedName: EventNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: lockingEvents
+      _node: {fileID: -5773141601634084214}
+      _typeQualifiedName: EventNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: passingEvents
+      _node: {fileID: -5773141601634084214}
+      _typeQualifiedName: EventNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  correspondingDialogue: {fileID: 0}
+  followingDialogue: {fileID: 0}
+  unlockingEvents: {fileID: 0}
+  lockingEvents: {fileID: 0}
+  passingEvents: {fileID: 0}
+  description: La tech
+  choiceNodeConsequences:
+  - indicatorType: 1
+    valueType: 0
+    value: -10
+    duration: 0
+  indicatorToUnlock: 9
 --- !u!114 &-5769252873609689896
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2129,7 +2489,7 @@ MonoBehaviour:
   dialogue: "Je ne suis pas sur que ce soit une d\xE9cision tr\xE8s sage, Monsieur
     le Pr\xE9sident. Il risque de mal le prendre, et il est connu pour \xEAtre assez
     irritable..."
-  uid: 7
+  uid: 22
 --- !u!114 &-5129744298042399994
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2211,6 +2571,10 @@ MonoBehaviour:
   - indicatorType: 3
     valueType: 0
     value: 20
+    duration: 0
+  - indicatorType: 2
+    valueType: 0
+    value: -10
     duration: 0
   indicatorToUnlock: 9
 --- !u!114 &-5126616552061132958
@@ -2387,6 +2751,10 @@ MonoBehaviour:
     valueType: 0
     value: 15
     duration: 0
+  - indicatorType: 2
+    valueType: 0
+    value: 10
+    duration: 0
   indicatorToUnlock: 9
 --- !u!114 &-5094203497081966685
 MonoBehaviour:
@@ -2536,7 +2904,7 @@ MonoBehaviour:
   character: 0
   dialogue: "Etes-vous certain ? Ce mur a un impact d\xE9sastreux sur notre \xE9conomie,
     sans parler de votre cote de popularit\xE9..."
-  uid: 9
+  uid: 6
 --- !u!114 &-5064450600914271291
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2688,6 +3056,296 @@ MonoBehaviour:
     mon cours !"
   choiceNodeConsequences: []
   indicatorToUnlock: 9
+--- !u!114 &-4837346469576310711
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e77689f02e2134294bbdf1163ebfa777, type: 3}
+  m_Name: Event
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 2552, y: 3240}
+  ports:
+    keys:
+    - unlockingChoices
+    - lockingChoices
+    - passingChoices
+    - dialogue
+    values:
+    - _fieldName: unlockingChoices
+      _node: {fileID: -4837346469576310711}
+      _typeQualifiedName: ChoiceNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: lockingChoices
+      _node: {fileID: -4837346469576310711}
+      _typeQualifiedName: ChoiceNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: passingChoices
+      _node: {fileID: -4837346469576310711}
+      _typeQualifiedName: ChoiceNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: dialogue
+      _node: {fileID: -4837346469576310711}
+      _typeQualifiedName: NPCDialogueNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: initialEvent
+        node: {fileID: -6744966966447857869}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  title: Un individu aimable...
+  uid: 20
+  status: 1
+  unlockingChoices: {fileID: 0}
+  lockingChoices: {fileID: 0}
+  passingChoices: {fileID: 0}
+  dialogue: {fileID: 0}
+  conditions:
+  - conditions:
+    - indicatorType: 3
+      threshold: 5
+      conditionType: 0
+--- !u!114 &-4799029301315544664
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e77689f02e2134294bbdf1163ebfa777, type: 3}
+  m_Name: Event
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 3768, y: 2488}
+  ports:
+    keys:
+    - unlockingChoices
+    - lockingChoices
+    - passingChoices
+    - dialogue
+    values:
+    - _fieldName: unlockingChoices
+      _node: {fileID: -4799029301315544664}
+      _typeQualifiedName: ChoiceNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: lockingChoices
+      _node: {fileID: -4799029301315544664}
+      _typeQualifiedName: ChoiceNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: passingChoices
+      _node: {fileID: -4799029301315544664}
+      _typeQualifiedName: ChoiceNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: dialogue
+      _node: {fileID: -4799029301315544664}
+      _typeQualifiedName: NPCDialogueNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: initialEvent
+        node: {fileID: -4678776307648510509}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  title: "L'app\xE2t du gain"
+  uid: 19
+  status: 1
+  unlockingChoices: {fileID: 0}
+  lockingChoices: {fileID: 0}
+  passingChoices: {fileID: 0}
+  dialogue: {fileID: 0}
+  conditions:
+  - conditions:
+    - indicatorType: 1
+      threshold: 90
+      conditionType: 0
+--- !u!114 &-4678776307648510509
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39784acf12ef448498ee792b1bf41ff0, type: 3}
+  m_Name: NPC Dialogue
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 4008, y: 2616}
+  ports:
+    keys:
+    - initialEvent
+    - incomingChoice
+    - outcomingChoices
+    values:
+    - _fieldName: initialEvent
+      _node: {fileID: -4678776307648510509}
+      _typeQualifiedName: EventNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: dialogue
+        node: {fileID: -4799029301315544664}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: incomingChoice
+      _node: {fileID: -4678776307648510509}
+      _typeQualifiedName: ChoiceNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: outcomingChoices
+      _node: {fileID: -4678776307648510509}
+      _typeQualifiedName: ChoiceNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: correspondingDialogue
+        node: {fileID: 2055428315675596957}
+        reroutePoints: []
+      - fieldName: correspondingDialogue
+        node: {fileID: 1939861055039136076}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  initialEvent: {fileID: 0}
+  incomingChoice: {fileID: 0}
+  outcomingChoices: {fileID: 0}
+  character: 8
+  dialogue: "Notre \xE9conomie est florissante, Monsieur. Nous devrions en profiter
+    pour investir dans des projets \xE0 long terme !"
+  uid: 32
+--- !u!114 &-4634401418478953258
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78d86ceab28114ca481a4504b2f3e3a3, type: 3}
+  m_Name: Choice
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 5272, y: 2888}
+  ports:
+    keys:
+    - correspondingDialogue
+    - followingDialogue
+    - unlockingEvents
+    - lockingEvents
+    - passingEvents
+    values:
+    - _fieldName: correspondingDialogue
+      _node: {fileID: -4634401418478953258}
+      _typeQualifiedName: NPCDialogueNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: outcomingChoices
+        node: {fileID: -2790746181763024298}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: followingDialogue
+      _node: {fileID: -4634401418478953258}
+      _typeQualifiedName: NPCDialogueNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: unlockingEvents
+      _node: {fileID: -4634401418478953258}
+      _typeQualifiedName: EventNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: lockingEvents
+      _node: {fileID: -4634401418478953258}
+      _typeQualifiedName: EventNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: passingEvents
+      _node: {fileID: -4634401418478953258}
+      _typeQualifiedName: EventNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  correspondingDialogue: {fileID: 0}
+  followingDialogue: {fileID: 0}
+  unlockingEvents: {fileID: 0}
+  lockingEvents: {fileID: 0}
+  passingEvents: {fileID: 0}
+  description: J'ai toujours eu le mot pour rire. Investissons massivement dans l'armement
+    ! J'ai quelques "projets"...
+  choiceNodeConsequences:
+  - indicatorType: 1
+    valueType: 0
+    value: -30
+    duration: 0
+  indicatorToUnlock: 9
 --- !u!114 &-4467930369749130559
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2747,7 +3405,7 @@ MonoBehaviour:
   character: 1
   dialogue: "Monsieur le Pr\xE9sident !\nMes \xE9quipes ont travaill\xE9es d'arrache-pied,
     et nous avons de bonnes nouvelles !"
-  uid: 15
+  uid: 35
 --- !u!114 &-4467104179170580774
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2761,7 +3419,7 @@ MonoBehaviour:
   m_Name: NPC Dialogue
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 4456, y: 392}
+  position: {x: 4696, y: 504}
   ports:
     keys:
     - initialEvent
@@ -2772,7 +3430,10 @@ MonoBehaviour:
       _node: {fileID: -4467104179170580774}
       _typeQualifiedName: EventNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
-      connections: []
+      connections:
+      - fieldName: dialogue
+        node: {fileID: 3836908736667462038}
+        reroutePoints: []
       _direction: 0
       _connectionType: 0
       _typeConstraint: 0
@@ -2781,10 +3442,7 @@ MonoBehaviour:
       _node: {fileID: -4467104179170580774}
       _typeQualifiedName: ChoiceNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
-      connections:
-      - fieldName: followingDialogue
-        node: {fileID: 3515525755029350254}
-        reroutePoints: []
+      connections: []
       _direction: 0
       _connectionType: 0
       _typeConstraint: 0
@@ -2808,9 +3466,9 @@ MonoBehaviour:
   incomingChoice: {fileID: 0}
   outcomingChoices: {fileID: 0}
   character: 1
-  dialogue: "Tr\xE8s bien, ce sera fait.\nQue devons-nous faire par rapport au manque
-    de masques ?"
-  uid: 42
+  dialogue: "D'apr\xE8s certains experts, nos stocks de masques pourraient \xEAtre
+    insuffisants, si cette pand\xE9mie venait \xE0 s'intensifier..."
+  uid: 29
 --- !u!114 &-4436405260831344289
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2966,6 +3624,216 @@ MonoBehaviour:
   passingChoices: {fileID: 0}
   dialogue: {fileID: 0}
   conditions: []
+--- !u!114 &-4346775651834682891
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39784acf12ef448498ee792b1bf41ff0, type: 3}
+  m_Name: NPC Dialogue
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 5896, y: 3608}
+  ports:
+    keys:
+    - initialEvent
+    - incomingChoice
+    - outcomingChoices
+    values:
+    - _fieldName: initialEvent
+      _node: {fileID: -4346775651834682891}
+      _typeQualifiedName: EventNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: incomingChoice
+      _node: {fileID: -4346775651834682891}
+      _typeQualifiedName: ChoiceNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: followingDialogue
+        node: {fileID: 2539000399609211474}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: outcomingChoices
+      _node: {fileID: -4346775651834682891}
+      _typeQualifiedName: ChoiceNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: correspondingDialogue
+        node: {fileID: -6667092801569149470}
+        reroutePoints: []
+      - fieldName: correspondingDialogue
+        node: {fileID: 3379807830996146496}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  initialEvent: {fileID: 0}
+  incomingChoice: {fileID: 0}
+  outcomingChoices: {fileID: 0}
+  character: 9
+  dialogue: "Il va de soit que vous serez d\xFBment r\xE9compens\xE9. Si vous veniez
+    \xE0 refuser...disons que la presse ne manquerait pas de s'interroger sur votre
+    nouvelle voiture."
+  uid: 20
+--- !u!114 &-4187843840712376257
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78d86ceab28114ca481a4504b2f3e3a3, type: 3}
+  m_Name: Choice
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 3000, y: 3256}
+  ports:
+    keys:
+    - correspondingDialogue
+    - followingDialogue
+    - unlockingEvents
+    - lockingEvents
+    - passingEvents
+    values:
+    - _fieldName: correspondingDialogue
+      _node: {fileID: -4187843840712376257}
+      _typeQualifiedName: NPCDialogueNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: outcomingChoices
+        node: {fileID: -6744966966447857869}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: followingDialogue
+      _node: {fileID: -4187843840712376257}
+      _typeQualifiedName: NPCDialogueNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: incomingChoice
+        node: {fileID: -477566508383598976}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: unlockingEvents
+      _node: {fileID: -4187843840712376257}
+      _typeQualifiedName: EventNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: lockingEvents
+      _node: {fileID: -4187843840712376257}
+      _typeQualifiedName: EventNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: passingEvents
+      _node: {fileID: -4187843840712376257}
+      _typeQualifiedName: EventNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  correspondingDialogue: {fileID: 0}
+  followingDialogue: {fileID: 0}
+  unlockingEvents: {fileID: 0}
+  lockingEvents: {fileID: 0}
+  passingEvents: {fileID: 0}
+  description: "...Vous \xEAtes qui encore vous ? Je ne pense pas que l'on se soit
+    d\xE9j\xE0 rencontr\xE9."
+  choiceNodeConsequences: []
+  indicatorToUnlock: 9
+--- !u!114 &-4119325921555146253
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39784acf12ef448498ee792b1bf41ff0, type: 3}
+  m_Name: NPC Dialogue
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 5176, y: 248}
+  ports:
+    keys:
+    - initialEvent
+    - incomingChoice
+    - outcomingChoices
+    values:
+    - _fieldName: initialEvent
+      _node: {fileID: -4119325921555146253}
+      _typeQualifiedName: EventNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: incomingChoice
+      _node: {fileID: -4119325921555146253}
+      _typeQualifiedName: ChoiceNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: followingDialogue
+        node: {fileID: -7757250838793234255}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: outcomingChoices
+      _node: {fileID: -4119325921555146253}
+      _typeQualifiedName: ChoiceNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: correspondingDialogue
+        node: {fileID: 2771435585964520391}
+        reroutePoints: []
+      - fieldName: correspondingDialogue
+        node: {fileID: 8445391073542873854}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  initialEvent: {fileID: 0}
+  incomingChoice: {fileID: 0}
+  outcomingChoices: {fileID: 0}
+  character: 8
+  dialogue: "Je vous le d\xE9conseille, Monsieur. Nos finances s'en trouveraient
+    impact\xE9es, ces d\xE9penses n'ont jamais \xE9t\xE9 pr\xE9vues dans notre budget
+    !"
+  uid: 46
 --- !u!114 &-3784549826910184613
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3032,7 +3900,7 @@ MonoBehaviour:
   dialogue: "Nous nous rencontrons toujours \xE0 l'hotel, c'est lassant \xE0 force...Pourquoi
     ne ferions-nous pas quelque chose d'autre, pour changer ? Il nous suffit de rester
     discret, personne ne nous reconnaitra."
-  uid: 22
+  uid: 47
 --- !u!114 &-3722489541259353381
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3179,6 +4047,88 @@ MonoBehaviour:
     - indicatorType: 3
       threshold: 40
       conditionType: 1
+--- !u!114 &-3610427964532928447
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78d86ceab28114ca481a4504b2f3e3a3, type: 3}
+  m_Name: Choice
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 4776, y: 2824}
+  ports:
+    keys:
+    - correspondingDialogue
+    - followingDialogue
+    - unlockingEvents
+    - lockingEvents
+    - passingEvents
+    values:
+    - _fieldName: correspondingDialogue
+      _node: {fileID: -3610427964532928447}
+      _typeQualifiedName: NPCDialogueNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: outcomingChoices
+        node: {fileID: -2567500366553648640}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: followingDialogue
+      _node: {fileID: -3610427964532928447}
+      _typeQualifiedName: NPCDialogueNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: unlockingEvents
+      _node: {fileID: -3610427964532928447}
+      _typeQualifiedName: EventNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: lockingEvents
+      _node: {fileID: -3610427964532928447}
+      _typeQualifiedName: EventNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: passingEvents
+      _node: {fileID: -3610427964532928447}
+      _typeQualifiedName: EventNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  correspondingDialogue: {fileID: 0}
+  followingDialogue: {fileID: 0}
+  unlockingEvents: {fileID: 0}
+  lockingEvents: {fileID: 0}
+  passingEvents: {fileID: 0}
+  description: L'industrie militaire
+  choiceNodeConsequences:
+  - indicatorType: 1
+    valueType: 0
+    value: -20
+    duration: 0
+  indicatorToUnlock: 9
 --- !u!114 &-3375190794589762253
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3311,7 +4261,7 @@ MonoBehaviour:
   dialogue: "Monsieur le Pr\xE9sident ! \nNous avons proc\xE9d\xE9 au s\xE9quencage
     du virus au cours des derni\xE8res semaines...et il semblerait que ce dernier
     soit en train de muter !"
-  uid: 13
+  uid: 2
 --- !u!114 &-3083690635934451316
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3449,7 +4399,234 @@ MonoBehaviour:
   dialogue: "Le comment importe peu...Le peuple est assez surpris de voir que vous
     avez du temps \xE0 consacrer \xE0 ce genre de frivolit\xE9s, alors qu'une pand\xE9mie
     s'annonce. Pouvez-vous nous \xE9claircir un peu sur cette histoire ?"
-  uid: 3
+  uid: 21
+--- !u!114 &-2790746181763024298
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39784acf12ef448498ee792b1bf41ff0, type: 3}
+  m_Name: NPC Dialogue
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 5016, y: 3032}
+  ports:
+    keys:
+    - initialEvent
+    - incomingChoice
+    - outcomingChoices
+    values:
+    - _fieldName: initialEvent
+      _node: {fileID: -2790746181763024298}
+      _typeQualifiedName: EventNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: incomingChoice
+      _node: {fileID: -2790746181763024298}
+      _typeQualifiedName: ChoiceNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: followingDialogue
+        node: {fileID: 7472509613294695125}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: outcomingChoices
+      _node: {fileID: -2790746181763024298}
+      _typeQualifiedName: ChoiceNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: correspondingDialogue
+        node: {fileID: -4634401418478953258}
+        reroutePoints: []
+      - fieldName: correspondingDialogue
+        node: {fileID: -2542643502728431352}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  initialEvent: {fileID: 0}
+  incomingChoice: {fileID: 0}
+  outcomingChoices: {fileID: 0}
+  character: 8
+  dialogue: "Ahahaha ! Tr\xE8s bonne Monsieur le Pr\xE9sident, tr\xE8s bonne !"
+  uid: 1
+--- !u!114 &-2567500366553648640
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39784acf12ef448498ee792b1bf41ff0, type: 3}
+  m_Name: NPC Dialogue
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 4504, y: 2472}
+  ports:
+    keys:
+    - initialEvent
+    - incomingChoice
+    - outcomingChoices
+    values:
+    - _fieldName: initialEvent
+      _node: {fileID: -2567500366553648640}
+      _typeQualifiedName: EventNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: incomingChoice
+      _node: {fileID: -2567500366553648640}
+      _typeQualifiedName: ChoiceNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: followingDialogue
+        node: {fileID: 2055428315675596957}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: outcomingChoices
+      _node: {fileID: -2567500366553648640}
+      _typeQualifiedName: ChoiceNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: correspondingDialogue
+        node: {fileID: 6590070571888740739}
+        reroutePoints: []
+      - fieldName: correspondingDialogue
+        node: {fileID: 2526528948892301834}
+        reroutePoints: []
+      - fieldName: correspondingDialogue
+        node: {fileID: -3610427964532928447}
+        reroutePoints: []
+      - fieldName: correspondingDialogue
+        node: {fileID: -5773141601634084214}
+        reroutePoints: []
+      - fieldName: correspondingDialogue
+        node: {fileID: 7472509613294695125}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  initialEvent: {fileID: 0}
+  incomingChoice: {fileID: 0}
+  outcomingChoices: {fileID: 0}
+  character: 8
+  dialogue: "Diverses options s'offrent \xE0 nous. Nucl\xE9aire, tech, militaire,
+    banque,..."
+  uid: 26
+--- !u!114 &-2542643502728431352
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78d86ceab28114ca481a4504b2f3e3a3, type: 3}
+  m_Name: Choice
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 5272, y: 3224}
+  ports:
+    keys:
+    - correspondingDialogue
+    - followingDialogue
+    - unlockingEvents
+    - lockingEvents
+    - passingEvents
+    values:
+    - _fieldName: correspondingDialogue
+      _node: {fileID: -2542643502728431352}
+      _typeQualifiedName: NPCDialogueNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: outcomingChoices
+        node: {fileID: -2790746181763024298}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: followingDialogue
+      _node: {fileID: -2542643502728431352}
+      _typeQualifiedName: NPCDialogueNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: unlockingEvents
+      _node: {fileID: -2542643502728431352}
+      _typeQualifiedName: EventNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: lockingEvents
+      _node: {fileID: -2542643502728431352}
+      _typeQualifiedName: EventNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: passingEvents
+      _node: {fileID: -2542643502728431352}
+      _typeQualifiedName: EventNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  correspondingDialogue: {fileID: 0}
+  followingDialogue: {fileID: 0}
+  unlockingEvents: {fileID: 0}
+  lockingEvents: {fileID: 0}
+  passingEvents: {fileID: 0}
+  description: '...Je ne rigolais pas.
+
+    Investissez dans nos politiques sociales,
+    en particulier nos hopitaux !'
+  choiceNodeConsequences:
+  - indicatorType: 1
+    valueType: 0
+    value: -30
+    duration: 0
+  - indicatorType: 0
+    valueType: 0
+    value: 30
+    duration: 0
+  - indicatorType: 2
+    valueType: 0
+    value: 20
+    duration: 0
+  indicatorToUnlock: 9
 --- !u!114 &-2500432219215394467
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3530,11 +4707,11 @@ MonoBehaviour:
   choiceNodeConsequences:
   - indicatorType: 0
     valueType: 0
-    value: -10
+    value: -20
     duration: 0
   - indicatorType: 4
-    valueType: 0
-    value: -10
+    valueType: 1
+    value: -30
     duration: 0
   indicatorToUnlock: 8
 --- !u!114 &-2457503444081220328
@@ -3679,7 +4856,7 @@ MonoBehaviour:
   character: 1
   dialogue: "Toutes nos pr\xE9visions sont largement en dessous de la r\xE9alit\xE9,
     la situation est critique !"
-  uid: 4
+  uid: 33
 --- !u!114 &-2253588294746429726
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3988,7 +5165,7 @@ MonoBehaviour:
   dialogue: "Bon...bonjour Monsieur le Pr\xE9sident. En r\xE9alit\xE9, nous ne savons
     pas encore grand chose sur cette grippe, les personnes contamin\xE9es semblent
     avoir des difficult\xE9s \xE0 respirer, mais sans autres cons\xE9quences..."
-  uid: 16
+  uid: 51
 --- !u!114 &-1988788447319851164
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4055,7 +5232,7 @@ MonoBehaviour:
   dialogue: "Monsieur Le Pr\xE9sident ! \nIl semblerait qu'une grippe \xE9trange
     soit apparue dans un quartier de la capitale. Les sp\xE9cialistes semblent inquiets.
     \nQue devrions-nous faire ?"
-  uid: 26
+  uid: 24
 --- !u!114 &-1790166036415234018
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4119,7 +5296,7 @@ MonoBehaviour:
   dialogue: "Monsieur le Pr\xE9sident, nous entamons la construction du mur autour
     du virus. Ce n'est pas tr\xE8s clair pour nos ing\xE9nieurs, doivent-il pr\xE9voir
     des barbel\xE9s pour retenir le virus ?"
-  uid: 21
+  uid: 15
 --- !u!114 &-1704363276278505542
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4368,7 +5545,11 @@ MonoBehaviour:
   description: "Si je comprends bien, vous m'avez d\xE9rang\xE9 pour quelques probl\xE8mes
     respiratoires ? Je suis le pr\xE9sident, pas le m\xE9decin du coin. Hors de ma
     vue !"
-  choiceNodeConsequences: []
+  choiceNodeConsequences:
+  - indicatorType: 2
+    valueType: 0
+    value: -10
+    duration: 0
   indicatorToUnlock: 9
 --- !u!114 &-1377400357066802787
 MonoBehaviour:
@@ -4543,6 +5724,84 @@ MonoBehaviour:
   lockingEvents: {fileID: 0}
   passingEvents: {fileID: 0}
   description: "C'est inqui\xE9tant...que suggerez-vous ?"
+  choiceNodeConsequences: []
+  indicatorToUnlock: 9
+--- !u!114 &-967682984934390384
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78d86ceab28114ca481a4504b2f3e3a3, type: 3}
+  m_Name: Choice
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 3976, y: 3384}
+  ports:
+    keys:
+    - correspondingDialogue
+    - followingDialogue
+    - unlockingEvents
+    - lockingEvents
+    - passingEvents
+    values:
+    - _fieldName: correspondingDialogue
+      _node: {fileID: -967682984934390384}
+      _typeQualifiedName: NPCDialogueNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: outcomingChoices
+        node: {fileID: 939513846492730089}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: followingDialogue
+      _node: {fileID: -967682984934390384}
+      _typeQualifiedName: NPCDialogueNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: unlockingEvents
+      _node: {fileID: -967682984934390384}
+      _typeQualifiedName: EventNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: lockingEvents
+      _node: {fileID: -967682984934390384}
+      _typeQualifiedName: EventNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: passingEvents
+      _node: {fileID: -967682984934390384}
+      _typeQualifiedName: EventNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  correspondingDialogue: {fileID: 0}
+  followingDialogue: {fileID: 0}
+  unlockingEvents: {fileID: 0}
+  lockingEvents: {fileID: 0}
+  passingEvents: {fileID: 0}
+  description: Non, tout cela me semble bien louche...
   choiceNodeConsequences: []
   indicatorToUnlock: 9
 --- !u!114 &-788168017513681268
@@ -4790,7 +6049,77 @@ MonoBehaviour:
     valueType: 0
     value: 2
     duration: 0
+  - indicatorType: 2
+    valueType: 0
+    value: -10
+    duration: 0
   indicatorToUnlock: 9
+--- !u!114 &-477566508383598976
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39784acf12ef448498ee792b1bf41ff0, type: 3}
+  m_Name: NPC Dialogue
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 3240, y: 3384}
+  ports:
+    keys:
+    - initialEvent
+    - incomingChoice
+    - outcomingChoices
+    values:
+    - _fieldName: initialEvent
+      _node: {fileID: -477566508383598976}
+      _typeQualifiedName: EventNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: incomingChoice
+      _node: {fileID: -477566508383598976}
+      _typeQualifiedName: ChoiceNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: followingDialogue
+        node: {fileID: -4187843840712376257}
+        reroutePoints: []
+      - fieldName: followingDialogue
+        node: {fileID: 7307833212662970042}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: outcomingChoices
+      _node: {fileID: -477566508383598976}
+      _typeQualifiedName: ChoiceNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: correspondingDialogue
+        node: {fileID: 2937654606465471454}
+        reroutePoints: []
+      - fieldName: correspondingDialogue
+        node: {fileID: 4689767728608185187}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  initialEvent: {fileID: 0}
+  incomingChoice: {fileID: 0}
+  outcomingChoices: {fileID: 0}
+  character: 9
+  dialogue: "Oh, mon nom importe peu. Vous voyez la Ferrari l\xE0-bas ? C'est la
+    mienne !"
+  uid: 27
 --- !u!114 &-420649722492082678
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4854,7 +6183,7 @@ MonoBehaviour:
   dialogue: "Monsieur !\nPlusieurs des chercheurs \xE9tudiant ce virus inconnu semblent
     l'avoir contract\xE9 ! Nous risquons de faire plus de mal que de bien \xE0 poursuivre
     nos \xE9tudes sur le sujet..."
-  uid: 1
+  uid: 39
 --- !u!114 &-415226015298921600
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5002,7 +6331,7 @@ MonoBehaviour:
   outcomingChoices: {fileID: 0}
   character: 1
   dialogue: Alerte ! C'est une catastrophe !
-  uid: 25
+  uid: 48
 --- !u!114 &-229377627837845917
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5385,6 +6714,42 @@ MonoBehaviour:
   - {fileID: 299308048157282125}
   - {fileID: -5336115429581398976}
   - {fileID: 5022022554872958172}
+  - {fileID: 3836908736667462038}
+  - {fileID: -4119325921555146253}
+  - {fileID: 2771435585964520391}
+  - {fileID: -4799029301315544664}
+  - {fileID: -4678776307648510509}
+  - {fileID: 2055428315675596957}
+  - {fileID: 1939861055039136076}
+  - {fileID: -2567500366553648640}
+  - {fileID: 6590070571888740739}
+  - {fileID: 2526528948892301834}
+  - {fileID: -3610427964532928447}
+  - {fileID: -5773141601634084214}
+  - {fileID: 7472509613294695125}
+  - {fileID: -2790746181763024298}
+  - {fileID: -4634401418478953258}
+  - {fileID: -2542643502728431352}
+  - {fileID: -8413346220491358754}
+  - {fileID: 7634119974094431354}
+  - {fileID: -4837346469576310711}
+  - {fileID: -6744966966447857869}
+  - {fileID: -4187843840712376257}
+  - {fileID: 7307833212662970042}
+  - {fileID: -477566508383598976}
+  - {fileID: 2937654606465471454}
+  - {fileID: 4689767728608185187}
+  - {fileID: 939513846492730089}
+  - {fileID: -967682984934390384}
+  - {fileID: 8671454449011215515}
+  - {fileID: 1255302660228884656}
+  - {fileID: 6386743178682152446}
+  - {fileID: 2322911130510164977}
+  - {fileID: -5937623069744095474}
+  - {fileID: 2539000399609211474}
+  - {fileID: -4346775651834682891}
+  - {fileID: -6667092801569149470}
+  - {fileID: 3379807830996146496}
 --- !u!114 &111805978676101549
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5444,7 +6809,7 @@ MonoBehaviour:
   character: 1
   dialogue: "Monsieur le Pr\xE9sident !\nLa situation continue d'empirer, plusieurs
     clusters de contamination ont \xE9t\xE9 d\xE9tect\xE9s !"
-  uid: 27
+  uid: 41
 --- !u!114 &202897181243863251
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5530,9 +6895,9 @@ MonoBehaviour:
     valueType: 0
     value: 10
     duration: 0
-  - indicatorType: 8
+  - indicatorType: 5
     valueType: 0
-    value: 5
+    value: -10
     duration: 0
   indicatorToUnlock: 6
 --- !u!114 &299308048157282125
@@ -5621,6 +6986,71 @@ MonoBehaviour:
     value: 10
     duration: 0
   indicatorToUnlock: 9
+--- !u!114 &939513846492730089
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39784acf12ef448498ee792b1bf41ff0, type: 3}
+  m_Name: NPC Dialogue
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 3720, y: 3512}
+  ports:
+    keys:
+    - initialEvent
+    - incomingChoice
+    - outcomingChoices
+    values:
+    - _fieldName: initialEvent
+      _node: {fileID: 939513846492730089}
+      _typeQualifiedName: EventNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: incomingChoice
+      _node: {fileID: 939513846492730089}
+      _typeQualifiedName: ChoiceNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: followingDialogue
+        node: {fileID: 2937654606465471454}
+        reroutePoints: []
+      - fieldName: followingDialogue
+        node: {fileID: 4689767728608185187}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: outcomingChoices
+      _node: {fileID: 939513846492730089}
+      _typeQualifiedName: ChoiceNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: correspondingDialogue
+        node: {fileID: -967682984934390384}
+        reroutePoints: []
+      - fieldName: correspondingDialogue
+        node: {fileID: 8671454449011215515}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  initialEvent: {fileID: 0}
+  incomingChoice: {fileID: 0}
+  outcomingChoices: {fileID: 0}
+  character: 9
+  dialogue: "Vous voulez la m\xEAme ?"
+  uid: 10
 --- !u!114 &1251149666467273349
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5686,7 +7116,88 @@ MonoBehaviour:
   character: 3
   dialogue: "Nous devrions peut-\xEAtre envisager de confiner une partie de la population.
     L'impact \xE9conomique et sociale se fera cependant sentir..."
-  uid: 29
+  uid: 36
+--- !u!114 &1255302660228884656
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78d86ceab28114ca481a4504b2f3e3a3, type: 3}
+  m_Name: Choice
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 4712, y: 3576}
+  ports:
+    keys:
+    - correspondingDialogue
+    - followingDialogue
+    - unlockingEvents
+    - lockingEvents
+    - passingEvents
+    values:
+    - _fieldName: correspondingDialogue
+      _node: {fileID: 1255302660228884656}
+      _typeQualifiedName: NPCDialogueNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: outcomingChoices
+        node: {fileID: 7634119974094431354}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: followingDialogue
+      _node: {fileID: 1255302660228884656}
+      _typeQualifiedName: NPCDialogueNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: incomingChoice
+        node: {fileID: 6386743178682152446}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: unlockingEvents
+      _node: {fileID: 1255302660228884656}
+      _typeQualifiedName: EventNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: lockingEvents
+      _node: {fileID: 1255302660228884656}
+      _typeQualifiedName: EventNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: passingEvents
+      _node: {fileID: 1255302660228884656}
+      _typeQualifiedName: EventNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  correspondingDialogue: {fileID: 0}
+  followingDialogue: {fileID: 0}
+  unlockingEvents: {fileID: 0}
+  lockingEvents: {fileID: 0}
+  passingEvents: {fileID: 0}
+  description: Oh, c'est vous !
+  choiceNodeConsequences: []
+  indicatorToUnlock: 9
 --- !u!114 &1266531448004561899
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5915,7 +7426,7 @@ MonoBehaviour:
   choiceNodeConsequences:
   - indicatorType: 2
     valueType: 0
-    value: -15
+    value: -20
     duration: 0
   - indicatorType: 4
     valueType: 0
@@ -5981,7 +7492,7 @@ MonoBehaviour:
   character: 1
   dialogue: "Monsieur ! \nIl semblerait que la grippe soit bien plus dangereuse que
     l'on ne pensait. Plusieurs patients viennent de d\xE9c\xE9der !"
-  uid: 18
+  uid: 25
 --- !u!114 &1759967436600919857
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6047,7 +7558,171 @@ MonoBehaviour:
   character: 5
   dialogue: "A premi\xE8re vue, la nature de cette grippe serait virale, et son degr\xE9
     de contagion pr\xE8s de 3 fois sup\xE9rieur \xE0 celui d'une grippe classique."
-  uid: 14
+  uid: 30
+--- !u!114 &1939861055039136076
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78d86ceab28114ca481a4504b2f3e3a3, type: 3}
+  m_Name: Choice
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 4248, y: 2760}
+  ports:
+    keys:
+    - correspondingDialogue
+    - followingDialogue
+    - unlockingEvents
+    - lockingEvents
+    - passingEvents
+    values:
+    - _fieldName: correspondingDialogue
+      _node: {fileID: 1939861055039136076}
+      _typeQualifiedName: NPCDialogueNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: outcomingChoices
+        node: {fileID: -4678776307648510509}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: followingDialogue
+      _node: {fileID: 1939861055039136076}
+      _typeQualifiedName: NPCDialogueNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: unlockingEvents
+      _node: {fileID: 1939861055039136076}
+      _typeQualifiedName: EventNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: lockingEvents
+      _node: {fileID: 1939861055039136076}
+      _typeQualifiedName: EventNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: passingEvents
+      _node: {fileID: 1939861055039136076}
+      _typeQualifiedName: EventNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  correspondingDialogue: {fileID: 0}
+  followingDialogue: {fileID: 0}
+  unlockingEvents: {fileID: 0}
+  lockingEvents: {fileID: 0}
+  passingEvents: {fileID: 0}
+  description: "Npn. Le long terme m'int\xE8resse peu, c'est le futur proche qui
+    d\xE9cidera de ma r\xE9\xE9lection. Je n'ai que faire de vos conseils."
+  choiceNodeConsequences:
+  - indicatorType: 1
+    valueType: 0
+    value: 10
+    duration: 0
+  indicatorToUnlock: 9
+--- !u!114 &2055428315675596957
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78d86ceab28114ca481a4504b2f3e3a3, type: 3}
+  m_Name: Choice
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 4248, y: 2472}
+  ports:
+    keys:
+    - correspondingDialogue
+    - followingDialogue
+    - unlockingEvents
+    - lockingEvents
+    - passingEvents
+    values:
+    - _fieldName: correspondingDialogue
+      _node: {fileID: 2055428315675596957}
+      _typeQualifiedName: NPCDialogueNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: outcomingChoices
+        node: {fileID: -4678776307648510509}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: followingDialogue
+      _node: {fileID: 2055428315675596957}
+      _typeQualifiedName: NPCDialogueNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: incomingChoice
+        node: {fileID: -2567500366553648640}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: unlockingEvents
+      _node: {fileID: 2055428315675596957}
+      _typeQualifiedName: EventNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: lockingEvents
+      _node: {fileID: 2055428315675596957}
+      _typeQualifiedName: EventNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: passingEvents
+      _node: {fileID: 2055428315675596957}
+      _typeQualifiedName: EventNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  correspondingDialogue: {fileID: 0}
+  followingDialogue: {fileID: 0}
+  unlockingEvents: {fileID: 0}
+  lockingEvents: {fileID: 0}
+  passingEvents: {fileID: 0}
+  description: "Que sugg\xE9rez-vous ?"
+  choiceNodeConsequences: []
+  indicatorToUnlock: 9
 --- !u!114 &2095663064648633719
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6221,6 +7896,87 @@ MonoBehaviour:
   description: Passez le moi.
   choiceNodeConsequences: []
   indicatorToUnlock: 9
+--- !u!114 &2322911130510164977
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78d86ceab28114ca481a4504b2f3e3a3, type: 3}
+  m_Name: Choice
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 5208, y: 3592}
+  ports:
+    keys:
+    - correspondingDialogue
+    - followingDialogue
+    - unlockingEvents
+    - lockingEvents
+    - passingEvents
+    values:
+    - _fieldName: correspondingDialogue
+      _node: {fileID: 2322911130510164977}
+      _typeQualifiedName: NPCDialogueNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: outcomingChoices
+        node: {fileID: 6386743178682152446}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: followingDialogue
+      _node: {fileID: 2322911130510164977}
+      _typeQualifiedName: NPCDialogueNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: incomingChoice
+        node: {fileID: -5937623069744095474}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: unlockingEvents
+      _node: {fileID: 2322911130510164977}
+      _typeQualifiedName: EventNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: lockingEvents
+      _node: {fileID: 2322911130510164977}
+      _typeQualifiedName: EventNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: passingEvents
+      _node: {fileID: 2322911130510164977}
+      _typeQualifiedName: EventNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  correspondingDialogue: {fileID: 0}
+  followingDialogue: {fileID: 0}
+  unlockingEvents: {fileID: 0}
+  lockingEvents: {fileID: 0}
+  passingEvents: {fileID: 0}
+  description: Je ne suis pas certain de vous suivre...Parlez franchement !
+  choiceNodeConsequences: []
+  indicatorToUnlock: 9
 --- !u!114 &2445430462653422309
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6381,6 +8137,170 @@ MonoBehaviour:
     - indicatorType: 8
       threshold: 10
       conditionType: 0
+--- !u!114 &2526528948892301834
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78d86ceab28114ca481a4504b2f3e3a3, type: 3}
+  m_Name: Choice
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 4776, y: 2664}
+  ports:
+    keys:
+    - correspondingDialogue
+    - followingDialogue
+    - unlockingEvents
+    - lockingEvents
+    - passingEvents
+    values:
+    - _fieldName: correspondingDialogue
+      _node: {fileID: 2526528948892301834}
+      _typeQualifiedName: NPCDialogueNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: outcomingChoices
+        node: {fileID: -2567500366553648640}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: followingDialogue
+      _node: {fileID: 2526528948892301834}
+      _typeQualifiedName: NPCDialogueNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: unlockingEvents
+      _node: {fileID: 2526528948892301834}
+      _typeQualifiedName: EventNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: lockingEvents
+      _node: {fileID: 2526528948892301834}
+      _typeQualifiedName: EventNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: passingEvents
+      _node: {fileID: 2526528948892301834}
+      _typeQualifiedName: EventNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  correspondingDialogue: {fileID: 0}
+  followingDialogue: {fileID: 0}
+  unlockingEvents: {fileID: 0}
+  lockingEvents: {fileID: 0}
+  passingEvents: {fileID: 0}
+  description: Le secteur bancaire
+  choiceNodeConsequences:
+  - indicatorType: 1
+    valueType: 0
+    value: -10
+    duration: 0
+  indicatorToUnlock: 9
+--- !u!114 &2539000399609211474
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78d86ceab28114ca481a4504b2f3e3a3, type: 3}
+  m_Name: Choice
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 5672, y: 3608}
+  ports:
+    keys:
+    - correspondingDialogue
+    - followingDialogue
+    - unlockingEvents
+    - lockingEvents
+    - passingEvents
+    values:
+    - _fieldName: correspondingDialogue
+      _node: {fileID: 2539000399609211474}
+      _typeQualifiedName: NPCDialogueNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: outcomingChoices
+        node: {fileID: -5937623069744095474}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: followingDialogue
+      _node: {fileID: 2539000399609211474}
+      _typeQualifiedName: NPCDialogueNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: incomingChoice
+        node: {fileID: -4346775651834682891}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: unlockingEvents
+      _node: {fileID: 2539000399609211474}
+      _typeQualifiedName: EventNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: lockingEvents
+      _node: {fileID: 2539000399609211474}
+      _typeQualifiedName: EventNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: passingEvents
+      _node: {fileID: 2539000399609211474}
+      _typeQualifiedName: EventNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  correspondingDialogue: {fileID: 0}
+  followingDialogue: {fileID: 0}
+  unlockingEvents: {fileID: 0}
+  lockingEvents: {fileID: 0}
+  passingEvents: {fileID: 0}
+  description: Vous me demandez de prendre des mesures afin d'encourager la propagation
+    du virus ?!
+  choiceNodeConsequences: []
+  indicatorToUnlock: 9
 --- !u!114 &2596246116372881253
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6464,6 +8384,173 @@ MonoBehaviour:
   passingEvents: {fileID: 0}
   description: "Je vois...continuez vos investigations, et tenez moi au courant des
     r\xE9sultats."
+  choiceNodeConsequences: []
+  indicatorToUnlock: 9
+--- !u!114 &2771435585964520391
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78d86ceab28114ca481a4504b2f3e3a3, type: 3}
+  m_Name: Choice
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 5432, y: 280}
+  ports:
+    keys:
+    - correspondingDialogue
+    - followingDialogue
+    - unlockingEvents
+    - lockingEvents
+    - passingEvents
+    values:
+    - _fieldName: correspondingDialogue
+      _node: {fileID: 2771435585964520391}
+      _typeQualifiedName: NPCDialogueNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: outcomingChoices
+        node: {fileID: -4119325921555146253}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: followingDialogue
+      _node: {fileID: 2771435585964520391}
+      _typeQualifiedName: NPCDialogueNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: unlockingEvents
+      _node: {fileID: 2771435585964520391}
+      _typeQualifiedName: EventNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: lockingEvents
+      _node: {fileID: 2771435585964520391}
+      _typeQualifiedName: EventNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: passingEvents
+      _node: {fileID: 2771435585964520391}
+      _typeQualifiedName: EventNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  correspondingDialogue: {fileID: 0}
+  followingDialogue: {fileID: 0}
+  unlockingEvents: {fileID: 0}
+  lockingEvents: {fileID: 0}
+  passingEvents: {fileID: 0}
+  description: "Taisez-vous, je ne risquerais pas la sant\xE9 de mon peuple."
+  choiceNodeConsequences:
+  - indicatorType: 0
+    valueType: 0
+    value: 20
+    duration: 0
+  - indicatorType: 1
+    valueType: 0
+    value: -20
+    duration: 0
+  indicatorToUnlock: 9
+--- !u!114 &2937654606465471454
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78d86ceab28114ca481a4504b2f3e3a3, type: 3}
+  m_Name: Choice
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 3480, y: 3384}
+  ports:
+    keys:
+    - correspondingDialogue
+    - followingDialogue
+    - unlockingEvents
+    - lockingEvents
+    - passingEvents
+    values:
+    - _fieldName: correspondingDialogue
+      _node: {fileID: 2937654606465471454}
+      _typeQualifiedName: NPCDialogueNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: outcomingChoices
+        node: {fileID: -477566508383598976}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: followingDialogue
+      _node: {fileID: 2937654606465471454}
+      _typeQualifiedName: NPCDialogueNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: incomingChoice
+        node: {fileID: 939513846492730089}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: unlockingEvents
+      _node: {fileID: 2937654606465471454}
+      _typeQualifiedName: EventNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: lockingEvents
+      _node: {fileID: 2937654606465471454}
+      _typeQualifiedName: EventNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: passingEvents
+      _node: {fileID: 2937654606465471454}
+      _typeQualifiedName: EventNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  correspondingDialogue: {fileID: 0}
+  followingDialogue: {fileID: 0}
+  unlockingEvents: {fileID: 0}
+  lockingEvents: {fileID: 0}
+  passingEvents: {fileID: 0}
+  description: "Un peu tape \xE0 l'oeil..."
   choiceNodeConsequences: []
   indicatorToUnlock: 9
 --- !u!114 &3028068221980068523
@@ -6803,6 +8890,93 @@ MonoBehaviour:
     value: -5
     duration: 0
   indicatorToUnlock: 9
+--- !u!114 &3379807830996146496
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78d86ceab28114ca481a4504b2f3e3a3, type: 3}
+  m_Name: Choice
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 6152, y: 3752}
+  ports:
+    keys:
+    - correspondingDialogue
+    - followingDialogue
+    - unlockingEvents
+    - lockingEvents
+    - passingEvents
+    values:
+    - _fieldName: correspondingDialogue
+      _node: {fileID: 3379807830996146496}
+      _typeQualifiedName: NPCDialogueNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: outcomingChoices
+        node: {fileID: -4346775651834682891}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: followingDialogue
+      _node: {fileID: 3379807830996146496}
+      _typeQualifiedName: NPCDialogueNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: unlockingEvents
+      _node: {fileID: 3379807830996146496}
+      _typeQualifiedName: EventNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: lockingEvents
+      _node: {fileID: 3379807830996146496}
+      _typeQualifiedName: EventNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: passingEvents
+      _node: {fileID: 3379807830996146496}
+      _typeQualifiedName: EventNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  correspondingDialogue: {fileID: 0}
+  followingDialogue: {fileID: 0}
+  unlockingEvents: {fileID: 0}
+  lockingEvents: {fileID: 0}
+  passingEvents: {fileID: 0}
+  description: "Je vois...je vais prendre les mesures ad\xE9quates. Vos amis n'ont
+    pas \xE0 s'inqui\xE9ter."
+  choiceNodeConsequences:
+  - indicatorType: 4
+    valueType: 0
+    value: 30
+    duration: 0
+  - indicatorType: 1
+    valueType: 0
+    value: 20
+    duration: 0
+  indicatorToUnlock: 9
 --- !u!114 &3380805119946957146
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6864,7 +9038,7 @@ MonoBehaviour:
   outcomingChoices: {fileID: 0}
   character: 4
   dialogue: Tu as dis quelque chose, mon cher ? Rejoins moi dans le lit au lieu de...
-  uid: 38
+  uid: 18
 --- !u!114 &3435564652014928347
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7079,10 +9253,7 @@ MonoBehaviour:
       _node: {fileID: 3515525755029350254}
       _typeQualifiedName: NPCDialogueNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
-      connections:
-      - fieldName: incomingChoice
-        node: {fileID: -4467104179170580774}
-        reroutePoints: []
+      connections: []
       _direction: 1
       _connectionType: 0
       _typeConstraint: 0
@@ -7193,7 +9364,7 @@ MonoBehaviour:
   character: 1
   dialogue: "Insuffisante que pour pouvoir en distribuer \xE0 chaque citoyen, j'en
     ai bien peur...Nous ignorons d'ailleurs si cela sera r\xE9ellement utile."
-  uid: 32
+  uid: 45
 --- !u!114 &3818322351521693379
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7265,6 +9436,81 @@ MonoBehaviour:
   - conditions:
     - indicatorType: 3
       threshold: 5
+      conditionType: 0
+--- !u!114 &3836908736667462038
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e77689f02e2134294bbdf1163ebfa777, type: 3}
+  m_Name: Event
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 4488, y: 264}
+  ports:
+    keys:
+    - unlockingChoices
+    - lockingChoices
+    - passingChoices
+    - dialogue
+    values:
+    - _fieldName: unlockingChoices
+      _node: {fileID: 3836908736667462038}
+      _typeQualifiedName: ChoiceNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: lockingChoices
+      _node: {fileID: 3836908736667462038}
+      _typeQualifiedName: ChoiceNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: passingChoices
+      _node: {fileID: 3836908736667462038}
+      _typeQualifiedName: ChoiceNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: dialogue
+      _node: {fileID: 3836908736667462038}
+      _typeQualifiedName: NPCDialogueNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: initialEvent
+        node: {fileID: -4467104179170580774}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  title: "Des r\xE9serves de masques"
+  uid: 18
+  status: 1
+  unlockingChoices: {fileID: 0}
+  lockingChoices: {fileID: 0}
+  passingChoices: {fileID: 0}
+  dialogue: {fileID: 0}
+  conditions:
+  - conditions:
+    - indicatorType: 3
+      threshold: 10
+      conditionType: 0
+    - indicatorType: 0
+      threshold: 50
       conditionType: 0
 --- !u!114 &3891065693992381294
 MonoBehaviour:
@@ -7401,7 +9647,88 @@ MonoBehaviour:
   dialogue: "Monsieur le Pr\xE9sident ! \nNous avons effectu\xE9 diverses mod\xE9lisations,
     \xE0 partir des informations que nous avions pu r\xE9colter sur le virus et les
     premiers infect\xE9s. La situation est inqui\xE9tante !"
-  uid: 10
+  uid: 9
+--- !u!114 &4689767728608185187
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78d86ceab28114ca481a4504b2f3e3a3, type: 3}
+  m_Name: Choice
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 3480, y: 3656}
+  ports:
+    keys:
+    - correspondingDialogue
+    - followingDialogue
+    - unlockingEvents
+    - lockingEvents
+    - passingEvents
+    values:
+    - _fieldName: correspondingDialogue
+      _node: {fileID: 4689767728608185187}
+      _typeQualifiedName: NPCDialogueNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: outcomingChoices
+        node: {fileID: -477566508383598976}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: followingDialogue
+      _node: {fileID: 4689767728608185187}
+      _typeQualifiedName: NPCDialogueNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: incomingChoice
+        node: {fileID: 939513846492730089}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: unlockingEvents
+      _node: {fileID: 4689767728608185187}
+      _typeQualifiedName: EventNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: lockingEvents
+      _node: {fileID: 4689767728608185187}
+      _typeQualifiedName: EventNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: passingEvents
+      _node: {fileID: 4689767728608185187}
+      _typeQualifiedName: EventNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  correspondingDialogue: {fileID: 0}
+  followingDialogue: {fileID: 0}
+  unlockingEvents: {fileID: 0}
+  lockingEvents: {fileID: 0}
+  passingEvents: {fileID: 0}
+  description: Elle est magnifique !
+  choiceNodeConsequences: []
+  indicatorToUnlock: 9
 --- !u!114 &4720124938883402071
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7461,7 +9788,7 @@ MonoBehaviour:
   character: 5
   dialogue: Je ne suis pas certain de ... je..bonjour Madame...Je pense que je vais
     y aller !
-  uid: 39
+  uid: 49
 --- !u!114 &4849248326712161072
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7602,7 +9929,7 @@ MonoBehaviour:
   character: 1
   dialogue: "Nous nous sommes tromp\xE9s sur cette grippe ! Les patients sont contagieux
     plusieurs jours AVANT les premiers symptomes !"
-  uid: 30
+  uid: 5
 --- !u!114 &4920490625740508703
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7666,8 +9993,8 @@ MonoBehaviour:
   dialogue: "La construction du mur s'est termin\xE9e il y a quelques temps, Monsieur
     le Pr\xE9sident. Il semblerait cependant que cela ne fonctionne pas tr\xE8s bien,
     le virus s'\xE9tant d\xE9j\xE0 r\xE9pandu en dehors de la capitale. Que devons-nous
-    faire s?"
-  uid: 33
+    faire ?"
+  uid: 34
 --- !u!114 &5022022554872958172
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7725,7 +10052,7 @@ MonoBehaviour:
   dialogue: "F\xE9licitations pour votre \xE9lection, Monsieur le Pr\xE9sident !
     Je n'ai aucun doute sur le fait que votre mandat sera couronn\xE9 de succ\xE8s
     !"
-  uid: 5
+  uid: 53
 --- !u!114 &5141091862183648765
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8273,7 +10600,7 @@ MonoBehaviour:
   outcomingChoices: {fileID: 0}
   character: 1
   dialogue: Je...nous...
-  uid: 23
+  uid: 44
 --- !u!114 &6237694365150075352
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8337,7 +10664,67 @@ MonoBehaviour:
   dialogue: "Monsieur ! \nJ'ai \xE9tudi\xE9 ce week-end de plus pr\xE8s les donn\xE9es
     des cas de contaminations...Je pense \xEAtre \xE0 m\xEAme de mod\xE9liser la
     vitesse de propagation du virus !"
-  uid: 31
+  uid: 40
+--- !u!114 &6386743178682152446
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39784acf12ef448498ee792b1bf41ff0, type: 3}
+  m_Name: NPC Dialogue
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 4968, y: 3592}
+  ports:
+    keys:
+    - initialEvent
+    - incomingChoice
+    - outcomingChoices
+    values:
+    - _fieldName: initialEvent
+      _node: {fileID: 6386743178682152446}
+      _typeQualifiedName: EventNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: incomingChoice
+      _node: {fileID: 6386743178682152446}
+      _typeQualifiedName: ChoiceNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: followingDialogue
+        node: {fileID: 1255302660228884656}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: outcomingChoices
+      _node: {fileID: 6386743178682152446}
+      _typeQualifiedName: ChoiceNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: correspondingDialogue
+        node: {fileID: 2322911130510164977}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  initialEvent: {fileID: 0}
+  incomingChoice: {fileID: 0}
+  outcomingChoices: {fileID: 0}
+  character: 9
+  dialogue: "Au sujet de cette pand\xE9mie...j'ai eu vent que la situation \xE9tait
+    bient\xF4t sous contr\xF4le. Je n'aime pas trop ce \"bient\xF4t\"..."
+  uid: 8
 --- !u!114 &6565207463979878035
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8420,6 +10807,88 @@ MonoBehaviour:
     de ralentir la propagation ?"
   choiceNodeConsequences: []
   indicatorToUnlock: 9
+--- !u!114 &6590070571888740739
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78d86ceab28114ca481a4504b2f3e3a3, type: 3}
+  m_Name: Choice
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 4776, y: 2392}
+  ports:
+    keys:
+    - correspondingDialogue
+    - followingDialogue
+    - unlockingEvents
+    - lockingEvents
+    - passingEvents
+    values:
+    - _fieldName: correspondingDialogue
+      _node: {fileID: 6590070571888740739}
+      _typeQualifiedName: NPCDialogueNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: outcomingChoices
+        node: {fileID: -2567500366553648640}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: followingDialogue
+      _node: {fileID: 6590070571888740739}
+      _typeQualifiedName: NPCDialogueNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: unlockingEvents
+      _node: {fileID: 6590070571888740739}
+      _typeQualifiedName: EventNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: lockingEvents
+      _node: {fileID: 6590070571888740739}
+      _typeQualifiedName: EventNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: passingEvents
+      _node: {fileID: 6590070571888740739}
+      _typeQualifiedName: EventNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  correspondingDialogue: {fileID: 0}
+  followingDialogue: {fileID: 0}
+  unlockingEvents: {fileID: 0}
+  lockingEvents: {fileID: 0}
+  passingEvents: {fileID: 0}
+  description: "Le nucl\xE9aire"
+  choiceNodeConsequences:
+  - indicatorType: 1
+    valueType: 0
+    value: -30
+    duration: 0
+  indicatorToUnlock: 9
 --- !u!114 &6620954527881540534
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8483,7 +10952,7 @@ MonoBehaviour:
   dialogue: "Il est encore trop t\xF4t pour le dire, nous ignorons si son degr\xE9
     de contagion a augment\xE9. Augmenter les pr\xE9cautions en terme d'hygi\xE8ne
     ne pourra cependant pas faire de mal."
-  uid: 12
+  uid: 16
 --- !u!114 &7075951116315979056
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8651,13 +11120,175 @@ MonoBehaviour:
   unlockingEvents: {fileID: 0}
   lockingEvents: {fileID: 0}
   passingEvents: {fileID: 0}
-  description: "Je vois. Conservons les pour l'instant, et voyons voir comme la situation
+  description: "Je vois. Conservons les pour l'instant, et observons comment la situation
     va \xE9voluer."
   choiceNodeConsequences:
-  - indicatorType: 4
+  - indicatorType: 0
     valueType: 0
-    value: 20
+    value: 10
     duration: 0
+  indicatorToUnlock: 9
+--- !u!114 &7307833212662970042
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78d86ceab28114ca481a4504b2f3e3a3, type: 3}
+  m_Name: Choice
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 3000, y: 3528}
+  ports:
+    keys:
+    - correspondingDialogue
+    - followingDialogue
+    - unlockingEvents
+    - lockingEvents
+    - passingEvents
+    values:
+    - _fieldName: correspondingDialogue
+      _node: {fileID: 7307833212662970042}
+      _typeQualifiedName: NPCDialogueNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: outcomingChoices
+        node: {fileID: -6744966966447857869}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: followingDialogue
+      _node: {fileID: 7307833212662970042}
+      _typeQualifiedName: NPCDialogueNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: incomingChoice
+        node: {fileID: -477566508383598976}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: unlockingEvents
+      _node: {fileID: 7307833212662970042}
+      _typeQualifiedName: EventNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: lockingEvents
+      _node: {fileID: 7307833212662970042}
+      _typeQualifiedName: EventNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: passingEvents
+      _node: {fileID: 7307833212662970042}
+      _typeQualifiedName: EventNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  correspondingDialogue: {fileID: 0}
+  followingDialogue: {fileID: 0}
+  unlockingEvents: {fileID: 0}
+  lockingEvents: {fileID: 0}
+  passingEvents: {fileID: 0}
+  description: Mmmmh...bonjour ?
+  choiceNodeConsequences: []
+  indicatorToUnlock: 9
+--- !u!114 &7472509613294695125
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78d86ceab28114ca481a4504b2f3e3a3, type: 3}
+  m_Name: Choice
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 4776, y: 3032}
+  ports:
+    keys:
+    - correspondingDialogue
+    - followingDialogue
+    - unlockingEvents
+    - lockingEvents
+    - passingEvents
+    values:
+    - _fieldName: correspondingDialogue
+      _node: {fileID: 7472509613294695125}
+      _typeQualifiedName: NPCDialogueNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: outcomingChoices
+        node: {fileID: -2567500366553648640}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: followingDialogue
+      _node: {fileID: 7472509613294695125}
+      _typeQualifiedName: NPCDialogueNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: incomingChoice
+        node: {fileID: -2790746181763024298}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: unlockingEvents
+      _node: {fileID: 7472509613294695125}
+      _typeQualifiedName: EventNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: lockingEvents
+      _node: {fileID: 7472509613294695125}
+      _typeQualifiedName: EventNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: passingEvents
+      _node: {fileID: 7472509613294695125}
+      _typeQualifiedName: EventNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  correspondingDialogue: {fileID: 0}
+  followingDialogue: {fileID: 0}
+  unlockingEvents: {fileID: 0}
+  lockingEvents: {fileID: 0}
+  passingEvents: {fileID: 0}
+  description: Le secteur public ?
+  choiceNodeConsequences: []
   indicatorToUnlock: 9
 --- !u!114 &7556784360022163871
 MonoBehaviour:
@@ -8722,7 +11353,7 @@ MonoBehaviour:
   dialogue: "Si l'on en croit nos mod\xE8les, le nombre d'infect\xE9s pourraient
     croitre de mani\xE8re tr\xE8s importante, et nos hopitaux ne seraient plus en
     mesure d'y faire face et de traiter tout le monde."
-  uid: 35
+  uid: 13
 --- !u!114 &7621415491027884080
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8805,6 +11436,65 @@ MonoBehaviour:
     value: -30
     duration: 0
   indicatorToUnlock: 9
+--- !u!114 &7634119974094431354
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39784acf12ef448498ee792b1bf41ff0, type: 3}
+  m_Name: NPC Dialogue
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 4488, y: 3544}
+  ports:
+    keys:
+    - initialEvent
+    - incomingChoice
+    - outcomingChoices
+    values:
+    - _fieldName: initialEvent
+      _node: {fileID: 7634119974094431354}
+      _typeQualifiedName: EventNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: dialogue
+        node: {fileID: -8413346220491358754}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: incomingChoice
+      _node: {fileID: 7634119974094431354}
+      _typeQualifiedName: ChoiceNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: outcomingChoices
+      _node: {fileID: 7634119974094431354}
+      _typeQualifiedName: ChoiceNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: correspondingDialogue
+        node: {fileID: 1255302660228884656}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  initialEvent: {fileID: 0}
+  incomingChoice: {fileID: 0}
+  outcomingChoices: {fileID: 0}
+  character: 9
+  dialogue: "Bonjour ! Vous appr\xE9ciez la voiture ?"
+  uid: 37
 --- !u!114 &7782223547540608360
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9030,7 +11720,7 @@ MonoBehaviour:
   character: 1
   dialogue: "Mais...non Monsieur, ce n'est pas \xE7a...Personne ne nous attaque.
     C'est pire !"
-  uid: 34
+  uid: 43
 --- !u!114 &8066008260636340538
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9160,7 +11850,7 @@ MonoBehaviour:
   dialogue: "Les sympt\xF4mes de cette grippe \xE9trange sont maintenant mieux connus,
     et nous sommes en capacit\xE9 d'avoir une id\xE9e, certes impr\xE9cise, du nombre
     d'infect\xE9s !"
-  uid: 20
+  uid: 19
 --- !u!114 &8445391073542873854
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9174,7 +11864,7 @@ MonoBehaviour:
   m_Name: Choice
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 4696, y: 552}
+  position: {x: 5400, y: 536}
   ports:
     keys:
     - correspondingDialogue
@@ -9190,6 +11880,9 @@ MonoBehaviour:
       connections:
       - fieldName: outcomingChoices
         node: {fileID: -4467104179170580774}
+        reroutePoints: []
+      - fieldName: outcomingChoices
+        node: {fileID: -4119325921555146253}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
@@ -9236,8 +11929,97 @@ MonoBehaviour:
   unlockingEvents: {fileID: 0}
   lockingEvents: {fileID: 0}
   passingEvents: {fileID: 0}
-  description: "Nous ne pouvons pas nous le permettre pour l'instant, l'\xE9conomie
-    ne tiendrait pas."
+  description: "Nous ne pouvons pas nous permettre ces masques pour l'instant, le
+    co\xFBt est trop important."
+  choiceNodeConsequences:
+  - indicatorType: 0
+    valueType: 0
+    value: -10
+    duration: 0
+  - indicatorType: 1
+    valueType: 0
+    value: 10
+    duration: 0
+  indicatorToUnlock: 9
+--- !u!114 &8671454449011215515
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78d86ceab28114ca481a4504b2f3e3a3, type: 3}
+  m_Name: Choice
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 3976, y: 3688}
+  ports:
+    keys:
+    - correspondingDialogue
+    - followingDialogue
+    - unlockingEvents
+    - lockingEvents
+    - passingEvents
+    values:
+    - _fieldName: correspondingDialogue
+      _node: {fileID: 8671454449011215515}
+      _typeQualifiedName: NPCDialogueNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: outcomingChoices
+        node: {fileID: 939513846492730089}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: followingDialogue
+      _node: {fileID: 8671454449011215515}
+      _typeQualifiedName: NPCDialogueNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: unlockingEvents
+      _node: {fileID: 8671454449011215515}
+      _typeQualifiedName: EventNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: unlockingChoices
+        node: {fileID: -8413346220491358754}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: lockingEvents
+      _node: {fileID: 8671454449011215515}
+      _typeQualifiedName: EventNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: passingEvents
+      _node: {fileID: 8671454449011215515}
+      _typeQualifiedName: EventNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  correspondingDialogue: {fileID: 0}
+  followingDialogue: {fileID: 0}
+  unlockingEvents: {fileID: 0}
+  lockingEvents: {fileID: 0}
+  passingEvents: {fileID: 0}
+  description: Je peux choisir la couleur ?
   choiceNodeConsequences: []
   indicatorToUnlock: 9
 --- !u!114 &8713376518831463849
@@ -9302,7 +12084,7 @@ MonoBehaviour:
   character: 2
   dialogue: "Monsieur le Pr\xE9sident !\nLe Pr\xE9sident des Etats-Unis est au bout
     du fil, il souhaite vous parler tout de suite !"
-  uid: 8
+  uid: 50
 --- !u!114 &8853751253228672792
 MonoBehaviour:
   m_ObjectHideFlags: 0

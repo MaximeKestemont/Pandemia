@@ -1525,6 +1525,51 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7f95267deac945a3b3bc5a4248b22ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &855564181
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 855564182}
+  - component: {fileID: 855564183}
+  m_Layer: 0
+  m_Name: MinisterOfEconomy
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &855564182
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 855564181}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1992301993}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &855564183
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 855564181}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8b66c97877b941ca92fd51e9f24bbb1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterName: 8
+  image: {fileID: 2800000, guid: 9fd31269c3ccf4a4ebf947739cc66409, type: 3}
 --- !u!114 &871589307 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1840937659899806920, guid: fa7d02b799c0f4802925bf43b7713f09,
@@ -2077,6 +2122,51 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   contagionProb: 3
   healingTime: 10
+--- !u!1 &1382640494
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1382640495}
+  - component: {fileID: 1382640496}
+  m_Layer: 0
+  m_Name: PharmaLobbyist
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1382640495
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1382640494}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1992301993}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1382640496
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1382640494}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8b66c97877b941ca92fd51e9f24bbb1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterName: 9
+  image: {fileID: 2800000, guid: 9fd31269c3ccf4a4ebf947739cc66409, type: 3}
 --- !u!1 &1432216137
 GameObject:
   m_ObjectHideFlags: 0
@@ -3168,6 +3258,8 @@ Transform:
   - {fileID: 2028294973}
   - {fileID: 2126867743}
   - {fileID: 1019012495}
+  - {fileID: 855564182}
+  - {fileID: 1382640495}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
