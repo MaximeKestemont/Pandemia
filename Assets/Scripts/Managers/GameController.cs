@@ -19,6 +19,7 @@ public class GameController : MonoBehaviour
     private IndicatorBar indicatorBar;
 
     private int eventCount = 0;
+    public ResourceManager.Phase currentPhase = ResourceManager.Phase.NORMAL;
 
     // Counter to track the player progress
     public int day = 0;
@@ -29,6 +30,7 @@ public class GameController : MonoBehaviour
         resourceManager.gameOverPanel.SetActive(false);
         resourceManager.menuPanel.SetActive(false);
         resourceManager.recapPanel.SetActive(false);
+        resourceManager.settingsPanel.SetActive(false);
 
         Debug.Log ("Initializing game data and storing them in resource manager...");
         // Init events
@@ -157,6 +159,18 @@ public class GameController : MonoBehaviour
 
     public void Restart() {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    public void OpenMenu() {
+        resourceManager.menuPanel.SetActive(!resourceManager.menuPanel.activeSelf);
+    }
+
+    public void OpenSettingsPanel(){
+        resourceManager.settingsPanel.SetActive(!resourceManager.settingsPanel.activeSelf);
+    }
+
+    public void QuitGame() {
+        Application.Quit();
     }
     
 }

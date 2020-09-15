@@ -18,6 +18,9 @@ public class Event : MonoBehaviour
     // all constraints need to be validated
     public List<EventCondition> eventConditions;
 
+    // Condition to lock/unlock events based on a specific phase - if Normal, no constraint applied
+    public ResourceManager.Phase eventPhase;
+
     // Start is called before the first frame update
     void Start()
     {

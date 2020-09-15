@@ -1,7 +1,7 @@
 using System.Collections.Generic;   
 using System;
 /*
-* Define the condition for an event to be unlocked. This does not concern locking/unlocking due to choices.
+* Define the condition for an event to be unlocked. This does not concern locking/unlocking due to choices or phases.
 */
 [Serializable]
 public class EventCondition {

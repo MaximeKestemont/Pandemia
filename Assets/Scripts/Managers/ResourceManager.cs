@@ -13,6 +13,7 @@ public class ResourceManager : MonoBehaviour {
     public GameObject menuPanel;
     public GameObject gameOverPanel;
     public GameObject recapPanel;
+    public GameObject settingsPanel;
 
     // --- Prefab ---
     public GameObject eventPrefab;
@@ -120,6 +121,12 @@ public class ResourceManager : MonoBehaviour {
         CURED, // useless but if removed, all nodes created with values bigger in the enums will be modified
         VIRUS_KNOWLEDGE,
         NONE // null type
+    }
+
+    public enum Phase {
+        NORMAL,
+        LOCKDOWN,
+        WAR
     }
 
 }
