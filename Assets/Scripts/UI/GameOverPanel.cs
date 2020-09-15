@@ -10,9 +10,12 @@ public class GameOverPanel : MonoBehaviour {
 
     public Button QuitButton;
 
-    private string winningMessage = "Congratulation you managed to kill the virus";
+    // Winning messages
+    public static string knowledgeMessage = "Congratulations, you managed to kill the virus";
+    public static string survivingMessage = "Congratulations, you managed to survive long enough !";
 
-    private string losingMessage = "Game Over";
+    // Losing messages
+    public static string losingMessage = "Game Over";
 
     // Start is called before the first frame update
     void Start()
@@ -26,12 +29,12 @@ public class GameOverPanel : MonoBehaviour {
         
     }
 
-    public void SetEndingScreen(bool isWinning)
+    public void SetEndingScreen(bool isWinning, string endingMesage)
     {   
-        if(isWinning) {
-            endingTitle.GetComponent<Text>().text =  winningMessage;
+        if (isWinning) {
+            endingTitle.GetComponent<Text>().text =  endingMesage;
         } else {
-            endingTitle.GetComponent<Text>().text =  losingMessage;
+            endingTitle.GetComponent<Text>().text =  endingMesage;
         }
 
     }

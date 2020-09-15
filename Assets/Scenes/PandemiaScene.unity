@@ -287,6 +287,21 @@ PrefabInstance:
       propertyPath: fillingLevel
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1840937659899806920, guid: fa7d02b799c0f4802925bf43b7713f09,
+        type: 3}
+      propertyPath: color.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1840937659899806920, guid: fa7d02b799c0f4802925bf43b7713f09,
+        type: 3}
+      propertyPath: color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1840937659899806920, guid: fa7d02b799c0f4802925bf43b7713f09,
+        type: 3}
+      propertyPath: color.b
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1840937659899806921, guid: fa7d02b799c0f4802925bf43b7713f09,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1450,7 +1465,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0.0019627, y: -90.509766}
+  m_AnchoredPosition: {x: 0, y: -90}
   m_SizeDelta: {x: 7596.8, y: 586.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &621006816
@@ -1569,7 +1584,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   characterName: 8
-  image: {fileID: 2800000, guid: 9fd31269c3ccf4a4ebf947739cc66409, type: 3}
+  image: {fileID: 2800000, guid: a61d916ae4ef04dd5acb7523d3d6ed48, type: 3}
 --- !u!114 &871589307 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1840937659899806920, guid: fa7d02b799c0f4802925bf43b7713f09,
@@ -1626,7 +1641,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   characterName: 7
-  image: {fileID: 2800000, guid: 9fd31269c3ccf4a4ebf947739cc66409, type: 3}
+  image: {fileID: 2800000, guid: ba95963773b6145dcbf3df893b6e3c9a, type: 3}
 --- !u!114 &1034461213 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1840937659899806920, guid: fa7d02b799c0f4802925bf43b7713f09,
@@ -1693,7 +1708,7 @@ MonoBehaviour:
   recapPanel: {fileID: 391624195}
   gameOverPanel: {fileID: 1302193033}
   currentEventId: 0
-  day: 1
+  day: 0
 --- !u!1 &1071693429
 GameObject:
   m_ObjectHideFlags: 0
@@ -2166,7 +2181,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   characterName: 9
-  image: {fileID: 2800000, guid: 9fd31269c3ccf4a4ebf947739cc66409, type: 3}
+  image: {fileID: 2800000, guid: bf1004d2d8aa047109c0bfc1ce7aa51e, type: 3}
 --- !u!1 &1432216137
 GameObject:
   m_ObjectHideFlags: 0

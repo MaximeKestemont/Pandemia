@@ -49,6 +49,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0485b2fa1a084bcc87be6d5f45e7fcf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  indicatorToUnlock: 9
   choiceTitle: {fileID: 5096160235226824802}
   choiceImage: {fileID: 0}
   choiceButton: {fileID: 1664993035228112294}
@@ -195,7 +196,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.20000002, g: 0.627451, b: 0.8588236, a: 1}
+  m_Color: {r: 0.84313726, g: 0.8156863, b: 0.6313726, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:

@@ -21,7 +21,7 @@ public class GameController : MonoBehaviour
     private int eventCount = 0;
 
     // Counter to track the player progress
-    public int day = 1;
+    public int day = 0;
 
     public void StartGame()
     {
@@ -61,9 +61,9 @@ public class GameController : MonoBehaviour
         eventCount++;
 
         if (CheckLosingConditions()) {
-            FinishGame(false);
+            FinishGame(false, GameOverPanel.losingMessage);
         } else if (CheckWinningConditions()) {
-            FinishGame(true);
+            FinishGame(true, GameOverPanel.knowledgeMessage);
         } else {
 
         Debug.Log("Updating the day counter and displaying the corresponding panel");
@@ -130,7 +130,7 @@ public class GameController : MonoBehaviour
             currentEvent = resourceManager.eventsMap[currentEventId];
             currentEvent.SetActive(true);
         } else {
-            FinishGame(true);
+            FinishGame(true, GameOverPanel.survivingMessage);
         }
         }
     }
@@ -150,14 +150,8 @@ public class GameController : MonoBehaviour
         return (virusKnowledgeCondition || infectedNumberCondition) && eventsCondition;
     }
 
-    public void FinishGame(bool isWinner) {
-        if(isWinner) {
-            Debug.Log("No more event. Game finished.");
-            gameOverPanel.SetEndingScreen(true);
-        } else {
-            Debug.Log("Game Over panel activated.");
-            gameOverPanel.SetEndingScreen(true);
-        }
+    public void FinishGame(bool isWinner, string endingMessage) {
+        gameOverPanel.SetEndingScreen(isWinner, endingMessage);
         resourceManager.gameOverPanel.SetActive(true);
     }
 
