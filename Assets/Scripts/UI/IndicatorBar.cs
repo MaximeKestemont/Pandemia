@@ -10,9 +10,7 @@ Range between 0 and 100.
  */
 public class IndicatorBar : MonoBehaviour {
 
-	public GameObject filling;
-	public GameObject blinkingImage;
-	public GameObject border;
+	public Image fillingImage;
 	public GameObject text;
 
 	public string indicatorName = "DefaultName";
@@ -22,66 +20,31 @@ public class IndicatorBar : MonoBehaviour {
 
 	public List<ValueOverTime> bonusAndMalus = new List<ValueOverTime>();
 	
-	private RectTransform borderRect;
 	public int MIN_VALUE = 0;
 	public int MAX_VALUE = 100;
-	public int blinkingTime = 2;
-
-	private bool isBlinking = false;
+	
+	// Variables to handle the blinking and progress update
+	public float blinkingDelay = 0.2f;
+	public int updateStep = 3;	// step at which the bar will be updated
+	private int currentFilling;
+	private bool isUpdating = false;
+	private bool originalColor = true;
 	
 	void Start () {
-		borderRect = border.GetComponent<RectTransform> ();
 		text.GetComponent<Text>().text = indicatorName;
-		filling.GetComponent<Image>().color = color;
+		fillingImage.color = color;
 		this.previousFillingLevel = this.fillingLevel;
-		this.blinkingImage.SetActive(false);
+
+		currentFilling = fillingLevel;
+		fillingImage.fillAmount = (float) fillingLevel / 100;
 	}
 
 
 	void Update () {
 		// Update the bar rendering
-		filling.transform.localScale = new Vector3 (
-			(float) fillingLevel / (float) MAX_VALUE * borderRect.localScale.x, 
-			filling.transform.localScale.y, 
-			filling.transform.localScale.z
-		);
-
-		// Check if the bar has been updated, and if yes, trigger blinking
-		if (previousFillingLevel != fillingLevel) {
-			// Resize the width of the blinking image
-			int blinkingImageWidth = Math.Abs(fillingLevel - previousFillingLevel);
-
-			blinkingImage.transform.localScale = new Vector3 (
-				(float) blinkingImageWidth / (float) MAX_VALUE * borderRect.localScale.x, 
-				filling.transform.localScale.y, 
-				filling.transform.localScale.z
-			);
-
-			// Position the blinking image properly
-			if (fillingLevel < previousFillingLevel) {
-				// Starting position of blinkingImage = Ending position of FillingImage
-				blinkingImage.transform.localPosition = new Vector3(
-					filling.transform.localPosition.x + filling.transform.localScale.x * filling.GetComponent<RectTransform>().rect.width,
-					blinkingImage.transform.localPosition.y,
-					blinkingImage.transform.localPosition.z
-				);
-			} else {
-				// Ending position of blinkingImage = Ending position of FillingImage
-				// -> starting position = Ending position - width
-				float endingPosition = filling.transform.localPosition.x + filling.transform.localScale.x * filling.GetComponent<RectTransform>().rect.width;
-				blinkingImage.transform.localPosition = new Vector3(
-					endingPosition - blinkingImageWidth,
-					blinkingImage.transform.localPosition.y,
-					blinkingImage.transform.localPosition.z
-				);				
-			}
-
-			if (!isBlinking) {
-				isBlinking = true;
-				InvokeRepeating ("Blink", 0, 0.2f);
-				StartCoroutine(StopBlinking());
-			}
-			previousFillingLevel = fillingLevel;
+		if (!isUpdating && currentFilling != fillingLevel) {
+			InvokeRepeating ("UpdateFilling", 0, blinkingDelay);
+			isUpdating = true;
 		}
 
 	}
@@ -133,26 +96,39 @@ public class IndicatorBar : MonoBehaviour {
 
 	/*
 	=====================
-	Blink
+	UpdateFilling
 	=====================
-	Enable or disable the blinking image
+	- Update the currentFilling and the fillingImage value by 1 updateStep
+	- Handle the blinking
+	- If finished, reset all the parameters and stop the invoke
 	*/
-	void Blink() {
-		//blinkingImage.GetComponent<Image>().
-		blinkingImage.SetActive(!blinkingImage.activeSelf);
-	}
+	void UpdateFilling() {
+		// Update currentFilling value
+		if (currentFilling < fillingLevel) {
+			currentFilling = Math.Min(fillingLevel, currentFilling + updateStep);
+		} else if (currentFilling > fillingLevel) {
+			currentFilling = Math.Max(fillingLevel, currentFilling - updateStep);
+		}
+		
+		// Update progress bar
+		fillingImage.fillAmount = (float) currentFilling / 100;
 
-	/*
-	=====================
-	StopBlinking
-	=====================
-	*/
-	IEnumerator StopBlinking() {
-		yield return new WaitForSeconds(this.blinkingTime);
-		CancelInvoke ();
-		blinkingImage.SetActive(false);
-		this.isBlinking = false;
-	} 
+		// Blink
+		if (originalColor) {
+			fillingImage.color = Color.white;
+		} else {
+			fillingImage.color = color;
+		}
+		originalColor = !originalColor;
+
+		// Check if it finished
+		if (currentFilling == fillingLevel) {
+			CancelInvoke();
+			this.isUpdating = false;
+			originalColor = true;
+			fillingImage.color = color;
+		}
+	}
 
 	/*
 	=====================

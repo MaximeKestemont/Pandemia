@@ -78,8 +78,7 @@ public class GameController : MonoBehaviour
         Debug.Log("Checking if events should be unlocked or locked");
         foreach(GameObject eventObject in resourceManager.eventsMap.Values) {
             Event eventInstance = eventObject.GetComponent<Event>();
-            bool test = eventInstance.unlockedByChoice != Event.Status.PASSED && eventInstance.eventConditions.Count > 0;
-            Debug.Log(test);
+
             if (eventInstance.unlockedByChoice != Event.Status.PASSED && eventInstance.eventConditions.Count > 0) {
                 bool unlocked = false;
                 
@@ -107,10 +106,6 @@ public class GameController : MonoBehaviour
                     }
                 }
 
-                Debug.Log("-------------");
-                Debug.Log(eventInstance.uid);
-                Debug.Log(eventInstance.unlockedByChoice);
-                Debug.Log(unlocked);
                 if (unlocked && eventInstance.unlockedByChoice == Event.Status.UNLOCKED) {
                     eventInstance.status = Event.Status.UNLOCKED;
                 } else {
