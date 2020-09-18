@@ -16,13 +16,18 @@ public class GraphLoader: MonoBehaviour
     void Start()
     {
         Debug.Log("Start parsing xNode graph...");
-        // TODO change the string resource name here to load another event graph
+        /* Uncomment to test specific behaviours
+        List<EventChoiceGraph> graphs = new List<EventChoiceGraph>{
+            Resources.Load("LockTestGraph") as EventChoiceGraph
+        };
+        */
         List<EventChoiceGraph> graphs = new List<EventChoiceGraph>{
             Resources.Load("TestGraph2") as EventChoiceGraph,
             Resources.Load("EconomyGraph") as EventChoiceGraph,
             Resources.Load("InfectionGraph") as EventChoiceGraph,
             Resources.Load("ResearchGraph") as EventChoiceGraph
         };
+        
 
         var eventsParent = GameObject.Find("Events").transform;
 
@@ -45,6 +50,16 @@ public class GraphLoader: MonoBehaviour
 
                 newEventObject.SetActive(false);
                 eventObjects.Add(newEventObject);
+
+                // if there are incoming dependencies, unlockedByChoice take the global status
+                // if there is no dependencies, its set to UNLOCKED so that it does not prevent the event to be unlocked
+                var unlockedChoiceConnections = eventNode.GetInputPort("unlockingChoices").GetConnections();
+                if (unlockedChoiceConnections.Count() > 0) {
+                    newEvent.unlockedByChoice = eventNode.status;
+                } else {
+                    newEvent.unlockedByChoice = Event.Status.UNLOCKED;
+                }
+
                 Debug.Log($"Event {newEvent.uid} has been properly created");
             }
 
