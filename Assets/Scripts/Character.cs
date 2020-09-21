@@ -24,7 +24,8 @@ public class Character : MonoBehaviour
         JOURNALIST,
         PRIME_MINISTER,
         MINISTER_OF_ECONOMY,
-        PHARMA_LOBBYIST
+        PHARMA_LOBBYIST,
+        CHINESE_PRESIDENT
     }
 
 }
