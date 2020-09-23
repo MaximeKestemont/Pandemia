@@ -25,7 +25,8 @@ public class GraphLoader: MonoBehaviour
             Resources.Load("TestGraph2") as EventChoiceGraph,
             Resources.Load("EconomyGraph") as EventChoiceGraph,
             Resources.Load("InfectionGraph") as EventChoiceGraph,
-            Resources.Load("ResearchGraph") as EventChoiceGraph
+            Resources.Load("ResearchGraph") as EventChoiceGraph,
+            Resources.Load("MiscGraph") as EventChoiceGraph
         };
         
 
