@@ -59,7 +59,7 @@ MonoBehaviour:
   character: 1
   dialogue: "Monsieur ! \nIl semblerait que la grippe soit bien plus dangereuse que
     l'on ne pensait. Plusieurs patients viennent de d\xE9c\xE9der !"
-  uid: 15
+  uid: 93
 --- !u!114 &-8639486727629898857
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -151,6 +151,7 @@ MonoBehaviour:
     value: -20
     duration: 0
   indicatorToUnlock: 6
+  phaseToUnlock: 0
 --- !u!114 &-8181022027983185696
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -232,6 +233,7 @@ MonoBehaviour:
   description: Que devrions-nous faire dans ce cas ?
   choiceNodeConsequences: []
   indicatorToUnlock: 9
+  phaseToUnlock: 0
 --- !u!114 &-6394171116653124332
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -299,12 +301,13 @@ MonoBehaviour:
   lockingChoices: {fileID: 0}
   passingChoices: {fileID: 0}
   dialogue: {fileID: 0}
+  eventPhase: 0
   conditions:
   - conditions:
     - indicatorType: 3
       threshold: 30
       conditionType: 0
-  eventPhase: 0
+  minEventsCondition: 0
 --- !u!114 &-6238139833672439972
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -363,7 +366,7 @@ MonoBehaviour:
   outcomingChoices: {fileID: 0}
   character: 1
   dialogue: Je...nous...
-  uid: 7
+  uid: 105
 --- !u!114 &-6162848389207828877
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -446,6 +449,7 @@ MonoBehaviour:
     value: 20
     duration: 0
   indicatorToUnlock: 9
+  phaseToUnlock: 0
 --- !u!114 &-6089687328206000431
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -505,7 +509,7 @@ MonoBehaviour:
   character: 1
   dialogue: "Mais...non Monsieur, ce n'est pas \xE7a...Personne ne nous attaque.
     C'est pire !"
-  uid: 21
+  uid: 94
 --- !u!114 &-5801747043864098931
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -573,12 +577,13 @@ MonoBehaviour:
   lockingChoices: {fileID: 0}
   passingChoices: {fileID: 0}
   dialogue: {fileID: 0}
+  eventPhase: 0
   conditions:
   - conditions:
     - indicatorType: 4
       threshold: 20
       conditionType: 0
-  eventPhase: 0
+  minEventsCondition: 0
 --- !u!114 &-5726298463413678031
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -646,7 +651,7 @@ MonoBehaviour:
   outcomingChoices: {fileID: 0}
   character: 3
   dialogue: "En \xEAtes-vous certain ? Quel limite devrions nous imposer ?"
-  uid: 71
+  uid: 102
 --- !u!114 &-5422470006865607633
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -737,6 +742,7 @@ MonoBehaviour:
     value: 20
     duration: 0
   indicatorToUnlock: 9
+  phaseToUnlock: 0
 --- !u!114 &-5359024148611790123
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -796,7 +802,7 @@ MonoBehaviour:
   character: 1
   dialogue: "Toutes nos pr\xE9visions sont largement en dessous de la r\xE9alit\xE9,
     la situation est critique !"
-  uid: 23
+  uid: 98
 --- !u!114 &-5332540721408880727
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -888,6 +894,7 @@ MonoBehaviour:
     value: -20
     duration: 0
   indicatorToUnlock: 9
+  phaseToUnlock: 4
 --- !u!114 &-5318872176305909976
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -969,6 +976,7 @@ MonoBehaviour:
   description: Nous devons interdir les grands rassemblements !
   choiceNodeConsequences: []
   indicatorToUnlock: 9
+  phaseToUnlock: 0
 --- !u!114 &-5226681277051634756
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1030,7 +1038,7 @@ MonoBehaviour:
   outcomingChoices: {fileID: 0}
   character: 1
   dialogue: Alerte ! C'est une catastrophe !
-  uid: 30
+  uid: 92
 --- !u!114 &-5161456615027825782
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1093,7 +1101,7 @@ MonoBehaviour:
   character: 3
   dialogue: "Je ne suis pas certain que ce soit une bonne id\xE9e...La population
     risque de ne pas appr\xE9cier, et ces gens font partie de votre \xE9lectorat."
-  uid: 11
+  uid: 100
 --- !u!114 &-5033503963372059779
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1175,6 +1183,7 @@ MonoBehaviour:
   description: Mais c'est une catastrophe !
   choiceNodeConsequences: []
   indicatorToUnlock: 9
+  phaseToUnlock: 0
 --- !u!114 &-4788963369633716205
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1242,12 +1251,13 @@ MonoBehaviour:
   lockingChoices: {fileID: 0}
   passingChoices: {fileID: 0}
   dialogue: {fileID: 0}
+  eventPhase: 0
   conditions:
   - conditions:
     - indicatorType: 3
       threshold: 10
       conditionType: 0
-  eventPhase: 0
+  minEventsCondition: 0
 --- !u!114 &-2923231116386166197
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1329,6 +1339,7 @@ MonoBehaviour:
   description: Aaaaaaaaaah, fuyons ! Nous sommes en guerre !
   choiceNodeConsequences: []
   indicatorToUnlock: 9
+  phaseToUnlock: 0
 --- !u!114 &-2829642266061083938
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1415,6 +1426,7 @@ MonoBehaviour:
     value: -15
     duration: 0
   indicatorToUnlock: 9
+  phaseToUnlock: 0
 --- !u!114 &-2454098364447855855
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1507,6 +1519,7 @@ MonoBehaviour:
     value: 20
     duration: 0
   indicatorToUnlock: 9
+  phaseToUnlock: 0
 --- !u!114 &-1991244950140474461
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1593,6 +1606,7 @@ MonoBehaviour:
     value: -30
     duration: 0
   indicatorToUnlock: 9
+  phaseToUnlock: 0
 --- !u!114 &-1421796635576081371
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1679,6 +1693,7 @@ MonoBehaviour:
     value: -10
     duration: 0
   indicatorToUnlock: 9
+  phaseToUnlock: 0
 --- !u!114 &-697393708977476459
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1744,7 +1759,7 @@ MonoBehaviour:
   character: 3
   dialogue: "Nous devrions peut-\xEAtre envisager de confiner une partie de la population.
     L'impact \xE9conomique et sociale se fera cependant sentir..."
-  uid: 33
+  uid: 95
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1867,7 +1882,7 @@ MonoBehaviour:
   character: 1
   dialogue: "Les nouvelles sont catastrophiques ! Le nombre de morts a fortement
     augment\xE9 ces derniers jours, ils se comptent en milliers !"
-  uid: 6
+  uid: 104
 --- !u!114 &1013088786299528488
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1961,6 +1976,7 @@ MonoBehaviour:
     value: -30
     duration: 0
   indicatorToUnlock: 9
+  phaseToUnlock: 3
 --- !u!114 &1294278181850432159
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2051,6 +2067,7 @@ MonoBehaviour:
     value: -15
     duration: 0
   indicatorToUnlock: 6
+  phaseToUnlock: 0
 --- !u!114 &2139186820653971818
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2138,6 +2155,7 @@ MonoBehaviour:
     value: 10
     duration: 0
   indicatorToUnlock: 9
+  phaseToUnlock: 0
 --- !u!114 &2380667948495539987
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2224,6 +2242,7 @@ MonoBehaviour:
     value: 10
     duration: 0
   indicatorToUnlock: 9
+  phaseToUnlock: 0
 --- !u!114 &2468598614261467921
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2291,12 +2310,13 @@ MonoBehaviour:
   lockingChoices: {fileID: 0}
   passingChoices: {fileID: 0}
   dialogue: {fileID: 0}
+  eventPhase: 0
   conditions:
   - conditions:
     - indicatorType: 3
       threshold: 30
       conditionType: 0
-  eventPhase: 0
+  minEventsCondition: 0
 --- !u!114 &3894501719905024538
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2379,6 +2399,7 @@ MonoBehaviour:
     value: 30
     duration: 0
   indicatorToUnlock: 6
+  phaseToUnlock: 0
 --- !u!114 &4776705563872199242
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2460,6 +2481,7 @@ MonoBehaviour:
   description: "C'est inqui\xE9tant...que suggerez-vous ?"
   choiceNodeConsequences: []
   indicatorToUnlock: 9
+  phaseToUnlock: 0
 --- !u!114 &5169403472969110142
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2541,6 +2563,7 @@ MonoBehaviour:
   description: "Mettez l'entieret\xE9 de ces quartiers en quarantaine !"
   choiceNodeConsequences: []
   indicatorToUnlock: 9
+  phaseToUnlock: 0
 --- !u!114 &5212885545379261204
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2604,7 +2627,7 @@ MonoBehaviour:
   dialogue: "Il est encore trop t\xF4t pour le dire, nous ignorons si son degr\xE9
     de contagion a augment\xE9. Augmenter les pr\xE9cautions en terme d'hygi\xE8ne
     ne pourra cependant pas faire de mal."
-  uid: 14
+  uid: 101
 --- !u!114 &5383533800258923274
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2697,6 +2720,7 @@ MonoBehaviour:
     value: 30
     duration: 0
   indicatorToUnlock: 9
+  phaseToUnlock: 0
 --- !u!114 &5440013063490526137
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2756,7 +2780,7 @@ MonoBehaviour:
   character: 1
   dialogue: "Monsieur le Pr\xE9sident !\nLa situation continue d'empirer, plusieurs
     clusters de contamination ont \xE9t\xE9 d\xE9tect\xE9s !"
-  uid: 72
+  uid: 97
 --- !u!114 &5822567781717024018
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2843,6 +2867,7 @@ MonoBehaviour:
     value: 10
     duration: 0
   indicatorToUnlock: 6
+  phaseToUnlock: 0
 --- !u!114 &6015179723110780382
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2899,7 +2924,7 @@ MonoBehaviour:
   character: 1
   dialogue: "Leur situation \xE9tait sous contr\xF4le...et a brusquement empir\xE9,
     en l'espace de quelques heures !"
-  uid: 1
+  uid: 91
 --- !u!114 &6228112125993297188
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2981,6 +3006,7 @@ MonoBehaviour:
   description: "Je ne comprends pas tr\xE8s bien le probl\xE8me..."
   choiceNodeConsequences: []
   indicatorToUnlock: 9
+  phaseToUnlock: 0
 --- !u!114 &6421092113669636570
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3043,7 +3069,7 @@ MonoBehaviour:
   character: 1
   dialogue: "Nous nous sommes tromp\xE9s sur cette grippe ! Les patients sont contagieux
     plusieurs jours AVANT les premiers symptomes !"
-  uid: 53
+  uid: 96
 --- !u!114 &7908019943296020538
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3104,7 +3130,7 @@ MonoBehaviour:
   dialogue: "Monsieur le Pr\xE9sident ! \nNous avons proc\xE9d\xE9 au s\xE9quencage
     du virus au cours des derni\xE8res semaines...et il semblerait que ce dernier
     soit en train de muter !"
-  uid: 8
+  uid: 103
 --- !u!114 &8009623371603399539
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3172,12 +3198,13 @@ MonoBehaviour:
   lockingChoices: {fileID: 0}
   passingChoices: {fileID: 0}
   dialogue: {fileID: 0}
+  eventPhase: 0
   conditions:
   - conditions:
     - indicatorType: 8
       threshold: 10
       conditionType: 0
-  eventPhase: 0
+  minEventsCondition: 0
 --- !u!114 &8515637038380090447
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3240,7 +3267,7 @@ MonoBehaviour:
   character: 1
   dialogue: "De nouveaux foyers de contamination ont \xE9t\xE9 d\xE9couverts dans
     certaines r\xE9gions. Que devons-nous faire ?"
-  uid: 52
+  uid: 99
 --- !u!114 &8701641163579183246
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3322,6 +3349,7 @@ MonoBehaviour:
   description: Calmez-vous, et dites-moi ce qui se passe !
   choiceNodeConsequences: []
   indicatorToUnlock: 9
+  phaseToUnlock: 0
 --- !u!114 &8972360151153717920
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3389,9 +3417,10 @@ MonoBehaviour:
   lockingChoices: {fileID: 0}
   passingChoices: {fileID: 0}
   dialogue: {fileID: 0}
+  eventPhase: 0
   conditions:
   - conditions:
     - indicatorType: 4
       threshold: 30
       conditionType: 0
-  eventPhase: 0
+  minEventsCondition: 0

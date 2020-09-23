@@ -25,7 +25,8 @@ public class Character : MonoBehaviour
         PRIME_MINISTER,
         MINISTER_OF_ECONOMY,
         PHARMA_LOBBYIST,
-        CHINESE_PRESIDENT
+        CHINESE_PRESIDENT,
+        DRUNKEN_MAN
     }
 
 }

@@ -1,0 +1,143 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5274cff68226842e18fdb3194d61a219, type: 3}
+  m_Name: LockdownGraph
+  m_EditorClassIdentifier: 
+  nodes:
+  - {fileID: 9084166821622053667}
+  - {fileID: 7315093856782355815}
+--- !u!114 &7315093856782355815
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39784acf12ef448498ee792b1bf41ff0, type: 3}
+  m_Name: NPC Dialogue
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 264, y: 104}
+  ports:
+    keys:
+    - initialEvent
+    - incomingChoice
+    - outcomingChoices
+    values:
+    - _fieldName: initialEvent
+      _node: {fileID: 7315093856782355815}
+      _typeQualifiedName: EventNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: dialogue
+        node: {fileID: 9084166821622053667}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: incomingChoice
+      _node: {fileID: 7315093856782355815}
+      _typeQualifiedName: ChoiceNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: outcomingChoices
+      _node: {fileID: 7315093856782355815}
+      _typeQualifiedName: ChoiceNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  initialEvent: {fileID: 0}
+  incomingChoice: {fileID: 0}
+  outcomingChoices: {fileID: 0}
+  character: 0
+  dialogue: TODO ALEX
+  uid: 66
+--- !u!114 &9084166821622053667
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e77689f02e2134294bbdf1163ebfa777, type: 3}
+  m_Name: Event
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 0, y: 0}
+  ports:
+    keys:
+    - unlockingChoices
+    - lockingChoices
+    - passingChoices
+    - dialogue
+    values:
+    - _fieldName: unlockingChoices
+      _node: {fileID: 9084166821622053667}
+      _typeQualifiedName: ChoiceNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: lockingChoices
+      _node: {fileID: 9084166821622053667}
+      _typeQualifiedName: ChoiceNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: passingChoices
+      _node: {fileID: 9084166821622053667}
+      _typeQualifiedName: ChoiceNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: dialogue
+      _node: {fileID: 9084166821622053667}
+      _typeQualifiedName: NPCDialogueNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: initialEvent
+        node: {fileID: 7315093856782355815}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  title: TODO ALEX
+  uid: 500
+  status: 1
+  unlockingChoices: {fileID: 0}
+  lockingChoices: {fileID: 0}
+  passingChoices: {fileID: 0}
+  dialogue: {fileID: 0}
+  eventPhase: 3
+  conditions: []
+  minEventsCondition: 0

@@ -126,6 +126,7 @@ public class ResourceManager : MonoBehaviour {
         ALL,        // event can always happen, regardless of the current phase  
         NORMAL,     // event can only happen if phase is normal
         LOCKDOWN,   // event can only happen if phase is lockdown
+        PARTIAL_LOCKDOWN,
         WAR,
         DICTATORSHIP
     }
