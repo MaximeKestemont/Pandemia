@@ -59,7 +59,7 @@ MonoBehaviour:
   character: 1
   dialogue: "Monsieur ! \nIl semblerait que la grippe soit bien plus dangereuse que
     l'on ne pensait. Plusieurs patients viennent de d\xE9c\xE9der !"
-  uid: 93
+  uid: 17
 --- !u!114 &-8639486727629898857
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -366,7 +366,7 @@ MonoBehaviour:
   outcomingChoices: {fileID: 0}
   character: 1
   dialogue: Je...nous...
-  uid: 105
+  uid: 7
 --- !u!114 &-6162848389207828877
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -509,7 +509,7 @@ MonoBehaviour:
   character: 1
   dialogue: "Mais...non Monsieur, ce n'est pas \xE7a...Personne ne nous attaque.
     C'est pire !"
-  uid: 94
+  uid: 25
 --- !u!114 &-5801747043864098931
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -651,7 +651,7 @@ MonoBehaviour:
   outcomingChoices: {fileID: 0}
   character: 3
   dialogue: "En \xEAtes-vous certain ? Quel limite devrions nous imposer ?"
-  uid: 102
+  uid: 72
 --- !u!114 &-5422470006865607633
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -743,6 +743,97 @@ MonoBehaviour:
     duration: 0
   indicatorToUnlock: 9
   phaseToUnlock: 0
+--- !u!114 &-5373211973628296260
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78d86ceab28114ca481a4504b2f3e3a3, type: 3}
+  m_Name: Choice
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 2536, y: 40}
+  ports:
+    keys:
+    - correspondingDialogue
+    - followingDialogue
+    - unlockingEvents
+    - lockingEvents
+    - passingEvents
+    values:
+    - _fieldName: correspondingDialogue
+      _node: {fileID: -5373211973628296260}
+      _typeQualifiedName: NPCDialogueNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: outcomingChoices
+        node: {fileID: -5009382719387158637}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: followingDialogue
+      _node: {fileID: -5373211973628296260}
+      _typeQualifiedName: NPCDialogueNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: unlockingEvents
+      _node: {fileID: -5373211973628296260}
+      _typeQualifiedName: EventNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: lockingEvents
+      _node: {fileID: -5373211973628296260}
+      _typeQualifiedName: EventNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: passingEvents
+      _node: {fileID: -5373211973628296260}
+      _typeQualifiedName: EventNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  correspondingDialogue: {fileID: 0}
+  followingDialogue: {fileID: 0}
+  unlockingEvents: {fileID: 0}
+  lockingEvents: {fileID: 0}
+  passingEvents: {fileID: 0}
+  description: "Confiner uniquement les secteurs les plus \xE0 risque."
+  choiceNodeConsequences:
+  - indicatorType: 2
+    valueType: 0
+    value: -10
+    duration: 0
+  - indicatorType: 1
+    valueType: 0
+    value: -10
+    duration: 0
+  - indicatorType: 4
+    valueType: 0
+    value: -10
+    duration: 0
+  indicatorToUnlock: 9
+  phaseToUnlock: 4
 --- !u!114 &-5359024148611790123
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -802,7 +893,7 @@ MonoBehaviour:
   character: 1
   dialogue: "Toutes nos pr\xE9visions sont largement en dessous de la r\xE9alit\xE9,
     la situation est critique !"
-  uid: 98
+  uid: 27
 --- !u!114 &-5332540721408880727
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1038,7 +1129,7 @@ MonoBehaviour:
   outcomingChoices: {fileID: 0}
   character: 1
   dialogue: Alerte ! C'est une catastrophe !
-  uid: 92
+  uid: 35
 --- !u!114 &-5161456615027825782
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1101,7 +1192,7 @@ MonoBehaviour:
   character: 3
   dialogue: "Je ne suis pas certain que ce soit une bonne id\xE9e...La population
     risque de ne pas appr\xE9cier, et ces gens font partie de votre \xE9lectorat."
-  uid: 100
+  uid: 11
 --- !u!114 &-5033503963372059779
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1184,6 +1275,73 @@ MonoBehaviour:
   choiceNodeConsequences: []
   indicatorToUnlock: 9
   phaseToUnlock: 0
+--- !u!114 &-5009382719387158637
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39784acf12ef448498ee792b1bf41ff0, type: 3}
+  m_Name: NPC Dialogue
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 2264, y: -72}
+  ports:
+    keys:
+    - initialEvent
+    - incomingChoice
+    - outcomingChoices
+    values:
+    - _fieldName: initialEvent
+      _node: {fileID: -5009382719387158637}
+      _typeQualifiedName: EventNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: incomingChoice
+      _node: {fileID: -5009382719387158637}
+      _typeQualifiedName: ChoiceNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: followingDialogue
+        node: {fileID: 6128410845119851857}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: outcomingChoices
+      _node: {fileID: -5009382719387158637}
+      _typeQualifiedName: ChoiceNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: correspondingDialogue
+        node: {fileID: 3131607450740155496}
+        reroutePoints: []
+      - fieldName: correspondingDialogue
+        node: {fileID: -5373211973628296260}
+        reroutePoints: []
+      - fieldName: correspondingDialogue
+        node: {fileID: 4825385536551686981}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  initialEvent: {fileID: 0}
+  incomingChoice: {fileID: 0}
+  outcomingChoices: {fileID: 0}
+  character: 8
+  dialogue: "Cons\xE9quent, Monsieur.\nUn confinement partiel, par secteur, ralentira
+    fortement notre activit\xE9 \xE9conomique.\nUn confinement total, l'impact serait
+    d\xE9sastreux !"
+  uid: 78
 --- !u!114 &-4788963369633716205
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1256,6 +1414,151 @@ MonoBehaviour:
   - conditions:
     - indicatorType: 3
       threshold: 10
+      conditionType: 0
+  minEventsCondition: 0
+--- !u!114 &-3135293485746549435
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39784acf12ef448498ee792b1bf41ff0, type: 3}
+  m_Name: NPC Dialogue
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 1704, y: 88}
+  ports:
+    keys:
+    - initialEvent
+    - incomingChoice
+    - outcomingChoices
+    values:
+    - _fieldName: initialEvent
+      _node: {fileID: -3135293485746549435}
+      _typeQualifiedName: EventNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: dialogue
+        node: {fileID: -3002512608577817857}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: incomingChoice
+      _node: {fileID: -3135293485746549435}
+      _typeQualifiedName: ChoiceNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: outcomingChoices
+      _node: {fileID: -3135293485746549435}
+      _typeQualifiedName: ChoiceNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: correspondingDialogue
+        node: {fileID: 6128410845119851857}
+        reroutePoints: []
+      - fieldName: correspondingDialogue
+        node: {fileID: 8464191477189037770}
+        reroutePoints: []
+      - fieldName: correspondingDialogue
+        node: {fileID: 4825385536551686981}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  initialEvent: {fileID: 0}
+  incomingChoice: {fileID: 0}
+  outcomingChoices: {fileID: 0}
+  character: 1
+  dialogue: "La situation est critique, le nombre d'infect\xE9s et la vitesse de
+    propagation du virus ne sont plus sous contr\xF4le. Nous devons prendre des mesures
+    drastiques !"
+  uid: 77
+--- !u!114 &-3002512608577817857
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e77689f02e2134294bbdf1163ebfa777, type: 3}
+  m_Name: Event
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 1432, y: -40}
+  ports:
+    keys:
+    - unlockingChoices
+    - lockingChoices
+    - passingChoices
+    - dialogue
+    values:
+    - _fieldName: unlockingChoices
+      _node: {fileID: -3002512608577817857}
+      _typeQualifiedName: ChoiceNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: lockingChoices
+      _node: {fileID: -3002512608577817857}
+      _typeQualifiedName: ChoiceNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: passingChoices
+      _node: {fileID: -3002512608577817857}
+      _typeQualifiedName: ChoiceNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: dialogue
+      _node: {fileID: -3002512608577817857}
+      _typeQualifiedName: NPCDialogueNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: initialEvent
+        node: {fileID: -3135293485746549435}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  title: La situation est critique !
+  uid: 206
+  status: 1
+  unlockingChoices: {fileID: 0}
+  lockingChoices: {fileID: 0}
+  passingChoices: {fileID: 0}
+  dialogue: {fileID: 0}
+  eventPhase: 1
+  conditions:
+  - conditions:
+    - indicatorType: 3
+      threshold: 60
+      conditionType: 0
+  - conditions:
+    - indicatorType: 4
+      threshold: 60
       conditionType: 0
   minEventsCondition: 0
 --- !u!114 &-2923231116386166197
@@ -1759,7 +2062,7 @@ MonoBehaviour:
   character: 3
   dialogue: "Nous devrions peut-\xEAtre envisager de confiner une partie de la population.
     L'impact \xE9conomique et sociale se fera cependant sentir..."
-  uid: 95
+  uid: 39
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1817,6 +2120,14 @@ MonoBehaviour:
   - {fileID: -8639486727629898857}
   - {fileID: 3894501719905024538}
   - {fileID: 1294278181850432159}
+  - {fileID: -3002512608577817857}
+  - {fileID: -3135293485746549435}
+  - {fileID: 6128410845119851857}
+  - {fileID: 8464191477189037770}
+  - {fileID: 4825385536551686981}
+  - {fileID: -5009382719387158637}
+  - {fileID: 3131607450740155496}
+  - {fileID: -5373211973628296260}
 --- !u!114 &901114336235855988
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1882,7 +2193,7 @@ MonoBehaviour:
   character: 1
   dialogue: "Les nouvelles sont catastrophiques ! Le nombre de morts a fortement
     augment\xE9 ces derniers jours, ils se comptent en milliers !"
-  uid: 104
+  uid: 5
 --- !u!114 &1013088786299528488
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2317,6 +2628,97 @@ MonoBehaviour:
       threshold: 30
       conditionType: 0
   minEventsCondition: 0
+--- !u!114 &3131607450740155496
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78d86ceab28114ca481a4504b2f3e3a3, type: 3}
+  m_Name: Choice
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 2536, y: -248}
+  ports:
+    keys:
+    - correspondingDialogue
+    - followingDialogue
+    - unlockingEvents
+    - lockingEvents
+    - passingEvents
+    values:
+    - _fieldName: correspondingDialogue
+      _node: {fileID: 3131607450740155496}
+      _typeQualifiedName: NPCDialogueNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: outcomingChoices
+        node: {fileID: -5009382719387158637}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: followingDialogue
+      _node: {fileID: 3131607450740155496}
+      _typeQualifiedName: NPCDialogueNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: unlockingEvents
+      _node: {fileID: 3131607450740155496}
+      _typeQualifiedName: EventNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: lockingEvents
+      _node: {fileID: 3131607450740155496}
+      _typeQualifiedName: EventNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: passingEvents
+      _node: {fileID: 3131607450740155496}
+      _typeQualifiedName: EventNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  correspondingDialogue: {fileID: 0}
+  followingDialogue: {fileID: 0}
+  unlockingEvents: {fileID: 0}
+  lockingEvents: {fileID: 0}
+  passingEvents: {fileID: 0}
+  description: Instaurons un confinement total !
+  choiceNodeConsequences:
+  - indicatorType: 2
+    valueType: 0
+    value: -20
+    duration: 0
+  - indicatorType: 1
+    valueType: 0
+    value: -20
+    duration: 0
+  - indicatorType: 4
+    valueType: 0
+    value: -20
+    duration: 0
+  indicatorToUnlock: 9
+  phaseToUnlock: 3
 --- !u!114 &3894501719905024538
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2482,6 +2884,92 @@ MonoBehaviour:
   choiceNodeConsequences: []
   indicatorToUnlock: 9
   phaseToUnlock: 0
+--- !u!114 &4825385536551686981
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78d86ceab28114ca481a4504b2f3e3a3, type: 3}
+  m_Name: Choice
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 2536, y: 344}
+  ports:
+    keys:
+    - correspondingDialogue
+    - followingDialogue
+    - unlockingEvents
+    - lockingEvents
+    - passingEvents
+    values:
+    - _fieldName: correspondingDialogue
+      _node: {fileID: 4825385536551686981}
+      _typeQualifiedName: NPCDialogueNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: outcomingChoices
+        node: {fileID: -3135293485746549435}
+        reroutePoints: []
+      - fieldName: outcomingChoices
+        node: {fileID: -5009382719387158637}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: followingDialogue
+      _node: {fileID: 4825385536551686981}
+      _typeQualifiedName: NPCDialogueNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: unlockingEvents
+      _node: {fileID: 4825385536551686981}
+      _typeQualifiedName: EventNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: lockingEvents
+      _node: {fileID: 4825385536551686981}
+      _typeQualifiedName: EventNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: passingEvents
+      _node: {fileID: 4825385536551686981}
+      _typeQualifiedName: EventNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  correspondingDialogue: {fileID: 0}
+  followingDialogue: {fileID: 0}
+  unlockingEvents: {fileID: 0}
+  lockingEvents: {fileID: 0}
+  passingEvents: {fileID: 0}
+  description: Ne faites rien.
+  choiceNodeConsequences:
+  - indicatorType: 4
+    valueType: 0
+    value: 20
+    duration: 0
+  indicatorToUnlock: 9
+  phaseToUnlock: 0
 --- !u!114 &5169403472969110142
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2627,7 +3115,7 @@ MonoBehaviour:
   dialogue: "Il est encore trop t\xF4t pour le dire, nous ignorons si son degr\xE9
     de contagion a augment\xE9. Augmenter les pr\xE9cautions en terme d'hygi\xE8ne
     ne pourra cependant pas faire de mal."
-  uid: 101
+  uid: 16
 --- !u!114 &5383533800258923274
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2780,7 +3268,7 @@ MonoBehaviour:
   character: 1
   dialogue: "Monsieur le Pr\xE9sident !\nLa situation continue d'empirer, plusieurs
     clusters de contamination ont \xE9t\xE9 d\xE9tect\xE9s !"
-  uid: 97
+  uid: 75
 --- !u!114 &5822567781717024018
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2924,7 +3412,89 @@ MonoBehaviour:
   character: 1
   dialogue: "Leur situation \xE9tait sous contr\xF4le...et a brusquement empir\xE9,
     en l'espace de quelques heures !"
-  uid: 91
+  uid: 1
+--- !u!114 &6128410845119851857
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78d86ceab28114ca481a4504b2f3e3a3, type: 3}
+  m_Name: Choice
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 1976, y: -56}
+  ports:
+    keys:
+    - correspondingDialogue
+    - followingDialogue
+    - unlockingEvents
+    - lockingEvents
+    - passingEvents
+    values:
+    - _fieldName: correspondingDialogue
+      _node: {fileID: 6128410845119851857}
+      _typeQualifiedName: NPCDialogueNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: outcomingChoices
+        node: {fileID: -3135293485746549435}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: followingDialogue
+      _node: {fileID: 6128410845119851857}
+      _typeQualifiedName: NPCDialogueNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: incomingChoice
+        node: {fileID: -5009382719387158637}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: unlockingEvents
+      _node: {fileID: 6128410845119851857}
+      _typeQualifiedName: EventNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: lockingEvents
+      _node: {fileID: 6128410845119851857}
+      _typeQualifiedName: EventNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: passingEvents
+      _node: {fileID: 6128410845119851857}
+      _typeQualifiedName: EventNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  correspondingDialogue: {fileID: 0}
+  followingDialogue: {fileID: 0}
+  unlockingEvents: {fileID: 0}
+  lockingEvents: {fileID: 0}
+  passingEvents: {fileID: 0}
+  description: Quel serait l'impact d'un confinement de la population ?
+  choiceNodeConsequences: []
+  indicatorToUnlock: 9
+  phaseToUnlock: 0
 --- !u!114 &6228112125993297188
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3069,7 +3639,7 @@ MonoBehaviour:
   character: 1
   dialogue: "Nous nous sommes tromp\xE9s sur cette grippe ! Les patients sont contagieux
     plusieurs jours AVANT les premiers symptomes !"
-  uid: 96
+  uid: 56
 --- !u!114 &7908019943296020538
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3130,7 +3700,7 @@ MonoBehaviour:
   dialogue: "Monsieur le Pr\xE9sident ! \nNous avons proc\xE9d\xE9 au s\xE9quencage
     du virus au cours des derni\xE8res semaines...et il semblerait que ce dernier
     soit en train de muter !"
-  uid: 103
+  uid: 8
 --- !u!114 &8009623371603399539
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3205,6 +3775,94 @@ MonoBehaviour:
       threshold: 10
       conditionType: 0
   minEventsCondition: 0
+--- !u!114 &8464191477189037770
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78d86ceab28114ca481a4504b2f3e3a3, type: 3}
+  m_Name: Choice
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 1976, y: 264}
+  ports:
+    keys:
+    - correspondingDialogue
+    - followingDialogue
+    - unlockingEvents
+    - lockingEvents
+    - passingEvents
+    values:
+    - _fieldName: correspondingDialogue
+      _node: {fileID: 8464191477189037770}
+      _typeQualifiedName: NPCDialogueNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: outcomingChoices
+        node: {fileID: -3135293485746549435}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: followingDialogue
+      _node: {fileID: 8464191477189037770}
+      _typeQualifiedName: NPCDialogueNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: unlockingEvents
+      _node: {fileID: 8464191477189037770}
+      _typeQualifiedName: EventNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: lockingEvents
+      _node: {fileID: 8464191477189037770}
+      _typeQualifiedName: EventNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: passingEvents
+      _node: {fileID: 8464191477189037770}
+      _typeQualifiedName: EventNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  correspondingDialogue: {fileID: 0}
+  followingDialogue: {fileID: 0}
+  unlockingEvents: {fileID: 0}
+  lockingEvents: {fileID: 0}
+  passingEvents: {fileID: 0}
+  description: "Ne paniquons pas. Durcissez les r\xE8gles de distanciation sociale
+    et instaurez le port obligatoire du masque !"
+  choiceNodeConsequences:
+  - indicatorType: 4
+    valueType: 0
+    value: -10
+    duration: 0
+  - indicatorType: 2
+    valueType: 0
+    value: -10
+    duration: 0
+  indicatorToUnlock: 9
+  phaseToUnlock: 0
 --- !u!114 &8515637038380090447
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3267,7 +3925,7 @@ MonoBehaviour:
   character: 1
   dialogue: "De nouveaux foyers de contamination ont \xE9t\xE9 d\xE9couverts dans
     certaines r\xE9gions. Que devons-nous faire ?"
-  uid: 99
+  uid: 55
 --- !u!114 &8701641163579183246
 MonoBehaviour:
   m_ObjectHideFlags: 0
