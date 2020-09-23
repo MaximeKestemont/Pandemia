@@ -75,12 +75,22 @@ public class GameController : MonoBehaviour
         recapPanel.StartCoroutine(recapPanel.WaitAndClose());
 
         // check if events are meeting conditions to be unlocked/locked
-        Debug.Log("Checking if events should be unlocked or locked");
+        Debug.Log("Checking if events should be unlocked or locked");    
         foreach(GameObject eventObject in resourceManager.eventsMap.Values) {
             Event eventInstance = eventObject.GetComponent<Event>();
 
+            // --- Check based on phase
+            bool phaseCheck = false;
+            if ( eventInstance.eventPhase == ResourceManager.Phase.ALL
+                || eventInstance.eventPhase == ResourceManager.Phase.NONE   // should not be used in theory
+                || eventInstance.eventPhase == currentPhase) {
+                phaseCheck = true;
+            }
+
+            // --- Check based on previous choices ---
+            bool unlocked = true;
             if (eventInstance.unlockedByChoice != Event.Status.PASSED && eventInstance.eventConditions.Count > 0) {
-                bool unlocked = false;
+                unlocked = false;
                 
                 // If one EventCondition is fully met, unlock the event. Else, it should be locked.
                 // unlocked = EventCondition1 OR EventCondition2, but EventCondition1 = Condition1 AND Condition2
@@ -105,8 +115,10 @@ public class GameController : MonoBehaviour
                         unlocked = true;
                     }
                 }
+            }
 
-                if (unlocked && eventInstance.unlockedByChoice == Event.Status.UNLOCKED) {
+            if (eventInstance.unlockedByChoice != Event.Status.PASSED && eventInstance.status != Event.Status.PASSED) {
+                if (phaseCheck && unlocked && eventInstance.unlockedByChoice == Event.Status.UNLOCKED) {
                     eventInstance.status = Event.Status.UNLOCKED;
                 } else {
                     eventInstance.status = Event.Status.LOCKED;
@@ -140,9 +152,8 @@ public class GameController : MonoBehaviour
     public bool CheckLosingConditions() {
         bool economyCondition = resourceManager.economy.fillingLevel == resourceManager.economy.MIN_VALUE;
         bool deathCondition = resourceManager.death.fillingLevel == resourceManager.death.MAX_VALUE;
-        bool populationCondition = resourceManager.population.fillingLevel == resourceManager.population.MIN_VALUE;
         bool satisfactionCondition = resourceManager.populationSatisfaction.fillingLevel == resourceManager.populationSatisfaction.MIN_VALUE;
-        return economyCondition || deathCondition || populationCondition || satisfactionCondition;
+        return economyCondition || deathCondition || satisfactionCondition;
     }
 
     public bool CheckWinningConditions() {

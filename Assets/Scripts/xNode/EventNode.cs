@@ -15,6 +15,7 @@ public class EventNode : Node {
 
 	[Output] public NPCDialogueNode dialogue;
 
+	public ResourceManager.Phase eventPhase = ResourceManager.Phase.ALL;
 	public List<EventCondition> conditions;
 
 	// Use this for initialization

@@ -59,7 +59,7 @@ MonoBehaviour:
   character: 1
   dialogue: "Monsieur ! \nIl semblerait que la grippe soit bien plus dangereuse que
     l'on ne pensait. Plusieurs patients viennent de d\xE9c\xE9der !"
-  uid: 53
+  uid: 15
 --- !u!114 &-8639486727629898857
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -142,21 +142,13 @@ MonoBehaviour:
     valueType: 0
     value: 30
     duration: 0
-  - indicatorType: 5
+  - indicatorType: 4
     valueType: 0
     value: -30
-    duration: 0
-  - indicatorType: 1
-    valueType: 0
-    value: -20
     duration: 0
   - indicatorType: 2
     valueType: 0
     value: -20
-    duration: 0
-  - indicatorType: 4
-    valueType: 0
-    value: -25
     duration: 0
   indicatorToUnlock: 6
 --- !u!114 &-8181022027983185696
@@ -312,6 +304,7 @@ MonoBehaviour:
     - indicatorType: 3
       threshold: 30
       conditionType: 0
+  eventPhase: 0
 --- !u!114 &-6238139833672439972
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -370,7 +363,7 @@ MonoBehaviour:
   outcomingChoices: {fileID: 0}
   character: 1
   dialogue: Je...nous...
-  uid: 4
+  uid: 7
 --- !u!114 &-6162848389207828877
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -512,7 +505,7 @@ MonoBehaviour:
   character: 1
   dialogue: "Mais...non Monsieur, ce n'est pas \xE7a...Personne ne nous attaque.
     C'est pire !"
-  uid: 5
+  uid: 21
 --- !u!114 &-5801747043864098931
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -585,6 +578,7 @@ MonoBehaviour:
     - indicatorType: 4
       threshold: 20
       conditionType: 0
+  eventPhase: 0
 --- !u!114 &-5726298463413678031
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -652,7 +646,7 @@ MonoBehaviour:
   outcomingChoices: {fileID: 0}
   character: 3
   dialogue: "En \xEAtes-vous certain ? Quel limite devrions nous imposer ?"
-  uid: 30
+  uid: 71
 --- !u!114 &-5422470006865607633
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -802,7 +796,7 @@ MonoBehaviour:
   character: 1
   dialogue: "Toutes nos pr\xE9visions sont largement en dessous de la r\xE9alit\xE9,
     la situation est critique !"
-  uid: 21
+  uid: 23
 --- !u!114 &-5332540721408880727
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1036,7 +1030,7 @@ MonoBehaviour:
   outcomingChoices: {fileID: 0}
   character: 1
   dialogue: Alerte ! C'est une catastrophe !
-  uid: 22
+  uid: 30
 --- !u!114 &-5161456615027825782
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1099,7 +1093,7 @@ MonoBehaviour:
   character: 3
   dialogue: "Je ne suis pas certain que ce soit une bonne id\xE9e...La population
     risque de ne pas appr\xE9cier, et ces gens font partie de votre \xE9lectorat."
-  uid: 17
+  uid: 11
 --- !u!114 &-5033503963372059779
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1253,6 +1247,7 @@ MonoBehaviour:
     - indicatorType: 3
       threshold: 10
       conditionType: 0
+  eventPhase: 0
 --- !u!114 &-2923231116386166197
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1749,7 +1744,7 @@ MonoBehaviour:
   character: 3
   dialogue: "Nous devrions peut-\xEAtre envisager de confiner une partie de la population.
     L'impact \xE9conomique et sociale se fera cependant sentir..."
-  uid: 36
+  uid: 33
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1872,7 +1867,7 @@ MonoBehaviour:
   character: 1
   dialogue: "Les nouvelles sont catastrophiques ! Le nombre de morts a fortement
     augment\xE9 ces derniers jours, ils se comptent en milliers !"
-  uid: 24
+  uid: 6
 --- !u!114 &1013088786299528488
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2047,15 +2042,11 @@ MonoBehaviour:
     valueType: 0
     value: 30
     duration: 0
-  - indicatorType: 5
-    valueType: 0
-    value: -30
-    duration: 0
-  - indicatorType: 2
+  - indicatorType: 4
     valueType: 0
     value: -15
     duration: 0
-  - indicatorType: 4
+  - indicatorType: 2
     valueType: 0
     value: -15
     duration: 0
@@ -2305,6 +2296,7 @@ MonoBehaviour:
     - indicatorType: 3
       threshold: 30
       conditionType: 0
+  eventPhase: 0
 --- !u!114 &3894501719905024538
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2385,10 +2377,6 @@ MonoBehaviour:
   - indicatorType: 6
     valueType: 0
     value: 30
-    duration: 0
-  - indicatorType: 5
-    valueType: 0
-    value: -30
     duration: 0
   indicatorToUnlock: 6
 --- !u!114 &4776705563872199242
@@ -2616,7 +2604,7 @@ MonoBehaviour:
   dialogue: "Il est encore trop t\xF4t pour le dire, nous ignorons si son degr\xE9
     de contagion a augment\xE9. Augmenter les pr\xE9cautions en terme d'hygi\xE8ne
     ne pourra cependant pas faire de mal."
-  uid: 48
+  uid: 14
 --- !u!114 &5383533800258923274
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2768,7 +2756,7 @@ MonoBehaviour:
   character: 1
   dialogue: "Monsieur le Pr\xE9sident !\nLa situation continue d'empirer, plusieurs
     clusters de contamination ont \xE9t\xE9 d\xE9tect\xE9s !"
-  uid: 28
+  uid: 72
 --- !u!114 &5822567781717024018
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2854,10 +2842,6 @@ MonoBehaviour:
     valueType: 0
     value: 10
     duration: 0
-  - indicatorType: 5
-    valueType: 0
-    value: -10
-    duration: 0
   indicatorToUnlock: 6
 --- !u!114 &6015179723110780382
 MonoBehaviour:
@@ -2915,7 +2899,7 @@ MonoBehaviour:
   character: 1
   dialogue: "Leur situation \xE9tait sous contr\xF4le...et a brusquement empir\xE9,
     en l'espace de quelques heures !"
-  uid: 26
+  uid: 1
 --- !u!114 &6228112125993297188
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3059,7 +3043,7 @@ MonoBehaviour:
   character: 1
   dialogue: "Nous nous sommes tromp\xE9s sur cette grippe ! Les patients sont contagieux
     plusieurs jours AVANT les premiers symptomes !"
-  uid: 27
+  uid: 53
 --- !u!114 &7908019943296020538
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3120,7 +3104,7 @@ MonoBehaviour:
   dialogue: "Monsieur le Pr\xE9sident ! \nNous avons proc\xE9d\xE9 au s\xE9quencage
     du virus au cours des derni\xE8res semaines...et il semblerait que ce dernier
     soit en train de muter !"
-  uid: 46
+  uid: 8
 --- !u!114 &8009623371603399539
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3193,6 +3177,7 @@ MonoBehaviour:
     - indicatorType: 8
       threshold: 10
       conditionType: 0
+  eventPhase: 0
 --- !u!114 &8515637038380090447
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3255,7 +3240,7 @@ MonoBehaviour:
   character: 1
   dialogue: "De nouveaux foyers de contamination ont \xE9t\xE9 d\xE9couverts dans
     certaines r\xE9gions. Que devons-nous faire ?"
-  uid: 44
+  uid: 52
 --- !u!114 &8701641163579183246
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3409,3 +3394,4 @@ MonoBehaviour:
     - indicatorType: 4
       threshold: 30
       conditionType: 0
+  eventPhase: 0

@@ -11,6 +11,9 @@ public class Choice: MonoBehaviour
     // some choice may render visible indicators
     public ResourceManager.IndicatorType indicatorToUnlock = ResourceManager.IndicatorType.NONE;
 
+    // some choice may change the current phase
+    public ResourceManager.Phase phaseToUnlock = ResourceManager.Phase.NONE;
+
     public Text choiceTitle;
     public Image choiceImage;
 
@@ -64,6 +67,11 @@ public class Choice: MonoBehaviour
 
             }
             if (valueOverTime != null ) consequence.indicatorBar.AddValueOverTime(valueOverTime);
+        }
+
+        // Change the current phase
+        if (phaseToUnlock != ResourceManager.Phase.NONE) {
+            resourceManager.gameController.currentPhase = phaseToUnlock;
         }
 
         // Lock/unlock other events

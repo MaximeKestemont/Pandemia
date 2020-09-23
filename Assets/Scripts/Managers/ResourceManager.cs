@@ -34,7 +34,6 @@ public class ResourceManager : MonoBehaviour {
     public IndicatorBar propagationSpeed;
     public IndicatorBar populationSatisfaction;
     public IndicatorBar infectedNumber;
-    public IndicatorBar population;
     public IndicatorBar death;
     public IndicatorBar virusKnowledge;
 
@@ -66,7 +65,6 @@ public class ResourceManager : MonoBehaviour {
             propagationSpeed, 
             populationSatisfaction, 
             infectedNumber,
-            population,
             death,
             virusKnowledge
         };
@@ -97,15 +95,13 @@ public class ResourceManager : MonoBehaviour {
                 return populationSatisfaction;
             case IndicatorType.PROPAGATION_SPEED:
                 return propagationSpeed;
-            case IndicatorType.POPULATION:
-                return population;
             case IndicatorType.DEATH:
                 return death;
             case IndicatorType.VIRUS_KNOWLEDGE:
                 return virusKnowledge;
             
             default:
-                Debug.LogError("IndicatorType in xNode editor not supported yet!");
+                Debug.LogError("IndicatorType in xNode editor not supported yet/anymore!");
                 return null;
         }
     }
@@ -116,7 +112,7 @@ public class ResourceManager : MonoBehaviour {
         POP_SATISFACTION,
         INFECTED_NUMBER,
         PROPAGATION_SPEED,
-        POPULATION,
+        POPULATION, // useless but if removed, all nodes created with values bigger in the enums will be modified
         DEATH,
         CURED, // useless but if removed, all nodes created with values bigger in the enums will be modified
         VIRUS_KNOWLEDGE,
@@ -124,9 +120,12 @@ public class ResourceManager : MonoBehaviour {
     }
 
     public enum Phase {
-        NORMAL,
-        LOCKDOWN,
-        WAR
+        NONE,       // only used for the ChoiceNode, to indicate that it does not unlock any phase
+        ALL,        // event can always happen, regardless of the current phase  
+        NORMAL,     // event can only happen if phase is normal
+        LOCKDOWN,   // event can only happen if phase is lockdown
+        WAR,
+        DICTATORSHIP
     }
 
 }
