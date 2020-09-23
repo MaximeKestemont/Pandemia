@@ -63,7 +63,7 @@ MonoBehaviour:
   dialogue: "Vous...vous \xEAtes s\xE9rieux, Monsieur le Pr\xE9sident ? N'est-ce
     pas un peu disproportionn\xE9 comme r\xE9action ? L'impact \xE9conomique sera
     terrible !"
-  uid: 70
+  uid: 34
 --- !u!114 &-8913196847682330628
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -214,7 +214,7 @@ MonoBehaviour:
   dialogue: "Monsieur le Pr\xE9sident !\nComme vous avez pu le voir dans la presse,
     nous avons eu vent d'une affaire, entre vous et une charmante jeune dame...Pouvez-vous
     nous en dire plus ?"
-  uid: 13
+  uid: 28
 --- !u!114 &-8641935941286930188
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -370,7 +370,7 @@ MonoBehaviour:
   dialogue: "J'ai un peu \xE9tudi\xE9 la question, et une solution toute simple m'est
     venue \xE0 l'esprit...Pourquoi ne pas construire un mur, un gigantesque mur,
     autour de ce virus ?"
-  uid: 35
+  uid: 57
 --- !u!114 &-8413346220491358754
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -514,7 +514,7 @@ MonoBehaviour:
     sujet de cette grippe. Le nombre de cas semble augmenter rapidement, plus que
     dans le cas d'une grippe standard. Et nos sp\xE9cialistes ne savent toujours
     pas de quoi il s'agit."
-  uid: 42
+  uid: 35
 --- !u!114 &-8230544096393969765
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -833,7 +833,7 @@ MonoBehaviour:
   character: 0
   dialogue: "Hello my dear !\nJ'ai eu vent d'une inqui\xE9tante histoire...il semblerait
     qu'un virus \xE9trange se r\xE9pand parmi votre peuple ?"
-  uid: 36
+  uid: 48
 --- !u!114 &-7757250838793234255
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1145,7 +1145,7 @@ MonoBehaviour:
   dialogue: "Je reviens vers vous avec des informations au sujet du vecteur de contamination
     du virus. Nos donn\xE9es ne sont pas tout \xE0 fait fiables, mais il semblerait
     que le virus puisse rester en suspension dans l'air plusieurs heures !"
-  uid: 27
+  uid: 42
 --- !u!114 &-7407796427923633968
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1467,7 +1467,7 @@ MonoBehaviour:
   outcomingChoices: {fileID: 0}
   character: 9
   dialogue: Bonjour !
-  uid: 66
+  uid: 5
 --- !u!114 &-6667092801569149470
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1852,7 +1852,7 @@ MonoBehaviour:
   character: 9
   dialogue: "Nous travaillons d'arrache-pieds sur un vaccin, que nous aimerions commercialiser.
     Mais pour cela, il faut que cette pand\xE9mie reste...et bien, une pand\xE9mie."
-  uid: 54
+  uid: 68
 --- !u!114 &-5810375302947757840
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1915,7 +1915,7 @@ MonoBehaviour:
   character: 5
   dialogue: "Monsieur le Pr\xE9sident !\nNous avons investigu\xE9 plus en d\xE9tails
     cette grippe \xE9trange, et nous avons fait cetains progr\xE8s !"
-  uid: 40
+  uid: 31
 --- !u!114 &-5769252873609689896
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2214,7 +2214,7 @@ MonoBehaviour:
   dialogue: "Je ne suis pas sur que ce soit une d\xE9cision tr\xE8s sage, Monsieur
     le Pr\xE9sident. Il risque de mal le prendre, et il est connu pour \xEAtre assez
     irritable..."
-  uid: 25
+  uid: 36
 --- !u!114 &-5129744298042399994
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2541,7 +2541,7 @@ MonoBehaviour:
   character: 8
   dialogue: "Etes-vous certain ? Ce mur a un impact d\xE9sastreux sur notre \xE9conomie,
     sans parler de votre cote de popularit\xE9..."
-  uid: 16
+  uid: 24
 --- !u!114 &-5064450600914271291
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2827,7 +2827,7 @@ MonoBehaviour:
   character: 1
   dialogue: "Monsieur le Pr\xE9sident !\nMes \xE9quipes ont travaill\xE9es d'arrache-pied,
     et nous avons de bonnes nouvelles !"
-  uid: 65
+  uid: 12
 --- !u!114 &-4467104179170580774
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2890,7 +2890,7 @@ MonoBehaviour:
   character: 1
   dialogue: "D'apr\xE8s certains experts, nos stocks de masques pourraient \xEAtre
     insuffisants, si cette pand\xE9mie venait \xE0 s'intensifier..."
-  uid: 49
+  uid: 16
 --- !u!114 &-4436405260831344289
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3111,7 +3111,7 @@ MonoBehaviour:
   dialogue: "Il va de soit que vous serez d\xFBment r\xE9compens\xE9. Si vous veniez
     \xE0 refuser...disons que la presse ne manquerait pas de s'interroger sur votre
     nouvelle voiture."
-  uid: 50
+  uid: 54
 --- !u!114 &-4187843840712376257
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3258,7 +3258,7 @@ MonoBehaviour:
   dialogue: "Je vous le d\xE9conseille, Monsieur. Nos finances s'en trouveraient
     impact\xE9es, ces d\xE9penses n'ont jamais \xE9t\xE9 pr\xE9vues dans notre budget
     !"
-  uid: 22
+  uid: 49
 --- !u!114 &-3784549826910184613
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3325,7 +3325,7 @@ MonoBehaviour:
   dialogue: "Nous nous rencontrons toujours \xE0 l'hotel, c'est lassant \xE0 force...Pourquoi
     ne ferions-nous pas quelque chose d'autre, pour changer ? Il nous suffit de rester
     discret, personne ne nous reconnaitra."
-  uid: 26
+  uid: 13
 --- !u!114 &-3722489541259353381
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3393,7 +3393,7 @@ MonoBehaviour:
   lockingChoices: {fileID: 0}
   passingChoices: {fileID: 0}
   dialogue: {fileID: 0}
-  eventPhase: 0
+  eventPhase: 1
   conditions: []
 --- !u!114 &-3708324903393281119
 MonoBehaviour:
@@ -3685,7 +3685,7 @@ MonoBehaviour:
   dialogue: "Le comment importe peu...Le peuple est assez surpris de voir que vous
     avez du temps \xE0 consacrer \xE0 ce genre de frivolit\xE9s, alors qu'une pand\xE9mie
     s'annonce. Pouvez-vous nous \xE9claircir un peu sur cette histoire ?"
-  uid: 28
+  uid: 10
 --- !u!114 &-2500432219215394467
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4087,7 +4087,7 @@ MonoBehaviour:
   dialogue: "Bon...bonjour Monsieur le Pr\xE9sident. En r\xE9alit\xE9, nous ne savons
     pas encore grand chose sur cette grippe, les personnes contamin\xE9es semblent
     avoir des difficult\xE9s \xE0 respirer, mais sans autres cons\xE9quences..."
-  uid: 10
+  uid: 50
 --- !u!114 &-1988788447319851164
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4154,7 +4154,7 @@ MonoBehaviour:
   dialogue: "Monsieur Le Pr\xE9sident ! \nIl semblerait qu'une grippe \xE9trange
     soit apparue dans un quartier de la capitale. Les sp\xE9cialistes semblent inquiets.
     \nQue devrions-nous faire ?"
-  uid: 12
+  uid: 27
 --- !u!114 &-1790166036415234018
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4218,7 +4218,7 @@ MonoBehaviour:
   dialogue: "Monsieur le Pr\xE9sident, nous entamons la construction du mur autour
     du virus. Ce n'est pas tr\xE8s clair pour nos ing\xE9nieurs, doivent-il pr\xE9voir
     des barbel\xE9s pour retenir le virus ?"
-  uid: 34
+  uid: 38
 --- !u!114 &-1698912449060562332
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4721,7 +4721,7 @@ MonoBehaviour:
   character: 9
   dialogue: "Oh, mon nom importe peu. Vous voyez la Ferrari l\xE0-bas ? C'est la
     mienne !"
-  uid: 64
+  uid: 66
 --- !u!114 &-420649722492082678
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4785,7 +4785,7 @@ MonoBehaviour:
   dialogue: "Monsieur !\nPlusieurs des chercheurs \xE9tudiant ce virus inconnu semblent
     l'avoir contract\xE9 ! Nous risquons de faire plus de mal que de bien \xE0 poursuivre
     nos \xE9tudes sur le sujet..."
-  uid: 38
+  uid: 40
 --- !u!114 &-415226015298921600
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5313,7 +5313,7 @@ MonoBehaviour:
   outcomingChoices: {fileID: 0}
   character: 9
   dialogue: "Vous voulez la m\xEAme ?"
-  uid: 37
+  uid: 64
 --- !u!114 &1255302660228884656
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5699,7 +5699,7 @@ MonoBehaviour:
   character: 5
   dialogue: "A premi\xE8re vue, la nature de cette grippe serait virale, et son degr\xE9
     de contagion pr\xE8s de 3 fois sup\xE9rieur \xE0 celui d'une grippe classique."
-  uid: 19
+  uid: 26
 --- !u!114 &2305580346829359603
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6781,7 +6781,7 @@ MonoBehaviour:
   outcomingChoices: {fileID: 0}
   character: 4
   dialogue: Tu as dis quelque chose, mon cher ? Rejoins moi dans le lit au lieu de...
-  uid: 32
+  uid: 19
 --- !u!114 &3435564652014928347
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7110,7 +7110,7 @@ MonoBehaviour:
   character: 1
   dialogue: "Insuffisante que pour pouvoir en distribuer \xE0 chaque citoyen, j'en
     ai bien peur...Nous ignorons d'ailleurs si cela sera r\xE9ellement utile."
-  uid: 57
+  uid: 41
 --- !u!114 &3836908736667462038
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7250,7 +7250,7 @@ MonoBehaviour:
   dialogue: "Monsieur le Pr\xE9sident ! \nNous avons effectu\xE9 diverses mod\xE9lisations,
     \xE0 partir des informations que nous avions pu r\xE9colter sur le virus et les
     premiers infect\xE9s. La situation est inqui\xE9tante !"
-  uid: 20
+  uid: 25
 --- !u!114 &4689767728608185187
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7392,7 +7392,7 @@ MonoBehaviour:
   character: 5
   dialogue: Je ne suis pas certain de ... je..bonjour Madame...Je pense que je vais
     y aller !
-  uid: 44
+  uid: 32
 --- !u!114 &4920490625740508703
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7457,7 +7457,7 @@ MonoBehaviour:
     le Pr\xE9sident. Il semblerait cependant que cela ne fonctionne pas tr\xE8s bien,
     le virus s'\xE9tant d\xE9j\xE0 r\xE9pandu en dehors de la capitale. Que devons-nous
     faire ?"
-  uid: 31
+  uid: 62
 --- !u!114 &5022022554872958172
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7515,7 +7515,7 @@ MonoBehaviour:
   dialogue: "F\xE9licitations pour votre \xE9lection, Monsieur le Pr\xE9sident !
     Je n'ai aucun doute sur le fait que votre mandat sera couronn\xE9 de succ\xE8s
     !"
-  uid: 24
+  uid: 70
 --- !u!114 &5141091862183648765
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7894,7 +7894,7 @@ MonoBehaviour:
   character: 9
   dialogue: "Au sujet de cette pand\xE9mie...j'ai eu vent que la situation \xE9tait
     bient\xF4t sous contr\xF4le. Je n'aime pas trop ce \"bient\xF4t\"..."
-  uid: 68
+  uid: 37
 --- !u!114 &6565207463979878035
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8207,7 +8207,7 @@ MonoBehaviour:
   dialogue: "Si l'on en croit nos mod\xE8les, le nombre d'infect\xE9s pourraient
     croitre de mani\xE8re tr\xE8s importante, et nos hopitaux ne seraient plus en
     mesure d'y faire face et de traiter tout le monde."
-  uid: 41
+  uid: 20
 --- !u!114 &7621415491027884080
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8349,7 +8349,7 @@ MonoBehaviour:
   outcomingChoices: {fileID: 0}
   character: 9
   dialogue: "Bonjour ! Vous appr\xE9ciez la voiture ?"
-  uid: 5
+  uid: 22
 --- !u!114 &7782223547540608360
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8575,7 +8575,7 @@ MonoBehaviour:
   dialogue: "Les sympt\xF4mes de cette grippe \xE9trange sont maintenant mieux connus,
     et nous sommes en capacit\xE9 d'avoir une id\xE9e, certes impr\xE9cise, du nombre
     d'infect\xE9s !"
-  uid: 62
+  uid: 65
 --- !u!114 &8445391073542873854
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8811,7 +8811,7 @@ MonoBehaviour:
   character: 2
   dialogue: "Monsieur le Pr\xE9sident !\nLe Pr\xE9sident des Etats-Unis est au bout
     du fil, il souhaite vous parler tout de suite !"
-  uid: 48
+  uid: 44
 --- !u!114 &8853751253228672792
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -70,8 +70,10 @@ public class Choice: MonoBehaviour
         }
 
         // Change the current phase
+        Debug.Log("test1");
         if (phaseToUnlock != ResourceManager.Phase.NONE) {
-            resourceManager.gameController.currentPhase = phaseToUnlock;
+            Debug.Log("test2");
+            resourceManager.gameController.UpdatePhase(phaseToUnlock);
         }
 
         // Lock/unlock other events

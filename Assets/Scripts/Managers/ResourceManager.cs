@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 // Unsafe singleton object, should only be initialized once
 public class ResourceManager : MonoBehaviour {
@@ -14,6 +15,7 @@ public class ResourceManager : MonoBehaviour {
     public GameObject gameOverPanel;
     public GameObject recapPanel;
     public GameObject settingsPanel;
+    public Text currentPhaseText;
 
     // --- Prefab ---
     public GameObject eventPrefab;

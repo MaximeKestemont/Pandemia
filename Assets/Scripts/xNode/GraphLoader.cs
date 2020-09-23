@@ -120,6 +120,7 @@ public class GraphLoader: MonoBehaviour
                     Choice newChoice = newChoiceObject.GetComponent<Choice>();
                     newChoice.title = choiceNode.description;
                     newChoice.indicatorToUnlock = choiceNode.indicatorToUnlock;
+                    newChoice.phaseToUnlock = choiceNode.phaseToUnlock;
 
                     // Add the following dialogue to the attribute of the newChoice instance
                     var followingDialogueConnections = choiceNode.GetOutputPort("followingDialogue").GetConnections();
