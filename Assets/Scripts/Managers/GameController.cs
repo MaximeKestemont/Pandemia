@@ -80,7 +80,7 @@ public class GameController : MonoBehaviour
         foreach(GameObject eventObject in resourceManager.eventsMap.Values) {
             Event eventInstance = eventObject.GetComponent<Event>();
 
-            // --- Check based on phase
+            // --- Check based on phase ---
             bool phaseCheck = false;
             if ( eventInstance.eventPhase == ResourceManager.Phase.ALL
                 || eventInstance.eventPhase == ResourceManager.Phase.NONE   // should not be used in theory
@@ -88,7 +88,13 @@ public class GameController : MonoBehaviour
                 phaseCheck = true;
             }
 
-            // --- Check based on previous choices ---
+            // --- Check based on minimum number of events ---
+            bool minEventsCheck = false;
+            if (eventCount >= eventInstance.minEventsCondition ) {
+                minEventsCheck = true;
+            }
+
+            // --- Check based on indicator conditions ---
             bool unlocked = true;
             if (eventInstance.unlockedByChoice != Event.Status.PASSED && eventInstance.eventConditions.Count > 0) {
                 unlocked = false;
@@ -119,7 +125,7 @@ public class GameController : MonoBehaviour
             }
 
             if (eventInstance.unlockedByChoice != Event.Status.PASSED && eventInstance.status != Event.Status.PASSED) {
-                if (phaseCheck && unlocked && eventInstance.unlockedByChoice == Event.Status.UNLOCKED) {
+                if (phaseCheck && minEventsCheck && unlocked && eventInstance.unlockedByChoice == Event.Status.UNLOCKED) {
                     eventInstance.status = Event.Status.UNLOCKED;
                 } else {
                     eventInstance.status = Event.Status.LOCKED;
@@ -181,7 +187,7 @@ public class GameController : MonoBehaviour
         resourceManager.settingsPanel.SetActive(!resourceManager.settingsPanel.activeSelf);
     }
 
-    public void UpdatePhase(ResourceManager.Phase newPhase) {
+    public void UpdatePhase(ResourceManager.Phase newPhase) {   
         currentPhase = newPhase;
         resourceManager.currentPhaseText.text = newPhase.ToString();
     }

@@ -17,6 +17,7 @@ public class EventNode : Node {
 
 	public ResourceManager.Phase eventPhase = ResourceManager.Phase.ALL;
 	public List<EventCondition> conditions;
+	public int minEventsCondition = 0;
 
 	// Use this for initialization
 	protected override void Init() {

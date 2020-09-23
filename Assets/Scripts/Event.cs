@@ -39,6 +39,9 @@ public class Event : MonoBehaviour
     // Condition to lock/unlock events based on a specific phase - if Normal, no constraint applied
     public ResourceManager.Phase eventPhase;
 
+    // Condition to unlock events once a given number of events have already been played
+    public int minEventsCondition = 0;
+
     // Start is called before the first frame update
     void Start()
     {

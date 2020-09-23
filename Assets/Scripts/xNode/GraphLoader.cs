@@ -48,6 +48,7 @@ public class GraphLoader: MonoBehaviour
                 newEvent.status = eventNode.status;
                 newEvent.eventConditions = eventNode.conditions;
                 newEvent.eventPhase = eventNode.eventPhase;
+                newEvent.minEventsCondition = eventNode.minEventsCondition;
 
                 newEventObject.SetActive(false);
                 eventObjects.Add(newEventObject);
