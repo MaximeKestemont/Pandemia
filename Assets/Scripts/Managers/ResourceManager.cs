@@ -22,6 +22,7 @@ public class ResourceManager : MonoBehaviour {
     public GameObject eventPrefab;
     public GameObject choicePrefab;
     public GameObject dialoguePrefab;
+    public GameObject objectivePrefab;
 
     // --- GameObjects ---
     // Events
@@ -77,6 +78,13 @@ public class ResourceManager : MonoBehaviour {
         death.SetVisible(false);
         virusKnowledge.SetVisible(false);
         propagationSpeed.SetVisible(false);
+
+        // Hide panels
+        gameOverPanel.SetActive(false);
+        menuPanel.SetActive(false);
+        recapPanel.SetActive(false);
+        settingsPanel.SetActive(false);
+        objectivePanel.SetActive(false);
     }
 
     /*
