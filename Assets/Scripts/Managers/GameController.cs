@@ -31,6 +31,7 @@ public class GameController : MonoBehaviour
         resourceManager.menuPanel.SetActive(false);
         resourceManager.recapPanel.SetActive(false);
         resourceManager.settingsPanel.SetActive(false);
+        resourceManager.objectivePanel.SetActive(false);
         UpdatePhase(ResourceManager.Phase.NORMAL);
 
         Debug.Log ("Initializing game data and storing them in resource manager...");
@@ -183,8 +184,12 @@ public class GameController : MonoBehaviour
         resourceManager.menuPanel.SetActive(!resourceManager.menuPanel.activeSelf);
     }
 
-    public void OpenSettingsPanel(){
+    public void OpenSettingsPanel() {
         resourceManager.settingsPanel.SetActive(!resourceManager.settingsPanel.activeSelf);
+    }
+
+    public void OpenObjectivePanel() {
+        resourceManager.objectivePanel.SetActive(!resourceManager.objectivePanel.activeSelf);
     }
 
     public void UpdatePhase(ResourceManager.Phase newPhase) {   

@@ -15,6 +15,7 @@ public class ResourceManager : MonoBehaviour {
     public GameObject gameOverPanel;
     public GameObject recapPanel;
     public GameObject settingsPanel;
+    public GameObject objectivePanel;
     public Text currentPhaseText;
 
     // --- Prefab ---
