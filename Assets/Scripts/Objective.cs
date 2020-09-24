@@ -21,8 +21,9 @@ public class Objective : MonoBehaviour
 
     }
 
-    void Update()
-    {
 
+    public void CheckObjective() {
+        this.isDone = true;
+        this.checkBox.isOn = this.isDone;
     }
 }

@@ -18,6 +18,7 @@ public class ChoiceNode : Node {
     public List<ChoiceNodeConsequence> choiceNodeConsequences;
     public ResourceManager.IndicatorType indicatorToUnlock = ResourceManager.IndicatorType.NONE;
     public ResourceManager.Phase phaseToUnlock = ResourceManager.Phase.NONE;
+    public int objectiveId = -1;
 
 	protected override void Init() {
 		base.Init();

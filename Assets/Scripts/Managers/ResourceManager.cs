@@ -28,10 +28,13 @@ public class ResourceManager : MonoBehaviour {
     // Events
     public Dictionary<int, GameObject> eventsMap;
 
+    // Objectives (id -> object)
+    public Dictionary<int, Objective> objectivesMap = new Dictionary<int, Objective>();
+
     // Characters (name -> object)
     public GameObject characters;
     public Dictionary<Character.CharacterName, Character> charactersMap = new Dictionary<Character.CharacterName, Character>();
-    
+
     // Indicators
     public IndicatorBar health;
     public IndicatorBar economy;

@@ -63,7 +63,7 @@ MonoBehaviour:
   dialogue: "Vous...vous \xEAtes s\xE9rieux, Monsieur le Pr\xE9sident ? N'est-ce
     pas un peu disproportionn\xE9 comme r\xE9action ? L'impact \xE9conomique sera
     terrible !"
-  uid: 44
+  uid: 60
 --- !u!114 &-8900051836254191432
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -127,7 +127,7 @@ MonoBehaviour:
   dialogue: "Monsieur le Pr\xE9sident !\nComme vous avez pu le voir dans la presse,
     nous avons eu vent d'une affaire, entre vous et une charmante jeune dame...Pouvez-vous
     nous en dire plus ?"
-  uid: 10
+  uid: 76
 --- !u!114 &-8641935941286930188
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -217,6 +217,7 @@ MonoBehaviour:
     duration: 0
   indicatorToUnlock: 9
   phaseToUnlock: 0
+  objectiveId: -1
 --- !u!114 &-8344875645927665424
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -284,7 +285,7 @@ MonoBehaviour:
     sujet de cette grippe. Le nombre de cas semble augmenter rapidement, plus que
     dans le cas d'une grippe standard. Et nos sp\xE9cialistes ne savent toujours
     pas de quoi il s'agit."
-  uid: 60
+  uid: 71
 --- !u!114 &-8230544096393969765
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -373,6 +374,7 @@ MonoBehaviour:
     duration: 0
   indicatorToUnlock: 9
   phaseToUnlock: 0
+  objectiveId: -1
 --- !u!114 &-8223023701455156818
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -456,6 +458,7 @@ MonoBehaviour:
   choiceNodeConsequences: []
   indicatorToUnlock: 9
   phaseToUnlock: 0
+  objectiveId: -1
 --- !u!114 &-8189615961173914702
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -538,6 +541,7 @@ MonoBehaviour:
   choiceNodeConsequences: []
   indicatorToUnlock: 9
   phaseToUnlock: 0
+  objectiveId: -1
 --- !u!114 &-7757250838793234255
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -620,6 +624,7 @@ MonoBehaviour:
   choiceNodeConsequences: []
   indicatorToUnlock: 9
   phaseToUnlock: 0
+  objectiveId: -1
 --- !u!114 &-7619066564953695623
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -704,6 +709,7 @@ MonoBehaviour:
     duration: 0
   indicatorToUnlock: 9
   phaseToUnlock: 0
+  objectiveId: -1
 --- !u!114 &-7524046756960466478
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -767,7 +773,7 @@ MonoBehaviour:
   dialogue: "Je reviens vers vous avec des informations au sujet du vecteur de contamination
     du virus. Nos donn\xE9es ne sont pas tout \xE0 fait fiables, mais il semblerait
     que le virus puisse rester en suspension dans l'air plusieurs heures !"
-  uid: 41
+  uid: 59
 --- !u!114 &-7407796427923633968
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -848,6 +854,7 @@ MonoBehaviour:
   choiceNodeConsequences: []
   indicatorToUnlock: 9
   phaseToUnlock: 0
+  objectiveId: -1
 --- !u!114 &-6965955643441440527
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -934,6 +941,7 @@ MonoBehaviour:
     duration: 0
   indicatorToUnlock: 8
   phaseToUnlock: 0
+  objectiveId: -1
 --- !u!114 &-6571206116351972908
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1093,6 +1101,7 @@ MonoBehaviour:
     duration: 0
   indicatorToUnlock: 4
   phaseToUnlock: 0
+  objectiveId: -1
 --- !u!114 &-5810375302947757840
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1155,7 +1164,7 @@ MonoBehaviour:
   character: 5
   dialogue: "Monsieur le Pr\xE9sident !\nNous avons investigu\xE9 plus en d\xE9tails
     cette grippe \xE9trange, et nous avons fait cetains progr\xE8s !"
-  uid: 66
+  uid: 11
 --- !u!114 &-5769252873609689896
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1239,6 +1248,7 @@ MonoBehaviour:
   choiceNodeConsequences: []
   indicatorToUnlock: 9
   phaseToUnlock: 0
+  objectiveId: -1
 --- !u!114 &-5336115429581398976
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1397,6 +1407,7 @@ MonoBehaviour:
     duration: 0
   indicatorToUnlock: 9
   phaseToUnlock: 0
+  objectiveId: -1
 --- !u!114 &-5099976302529643120
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1486,6 +1497,7 @@ MonoBehaviour:
     duration: 0
   indicatorToUnlock: 9
   phaseToUnlock: 0
+  objectiveId: -1
 --- !u!114 &-4467930369749130559
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1545,7 +1557,7 @@ MonoBehaviour:
   character: 1
   dialogue: "Monsieur le Pr\xE9sident !\nMes \xE9quipes ont travaill\xE9es d'arrache-pied,
     et nous avons de bonnes nouvelles !"
-  uid: 32
+  uid: 34
 --- !u!114 &-4467104179170580774
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1608,7 +1620,7 @@ MonoBehaviour:
   character: 1
   dialogue: "D'apr\xE8s certains experts, nos stocks de masques pourraient \xEAtre
     insuffisants, si cette pand\xE9mie venait \xE0 s'intensifier..."
-  uid: 28
+  uid: 41
 --- !u!114 &-4436405260831344289
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1691,6 +1703,7 @@ MonoBehaviour:
   choiceNodeConsequences: []
   indicatorToUnlock: 9
   phaseToUnlock: 0
+  objectiveId: -1
 --- !u!114 &-4119325921555146253
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1754,7 +1767,7 @@ MonoBehaviour:
   dialogue: "Je vous le d\xE9conseille, Monsieur. Nos finances s'en trouveraient
     impact\xE9es, ces d\xE9penses n'ont jamais \xE9t\xE9 pr\xE9vues dans notre budget
     !"
-  uid: 19
+  uid: 63
 --- !u!114 &-3784549826910184613
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1821,7 +1834,7 @@ MonoBehaviour:
   dialogue: "Nous nous rencontrons toujours \xE0 l'hotel, c'est lassant \xE0 force...Pourquoi
     ne ferions-nous pas quelque chose d'autre, pour changer ? Il nous suffit de rester
     discret, personne ne nous reconnaitra."
-  uid: 33
+  uid: 38
 --- !u!114 &-3722489541259353381
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2185,7 +2198,7 @@ MonoBehaviour:
   dialogue: "Le comment importe peu...Le peuple est assez surpris de voir que vous
     avez du temps \xE0 consacrer \xE0 ce genre de frivolit\xE9s, alors qu'une pand\xE9mie
     s'annonce. Pouvez-vous nous \xE9claircir un peu sur cette histoire ?"
-  uid: 53
+  uid: 24
 --- !u!114 &-2500432219215394467
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2274,6 +2287,7 @@ MonoBehaviour:
     duration: 0
   indicatorToUnlock: 8
   phaseToUnlock: 0
+  objectiveId: -1
 --- !u!114 &-2457503444081220328
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2358,6 +2372,7 @@ MonoBehaviour:
     duration: 0
   indicatorToUnlock: 9
   phaseToUnlock: 0
+  objectiveId: -1
 --- !u!114 &-2253588294746429726
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2442,6 +2457,7 @@ MonoBehaviour:
     duration: 0
   indicatorToUnlock: 9
   phaseToUnlock: 0
+  objectiveId: -1
 --- !u!114 &-2017413853270691546
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2524,6 +2540,7 @@ MonoBehaviour:
   choiceNodeConsequences: []
   indicatorToUnlock: 9
   phaseToUnlock: 0
+  objectiveId: -1
 --- !u!114 &-2008968446456916411
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2587,7 +2604,7 @@ MonoBehaviour:
   dialogue: "Bon...bonjour Monsieur le Pr\xE9sident. En r\xE9alit\xE9, nous ne savons
     pas encore grand chose sur cette grippe, les personnes contamin\xE9es semblent
     avoir des difficult\xE9s \xE0 respirer, mais sans autres cons\xE9quences..."
-  uid: 57
+  uid: 35
 --- !u!114 &-1988788447319851164
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2654,7 +2671,7 @@ MonoBehaviour:
   dialogue: "Monsieur Le Pr\xE9sident ! \nIl semblerait qu'une grippe \xE9trange
     soit apparue dans un quartier de la capitale. Les sp\xE9cialistes semblent inquiets.
     \nQue devrions-nous faire ?"
-  uid: 47
+  uid: 26
 --- !u!114 &-1698912449060562332
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2745,6 +2762,7 @@ MonoBehaviour:
     duration: 0
   indicatorToUnlock: 9
   phaseToUnlock: 0
+  objectiveId: -1
 --- !u!114 &-1527326300684381723
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2830,6 +2848,7 @@ MonoBehaviour:
     duration: 0
   indicatorToUnlock: 9
   phaseToUnlock: 0
+  objectiveId: -1
 --- !u!114 &-507541601788557995
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2918,6 +2937,7 @@ MonoBehaviour:
     duration: 0
   indicatorToUnlock: 9
   phaseToUnlock: 0
+  objectiveId: -1
 --- !u!114 &-420649722492082678
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2981,7 +3001,7 @@ MonoBehaviour:
   dialogue: "Monsieur !\nPlusieurs des chercheurs \xE9tudiant ce virus inconnu semblent
     l'avoir contract\xE9 ! Nous risquons de faire plus de mal que de bien \xE0 poursuivre
     nos \xE9tudes sur le sujet..."
-  uid: 38
+  uid: 3
 --- !u!114 &-415226015298921600
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3069,6 +3089,7 @@ MonoBehaviour:
     duration: 0
   indicatorToUnlock: 9
   phaseToUnlock: 3
+  objectiveId: -1
 --- !u!114 &-106709695032851730
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3156,6 +3177,7 @@ MonoBehaviour:
     duration: 0
   indicatorToUnlock: 9
   phaseToUnlock: 0
+  objectiveId: -1
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3407,6 +3429,7 @@ MonoBehaviour:
     duration: 0
   indicatorToUnlock: 8
   phaseToUnlock: 0
+  objectiveId: -1
 --- !u!114 &1759967436600919857
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3472,7 +3495,7 @@ MonoBehaviour:
   character: 5
   dialogue: "A premi\xE8re vue, la nature de cette grippe serait virale, et son degr\xE9
     de contagion pr\xE8s de 3 fois sup\xE9rieur \xE0 celui d'une grippe classique."
-  uid: 15
+  uid: 12
 --- !u!114 &2445430462653422309
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3562,6 +3585,7 @@ MonoBehaviour:
     duration: 0
   indicatorToUnlock: 3
   phaseToUnlock: 0
+  objectiveId: -1
 --- !u!114 &2596246116372881253
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3648,6 +3672,7 @@ MonoBehaviour:
   choiceNodeConsequences: []
   indicatorToUnlock: 9
   phaseToUnlock: 0
+  objectiveId: -1
 --- !u!114 &2771435585964520391
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3735,6 +3760,7 @@ MonoBehaviour:
     duration: 0
   indicatorToUnlock: 9
   phaseToUnlock: 0
+  objectiveId: -1
 --- !u!114 &3028068221980068523
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3823,6 +3849,7 @@ MonoBehaviour:
     duration: 0
   indicatorToUnlock: 9
   phaseToUnlock: 0
+  objectiveId: -1
 --- !u!114 &3265950341284250682
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3903,6 +3930,7 @@ MonoBehaviour:
   choiceNodeConsequences: []
   indicatorToUnlock: 9
   phaseToUnlock: 0
+  objectiveId: -1
 --- !u!114 &3291702852521685842
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3986,6 +4014,7 @@ MonoBehaviour:
   choiceNodeConsequences: []
   indicatorToUnlock: 9
   phaseToUnlock: 0
+  objectiveId: -1
 --- !u!114 &3330794033176243479
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4076,6 +4105,7 @@ MonoBehaviour:
     duration: 0
   indicatorToUnlock: 9
   phaseToUnlock: 0
+  objectiveId: -1
 --- !u!114 &3380805119946957146
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4137,7 +4167,7 @@ MonoBehaviour:
   outcomingChoices: {fileID: 0}
   character: 4
   dialogue: Tu as dis quelque chose, mon cher ? Rejoins moi dans le lit au lieu de...
-  uid: 30
+  uid: 43
 --- !u!114 &3435564652014928347
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4221,6 +4251,7 @@ MonoBehaviour:
   choiceNodeConsequences: []
   indicatorToUnlock: 9
   phaseToUnlock: 0
+  objectiveId: -1
 --- !u!114 &3515525755029350254
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4309,6 +4340,7 @@ MonoBehaviour:
     duration: 0
   indicatorToUnlock: 9
   phaseToUnlock: 0
+  objectiveId: -1
 --- !u!114 &3641747310119261892
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4371,7 +4403,7 @@ MonoBehaviour:
   character: 1
   dialogue: "Insuffisante que pour pouvoir en distribuer \xE0 chaque citoyen, j'en
     ai bien peur...Nous ignorons d'ailleurs si cela sera r\xE9ellement utile."
-  uid: 24
+  uid: 18
 --- !u!114 &3836908736667462038
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4512,7 +4544,7 @@ MonoBehaviour:
   dialogue: "Monsieur le Pr\xE9sident ! \nNous avons effectu\xE9 diverses mod\xE9lisations,
     \xE0 partir des informations que nous avions pu r\xE9colter sur le virus et les
     premiers infect\xE9s. La situation est inqui\xE9tante !"
-  uid: 43
+  uid: 21
 --- !u!114 &4720124938883402071
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4572,7 +4604,7 @@ MonoBehaviour:
   character: 5
   dialogue: Je ne suis pas certain de ... je..bonjour Madame...Je pense que je vais
     y aller !
-  uid: 22
+  uid: 58
 --- !u!114 &5022022554872958172
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4630,7 +4662,7 @@ MonoBehaviour:
   dialogue: "F\xE9licitations pour votre \xE9lection, Monsieur le Pr\xE9sident !
     Je n'ai aucun doute sur le fait que votre mandat sera couronn\xE9 de succ\xE8s
     !"
-  uid: 40
+  uid: 78
 --- !u!114 &5141091862183648765
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4870,6 +4902,7 @@ MonoBehaviour:
     duration: 0
   indicatorToUnlock: 9
   phaseToUnlock: 0
+  objectiveId: -1
 --- !u!114 &6565207463979878035
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4953,6 +4986,7 @@ MonoBehaviour:
   choiceNodeConsequences: []
   indicatorToUnlock: 9
   phaseToUnlock: 0
+  objectiveId: -1
 --- !u!114 &7286356970662616604
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5037,6 +5071,7 @@ MonoBehaviour:
     duration: 0
   indicatorToUnlock: 9
   phaseToUnlock: 0
+  objectiveId: -1
 --- !u!114 &7556784360022163871
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5100,7 +5135,7 @@ MonoBehaviour:
   dialogue: "Si l'on en croit nos mod\xE8les, le nombre d'infect\xE9s pourraient
     croitre de mani\xE8re tr\xE8s importante, et nos hopitaux ne seraient plus en
     mesure d'y faire face et de traiter tout le monde."
-  uid: 29
+  uid: 36
 --- !u!114 &7621415491027884080
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5184,6 +5219,7 @@ MonoBehaviour:
     duration: 0
   indicatorToUnlock: 9
   phaseToUnlock: 0
+  objectiveId: -1
 --- !u!114 &7782223547540608360
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5266,6 +5302,7 @@ MonoBehaviour:
   choiceNodeConsequences: []
   indicatorToUnlock: 9
   phaseToUnlock: 0
+  objectiveId: -1
 --- !u!114 &7927178763799599695
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5352,6 +5389,7 @@ MonoBehaviour:
   choiceNodeConsequences: []
   indicatorToUnlock: 9
   phaseToUnlock: 0
+  objectiveId: -1
 --- !u!114 &8280410641131631356
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5409,7 +5447,7 @@ MonoBehaviour:
   dialogue: "Les sympt\xF4mes de cette grippe \xE9trange sont maintenant mieux connus,
     et nous sommes en capacit\xE9 d'avoir une id\xE9e, certes impr\xE9cise, du nombre
     d'infect\xE9s !"
-  uid: 14
+  uid: 51
 --- !u!114 &8445391073542873854
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5501,6 +5539,7 @@ MonoBehaviour:
     duration: 0
   indicatorToUnlock: 9
   phaseToUnlock: 0
+  objectiveId: -1
 --- !u!114 &8853751253228672792
 MonoBehaviour:
   m_ObjectHideFlags: 0

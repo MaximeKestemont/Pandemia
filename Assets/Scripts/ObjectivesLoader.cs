@@ -23,5 +23,7 @@ public class ObjectivesLoader : MonoBehaviour
         newObjective.uid = uid;
         newObjective.isDone = flag;
         newObjective.objectiveMessage = message;
+
+        resourceManager.objectivesMap.Add(uid, newObjective);
     }
 }

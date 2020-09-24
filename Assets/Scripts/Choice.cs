@@ -25,6 +25,9 @@ public class Choice: MonoBehaviour
     public List<int> passedEvents = new List<int>();
 
     public GameObject followingDialogue = null; // next dialogue if this choice is chosen
+
+    // Objective checked by this choice
+    public int objectiveId = -1;
     
     private ResourceManager resourceManager;
 
@@ -67,6 +70,11 @@ public class Choice: MonoBehaviour
 
             }
             if (valueOverTime != null ) consequence.indicatorBar.AddValueOverTime(valueOverTime);
+        }
+
+        // Check objectives
+        if (objectiveId > 0) {
+            resourceManager.objectivesMap[objectiveId].CheckObjective();
         }
 
         // Change the current phase
