@@ -9,11 +9,10 @@ public class ObjectivesLoader : MonoBehaviour
     
     void Start()
     {
-        CreateObjective(1, false, "test1");
-        CreateObjective(2, false, "test2");
-        CreateObjective(3, false, "test3");
-        CreateObjective(4, false, "test4");
-        CreateObjective(5, false, "test5");
+        CreateObjective(1, false, "Plus on est de fous, plus on rit");
+        CreateObjective(2, false, "Devenez l'heureux possesseur d'une ferrari");
+        CreateObjective(3, false, "Alliez-vous à une puissance étrangère");
+        CreateObjective(4, false, "Construisez un mur");
 
     }
 

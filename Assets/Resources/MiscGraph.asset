@@ -135,7 +135,7 @@ MonoBehaviour:
   outcomingChoices: {fileID: 0}
   character: 9
   dialogue: Bonjour !
-  uid: 42
+  uid: 2
 --- !u!114 &-8270822678897119605
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -200,7 +200,7 @@ MonoBehaviour:
   outcomingChoices: {fileID: 0}
   character: 9
   dialogue: "Vous voulez la m\xEAme ?"
-  uid: 67
+  uid: 70
 --- !u!114 &-8215956429267432555
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -288,6 +288,7 @@ MonoBehaviour:
     duration: 0
   indicatorToUnlock: 9
   phaseToUnlock: 0
+  objectiveId: -1
 --- !u!114 &-7597471673308046431
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -370,6 +371,7 @@ MonoBehaviour:
   choiceNodeConsequences: []
   indicatorToUnlock: 9
   phaseToUnlock: 0
+  objectiveId: -1
 --- !u!114 &-7238297265900270176
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -435,7 +437,7 @@ MonoBehaviour:
   character: 9
   dialogue: "Oh, mon nom importe peu. Vous voyez la Ferrari l\xE0-bas ? C'est la
     mienne !"
-  uid: 12
+  uid: 23
 --- !u!114 &-7129720202945646030
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -500,7 +502,7 @@ MonoBehaviour:
     le Pr\xE9sident. Il semblerait cependant que cela ne fonctionne pas tr\xE8s bien,
     le virus s'\xE9tant d\xE9j\xE0 r\xE9pandu en dehors de la capitale. Que devons-nous
     faire ?"
-  uid: 46
+  uid: 53
 --- !u!114 &-6936482045527532184
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -596,6 +598,7 @@ MonoBehaviour:
     duration: 0
   indicatorToUnlock: 9
   phaseToUnlock: 0
+  objectiveId: -1
 --- !u!114 &-6365899457736425438
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -731,7 +734,7 @@ MonoBehaviour:
   character: 0
   dialogue: "Hello my dear !\nJ'ai eu vent d'une inqui\xE9tante histoire...il semblerait
     qu'un virus \xE9trange se r\xE9pand parmi votre peuple ?"
-  uid: 13
+  uid: 19
 --- !u!114 &-5931070497313657932
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -814,6 +817,7 @@ MonoBehaviour:
   choiceNodeConsequences: []
   indicatorToUnlock: 9
   phaseToUnlock: 0
+  objectiveId: -1
 --- !u!114 &-5636571778094900751
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -894,6 +898,7 @@ MonoBehaviour:
   choiceNodeConsequences: []
   indicatorToUnlock: 9
   phaseToUnlock: 0
+  objectiveId: -1
 --- !u!114 &-5345231323367849905
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -973,6 +978,7 @@ MonoBehaviour:
   choiceNodeConsequences: []
   indicatorToUnlock: 9
   phaseToUnlock: 0
+  objectiveId: -1
 --- !u!114 &-4756469790976617394
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1031,7 +1037,7 @@ MonoBehaviour:
   outcomingChoices: {fileID: 0}
   character: 9
   dialogue: "Bonjour ! Vous appr\xE9ciez la voiture ?"
-  uid: 48
+  uid: 62
 --- !u!114 &-4489192414227888506
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1245,7 +1251,7 @@ MonoBehaviour:
   dialogue: "Il va de soit que vous serez d\xFBment r\xE9compens\xE9. Si vous veniez
     \xE0 refuser...disons que la presse ne manquerait pas de s'interroger sur votre
     nouvelle voiture."
-  uid: 23
+  uid: 49
 --- !u!114 &-3625431032539271414
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1325,6 +1331,7 @@ MonoBehaviour:
   choiceNodeConsequences: []
   indicatorToUnlock: 9
   phaseToUnlock: 0
+  objectiveId: -1
 --- !u!114 &-3601964203909046943
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1419,6 +1426,7 @@ MonoBehaviour:
     duration: 0
   indicatorToUnlock: 9
   phaseToUnlock: 0
+  objectiveId: -1
 --- !u!114 &-3560608915795823240
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1482,7 +1490,7 @@ MonoBehaviour:
   dialogue: "Je ne suis pas sur que ce soit une d\xE9cision tr\xE8s sage, Monsieur
     le Pr\xE9sident. Il risque de mal le prendre, et il est connu pour \xEAtre assez
     irritable..."
-  uid: 71
+  uid: 25
 --- !u!114 &-3025143977555372770
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1546,7 +1554,7 @@ MonoBehaviour:
   dialogue: "Monsieur le Pr\xE9sident, nous entamons la construction du mur autour
     du virus. Ce n'est pas tr\xE8s clair pour nos ing\xE9nieurs, doivent-il pr\xE9voir
     des barbel\xE9s pour retenir le virus ?"
-  uid: 18
+  uid: 31
 --- !u!114 &-1746777208845707783
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1613,7 +1621,7 @@ MonoBehaviour:
   dialogue: 'Afkfkrbsoif...
 
     Piofskvirjus ?'
-  uid: 75
+  uid: 67
 --- !u!114 &-1659481904533424991
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1696,6 +1704,7 @@ MonoBehaviour:
   choiceNodeConsequences: []
   indicatorToUnlock: 9
   phaseToUnlock: 0
+  objectiveId: -1
 --- !u!114 &-1550928236811593380
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1779,6 +1788,7 @@ MonoBehaviour:
   choiceNodeConsequences: []
   indicatorToUnlock: 9
   phaseToUnlock: 0
+  objectiveId: -1
 --- !u!114 &-841460183269535629
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1866,6 +1876,7 @@ MonoBehaviour:
     duration: 0
   indicatorToUnlock: 9
   phaseToUnlock: 0
+  objectiveId: 4
 --- !u!114 &-689664389413585274
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1954,6 +1965,7 @@ MonoBehaviour:
     duration: 0
   indicatorToUnlock: 9
   phaseToUnlock: 0
+  objectiveId: -1
 --- !u!114 &-337307145666398726
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2049,6 +2061,7 @@ MonoBehaviour:
     duration: 0
   indicatorToUnlock: 9
   phaseToUnlock: 0
+  objectiveId: -1
 --- !u!114 &-97719318195581397
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2115,7 +2128,7 @@ MonoBehaviour:
 
     Aarglel..ecoiefk
     ?'
-  uid: 74
+  uid: 56
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2261,6 +2274,7 @@ MonoBehaviour:
   choiceNodeConsequences: []
   indicatorToUnlock: 9
   phaseToUnlock: 0
+  objectiveId: -1
 --- !u!114 &179173695243189078
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2343,6 +2357,7 @@ MonoBehaviour:
   choiceNodeConsequences: []
   indicatorToUnlock: 9
   phaseToUnlock: 0
+  objectiveId: -1
 --- !u!114 &314039853448338419
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2425,6 +2440,7 @@ MonoBehaviour:
   choiceNodeConsequences: []
   indicatorToUnlock: 9
   phaseToUnlock: 0
+  objectiveId: -1
 --- !u!114 &734302042487903543
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2585,6 +2601,7 @@ MonoBehaviour:
   choiceNodeConsequences: []
   indicatorToUnlock: 9
   phaseToUnlock: 0
+  objectiveId: -1
 --- !u!114 &1556398619564400115
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2669,6 +2686,7 @@ MonoBehaviour:
     duration: 0
   indicatorToUnlock: 9
   phaseToUnlock: 0
+  objectiveId: -1
 --- !u!114 &2796980117327292182
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2752,6 +2770,7 @@ MonoBehaviour:
   choiceNodeConsequences: []
   indicatorToUnlock: 9
   phaseToUnlock: 0
+  objectiveId: -1
 --- !u!114 &2860170937151882324
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2814,7 +2833,7 @@ MonoBehaviour:
   character: 8
   dialogue: "Etes-vous certain ? Ce mur a un impact d\xE9sastreux sur notre \xE9conomie,
     sans parler de votre cote de popularit\xE9..."
-  uid: 37
+  uid: 28
 --- !u!114 &3508026831085973826
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2897,6 +2916,7 @@ MonoBehaviour:
   choiceNodeConsequences: []
   indicatorToUnlock: 9
   phaseToUnlock: 0
+  objectiveId: -1
 --- !u!114 &3532505877798873647
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2979,6 +2999,7 @@ MonoBehaviour:
   choiceNodeConsequences: []
   indicatorToUnlock: 9
   phaseToUnlock: 0
+  objectiveId: -1
 --- !u!114 &4651632553677590486
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3061,6 +3082,7 @@ MonoBehaviour:
   choiceNodeConsequences: []
   indicatorToUnlock: 9
   phaseToUnlock: 0
+  objectiveId: -1
 --- !u!114 &4656147507927025399
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3144,6 +3166,7 @@ MonoBehaviour:
   choiceNodeConsequences: []
   indicatorToUnlock: 9
   phaseToUnlock: 0
+  objectiveId: -1
 --- !u!114 &4668860052792966414
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3226,6 +3249,7 @@ MonoBehaviour:
   choiceNodeConsequences: []
   indicatorToUnlock: 9
   phaseToUnlock: 0
+  objectiveId: -1
 --- !u!114 &4790990316383838088
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3308,6 +3332,7 @@ MonoBehaviour:
   choiceNodeConsequences: []
   indicatorToUnlock: 9
   phaseToUnlock: 0
+  objectiveId: 2
 --- !u!114 &5260117980986917610
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3387,6 +3412,7 @@ MonoBehaviour:
   choiceNodeConsequences: []
   indicatorToUnlock: 9
   phaseToUnlock: 0
+  objectiveId: -1
 --- !u!114 &6615760322917591989
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3446,7 +3472,7 @@ MonoBehaviour:
   character: 9
   dialogue: "Au sujet de cette pand\xE9mie...j'ai eu vent que la situation \xE9tait
     bient\xF4t sous contr\xF4le. Je n'aime pas trop ce \"bient\xF4t\"..."
-  uid: 31
+  uid: 44
 --- !u!114 &6706130830544499613
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3527,6 +3553,7 @@ MonoBehaviour:
   choiceNodeConsequences: []
   indicatorToUnlock: 9
   phaseToUnlock: 0
+  objectiveId: -1
 --- !u!114 &7137330684198939022
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3589,7 +3616,7 @@ MonoBehaviour:
   character: 2
   dialogue: "Monsieur le Pr\xE9sident !\nLe Pr\xE9sident des Etats-Unis est au bout
     du fil, il souhaite vous parler tout de suite !"
-  uid: 36
+  uid: 66
 --- !u!114 &7332815009821679156
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3656,7 +3683,7 @@ MonoBehaviour:
   dialogue: "J'ai un peu \xE9tudi\xE9 la question, et une solution toute simple m'est
     venue \xE0 l'esprit...Pourquoi ne pas construire un mur, un gigantesque mur,
     autour de ce virus ?"
-  uid: 6
+  uid: 50
 --- !u!114 &7537038422483838007
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3812,6 +3839,7 @@ MonoBehaviour:
   choiceNodeConsequences: []
   indicatorToUnlock: 9
   phaseToUnlock: 0
+  objectiveId: -1
 --- !u!114 &8456288675623609599
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3871,4 +3899,4 @@ MonoBehaviour:
   character: 9
   dialogue: "Nous travaillons d'arrache-pieds sur un vaccin, que nous aimerions commercialiser.
     Mais pour cela, il faut que cette pand\xE9mie reste...et bien, une pand\xE9mie."
-  uid: 26
+  uid: 65
