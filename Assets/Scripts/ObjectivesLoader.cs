@@ -13,6 +13,7 @@ public class ObjectivesLoader : MonoBehaviour
         CreateObjective(2, false, "Devenez l'heureux possesseur d'une ferrari");
         CreateObjective(3, false, "Alliez-vous à une puissance étrangère");
         CreateObjective(4, false, "Construisez un mur");
+        CreateObjective(4, false, "Instaurez une dictature");
 
     }
 
