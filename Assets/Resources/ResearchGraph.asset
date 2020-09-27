@@ -733,7 +733,7 @@ MonoBehaviour:
   outcomingChoices: {fileID: 0}
   character: 10
   dialogue: Je ne vois pas de quelle maladie il s'agit...
-  uid: 72
+  uid: 34
 --- !u!114 &-4517207040269560304
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -796,7 +796,7 @@ MonoBehaviour:
   character: 10
   dialogue: "Vous avez raison...mais la presse ne doit pas \xEAtre au courant ! Cela
     d\xE9stabiliserait mon gouvernement."
-  uid: 22
+  uid: 10
 --- !u!114 &-3681618596173494586
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -863,7 +863,7 @@ MonoBehaviour:
   dialogue: "Monsieur ! \nJ'ai eu vent de certaines rumeurs...il semblerait que certains
     habitants d'une ville chinoise souffrent d'\xE9trange sympt\xF4me. Le gouvernement
     semble vouloir etouffer l'affaire. "
-  uid: 52
+  uid: 44
 --- !u!114 &-3593747947534703931
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -926,7 +926,7 @@ MonoBehaviour:
   character: 10
   dialogue: "Et pourquoi devrais-je faire cela ? Que me proposez-vous en \xE9change
     ?"
-  uid: 6
+  uid: 31
 --- !u!114 &-3299845405477170559
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1070,7 +1070,7 @@ MonoBehaviour:
   character: 10
   dialogue: "La collaboration entre nos chercheurs commencent \xE0 porter ses fruits
     ! Il semblerait qu'ils viennent de r\xE9ussir \xE0 s\xE9quencer le virus."
-  uid: 37
+  uid: 72
 --- !u!114 &-3036950188833297281
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1155,8 +1155,7 @@ MonoBehaviour:
   unlockingEvents: {fileID: 0}
   lockingEvents: {fileID: 0}
   passingEvents: {fileID: 0}
-  description: "Je vais contacter le gouvernement chinois. J'aurai du faire cela
-    d\xE8s le d\xE9part."
+  description: Je vais contacter le gouvernement chinois.
   choiceNodeConsequences: []
   indicatorToUnlock: 9
   phaseToUnlock: 0
@@ -1393,7 +1392,7 @@ MonoBehaviour:
   character: 2
   dialogue: "Les rumeurs d'une maladie \xE9trang\xE8re en Chine se sont aver\xE9es
     fausses...c'est une simple \xE9pid\xE9mie de grippe !"
-  uid: 32
+  uid: 56
 --- !u!114 &-1959890446699375412
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1543,7 +1542,7 @@ MonoBehaviour:
   outcomingChoices: {fileID: 0}
   character: 10
   dialogue: ...sinon quoi ?
-  uid: 7
+  uid: 85
 --- !u!114 &-1784834355650992255
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2017,7 +2016,7 @@ MonoBehaviour:
   character: 2
   dialogue: "Nos espions viennent de rentrer de Chine !\nIls ont fait d'importantes
     d\xE9couvertes !"
-  uid: 39
+  uid: 58
 --- !u!114 &1238883282774795121
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2099,8 +2098,7 @@ MonoBehaviour:
   unlockingEvents: {fileID: 0}
   lockingEvents: {fileID: 0}
   passingEvents: {fileID: 0}
-  description: "Je refuse d'y croire ! \nQu'ils continuent d'enqu\xEAter, ces chinois
-    ont bien masqu\xE9 leurs agissements !"
+  description: "Qu'ils continuent d'enqu\xEAter !"
   choiceNodeConsequences: []
   indicatorToUnlock: 9
   phaseToUnlock: 0
@@ -2252,7 +2250,7 @@ MonoBehaviour:
   character: 2
   dialogue: "Mauvaises nouvelles !\nNos chercheurs et espions infiltr\xE9s en Chine
     ont \xE9t\xE9 d\xE9couverts ! C'est un incident diplomatique !"
-  uid: 33
+  uid: 20
 --- !u!114 &2666225982771957499
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2329,7 +2327,7 @@ MonoBehaviour:
   lockingEvents: {fileID: 0}
   passingEvents: {fileID: 0}
   description: "Je ne prendrais pas le risque d'envenimer nos relations d\xE9j\xE0
-    tendue avec la Chine. Restons en l\xE0."
+    tendue avec la Chine."
   choiceNodeConsequences: []
   indicatorToUnlock: 9
   phaseToUnlock: 0
@@ -2396,7 +2394,7 @@ MonoBehaviour:
   character: 10
   dialogue: "De quel droit osez-vous envoyer des espions sur notre territoire ? Avez-vous
     des envies suicidaires peut-\xEAtre ?"
-  uid: 48
+  uid: 18
 --- !u!114 &3475942685946005347
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2572,8 +2570,7 @@ MonoBehaviour:
   unlockingEvents: {fileID: 0}
   lockingEvents: {fileID: 0}
   passingEvents: {fileID: 0}
-  description: "Cela semble louche...envoyez des chercheurs et espions infiltr\xE9s,
-    nous devons savoir si cela a un lien avec notre virus."
+  description: "Envoyez des chercheurs et espions infiltr\xE9s afin d'enqu\xEAter."
   choiceNodeConsequences:
   - indicatorType: 8
     valueType: 0
@@ -2644,7 +2641,7 @@ MonoBehaviour:
   character: 10
   dialogue: "Je suis honor\xE9 de vous recevoir. Vous d\xE9siriez me parler en priv\xE9
     ? S'agit-il du dernier trait\xE9 d'\xE9change \xE9conomique ?"
-  uid: 57
+  uid: 81
 --- !u!114 &3950398593297178584
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2706,7 +2703,7 @@ MonoBehaviour:
   outcomingChoices: {fileID: 0}
   character: 10
   dialogue: "Ce qui se passe dans mon pays ne vous regarde pas, \xE9tranger !"
-  uid: 30
+  uid: 63
 --- !u!114 &4063182608812189666
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3094,7 +3091,7 @@ MonoBehaviour:
   outcomingChoices: {fileID: 0}
   character: 10
   dialogue: Vous avez raison, mettons en place un consortium de recherche !
-  uid: 47
+  uid: 68
 --- !u!114 &4411275595403378529
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3154,7 +3151,7 @@ MonoBehaviour:
   character: 2
   dialogue: "Les espions que nous avions envoy\xE9s en Chine viennent de revenir,
     sain et sauf !\nLa mauvaise nouvelle, c'est qu'ils reviennent bredouille..."
-  uid: 45
+  uid: 61
 --- !u!114 &4571285941568039635
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3309,8 +3306,7 @@ MonoBehaviour:
   unlockingEvents: {fileID: 0}
   lockingEvents: {fileID: 0}
   passingEvents: {fileID: 0}
-  description: "Bon, rappatrions ces espions dans ce cas, ils n'ont plus rien \xE0
-    faire l\xE0-bas."
+  description: Rappatrions ces espions dans ce cas.
   choiceNodeConsequences:
   - indicatorType: 2
     valueType: 0
@@ -3626,7 +3622,7 @@ MonoBehaviour:
   dialogue: "Monsieur ! \nJ'ai \xE9tudi\xE9 ce week-end de plus pr\xE8s les donn\xE9es
     des cas de contaminations...Je pense \xEAtre \xE0 m\xEAme de mod\xE9liser la
     vitesse de propagation du virus !"
-  uid: 16
+  uid: 50
 --- !u!114 &6862703939838639049
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3705,8 +3701,7 @@ MonoBehaviour:
   unlockingEvents: {fileID: 0}
   lockingEvents: {fileID: 0}
   passingEvents: {fileID: 0}
-  description: "La diplomatie avant tout ! \nJe vais prendre contact officiellement
-    avec le gouvernement chinois, afin de tirer cette affaire au clair."
+  description: Je vais prendre contact officiellement avec le gouvernement chinois.
   choiceNodeConsequences: []
   indicatorToUnlock: 9
   phaseToUnlock: 0
@@ -3774,7 +3769,7 @@ MonoBehaviour:
   dialogue: "Les rumeurs \xE9taient vraies ! Une grippe \xE9trange est apparue il
     y a plusieurs semaines dans un quartier de la ville. L'origine semble \xEAtre
     animale."
-  uid: 27
+  uid: 24
 --- !u!114 &7580236940151539771
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3941,7 +3936,7 @@ MonoBehaviour:
     value: -40
     duration: 0
   indicatorToUnlock: 9
-  phaseToUnlock: 0
+  phaseToUnlock: 5
   objectiveId: -1
 --- !u!114 &7745724119016769650
 MonoBehaviour:

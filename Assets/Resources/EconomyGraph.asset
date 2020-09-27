@@ -77,8 +77,8 @@ MonoBehaviour:
   passingEvents: {fileID: 0}
   description: '...Je ne rigolais pas.
 
-    Investissez dans nos politiques sociales,
-    en particulier nos hopitaux !'
+    Investissez en particulier nos hopitaux
+    !'
   choiceNodeConsequences:
   - indicatorType: 1
     valueType: 0
@@ -93,6 +93,8 @@ MonoBehaviour:
     value: 20
     duration: 0
   indicatorToUnlock: 9
+  phaseToUnlock: 0
+  objectiveId: -1
 --- !u!114 &-9070134038536395818
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -175,6 +177,8 @@ MonoBehaviour:
     value: -20
     duration: 0
   indicatorToUnlock: 9
+  phaseToUnlock: 0
+  objectiveId: -1
 --- !u!114 &-8686888429936604940
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -257,6 +261,8 @@ MonoBehaviour:
     value: -10
     duration: 0
   indicatorToUnlock: 9
+  phaseToUnlock: 0
+  objectiveId: -1
 --- !u!114 &-8511810251951997943
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -319,7 +325,7 @@ MonoBehaviour:
   character: 8
   dialogue: "Notre \xE9conomie est florissante, Monsieur. Nous devrions en profiter
     pour investir dans des projets \xE0 long terme !"
-  uid: 17
+  uid: 13
 --- !u!114 &-6552551273336600097
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -402,6 +408,8 @@ MonoBehaviour:
     value: -30
     duration: 0
   indicatorToUnlock: 9
+  phaseToUnlock: 0
+  objectiveId: -1
 --- !u!114 &-5809681822525230862
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -488,6 +496,8 @@ MonoBehaviour:
     value: 20
     duration: 0
   indicatorToUnlock: 9
+  phaseToUnlock: 0
+  objectiveId: -1
 --- !u!114 &-5809560890500881592
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -569,6 +579,8 @@ MonoBehaviour:
   description: "Que sugg\xE9rez-vous ?"
   choiceNodeConsequences: []
   indicatorToUnlock: 9
+  phaseToUnlock: 0
+  objectiveId: -1
 --- !u!114 &-5278228064672640129
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -655,6 +667,8 @@ MonoBehaviour:
     value: -10
     duration: 0
   indicatorToUnlock: 9
+  phaseToUnlock: 0
+  objectiveId: -1
 --- !u!114 &-3519786725543865739
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -738,6 +752,8 @@ MonoBehaviour:
     value: -30
     duration: 0
   indicatorToUnlock: 9
+  phaseToUnlock: 0
+  objectiveId: -1
 --- !u!114 &-2608057482731900087
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -813,14 +829,16 @@ MonoBehaviour:
   unlockingEvents: {fileID: 0}
   lockingEvents: {fileID: 0}
   passingEvents: {fileID: 0}
-  description: "Npn. Le long terme m'int\xE8resse peu, c'est le futur proche qui
-    d\xE9cidera de ma r\xE9\xE9lection. Je n'ai que faire de vos conseils."
+  description: "Qu'importe le long terme, c'est le futur proche qui d\xE9cidera de
+    ma r\xE9\xE9lection."
   choiceNodeConsequences:
   - indicatorType: 1
     valueType: 0
     value: 10
     duration: 0
   indicatorToUnlock: 9
+  phaseToUnlock: 0
+  objectiveId: -1
 --- !u!114 &-1434815101300092598
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -896,13 +914,15 @@ MonoBehaviour:
   unlockingEvents: {fileID: 0}
   lockingEvents: {fileID: 0}
   passingEvents: {fileID: 0}
-  description: "Notre \xE9conomie est suffisant solide que pour absorber ce choc."
+  description: "Notre \xE9conomie est suffisamment solide que pour absorber ce choc."
   choiceNodeConsequences:
   - indicatorType: 1
     valueType: 0
     value: -20
     duration: 0
   indicatorToUnlock: 9
+  phaseToUnlock: 0
+  objectiveId: -1
 --- !u!114 &-1259503971531219015
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -964,7 +984,7 @@ MonoBehaviour:
   outcomingChoices: {fileID: 0}
   character: 8
   dialogue: "Ahahaha ! Tr\xE8s bonne Monsieur le Pr\xE9sident, tr\xE8s bonne !"
-  uid: 12
+  uid: 70
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1062,7 +1082,7 @@ MonoBehaviour:
   dialogue: "Notre \xE9conomie ralentit fortement, \xE0 cause de cette maudite pand\xE9mie
     !\nNous devrions envisager de faire des coupes dans le budget, en pr\xE9vision
     de la suite..."
-  uid: 58
+  uid: 69
 --- !u!114 &1988709469155559729
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1130,6 +1150,7 @@ MonoBehaviour:
   lockingChoices: {fileID: 0}
   passingChoices: {fileID: 0}
   dialogue: {fileID: 0}
+  eventPhase: 1
   conditions:
   - conditions:
     - indicatorType: 6
@@ -1139,6 +1160,7 @@ MonoBehaviour:
     - indicatorType: 3
       threshold: 60
       conditionType: 0
+  minEventsCondition: 0
 --- !u!114 &2751327082817178205
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1210,7 +1232,7 @@ MonoBehaviour:
   character: 8
   dialogue: "Diverses options s'offrent \xE0 nous. Nucl\xE9aire, tech, militaire,
     banque,..."
-  uid: 52
+  uid: 4
 --- !u!114 &4293417849462490405
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1278,11 +1300,13 @@ MonoBehaviour:
   lockingChoices: {fileID: 0}
   passingChoices: {fileID: 0}
   dialogue: {fileID: 0}
+  eventPhase: 1
   conditions:
   - conditions:
     - indicatorType: 1
       threshold: 90
       conditionType: 0
+  minEventsCondition: 0
 --- !u!114 &4978149657376837844
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1364,6 +1388,8 @@ MonoBehaviour:
   description: Le secteur public ?
   choiceNodeConsequences: []
   indicatorToUnlock: 9
+  phaseToUnlock: 0
+  objectiveId: -1
 --- !u!114 &5248561410281200938
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1446,3 +1472,5 @@ MonoBehaviour:
     value: -10
     duration: 0
   indicatorToUnlock: 9
+  phaseToUnlock: 0
+  objectiveId: -1

@@ -32,9 +32,9 @@ public class GameOverPanel : MonoBehaviour {
     public void SetEndingScreen(bool isWinning, string endingMesage)
     {   
         if (isWinning) {
-            endingTitle.GetComponent<Text>().text =  endingMesage;
+            endingTitle.GetComponent<Text>().text = endingMesage;
         } else {
-            endingTitle.GetComponent<Text>().text =  endingMesage;
+            endingTitle.GetComponent<Text>().text = endingMesage;
         }
 
     }

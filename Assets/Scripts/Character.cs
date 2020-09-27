@@ -27,7 +27,9 @@ public class Character : MonoBehaviour
         PHARMA_LOBBYIST,
         CHINESE_PRESIDENT,
         DRUNKEN_MAN,
-        POLICEMAN
+        POLICEMAN,
+        TWITTER_EXPERT,
+        PRIEST
     }
 
 }
