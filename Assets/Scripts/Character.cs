@@ -8,6 +8,7 @@ public class Character : MonoBehaviour
 
     public CharacterName characterName;
     public Texture2D image;
+    public bool alreadySeen = false;
 
     void Start()
     {   

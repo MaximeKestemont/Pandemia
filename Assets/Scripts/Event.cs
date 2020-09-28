@@ -29,6 +29,7 @@ public class Event : MonoBehaviour
     public string title;
     public Text textTitle;
     public Image eventImage;
+    public NPCDialogue firstDialogue;
 
     public GameObject dialogueContainer;
 

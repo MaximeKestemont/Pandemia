@@ -38,4 +38,8 @@ public class NPCDialogue : MonoBehaviour
     {
         
     }
+
+    public void UpdateDiscoveredCharacter() {
+        this.character.alreadySeen = true;
+    }
 }

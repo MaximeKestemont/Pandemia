@@ -27,12 +27,12 @@ public class GameController : MonoBehaviour
     public void StartGame()
     {
         Debug.Log ("Starting the game...");
+        UpdatePhase(ResourceManager.Phase.NORMAL);
         resourceManager.gameOverPanel.SetActive(false);
         resourceManager.menuPanel.SetActive(false);
         resourceManager.recapPanel.SetActive(false);
         resourceManager.settingsPanel.SetActive(false);
         resourceManager.objectivePanel.SetActive(false);
-        UpdatePhase(ResourceManager.Phase.NORMAL);
 
         Debug.Log ("Initializing game data and storing them in resource manager...");
         // Init events
@@ -44,8 +44,7 @@ public class GameController : MonoBehaviour
         
         // Activate first event
         currentEventId = 0;
-        currentEvent = resourceManager.eventsMap[currentEventId];
-        currentEvent.SetActive(true);
+        ActivateEvent(currentEventId);
         Debug.Log($"Current event: {currentEventId}");
 
     }
@@ -148,13 +147,18 @@ public class GameController : MonoBehaviour
         if (filteredIds.Count > 0) {
             var randomIndex = Random.Range(0, filteredIds.Count); 
             currentEventId = filteredIds[randomIndex];
-            Debug.Log($"Current event: {currentEventId}");
-            currentEvent = resourceManager.eventsMap[currentEventId];
-            currentEvent.SetActive(true);
+            ActivateEvent(currentEventId);
         } else {
             FinishGame(true, GameOverPanel.survivingMessage);
         }
         }
+    }
+
+    public void ActivateEvent(int eventId) {
+        Debug.Log($"Current event: {eventId}");
+        currentEvent = resourceManager.eventsMap[eventId];
+        currentEvent.SetActive(true);
+        currentEvent.GetComponent<Event>().firstDialogue.UpdateDiscoveredCharacter();
     }
 
     public bool CheckLosingConditions() {

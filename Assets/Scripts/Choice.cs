@@ -78,9 +78,7 @@ public class Choice: MonoBehaviour
         }
 
         // Change the current phase
-        Debug.Log("test1");
         if (phaseToUnlock != ResourceManager.Phase.NONE) {
-            Debug.Log("test2");
             resourceManager.gameController.UpdatePhase(phaseToUnlock);
         }
 
@@ -110,6 +108,7 @@ public class Choice: MonoBehaviour
         if (followingDialogue) {
             this.GetComponentInParent<NPCDialogue>().gameObject.SetActive(false);
             followingDialogue.SetActive(true);
+            followingDialogue.GetComponent<NPCDialogue>().UpdateDiscoveredCharacter();
         } else {
             // End of event --> go to next event
             resourceManager.gameController.NextEvent();

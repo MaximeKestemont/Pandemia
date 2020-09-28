@@ -101,7 +101,10 @@ public class GraphLoader: MonoBehaviour
                 int initialEventId = (eventConnections[0].node as EventNode).uid;
                 Event initialEvent = gameEvents[initialEventId].GetComponent<Event>();
                 newDialogueObject.transform.SetParent(initialEvent.dialogueContainer.transform, false);
-                if (isFirstDialogue) newDialogueObject.SetActive(true);
+                if (isFirstDialogue) {
+                    newDialogueObject.SetActive(true);
+                    initialEvent.firstDialogue = newDialogue;
+                }
 
                 dialoguesDict.Add(dialogueNode.uid, newDialogueObject);
             }
