@@ -7,6 +7,7 @@ public class ObjectivesLoader : MonoBehaviour
 {
     public ResourceManager resourceManager;
     public GameObject objectivesParent;
+    public GameObject charactersParent;
 
     private int objectiveCount = 0;
     
@@ -24,6 +25,8 @@ public class ObjectivesLoader : MonoBehaviour
         RectTransform rt = objectivesParent.GetComponent<RectTransform>();
         rt.sizeDelta = new Vector2(rt.sizeDelta.x, objectiveCount * cellSizeY);
 
+        // Fill characters gallery
+        LoadCharacters();
     }
 
     void CreateObjective(int uid, bool flag, string message) {
@@ -36,5 +39,21 @@ public class ObjectivesLoader : MonoBehaviour
         objectiveCount++;
 
         resourceManager.objectivesMap.Add(uid, newObjective);
+    }
+
+    void LoadCharacters() {
+        // Update size of scroll area
+        int characterCount = ResourceManager.resourceManager.charactersMap.Count;
+        float cellSizeY = charactersParent.GetComponent<GridLayoutGroup>().cellSize.y;
+        float marginSizeY = charactersParent.GetComponent<GridLayoutGroup>().spacing.y;
+        RectTransform rt = charactersParent.GetComponent<RectTransform>();
+        rt.sizeDelta = new Vector2(rt.sizeDelta.x, ((characterCount + 1 ) / 2) * (cellSizeY + marginSizeY));
+
+        foreach (KeyValuePair<Character.CharacterName, Character> kv in ResourceManager.resourceManager.charactersMap) {
+            GameObject portraitObject = Instantiate(resourceManager.characterPortraitPrefab, charactersParent.transform);
+            // TODO below line is ugly, rely on hardcoded name -> should create a script to hold those reference
+            portraitObject.transform.Find("CharacterImage").GetComponent<RawImage>().texture = kv.Value.image;
+            portraitObject.transform.Find("TextBackground").GetComponentInChildren<Text>().text = kv.Value.characterName.ToString();
+        }
     }
 }

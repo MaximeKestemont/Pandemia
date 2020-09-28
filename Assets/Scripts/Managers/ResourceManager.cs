@@ -17,6 +17,7 @@ public class ResourceManager : MonoBehaviour {
     public GameObject settingsPanel;
     public GameObject objectivePanel;
     public GameObject progressPanel;
+    public GameObject galleryPanel;
 
     public Text currentPhaseText;
 
@@ -25,6 +26,7 @@ public class ResourceManager : MonoBehaviour {
     public GameObject choicePrefab;
     public GameObject dialoguePrefab;
     public GameObject objectivePrefab;
+    public GameObject characterPortraitPrefab;
 
     // --- GameObjects ---
     // Events
@@ -91,6 +93,7 @@ public class ResourceManager : MonoBehaviour {
         settingsPanel.SetActive(false);
         objectivePanel.SetActive(false);
         progressPanel.SetActive(false);
+        galleryPanel.SetActive(false);
     }
 
     /*

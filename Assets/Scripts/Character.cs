@@ -11,7 +11,7 @@ public class Character : MonoBehaviour
     public bool alreadySeen = false;
 
     void Start()
-    {   
+    {
     }
 
     // !!! Add new character at the END of this enum. Else, it modifies all existing nodes.

@@ -196,9 +196,14 @@ public class GameController : MonoBehaviour
         resourceManager.objectivePanel.SetActive(!resourceManager.objectivePanel.activeSelf);
     }
 
+    public void OpenGalleryPanel() {
+        resourceManager.galleryPanel.SetActive(!resourceManager.galleryPanel.activeSelf);
+    }
+
     public void OpenProgressPanel() {
         resourceManager.progressPanel.SetActive(!resourceManager.progressPanel.activeSelf);
         resourceManager.objectivePanel.SetActive(false);
+        resourceManager.galleryPanel.SetActive(false);
     }
 
     public void UpdatePhase(ResourceManager.Phase newPhase) {   
