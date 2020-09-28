@@ -16,6 +16,8 @@ public class ResourceManager : MonoBehaviour {
     public GameObject recapPanel;
     public GameObject settingsPanel;
     public GameObject objectivePanel;
+    public GameObject progressPanel;
+
     public Text currentPhaseText;
 
     // --- Prefab ---
@@ -88,6 +90,7 @@ public class ResourceManager : MonoBehaviour {
         recapPanel.SetActive(false);
         settingsPanel.SetActive(false);
         objectivePanel.SetActive(false);
+        progressPanel.SetActive(false);
     }
 
     /*
