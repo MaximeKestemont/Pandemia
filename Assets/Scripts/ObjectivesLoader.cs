@@ -1,11 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ObjectivesLoader : MonoBehaviour
 {
     public ResourceManager resourceManager;
-    public Transform objectivesParent;
+    public GameObject objectivesParent;
+
+    private int objectiveCount = 0;
     
     void Start()
     {
@@ -16,14 +19,21 @@ public class ObjectivesLoader : MonoBehaviour
         CreateObjective(5, false, "Instaurez une dictature");
         CreateObjective(6, false, "Créer votre propre compte twitter");
 
+        // Update size of scroll area
+        float cellSizeY = objectivesParent.GetComponent<GridLayoutGroup>().cellSize.y;
+        RectTransform rt = objectivesParent.GetComponent<RectTransform>();
+        rt.sizeDelta = new Vector2(rt.sizeDelta.x, objectiveCount * cellSizeY);
+
     }
 
     void CreateObjective(int uid, bool flag, string message) {
-        GameObject objectiveObject = Instantiate(resourceManager.objectivePrefab, objectivesParent);
+        GameObject objectiveObject = Instantiate(resourceManager.objectivePrefab, objectivesParent.transform);
         Objective newObjective = objectiveObject.GetComponent<Objective>();
         newObjective.uid = uid;
         newObjective.isDone = flag;
         newObjective.objectiveMessage = message;
+
+        objectiveCount++;
 
         resourceManager.objectivesMap.Add(uid, newObjective);
     }

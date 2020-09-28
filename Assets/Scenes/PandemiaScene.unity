@@ -467,6 +467,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterName: 1
   image: {fileID: 2800000, guid: 286ed47600dc44463828c1beb454cb23, type: 3}
+  alreadySeen: 0
 --- !u!1 &155905245
 GameObject:
   m_ObjectHideFlags: 0
@@ -635,6 +636,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterName: 2
   image: {fileID: 2800000, guid: 297f07730ebe946bba4c9ce519da952f, type: 3}
+  alreadySeen: 0
 --- !u!1 &177347238
 GameObject:
   m_ObjectHideFlags: 0
@@ -1705,6 +1707,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterName: 0
   image: {fileID: 2800000, guid: 28802abde1095438090c09b04b09d227, type: 3}
+  alreadySeen: 0
 --- !u!1 &582364485
 GameObject:
   m_ObjectHideFlags: 0
@@ -1750,6 +1753,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterName: 13
   image: {fileID: 2800000, guid: 346820d89fa144d6791d56bcd7cc9c8d, type: 3}
+  alreadySeen: 0
 --- !u!1 &621006814
 GameObject:
   m_ObjectHideFlags: 0
@@ -2077,6 +2081,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterName: 12
   image: {fileID: 2800000, guid: 07d83ead00ec244c5864b61c121d729b, type: 3}
+  alreadySeen: 0
 --- !u!1 &767297953
 GameObject:
   m_ObjectHideFlags: 0
@@ -2236,6 +2241,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterName: 8
   image: {fileID: 2800000, guid: a61d916ae4ef04dd5acb7523d3d6ed48, type: 3}
+  alreadySeen: 0
 --- !u!114 &871589307 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1840937659899806920, guid: fa7d02b799c0f4802925bf43b7713f09,
@@ -2419,7 +2425,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &980914951
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2522,6 +2528,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterName: 7
   image: {fileID: 2800000, guid: ba95963773b6145dcbf3df893b6e3c9a, type: 3}
+  alreadySeen: 0
 --- !u!114 &1034461213 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1840937659899806920, guid: fa7d02b799c0f4802925bf43b7713f09,
@@ -2635,6 +2642,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterName: 3
   image: {fileID: 2800000, guid: 53f953e2356204db7bb3072828086a91, type: 3}
+  alreadySeen: 0
 --- !u!1 &1113465100
 GameObject:
   m_ObjectHideFlags: 0
@@ -3006,6 +3014,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterName: 14
   image: {fileID: 2800000, guid: dcc494a7ce4a44542b70b3d2145dac4b, type: 3}
+  alreadySeen: 0
 --- !u!1 &1205871681
 GameObject:
   m_ObjectHideFlags: 0
@@ -3413,6 +3422,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterName: 9
   image: {fileID: 2800000, guid: bf1004d2d8aa047109c0bfc1ce7aa51e, type: 3}
+  alreadySeen: 0
 --- !u!1 &1393623781
 GameObject:
   m_ObjectHideFlags: 0
@@ -3445,8 +3455,8 @@ RectTransform:
   m_Father: {fileID: 1295991253}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.439287}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -3822,7 +3832,7 @@ MonoBehaviour:
   m_HorizontalScrollbar: {fileID: 0}
   m_VerticalScrollbar: {fileID: 155905247}
   m_HorizontalScrollbarVisibility: 0
-  m_VerticalScrollbarVisibility: 0
+  m_VerticalScrollbarVisibility: 1
   m_HorizontalScrollbarSpacing: 0
   m_VerticalScrollbarSpacing: 0
   m_OnValueChanged:
@@ -4027,6 +4037,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterName: 5
   image: {fileID: 2800000, guid: b7bcb125e264d4c64a867248a8fec9dc, type: 3}
+  alreadySeen: 0
 --- !u!1 &1654056757
 GameObject:
   m_ObjectHideFlags: 0
@@ -5061,6 +5072,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterName: 11
   image: {fileID: 2800000, guid: 98b666bb2a4d1459c9a2ef78daef2cbb, type: 3}
+  alreadySeen: 0
 --- !u!1001 &1969950605
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5294,6 +5306,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterName: 4
   image: {fileID: 2800000, guid: 8027a6394b26d4fc88c65113e73f6c67, type: 3}
+  alreadySeen: 0
 --- !u!1 &2029086271
 GameObject:
   m_ObjectHideFlags: 0
@@ -5528,6 +5541,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterName: 10
   image: {fileID: 2800000, guid: 492a48566e73449e4affcbd9a25efdc3, type: 3}
+  alreadySeen: 0
 --- !u!1 &2076418269
 GameObject:
   m_ObjectHideFlags: 0
@@ -5559,7 +5573,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   resourceManager: {fileID: 1895411078}
-  objectivesParent: {fileID: 2029086272}
+  objectivesParent: {fileID: 2029086271}
 --- !u!4 &2076418271
 Transform:
   m_ObjectHideFlags: 0
@@ -5716,6 +5730,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterName: 6
   image: {fileID: 2800000, guid: 9fd31269c3ccf4a4ebf947739cc66409, type: 3}
+  alreadySeen: 0
 --- !u!1001 &1840937658739314687
 PrefabInstance:
   m_ObjectHideFlags: 0
