@@ -21,6 +21,9 @@ public class ResourceManager : MonoBehaviour {
 
     public Text currentPhaseText;
 
+    public ProgressBar objectivesProgressBar;
+    public ProgressBar galleryProgressBar;
+
     // --- Prefab ---
     public GameObject eventPrefab;
     public GameObject choicePrefab;

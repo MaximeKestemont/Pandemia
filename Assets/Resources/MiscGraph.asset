@@ -135,7 +135,7 @@ MonoBehaviour:
   outcomingChoices: {fileID: 0}
   character: 9
   dialogue: Bonjour !
-  uid: 52
+  uid: 54
 --- !u!114 &-8270822678897119605
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -200,7 +200,7 @@ MonoBehaviour:
   outcomingChoices: {fileID: 0}
   character: 9
   dialogue: "Vous voulez la m\xEAme ?"
-  uid: 45
+  uid: 83
 --- !u!114 &-8215956429267432555
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -437,7 +437,7 @@ MonoBehaviour:
   character: 9
   dialogue: "Oh, mon nom importe peu. Vous voyez la Ferrari l\xE0-bas ? C'est la
     mienne !"
-  uid: 27
+  uid: 41
 --- !u!114 &-7129720202945646030
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -502,7 +502,7 @@ MonoBehaviour:
     le Pr\xE9sident. Il semblerait cependant que cela ne fonctionne pas tr\xE8s bien,
     le virus s'\xE9tant d\xE9j\xE0 r\xE9pandu en dehors de la capitale. Que devons-nous
     faire ?"
-  uid: 75
+  uid: 27
 --- !u!114 &-6936482045527532184
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -734,7 +734,7 @@ MonoBehaviour:
   character: 0
   dialogue: "Hello my dear !\nJ'ai eu vent d'une inqui\xE9tante histoire...il semblerait
     qu'un virus \xE9trange se r\xE9pand parmi votre peuple ?"
-  uid: 46
+  uid: 71
 --- !u!114 &-6095015223892005004
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -794,7 +794,7 @@ MonoBehaviour:
   character: 13
   dialogue: "Vous devriez interrompre toute recherche sur ce soit-disant virus, et
     communiquer sur ce complot. Il vous faut \xE9galement un compte twitter, pour"
-  uid: 84
+  uid: 64
 --- !u!114 &-5931070497313657932
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1097,7 +1097,7 @@ MonoBehaviour:
   outcomingChoices: {fileID: 0}
   character: 9
   dialogue: "Bonjour ! Vous appr\xE9ciez la voiture ?"
-  uid: 22
+  uid: 49
 --- !u!114 &-4648269860892553129
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1163,7 +1163,7 @@ MonoBehaviour:
   character: 13
   dialogue: "Cette pand\xE9mie est un complot des francs-ma\xE7ons, il n'y a aucun
     virus en r\xE9alit\xE9 ! #complot #pand\xE9mie #virus"
-  uid: 83
+  uid: 72
 --- !u!114 &-4489192414227888506
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1377,7 +1377,7 @@ MonoBehaviour:
   dialogue: "Il va de soit que vous serez d\xFBment r\xE9compens\xE9. Si vous veniez
     \xE0 refuser...disons que la presse ne manquerait pas de s'interroger sur votre
     nouvelle voiture."
-  uid: 29
+  uid: 40
 --- !u!114 &-4133331691934258868
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1704,7 +1704,7 @@ MonoBehaviour:
   dialogue: "Je ne suis pas sur que ce soit une d\xE9cision tr\xE8s sage, Monsieur
     le Pr\xE9sident. Il risque de mal le prendre, et il est connu pour \xEAtre assez
     irritable..."
-  uid: 70
+  uid: 5
 --- !u!114 &-3025143977555372770
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1768,7 +1768,7 @@ MonoBehaviour:
   dialogue: "Monsieur le Pr\xE9sident, nous entamons la construction du mur autour
     du virus. Ce n'est pas tr\xE8s clair pour nos ing\xE9nieurs, doivent-il pr\xE9voir
     des barbel\xE9s pour retenir le virus ?"
-  uid: 3
+  uid: 56
 --- !u!114 &-1746777208845707783
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1835,7 +1835,7 @@ MonoBehaviour:
   dialogue: 'Afkfkrbsoif...
 
     Piofskvirjus ?'
-  uid: 54
+  uid: 22
 --- !u!114 &-1659481904533424991
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2065,7 +2065,7 @@ MonoBehaviour:
   character: 13
   dialogue: "Monsieur le Pr\xE9sident ! Je viens avec des informations capitales
     !"
-  uid: 82
+  uid: 70
 --- !u!114 &-916736107276199819
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2492,7 +2492,7 @@ MonoBehaviour:
 
     Aarglel..ecoiefk
     ?'
-  uid: 34
+  uid: 55
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3208,7 +3208,7 @@ MonoBehaviour:
   character: 8
   dialogue: "Etes-vous certain ? Ce mur a un impact d\xE9sastreux sur notre \xE9conomie,
     sans parler de votre cote de popularit\xE9..."
-  uid: 16
+  uid: 6
 --- !u!114 &3191903326437002711
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4393,7 +4393,7 @@ MonoBehaviour:
   character: 2
   dialogue: "Monsieur le Pr\xE9sident !\nLe Pr\xE9sident des Etats-Unis est au bout
     du fil, il souhaite vous parler tout de suite !"
-  uid: 74
+  uid: 85
 --- !u!114 &7332815009821679156
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4460,7 +4460,7 @@ MonoBehaviour:
   dialogue: "J'ai un peu \xE9tudi\xE9 la question, et une solution toute simple m'est
     venue \xE0 l'esprit...Pourquoi ne pas construire un mur, un gigantesque mur,
     autour de ce virus ?"
-  uid: 21
+  uid: 29
 --- !u!114 &7537038422483838007
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4676,7 +4676,7 @@ MonoBehaviour:
   character: 9
   dialogue: "Nous travaillons d'arrache-pieds sur un vaccin, que nous aimerions commercialiser.
     Mais pour cela, il faut que cette pand\xE9mie reste...et bien, une pand\xE9mie."
-  uid: 72
+  uid: 4
 --- !u!114 &9193685297931194234
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4738,4 +4738,4 @@ MonoBehaviour:
   outcomingChoices: {fileID: 0}
   character: 13
   dialogue: "Je suis limit\xE9 \xE0 140 caract\xE8res par message ! "
-  uid: 85
+  uid: 73

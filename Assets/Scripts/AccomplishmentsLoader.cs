@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ObjectivesLoader : MonoBehaviour
+public class AccomplishmentsLoader : MonoBehaviour
 {
     public ResourceManager resourceManager;
     public GameObject objectivesParent;
@@ -13,6 +13,15 @@ public class ObjectivesLoader : MonoBehaviour
     
     void Start()
     {
+        // Create objectives
+        LoadObjectives();
+
+        // Fill characters gallery
+        LoadCharacters();
+    }
+
+    // Create objectives and resize area accordingly
+    void LoadObjectives() {
         CreateObjective(1, false, "Plus on est de fous, plus on rit");
         CreateObjective(2, false, "Devenez l'heureux possesseur d'une ferrari");
         CreateObjective(3, false, "Alliez-vous à une puissance étrangère");
@@ -24,9 +33,6 @@ public class ObjectivesLoader : MonoBehaviour
         float cellSizeY = objectivesParent.GetComponent<GridLayoutGroup>().cellSize.y;
         RectTransform rt = objectivesParent.GetComponent<RectTransform>();
         rt.sizeDelta = new Vector2(rt.sizeDelta.x, objectiveCount * cellSizeY);
-
-        // Fill characters gallery
-        LoadCharacters();
     }
 
     void CreateObjective(int uid, bool flag, string message) {
@@ -41,6 +47,7 @@ public class ObjectivesLoader : MonoBehaviour
         resourceManager.objectivesMap.Add(uid, newObjective);
     }
 
+    // Create the portrait objects and resize the area accordingly
     void LoadCharacters() {
         // Update size of scroll area
         int characterCount = ResourceManager.resourceManager.charactersMap.Count;
@@ -51,9 +58,7 @@ public class ObjectivesLoader : MonoBehaviour
 
         foreach (KeyValuePair<Character.CharacterName, Character> kv in ResourceManager.resourceManager.charactersMap) {
             GameObject portraitObject = Instantiate(resourceManager.characterPortraitPrefab, charactersParent.transform);
-            // TODO below line is ugly, rely on hardcoded name -> should create a script to hold those reference
-            portraitObject.transform.Find("CharacterImage").GetComponent<RawImage>().texture = kv.Value.image;
-            portraitObject.transform.Find("TextBackground").GetComponentInChildren<Text>().text = kv.Value.characterName.ToString();
+            kv.Value.characterPortrait = portraitObject;
         }
     }
 }
