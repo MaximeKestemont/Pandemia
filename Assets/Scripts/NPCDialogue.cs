@@ -40,6 +40,10 @@ public class NPCDialogue : MonoBehaviour
     }
 
     public void UpdateDiscoveredCharacter() {
-        this.character.alreadySeen = true;
+        if (!this.character.alreadySeen) {
+            this.character.alreadySeen = true;
+            this.character.UpdatePortrait();
+        };
+
     }
 }

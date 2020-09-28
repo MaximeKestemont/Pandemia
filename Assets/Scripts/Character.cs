@@ -10,8 +10,17 @@ public class Character : MonoBehaviour
     public Texture2D image;
     public bool alreadySeen = false;
 
+    // ref to the portrait corresponding to this character in the Gallery pannel - initialized in the AccomplishmentsLoader class
+    public GameObject characterPortrait;
+
     void Start()
     {
+    }
+
+    public void UpdatePortrait() {
+            // TODO below lines are ugly, rely on hardcoded name -> should create a script to hold those reference
+            characterPortrait.transform.Find("CharacterImage").GetComponent<RawImage>().texture = this.image;
+            characterPortrait.transform.Find("TextBackground").GetComponentInChildren<Text>().text = this.characterName.ToString();
     }
 
     // !!! Add new character at the END of this enum. Else, it modifies all existing nodes.
