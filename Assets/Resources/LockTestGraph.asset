@@ -84,6 +84,8 @@ MonoBehaviour:
     value: 60
     duration: 0
   indicatorToUnlock: 9
+  phaseToUnlock: 0
+  objectiveId: -1
 --- !u!114 &-7127582479138011940
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -142,7 +144,7 @@ MonoBehaviour:
   outcomingChoices: {fileID: 0}
   character: 0
   dialogue: stst
-  uid: 57
+  uid: 168
 --- !u!114 &-6112523481815801501
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -210,7 +212,9 @@ MonoBehaviour:
   lockingChoices: {fileID: 0}
   passingChoices: {fileID: 0}
   dialogue: {fileID: 0}
+  eventPhase: 1
   conditions: []
+  minEventsCondition: 0
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -303,11 +307,13 @@ MonoBehaviour:
   lockingChoices: {fileID: 0}
   passingChoices: {fileID: 0}
   dialogue: {fileID: 0}
+  eventPhase: 1
   conditions:
   - conditions:
     - indicatorType: 0
       threshold: 50
       conditionType: 0
+  minEventsCondition: 0
 --- !u!114 &2422221262551819743
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -369,7 +375,7 @@ MonoBehaviour:
   outcomingChoices: {fileID: 0}
   character: 0
   dialogue: test
-  uid: 24
+  uid: 169
 --- !u!114 &3465328278742016513
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -383,7 +389,7 @@ MonoBehaviour:
   m_Name: Event
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -120, y: -104}
+  position: {x: -168, y: -56}
   ports:
     keys:
     - unlockingChoices
@@ -437,7 +443,9 @@ MonoBehaviour:
   lockingChoices: {fileID: 0}
   passingChoices: {fileID: 0}
   dialogue: {fileID: 0}
+  eventPhase: 1
   conditions: []
+  minEventsCondition: 0
 --- !u!114 &3479716060916657239
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -518,6 +526,8 @@ MonoBehaviour:
     N''unlock pas l''autre event'
   choiceNodeConsequences: []
   indicatorToUnlock: 9
+  phaseToUnlock: 0
+  objectiveId: -1
 --- !u!114 &4018142475977726168
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -573,7 +583,7 @@ MonoBehaviour:
   outcomingChoices: {fileID: 0}
   character: 0
   dialogue: test2
-  uid: 11
+  uid: 170
 --- !u!114 &8136302993803544534
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -660,3 +670,5 @@ MonoBehaviour:
     value: -60
     duration: 0
   indicatorToUnlock: 9
+  phaseToUnlock: 0
+  objectiveId: -1
