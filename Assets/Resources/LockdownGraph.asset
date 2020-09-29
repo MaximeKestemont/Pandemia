@@ -62,7 +62,7 @@ MonoBehaviour:
   character: 12
   dialogue: "N'est-ce pas un peu extr\xEAme, Monsieur le Pr\xE9sident ? Tirez dans
     la foule, vraiment ?"
-  uid: 61
+  uid: 8
 --- !u!114 &-7802486347120874168
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -213,7 +213,7 @@ MonoBehaviour:
   character: 8
   dialogue: "Avec l'annonce du confinement, tout le monde s'est pr\xE9cipit\xE9 au
     supermarch\xE9. Il ne reste plus rien!"
-  uid: 87
+  uid: 59
 --- !u!114 &-6640493466321940861
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -367,7 +367,7 @@ MonoBehaviour:
   dialogue: "La situation empire ! De nombreux groupes commencent \xE0 se rebeller,
     et refusent l'\xE9tat de confinement. Plusieurs manifestations violentes ont
     \xE9t\xE9 report\xE9es !"
-  uid: 7
+  uid: 27
 --- !u!114 &-4945201256776081622
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -666,7 +666,7 @@ MonoBehaviour:
       _typeQualifiedName: NPCDialogueNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
       connections:
-      - fieldName: initialEvent
+      - fieldName: incomingChoice
         node: {fileID: 3502538313779567555}
         reroutePoints: []
       _direction: 1
@@ -1528,10 +1528,7 @@ MonoBehaviour:
       _node: {fileID: 3502538313779567555}
       _typeQualifiedName: EventNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
-      connections:
-      - fieldName: followingDialogue
-        node: {fileID: -1500190748565763333}
-        reroutePoints: []
+      connections: []
       _direction: 0
       _connectionType: 0
       _typeConstraint: 0
@@ -1540,7 +1537,10 @@ MonoBehaviour:
       _node: {fileID: 3502538313779567555}
       _typeQualifiedName: ChoiceNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
-      connections: []
+      connections:
+      - fieldName: followingDialogue
+        node: {fileID: -1500190748565763333}
+        reroutePoints: []
       _direction: 0
       _connectionType: 0
       _typeConstraint: 0
@@ -1564,9 +1564,9 @@ MonoBehaviour:
   incomingChoice: {fileID: 0}
   outcomingChoices: {fileID: 0}
   character: 8
-  dialogue: "Des vivres initialement pr\xE9vues pour de l'aide \xE9trang\xE8re est
-    encore disponible dans des entrepots au nord de la capitale"
-  uid: 88
+  dialogue: "Des vivres initialement pr\xE9vues pour de l'aide \xE9trang\xE8re sont
+    encore disponibles dans des entrepots au nord de la capitale"
+  uid: 29
 --- !u!114 &4122221033555403874
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1727,7 +1727,7 @@ MonoBehaviour:
   lockingEvents: {fileID: 0}
   passingEvents: {fileID: 0}
   description: "Nous ne pouvons pas nous permettre de toucher \xE0 ces stocks., des
-    personnes comptent sur ces stocks pour survivre."
+    personnes comptent dessus pour survivre."
   choiceNodeConsequences:
   - indicatorType: 2
     valueType: 0
@@ -1980,7 +1980,7 @@ MonoBehaviour:
   character: 1
   dialogue: "La pand\xE9mie se r\xE9pand beaucoup moins qu'avant, la situation est
     bient\xF4t sous contr\xF4le."
-  uid: 11
+  uid: 24
 --- !u!114 &7315093856782355815
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2046,7 +2046,7 @@ MonoBehaviour:
   character: 1
   dialogue: De nombreux indivus ne respectent pas le confinement ! Que devons-nous
     faire ?
-  uid: 62
+  uid: 31
 --- !u!114 &9084166821622053667
 MonoBehaviour:
   m_ObjectHideFlags: 0
