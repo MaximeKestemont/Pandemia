@@ -17,7 +17,7 @@ public class AccomplishmentsLoader : MonoBehaviour
         LoadObjectives();
 
         // Update objective progress bar
-        Objective.InitializeProgressBar(objectiveCount); // need to give the count here, as Awake method is not called yet
+        Objective.InitializeProgressBar();
 
         // Fill characters gallery
         LoadCharacters();
@@ -39,6 +39,8 @@ public class AccomplishmentsLoader : MonoBehaviour
         float cellSizeY = objectivesParent.GetComponent<GridLayoutGroup>().cellSize.y;
         RectTransform rt = objectivesParent.GetComponent<RectTransform>();
         rt.sizeDelta = new Vector2(rt.sizeDelta.x, objectiveCount * cellSizeY);
+
+        Objective.totalObjectiveCount = objectiveCount;
     }
 
     void CreateObjective(int uid, bool flag, string message) {

@@ -23,6 +23,7 @@ public class ResourceManager : MonoBehaviour {
 
     public ProgressBar objectivesProgressBar;
     public ProgressBar galleryProgressBar;
+    public ProgressBar eventProgressBar;
 
     // --- Prefab ---
     public GameObject eventPrefab;

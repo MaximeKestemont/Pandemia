@@ -43,12 +43,24 @@ public class Event : MonoBehaviour
     // Condition to unlock events once a given number of events have already been played
     public int minEventsCondition = 0;
 
+    public bool hasBeenPlayed = false;
+
+    // Counters needed to compute the progress bar
+    public static int totalEventCount = 0;
+    public static int checkedEventCount = 0;
+
     // Start is called before the first frame update
     void Start()
     {
         textTitle.GetComponent<Text>().text = this.title;
 
-        
+        // Increase the counter of played events and update progress bar
+        if (!hasBeenPlayed) {
+            hasBeenPlayed = true;
+            checkedEventCount++;
+
+            ResourceManager.resourceManager.eventProgressBar.UpdateProgressBar(checkedEventCount, totalEventCount);
+        }
     }
 
     // Update is called once per frame

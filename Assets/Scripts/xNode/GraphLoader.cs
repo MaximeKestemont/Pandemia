@@ -64,6 +64,7 @@ public class GraphLoader: MonoBehaviour
                     newEvent.unlockedByChoice = Event.Status.UNLOCKED;
                 }
 
+                Event.totalEventCount++;
                 Debug.Log($"Event {newEvent.uid} has been properly created");
             }
 
