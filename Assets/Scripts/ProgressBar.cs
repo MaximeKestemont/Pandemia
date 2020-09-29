@@ -23,8 +23,12 @@ public class ProgressBar : MonoBehaviour
         
     }
 
-    void UpdateProgressBar(int completedTasks, int totalTasks) {
+    public void UpdateProgressBar(int completedTasks, int totalTasks) {
         float scaling = (float) completedTasks / (float) totalTasks;
         filling.localScale = new Vector2(scaling, filling.localScale.y);
+
+        string newText = completedTasks + " / " + totalTasks + " completed";
+        taskCompleted.text = newText;
+
     }
 }

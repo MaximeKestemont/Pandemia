@@ -2573,6 +2573,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Objectives
       objectReference: {fileID: 0}
+    - target: {fileID: 6600529919771726236, guid: 28895067f15434cafb53d8fed832b411,
+        type: 3}
+      propertyPath: m_Text
+      value: Objectives
+      objectReference: {fileID: 0}
     - target: {fileID: 6600529920254945562, guid: 28895067f15434cafb53d8fed832b411,
         type: 3}
       propertyPath: m_LocalPosition.x

@@ -16,8 +16,14 @@ public class AccomplishmentsLoader : MonoBehaviour
         // Create objectives
         LoadObjectives();
 
+        // Update objective progress bar
+        Objective.InitializeProgressBar(objectiveCount); // need to give the count here, as Awake method is not called yet
+
         // Fill characters gallery
         LoadCharacters();
+
+        // Update character progress bar
+        Character.InitializeProgressBar();
     }
 
     // Create objectives and resize area accordingly
