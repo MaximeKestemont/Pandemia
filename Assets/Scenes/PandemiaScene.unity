@@ -4634,7 +4634,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: START GAME
+  m_Text: 'Vladimir '
 --- !u!222 &1432216140
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4960,8 +4960,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 13.8, y: 395}
-  m_SizeDelta: {x: 627.9, y: 100}
+  m_AnchoredPosition: {x: 0.000091553, y: 373}
+  m_SizeDelta: {x: 1007.2, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1531697988
 MonoBehaviour:
@@ -4994,7 +4994,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: PANDEMIA
+  m_Text: Select a president
 --- !u!222 &1531697989
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5876,8 +5876,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 400, y: 120}
+  m_AnchoredPosition: {x: 0.000041962, y: -83}
+  m_SizeDelta: {x: 431.2, y: 656.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1874813976
 MonoBehaviour:
@@ -5981,12 +5981,12 @@ GameObject:
   - component: {fileID: 1887515220}
   - component: {fileID: 1887515219}
   m_Layer: 0
-  m_Name: MenuPanel
+  m_Name: SelectionPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1887515218
 RectTransform:
   m_ObjectHideFlags: 0
