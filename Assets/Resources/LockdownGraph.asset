@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Choice
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 1464, y: 2712}
+  position: {x: 1256, y: 3400}
   ports:
     keys:
     - correspondingDialogue
@@ -96,7 +96,7 @@ MonoBehaviour:
   m_Name: NPC Dialogue
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 1720, y: 2776}
+  position: {x: 1528, y: 3512}
   ports:
     keys:
     - initialEvent
@@ -129,8 +129,8 @@ MonoBehaviour:
       _typeQualifiedName: ChoiceNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
       connections:
-      - fieldName: incomingChoice
-        node: {fileID: 3647056401349634002}
+      - fieldName: correspondingDialogue
+        node: {fileID: 2656770702241278184}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
@@ -142,7 +142,7 @@ MonoBehaviour:
   character: 8
   dialogue: "Les sp\xE9cialistes ont perdu la raison, ce confinement est un suicide
     \xE9conomique!"
-  uid: 181
+  uid: 78
 --- !u!114 &-7929719640349067076
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -205,7 +205,7 @@ MonoBehaviour:
   character: 12
   dialogue: "N'est-ce pas un peu extr\xEAme, Monsieur le Pr\xE9sident ? Tirez dans
     la foule, vraiment ?"
-  uid: 111
+  uid: 56
 --- !u!114 &-7802486347120874168
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -356,7 +356,7 @@ MonoBehaviour:
   character: 8
   dialogue: "Avec l'annonce du confinement, tout le monde s'est pr\xE9cipit\xE9 au
     supermarch\xE9. Il ne reste plus rien!"
-  uid: 110
+  uid: 92
 --- !u!114 &-6640493466321940861
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -441,66 +441,6 @@ MonoBehaviour:
   indicatorToUnlock: 9
   phaseToUnlock: 2
   objectiveId: -1
---- !u!114 &-5956417793725154873
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 39784acf12ef448498ee792b1bf41ff0, type: 3}
-  m_Name: NPC Dialogue
-  m_EditorClassIdentifier: 
-  graph: {fileID: 11400000}
-  position: {x: 456, y: 3208}
-  ports:
-    keys:
-    - initialEvent
-    - incomingChoice
-    - outcomingChoices
-    values:
-    - _fieldName: initialEvent
-      _node: {fileID: -5956417793725154873}
-      _typeQualifiedName: EventNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      connections: []
-      _direction: 0
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-    - _fieldName: incomingChoice
-      _node: {fileID: -5956417793725154873}
-      _typeQualifiedName: ChoiceNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      connections:
-      - fieldName: outcomingChoices
-        node: {fileID: 7261134580445747938}
-        reroutePoints: []
-      _direction: 0
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-    - _fieldName: outcomingChoices
-      _node: {fileID: -5956417793725154873}
-      _typeQualifiedName: ChoiceNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      connections:
-      - fieldName: incomingChoice
-        node: {fileID: -2947582662738670609}
-        reroutePoints: []
-      _direction: 1
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-  initialEvent: {fileID: 0}
-  incomingChoice: {fileID: 0}
-  outcomingChoices: {fileID: 0}
-  character: 1
-  dialogue: "Cependant plus le confinement sera long, plus notre \xE9conomie en prendra
-    un coup..."
-  uid: 177
 --- !u!114 &-5906984100364648348
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -514,7 +454,7 @@ MonoBehaviour:
   m_Name: Choice
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 1464, y: 3032}
+  position: {x: 1256, y: 3736}
   ports:
     keys:
     - correspondingDialogue
@@ -653,7 +593,7 @@ MonoBehaviour:
   dialogue: "La situation empire ! De nombreux groupes commencent \xE0 se rebeller,
     et refusent l'\xE9tat de confinement. Plusieurs manifestations violentes ont
     \xE9t\xE9 report\xE9es !"
-  uid: 112
+  uid: 28
 --- !u!114 &-5487398269610989571
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -667,7 +607,7 @@ MonoBehaviour:
   m_Name: NPC Dialogue
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 1720, y: 3064}
+  position: {x: 1528, y: 3800}
   ports:
     keys:
     - initialEvent
@@ -700,8 +640,8 @@ MonoBehaviour:
       _typeQualifiedName: ChoiceNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
       connections:
-      - fieldName: incomingChoice
-        node: {fileID: 3647056401349634002}
+      - fieldName: correspondingDialogue
+        node: {fileID: 2656770702241278184}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
@@ -713,7 +653,7 @@ MonoBehaviour:
   character: 8
   dialogue: L'impact du confinement est encore plus important que nous l'imaginions.
     Vous devez les aider!
-  uid: 180
+  uid: 77
 --- !u!114 &-4945201256776081622
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -898,7 +838,7 @@ MonoBehaviour:
   m_Name: Choice
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 920, y: 3048}
+  position: {x: 584, y: 3112}
   ports:
     keys:
     - correspondingDialogue
@@ -913,7 +853,7 @@ MonoBehaviour:
         PublicKeyToken=null
       connections:
       - fieldName: outcomingChoices
-        node: {fileID: -2947582662738670609}
+        node: {fileID: 7261134580445747938}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
@@ -1081,7 +1021,7 @@ MonoBehaviour:
   m_Name: Choice
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 920, y: 3640}
+  position: {x: 600, y: 3880}
   ports:
     keys:
     - correspondingDialogue
@@ -1096,7 +1036,7 @@ MonoBehaviour:
         PublicKeyToken=null
       connections:
       - fieldName: outcomingChoices
-        node: {fileID: -2947582662738670609}
+        node: {fileID: 7261134580445747938}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
@@ -1106,7 +1046,10 @@ MonoBehaviour:
       _node: {fileID: -3760718853314846818}
       _typeQualifiedName: NPCDialogueNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
-      connections: []
+      connections:
+      - fieldName: incomingChoice
+        node: {fileID: 7939208354601219907}
+        reroutePoints: []
       _direction: 1
       _connectionType: 0
       _typeConstraint: 0
@@ -1161,72 +1104,6 @@ MonoBehaviour:
   indicatorToUnlock: 9
   phaseToUnlock: 2
   objectiveId: -1
---- !u!114 &-2947582662738670609
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 39784acf12ef448498ee792b1bf41ff0, type: 3}
-  m_Name: NPC Dialogue
-  m_EditorClassIdentifier: 
-  graph: {fileID: 11400000}
-  position: {x: 664, y: 3208}
-  ports:
-    keys:
-    - initialEvent
-    - incomingChoice
-    - outcomingChoices
-    values:
-    - _fieldName: initialEvent
-      _node: {fileID: -2947582662738670609}
-      _typeQualifiedName: EventNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      connections: []
-      _direction: 0
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-    - _fieldName: incomingChoice
-      _node: {fileID: -2947582662738670609}
-      _typeQualifiedName: ChoiceNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      connections:
-      - fieldName: outcomingChoices
-        node: {fileID: -5956417793725154873}
-        reroutePoints: []
-      _direction: 0
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-    - _fieldName: outcomingChoices
-      _node: {fileID: -2947582662738670609}
-      _typeQualifiedName: ChoiceNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      connections:
-      - fieldName: correspondingDialogue
-        node: {fileID: -4810185865611590857}
-        reroutePoints: []
-      - fieldName: correspondingDialogue
-        node: {fileID: 4611192078308131779}
-        reroutePoints: []
-      - fieldName: correspondingDialogue
-        node: {fileID: -3760718853314846818}
-        reroutePoints: []
-      _direction: 1
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-  initialEvent: {fileID: 0}
-  incomingChoice: {fileID: 0}
-  outcomingChoices: {fileID: 0}
-  character: 1
-  dialogue: "Je persiste \xE0 croire que la sant\xE9 de nos concitoyens est notre
-    priorit\xE9 mais que d\xE9cidez vous?"
-  uid: 178
 --- !u!114 &-1500190748565763333
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1515,8 +1392,6 @@ MonoBehaviour:
   - {fileID: 7261134580445747938}
   - {fileID: -4810185865611590857}
   - {fileID: 4611192078308131779}
-  - {fileID: -5956417793725154873}
-  - {fileID: -2947582662738670609}
   - {fileID: -3760718853314846818}
   - {fileID: 7939208354601219907}
   - {fileID: -8879581971666872120}
@@ -1526,6 +1401,7 @@ MonoBehaviour:
   - {fileID: 3647056401349634002}
   - {fileID: 572942646564269771}
   - {fileID: 148373502876011571}
+  - {fileID: 2656770702241278184}
 --- !u!114 &148373502876011571
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1539,7 +1415,7 @@ MonoBehaviour:
   m_Name: Choice
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 2232, y: 3000}
+  position: {x: 2344, y: 3752}
   ports:
     keys:
     - correspondingDialogue
@@ -1619,7 +1495,7 @@ MonoBehaviour:
   m_Name: Choice
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 2232, y: 2712}
+  position: {x: 2344, y: 3352}
   ports:
     keys:
     - correspondingDialogue
@@ -1707,7 +1583,7 @@ MonoBehaviour:
   m_Name: Event
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -8, y: 3208}
+  position: {x: 24, y: 3096}
   ports:
     keys:
     - unlockingChoices
@@ -2106,6 +1982,92 @@ MonoBehaviour:
       threshold: 50
       conditionType: 1
   minEventsCondition: 0
+--- !u!114 &2656770702241278184
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78d86ceab28114ca481a4504b2f3e3a3, type: 3}
+  m_Name: Choice
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 1816, y: 3608}
+  ports:
+    keys:
+    - correspondingDialogue
+    - followingDialogue
+    - unlockingEvents
+    - lockingEvents
+    - passingEvents
+    values:
+    - _fieldName: correspondingDialogue
+      _node: {fileID: 2656770702241278184}
+      _typeQualifiedName: NPCDialogueNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: outcomingChoices
+        node: {fileID: -5487398269610989571}
+        reroutePoints: []
+      - fieldName: outcomingChoices
+        node: {fileID: -8755735921593940192}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: followingDialogue
+      _node: {fileID: 2656770702241278184}
+      _typeQualifiedName: NPCDialogueNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: incomingChoice
+        node: {fileID: 3647056401349634002}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: unlockingEvents
+      _node: {fileID: 2656770702241278184}
+      _typeQualifiedName: EventNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: lockingEvents
+      _node: {fileID: 2656770702241278184}
+      _typeQualifiedName: EventNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: passingEvents
+      _node: {fileID: 2656770702241278184}
+      _typeQualifiedName: EventNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  correspondingDialogue: {fileID: 0}
+  followingDialogue: {fileID: 0}
+  unlockingEvents: {fileID: 0}
+  lockingEvents: {fileID: 0}
+  passingEvents: {fileID: 0}
+  description: D'accord, que proposez vous?
+  choiceNodeConsequences: []
+  indicatorToUnlock: 9
+  phaseToUnlock: 2
+  objectiveId: -1
 --- !u!114 &2701540243994353146
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2423,7 +2385,7 @@ MonoBehaviour:
   character: 8
   dialogue: "Des vivres initialement pr\xE9vues pour de l'aide \xE9trang\xE8re sont
     encore disponibles dans des entrepots au nord de la capitale"
-  uid: 109
+  uid: 4
 --- !u!114 &3647056401349634002
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2437,7 +2399,7 @@ MonoBehaviour:
   m_Name: NPC Dialogue
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 1976, y: 2920}
+  position: {x: 2088, y: 3672}
   ports:
     keys:
     - initialEvent
@@ -2458,11 +2420,8 @@ MonoBehaviour:
       _typeQualifiedName: ChoiceNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
       connections:
-      - fieldName: outcomingChoices
-        node: {fileID: -8755735921593940192}
-        reroutePoints: []
-      - fieldName: outcomingChoices
-        node: {fileID: -5487398269610989571}
+      - fieldName: followingDialogue
+        node: {fileID: 2656770702241278184}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
@@ -2489,7 +2448,7 @@ MonoBehaviour:
   character: 8
   dialogue: "Nous devons piocher dans les caisses de l'\xE9tat ou demander \xE0 l'Europe
     de venir en aide \xE0 ce secteur"
-  uid: 182
+  uid: 18
 --- !u!114 &4122221033555403874
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2587,7 +2546,7 @@ MonoBehaviour:
   m_Name: Choice
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 920, y: 3336}
+  position: {x: 600, y: 3464}
   ports:
     keys:
     - correspondingDialogue
@@ -2602,7 +2561,7 @@ MonoBehaviour:
         PublicKeyToken=null
       connections:
       - fieldName: outcomingChoices
-        node: {fileID: -2947582662738670609}
+        node: {fileID: 7261134580445747938}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
@@ -2612,7 +2571,10 @@ MonoBehaviour:
       _node: {fileID: 4611192078308131779}
       _typeQualifiedName: NPCDialogueNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
-      connections: []
+      connections:
+      - fieldName: incomingChoice
+        node: {fileID: 7939208354601219907}
+        reroutePoints: []
       _direction: 1
       _connectionType: 0
       _typeConstraint: 0
@@ -2995,7 +2957,7 @@ MonoBehaviour:
   character: 1
   dialogue: "La pand\xE9mie se r\xE9pand beaucoup moins qu'avant, la situation est
     bient\xF4t sous contr\xF4le."
-  uid: 113
+  uid: 29
 --- !u!114 &7261134580445747938
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3009,7 +2971,7 @@ MonoBehaviour:
   m_Name: NPC Dialogue
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 232, y: 3208}
+  position: {x: 248, y: 3096}
   ports:
     keys:
     - initialEvent
@@ -3042,8 +3004,14 @@ MonoBehaviour:
       _typeQualifiedName: ChoiceNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
       connections:
-      - fieldName: incomingChoice
-        node: {fileID: -5956417793725154873}
+      - fieldName: correspondingDialogue
+        node: {fileID: -4810185865611590857}
+        reroutePoints: []
+      - fieldName: correspondingDialogue
+        node: {fileID: 4611192078308131779}
+        reroutePoints: []
+      - fieldName: correspondingDialogue
+        node: {fileID: -3760718853314846818}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
@@ -3053,8 +3021,11 @@ MonoBehaviour:
   incomingChoice: {fileID: 0}
   outcomingChoices: {fileID: 0}
   character: 1
-  dialogue: "Les sp\xE9cialistes recommandent un confinement de 2 mois minimum. "
-  uid: 176
+  dialogue: "Les sp\xE9cialistes recommandent un confinement de 2 mois minimum. Cependant
+    plus le confinement sera long, plus notre \xE9conomie en prendra un coup... Je
+    persiste \xE0 croire que la sant\xE9 de nos concitoyens est notre priorit\xE9
+    mais que d\xE9cidez vous?"
+  uid: 66
 --- !u!114 &7315093856782355815
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3120,7 +3091,7 @@ MonoBehaviour:
   character: 1
   dialogue: De nombreux indivus ne respectent pas le confinement ! Que devons-nous
     faire ?
-  uid: 114
+  uid: 1
 --- !u!114 &7939208354601219907
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3134,7 +3105,7 @@ MonoBehaviour:
   m_Name: NPC Dialogue
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 1176, y: 2936}
+  position: {x: 920, y: 3576}
   ports:
     keys:
     - initialEvent
@@ -3156,7 +3127,13 @@ MonoBehaviour:
         PublicKeyToken=null
       connections:
       - fieldName: followingDialogue
+        node: {fileID: -3760718853314846818}
+        reroutePoints: []
+      - fieldName: followingDialogue
         node: {fileID: -4810185865611590857}
+        reroutePoints: []
+      - fieldName: followingDialogue
+        node: {fileID: 4611192078308131779}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
@@ -3183,7 +3160,7 @@ MonoBehaviour:
   character: 8
   dialogue: "Mr le Pr\xE9sident, notre \xE9conomie sombre, l'industrie de la restauration
     est en lambeau!"
-  uid: 179
+  uid: 60
 --- !u!114 &9084166821622053667
 MonoBehaviour:
   m_ObjectHideFlags: 0
