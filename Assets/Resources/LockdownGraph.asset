@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Choice
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 1256, y: 3400}
+  position: {x: 1512, y: 3208}
   ports:
     keys:
     - correspondingDialogue
@@ -96,7 +96,7 @@ MonoBehaviour:
   m_Name: NPC Dialogue
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 1528, y: 3512}
+  position: {x: 1768, y: 3272}
   ports:
     keys:
     - initialEvent
@@ -130,7 +130,7 @@ MonoBehaviour:
         PublicKeyToken=null
       connections:
       - fieldName: correspondingDialogue
-        node: {fileID: 2656770702241278184}
+        node: {fileID: -1514661179378101456}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
@@ -142,7 +142,7 @@ MonoBehaviour:
   character: 8
   dialogue: "Les sp\xE9cialistes ont perdu la raison, ce confinement est un suicide
     \xE9conomique!"
-  uid: 78
+  uid: 79
 --- !u!114 &-7929719640349067076
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -356,7 +356,7 @@ MonoBehaviour:
   character: 8
   dialogue: "Avec l'annonce du confinement, tout le monde s'est pr\xE9cipit\xE9 au
     supermarch\xE9. Il ne reste plus rien!"
-  uid: 92
+  uid: 94
 --- !u!114 &-6640493466321940861
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -454,7 +454,7 @@ MonoBehaviour:
   m_Name: Choice
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 1256, y: 3736}
+  position: {x: 1512, y: 3528}
   ports:
     keys:
     - correspondingDialogue
@@ -607,7 +607,7 @@ MonoBehaviour:
   m_Name: NPC Dialogue
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 1528, y: 3800}
+  position: {x: 1768, y: 3560}
   ports:
     keys:
     - initialEvent
@@ -641,7 +641,7 @@ MonoBehaviour:
         PublicKeyToken=null
       connections:
       - fieldName: correspondingDialogue
-        node: {fileID: 2656770702241278184}
+        node: {fileID: -1514661179378101456}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
@@ -653,7 +653,7 @@ MonoBehaviour:
   character: 8
   dialogue: L'impact du confinement est encore plus important que nous l'imaginions.
     Vous devez les aider!
-  uid: 77
+  uid: 78
 --- !u!114 &-4945201256776081622
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -838,7 +838,7 @@ MonoBehaviour:
   m_Name: Choice
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 584, y: 3112}
+  position: {x: 920, y: 3048}
   ports:
     keys:
     - correspondingDialogue
@@ -1021,7 +1021,7 @@ MonoBehaviour:
   m_Name: Choice
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 600, y: 3880}
+  position: {x: 920, y: 3640}
   ports:
     keys:
     - correspondingDialogue
@@ -1046,10 +1046,7 @@ MonoBehaviour:
       _node: {fileID: -3760718853314846818}
       _typeQualifiedName: NPCDialogueNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
-      connections:
-      - fieldName: incomingChoice
-        node: {fileID: 7939208354601219907}
-        reroutePoints: []
+      connections: []
       _direction: 1
       _connectionType: 0
       _typeConstraint: 0
@@ -1101,6 +1098,92 @@ MonoBehaviour:
     valueType: 0
     value: 10
     duration: 0
+  indicatorToUnlock: 9
+  phaseToUnlock: 2
+  objectiveId: -1
+--- !u!114 &-1514661179378101456
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78d86ceab28114ca481a4504b2f3e3a3, type: 3}
+  m_Name: Choice
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 2008, y: 3256}
+  ports:
+    keys:
+    - correspondingDialogue
+    - followingDialogue
+    - unlockingEvents
+    - lockingEvents
+    - passingEvents
+    values:
+    - _fieldName: correspondingDialogue
+      _node: {fileID: -1514661179378101456}
+      _typeQualifiedName: NPCDialogueNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: outcomingChoices
+        node: {fileID: -8755735921593940192}
+        reroutePoints: []
+      - fieldName: outcomingChoices
+        node: {fileID: -5487398269610989571}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: followingDialogue
+      _node: {fileID: -1514661179378101456}
+      _typeQualifiedName: NPCDialogueNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: incomingChoice
+        node: {fileID: 3647056401349634002}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: unlockingEvents
+      _node: {fileID: -1514661179378101456}
+      _typeQualifiedName: EventNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: lockingEvents
+      _node: {fileID: -1514661179378101456}
+      _typeQualifiedName: EventNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: passingEvents
+      _node: {fileID: -1514661179378101456}
+      _typeQualifiedName: EventNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  correspondingDialogue: {fileID: 0}
+  followingDialogue: {fileID: 0}
+  unlockingEvents: {fileID: 0}
+  lockingEvents: {fileID: 0}
+  passingEvents: {fileID: 0}
+  description: Que proposez vous donc?
+  choiceNodeConsequences: []
   indicatorToUnlock: 9
   phaseToUnlock: 2
   objectiveId: -1
@@ -1401,7 +1484,7 @@ MonoBehaviour:
   - {fileID: 3647056401349634002}
   - {fileID: 572942646564269771}
   - {fileID: 148373502876011571}
-  - {fileID: 2656770702241278184}
+  - {fileID: -1514661179378101456}
 --- !u!114 &148373502876011571
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1415,7 +1498,7 @@ MonoBehaviour:
   m_Name: Choice
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 2344, y: 3752}
+  position: {x: 2504, y: 3480}
   ports:
     keys:
     - correspondingDialogue
@@ -1495,7 +1578,7 @@ MonoBehaviour:
   m_Name: Choice
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 2344, y: 3352}
+  position: {x: 2504, y: 3192}
   ports:
     keys:
     - correspondingDialogue
@@ -1583,7 +1666,7 @@ MonoBehaviour:
   m_Name: Event
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 24, y: 3096}
+  position: {x: 232, y: 3320}
   ports:
     keys:
     - unlockingChoices
@@ -1982,92 +2065,6 @@ MonoBehaviour:
       threshold: 50
       conditionType: 1
   minEventsCondition: 0
---- !u!114 &2656770702241278184
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78d86ceab28114ca481a4504b2f3e3a3, type: 3}
-  m_Name: Choice
-  m_EditorClassIdentifier: 
-  graph: {fileID: 11400000}
-  position: {x: 1816, y: 3608}
-  ports:
-    keys:
-    - correspondingDialogue
-    - followingDialogue
-    - unlockingEvents
-    - lockingEvents
-    - passingEvents
-    values:
-    - _fieldName: correspondingDialogue
-      _node: {fileID: 2656770702241278184}
-      _typeQualifiedName: NPCDialogueNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      connections:
-      - fieldName: outcomingChoices
-        node: {fileID: -5487398269610989571}
-        reroutePoints: []
-      - fieldName: outcomingChoices
-        node: {fileID: -8755735921593940192}
-        reroutePoints: []
-      _direction: 0
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-    - _fieldName: followingDialogue
-      _node: {fileID: 2656770702241278184}
-      _typeQualifiedName: NPCDialogueNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      connections:
-      - fieldName: incomingChoice
-        node: {fileID: 3647056401349634002}
-        reroutePoints: []
-      _direction: 1
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-    - _fieldName: unlockingEvents
-      _node: {fileID: 2656770702241278184}
-      _typeQualifiedName: EventNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      connections: []
-      _direction: 1
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-    - _fieldName: lockingEvents
-      _node: {fileID: 2656770702241278184}
-      _typeQualifiedName: EventNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      connections: []
-      _direction: 1
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-    - _fieldName: passingEvents
-      _node: {fileID: 2656770702241278184}
-      _typeQualifiedName: EventNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      connections: []
-      _direction: 1
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-  correspondingDialogue: {fileID: 0}
-  followingDialogue: {fileID: 0}
-  unlockingEvents: {fileID: 0}
-  lockingEvents: {fileID: 0}
-  passingEvents: {fileID: 0}
-  description: D'accord, que proposez vous?
-  choiceNodeConsequences: []
-  indicatorToUnlock: 9
-  phaseToUnlock: 2
-  objectiveId: -1
 --- !u!114 &2701540243994353146
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2399,7 +2396,7 @@ MonoBehaviour:
   m_Name: NPC Dialogue
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 2088, y: 3672}
+  position: {x: 2248, y: 3400}
   ports:
     keys:
     - initialEvent
@@ -2421,7 +2418,7 @@ MonoBehaviour:
         PublicKeyToken=null
       connections:
       - fieldName: followingDialogue
-        node: {fileID: 2656770702241278184}
+        node: {fileID: -1514661179378101456}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
@@ -2546,7 +2543,7 @@ MonoBehaviour:
   m_Name: Choice
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 600, y: 3464}
+  position: {x: 920, y: 3336}
   ports:
     keys:
     - correspondingDialogue
@@ -2571,10 +2568,7 @@ MonoBehaviour:
       _node: {fileID: 4611192078308131779}
       _typeQualifiedName: NPCDialogueNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
-      connections:
-      - fieldName: incomingChoice
-        node: {fileID: 7939208354601219907}
-        reroutePoints: []
+      connections: []
       _direction: 1
       _connectionType: 0
       _typeConstraint: 0
@@ -2971,7 +2965,7 @@ MonoBehaviour:
   m_Name: NPC Dialogue
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 248, y: 3096}
+  position: {x: 472, y: 3320}
   ports:
     keys:
     - initialEvent
@@ -3105,7 +3099,7 @@ MonoBehaviour:
   m_Name: NPC Dialogue
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 920, y: 3576}
+  position: {x: 1176, y: 3432}
   ports:
     keys:
     - initialEvent
@@ -3127,13 +3121,7 @@ MonoBehaviour:
         PublicKeyToken=null
       connections:
       - fieldName: followingDialogue
-        node: {fileID: -3760718853314846818}
-        reroutePoints: []
-      - fieldName: followingDialogue
         node: {fileID: -4810185865611590857}
-        reroutePoints: []
-      - fieldName: followingDialogue
-        node: {fileID: 4611192078308131779}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
